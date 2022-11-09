@@ -1,0 +1,14 @@
+---
+permalink: deploy/concept_requirements_for_deploying_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous devez connaître les conditions de déploiement requises avant de déployer les outils ONTAP, et décider des tâches à effectuer. En fonction de vos tâches, vous pouvez choisir le modèle de déploiement pour les outils ONTAP 
+---
+= Conditions requises pour le déploiement des outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les conditions de déploiement requises avant de déployer les outils ONTAP, et décider des tâches à effectuer. En fonction de vos tâches, vous pouvez choisir le modèle de déploiement pour les outils ONTAP

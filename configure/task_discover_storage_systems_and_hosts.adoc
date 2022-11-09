@@ -1,0 +1,45 @@
+---
+permalink: configure/task_discover_storage_systems_and_hosts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lors de la première exécution de Virtual Storage Console \(VSC\) dans un client vSphere, VSC détecte les hôtes ESXi, leurs LUN et exportations NFS, et les systèmes de stockage NetApp qui possèdent ces LUN et ces exportations.' 
+---
+= Découverte des systèmes et des hôtes de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous exécutez Virtual Storage Console (VSC) pour la première fois dans un client vSphere, VSC détecte les hôtes ESXi, leurs LUN et exportations NFS, et les systèmes de stockage NetApp qui possèdent ces LUN et ces exportations.
+
+*Ce dont vous aurez besoin*
+
+* Tous les hôtes ESXi doivent être sous tension et connectés.
+* Tous les SVM de stockage détectés doivent être exécutés, et chaque nœud de cluster doit disposer d'au moins une LIF de données configurée pour le protocole de stockage utilisé (NFS, iSCSI ou FC).
+
+
+*À propos de cette tâche*
+
+Vous pouvez détecter de nouveaux systèmes de stockage ou mettre à jour les informations concernant les systèmes de stockage existants afin d'obtenir à tout moment les informations les plus récentes sur leur capacité et leur configuration. Vous pouvez également modifier les identifiants utilisés par VSC pour vous connecter aux systèmes de stockage.
+
+Lors de la découverte des systèmes de stockage, VSC collecte les informations des hôtes ESXi gérés par l'instance vCenter Server.
+
+*Étapes*
+
+. Dans la page d'accueil de vSphere client, sélectionnez *hôtes et clusters*.
+. Cliquez avec le bouton droit de la souris sur le data Center requis, puis sélectionnez *NetApp VSC* > *mettre à jour les données hôte et de stockage* .
++
+VSC affiche une boîte de dialogue confirmer qui vous indique que cette opération peut prendre un certain temps.
+
+. Cliquez sur *OK*.
+. Sélectionnez les contrôleurs de stockage découverts ayant l'état « échec d'authentification », puis cliquez sur *ACTIONS* > *Modifier*.
+. Renseignez les informations requises dans la boîte de dialogue Modifier le système de stockage.
+. Répétez les étapes 4 et 5 pour tous les contrôleurs de stockage avec le statut « échec d'authentification ».
+
+
+Une fois le processus de détection terminé, procédez comme suit :
+
+* Utilisez VSC pour configurer les paramètres de l'hôte ESXi pour les hôtes qui affichent l'icône alerte dans la colonne Paramètres de l'adaptateur, dans la colonne Paramètres MPIO ou dans la colonne Paramètres NFS.
+* Indiquez les informations d'identification du système de stockage.
+

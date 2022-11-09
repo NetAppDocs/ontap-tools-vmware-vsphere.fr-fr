@@ -1,0 +1,42 @@
+---
+permalink: configure/reference_rebalance_vvols_datastore.html 
+sidebar: sidebar 
+keywords: vVols datastore,rebalancing 
+summary: 'Les outils ONTAP prennent en charge une commande de rééquilibrage des volumes FlexVol dans votre datacenter. Le principal objectif est d"optimiser l"utilisation de l"espace entre les volumes FlexVol. Les outils ONTAP redistribue les volumes existants en fonction de l"utilisation de l"espace, du provisionnement fin, du nombre de LUN et des profils de capacité de stockage.' 
+---
+= Rééquilibrent les datastores vVvols
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les outils ONTAP prennent en charge une commande de rééquilibrage des volumes FlexVol dans votre datacenter. Le principal objectif est d'optimiser l'utilisation de l'espace entre les volumes FlexVol. Les outils ONTAP redistribue les volumes existants en fonction de l'utilisation de l'espace, du provisionnement fin, du nombre de LUN et des profils de capacité de stockage.
+
+Le rééquilibrage du datastore vVvols est effectué par le déplacement de LUN ou le déplacement de fichier. Les critères pris en compte lors du rééquilibrage de vVvols sont les suivants :
+
+* Les datastores NFS vvol ne sont pas pris en charge
+* Les volumes FlexVol existants ne seront pas redimensionnés et aucun nouveau volume FlexVol ne sera ajouté
+* Seuls les volumes FlexVol dotés des mêmes capacités de stockage ou attributs de volume sont rééquilibrés
+* Les volumes FlexVol avec l'utilisation de l'espace la plus élevée sont envisagés pour le rééquilibrage
+* Tous les vvols associés à une machine virtuelle sont déplacés vers les mêmes volumes FlexVol
+* La limite de LUN et de nombre de fichiers est conservée
+* Le rééquilibrage n'est pas effectué si l'utilisation de l'espace est de 10 % entre les volumes FlexVol
+
+
+La commande rééquilibrages supprime les volumes FlexVol vides pour fournir un espace aux autres datastores. Ainsi, la commande vous permet de supprimer les volumes FlexVol non autorisés afin qu'ils puissent être supprimés du datastore. La commande vise à déplacer tous les vvols associés à une machine virtuelle vers le même volume FlexVol. Une vérification préalable est effectuée par la commande avant que le rééquilibrage ne commence à minimiser les pannes. Mais même avec un contrôle préalable réussi, l'opération de rééquilibrage risque d'échouer pour un ou plusieurs vVols. Lorsque cela se produit, il n'y a pas de retour arrière de l'opération de rééquilibrage. Ainsi, les vvols associés à une machine virtuelle peuvent être placés sur différents volumes FlexVol et générer des journaux d'avertissement.
+
+[NOTE]
+====
+* Les opérations relatives aux datastores parallèles et aux machines virtuelles ne sont pas prises en charge.
+* Vous devez effectuer une opération de redécouverte de cluster après la fin de chaque opération de rééquilibrage de vVvols.
+* Lors de l'opération de rééquilibrage de vVvols, si un grand nombre de datastores vVvols sont identifiés, l'opération de transfert se déclenche après la valeur par défaut définie.
++
+** Dans ce cas, vous devez modifier le `vvol.properties` fichier pour définir la valeur sur `offtap.operation.timeout.period.seconds=29700` Et redémarrez le service VASA Provider.
+
+
+* Si un volume FlexVol a des snapshots, alors lors de l'opération de rééquilibrage de vvols, les vVvols ne sont pas rééquilibrés correctement en raison de détails insuffisants sur l'utilisation de l'espace.
+* Vous pouvez définir la propriété VASA Provider _enable.update.vvol.through.Discovery_ sur true afin d'obtenir des données cohérentes entre les outils ONTAP et ONTAP, lorsque le délai d'expiration se produit lors du rééquilibrage du conteneur.
+
+
+====

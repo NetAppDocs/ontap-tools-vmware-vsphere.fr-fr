@@ -1,0 +1,100 @@
+---
+permalink: manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La console de maintenance des outils ONTAP vous permet de gérer vos configurations d"applications, système et réseau. Vous pouvez modifier votre mot de passe administrateur et votre mot de passe de maintenance. Vous pouvez également générer des offres de support, définir différents niveaux de journal, afficher et gérer les configurations TLS et démarrer les diagnostics à distance.' 
+---
+= Présentation des outils ONTAP console de maintenance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La console de maintenance des outils ONTAP vous permet de gérer vos configurations d'applications, système et réseau. Vous pouvez modifier votre mot de passe administrateur et votre mot de passe de maintenance. Vous pouvez également générer des offres de support, définir différents niveaux de journal, afficher et gérer les configurations TLS et démarrer les diagnostics à distance.
+
+Vous devez avoir installé les outils VMware après avoir déployé les outils ONTAP pour accéder à la console de maintenance. Vous devez utiliser "maaint" comme nom d'utilisateur et mot de passe que vous avez configuré pendant le déploiement pour vous connecter à la console de maintenance des outils ONTAP.
+
+
+NOTE: Vous devez définir un mot de passe pour l'utilisateur "diag" tout en activant les diagnostics à distance.
+
+Vous devez utiliser l'onglet *Résumé* de vos outils ONTAP déployés pour accéder à la console de maintenance. Lorsque vous cliquez sur image:../media/launch_maintenance_console.gif[""], la console de maintenance démarre.
+
+|===
+
+
+| *Menu Console* | *Options* 
+
+
+ a| 
+Configuration de l'application
+ a| 
+. Afficher le récapitulatif de l'état du serveur
+. Démarrage du service Virtual Storage Console
+. Arrêtez le service Virtual Storage Console
+. Démarrer le service VASA Provider et SRA
+. Arrêt du service VASA Provider et SRA
+. Modifier le mot de passe utilisateur « administrateur »
+. Re-générez des certificats
+. Réinitialisation matérielle du magasin de clés et des certificats
+. Réinitialisation matérielle de la base de données
+. Modifiez le niveau DE JOURNALISATION du service Virtual Storage Console
+. Modifier le niveau DE JOURNALISATION pour les services VASA Provider et SRA
+. Afficher la configuration TLS
+
+
+
+
+ a| 
+Configuration du système
+ a| 
+. Redémarrez la machine virtuelle
+. Arrêter la machine virtuelle
+. Modifier le mot de passe utilisateur « familiariser »
+. Modifier le fuseau horaire
+. Ajouter un nouveau serveur NTP
++
+Vous pouvez fournir une adresse IPv6 pour votre serveur NTP.
+
+. Activez l'accès SSH
+. Augmentation de la taille des disques de prison (/prison)
+. Mise à niveau
+. Installez VMware Tools
+
+
+
+
+ a| 
+Configuration du réseau
+ a| 
+. Afficher les paramètres d'adresse IP
+. Modifier les paramètres d'adresse IP
++
+Vous pouvez utiliser cette option pour modifier l'adresse IP post-déploiement sur IPv6.
+
+. Afficher les paramètres de recherche du nom de domaine
+. Modifier les paramètres de recherche du nom de domaine
+. Afficher les routes statiques
+. Modifier les routes statiques
++
+Vous pouvez utiliser cette option pour ajouter une route IPv6.
+
+. Valider les modifications
+. Envoyez une requête ping à un hôte
++
+Vous pouvez utiliser cette option pour envoyer une requête ping vers un hôte IPv6.
+
+. Restaurez les paramètres par défaut
+
+
+
+
+ a| 
+Support et diagnostics
+ a| 
+. Générez un bundle de support
+. Accéder au shell de diagnostic
+. Activer l'accès aux diagnostics à distance
+
+
+|===

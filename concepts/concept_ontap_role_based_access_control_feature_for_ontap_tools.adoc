@@ -1,0 +1,90 @@
+---
+permalink: concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le contrôle d"accès basé sur des rôles \(RBAC\) ONTAP vous permet de contrôler l"accès aux systèmes de stockage spécifiques et de contrôler les actions qu"un utilisateur peut effectuer sur ces systèmes. Dans les outils ONTAP® pour VMware vSphere, le contrôle d"accès basé sur les rôles (RBAC) de ONTAP fonctionne avec le contrôle d"accès basé sur les rôles de vCenter Server afin de déterminer quelles tâches de Virtual Storage Console \(VSC\) un utilisateur spécifique peut effectuer sur les objets d"un système de stockage spécifique.' 
+---
+= Autorisations pour les systèmes de stockage ONTAP et les objets vSphere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le contrôle d'accès basé sur des rôles (RBAC) de ONTAP vous permet de contrôler l'accès aux systèmes de stockage spécifiques et de contrôler les actions qu'un utilisateur peut effectuer sur ces systèmes. Dans les outils ONTAP® pour VMware vSphere, le contrôle d'accès basé sur les rôles (RBAC) de ONTAP fonctionne avec vCenter Server RBAC pour déterminer quelles tâches VSC (Virtual Storage Console) un utilisateur spécifique peut effectuer sur les objets d'un système de stockage spécifique.
+
+VSC utilise les identifiants (nom d'utilisateur et mot de passe) que vous configurez dans VSC afin d'authentifier chaque système de stockage et de déterminer les opérations de stockage pouvant être effectuées sur ce système de stockage. VSC utilise un ensemble d'identifiants pour chaque système de stockage. Ces identifiants déterminent quelles tâches VSC peuvent être effectuées sur ce système de stockage. En d'autres termes, les identifiants sont utilisés pour VSC et non pour un utilisateur VSC.
+
+Le contrôle d'accès basé sur des rôles (RBAC) ONTAP ne s'applique qu'à l'accès aux systèmes de stockage et aux tâches VSC liées au stockage, comme le provisionnement de machines virtuelles. Si vous ne disposez pas des privilèges ONTAP RBAC appropriés pour un système de stockage spécifique, vous ne pouvez pas effectuer de tâches sur un objet vSphere hébergé sur ce système de stockage. Vous pouvez utiliser le contrôle d'accès basé sur des rôles ONTAP associé aux privilèges spécifiques de VSC afin de contrôler les tâches VSC que un utilisateur peut effectuer :
+
+* Surveillance et configuration d'objets de stockage ou vCenter Server résidant sur un système de stockage
+* Provisionnement d'objets vSphere résidant sur un système de stockage
+
+
+L'utilisation du contrôle d'accès basé sur des rôles (RBAC) ONTAP avec les privilèges spécifiques de VSC fournit une couche de sécurité orientée stockage que l'administrateur du stockage peut gérer. Par conséquent, le contrôle d'accès est plus granulaire que ce que vous ne pouvez prendre en charge que le RBAC ONTAP seul ou le RBAC vCenter Server. Par exemple, avec le RBAC de vCenter Server, vous pouvez permettre à vCenter UserB de provisionner un datastore sur le stockage NetApp tout en empêchant vCenter UserA de provisionner des datastores. Si les informations d'identification du système de stockage pour un système de stockage spécifique ne prennent pas en charge la création de stockage, ni vCenter UserB ni vCenter UserA ne peuvent provisionner un datastore sur ce système de stockage.
+
+Lorsque vous lancez une tâche VSC, VSC vérifie d'abord si vous disposez de l'autorisation vCenter Server appropriée pour cette tâche. Si l'autorisation de vCenter Server n'est pas suffisante pour vous permettre d'effectuer la tâche, VSC n'a pas besoin de vérifier les privilèges ONTAP de ce système de stockage car vous n'avez pas réussi le contrôle de sécurité initial du serveur vCenter. Dans ce cas, vous ne pouvez pas accéder au système de stockage.
+
+Si l'autorisation vCenter Server est suffisante, VSC vérifie alors les privilèges RBAC ONTAP (votre rôle ONTAP) associés aux informations d'identification du système de stockage (nom d'utilisateur et mot de passe) Pour déterminer si vous disposez de privilèges suffisants pour exécuter les opérations de stockage requises par la tâche VSC sur ce système de stockage. Si vous disposez des privilèges ONTAP appropriés, vous pouvez accéder au système de stockage et effectuer la tâche VSC. Les rôles ONTAP déterminent les tâches VSC que vous pouvez effectuer sur le système de stockage.
+
+Chaque système de stockage dispose d'un ensemble de privilèges ONTAP qui lui sont associés.
+
+L'utilisation de RBAC ONTAP et du RBAC vCenter Server offre les avantages suivants :
+
+* Sécurité
++
+L'administrateur peut déterminer les utilisateurs qui peuvent effectuer les tâches au niveau objet précis de vCenter Server et au niveau du système de stockage.
+
+* Informations d'audit
++
+Dans de nombreux cas, VSC fournit une piste d'audit sur le système de stockage, qui vous permet de suivre les événements vers l'utilisateur vCenter Server qui a effectué les modifications du stockage.
+
+* Facilité d'utilisation
++
+Vous pouvez conserver toutes les informations d'identification du contrôleur en un seul emplacement.
+
+
+
+
+
+== Rôles ONTAP recommandés pour l'utilisation des outils ONTAP pour VMware vSphere
+
+Vous pouvez configurer plusieurs rôles ONTAP recommandés pour utiliser les outils ONTAP® pour VMware vSphere et le contrôle d'accès basé sur les rôles (RBAC). Ces rôles disposent des privilèges ONTAP requis pour effectuer les opérations de stockage requises exécutées par les tâches Virtual Storage Console (VSC).
+
+Pour créer de nouveaux rôles utilisateur, vous devez vous connecter en tant qu'administrateur sur les systèmes de stockage exécutant ONTAP. Vous pouvez créer des rôles ONTAP à l'aide de l'une des options suivantes :
+
+* ONTAP System Manager 9.8P1 ou version ultérieure
++
+link:../configure/task_configure_user_role_and_privileges.html["Configurez les rôles et privilèges utilisateur"]
+
+* Créateur d'utilisateurs RBAC pour l'outil ONTAP (si vous utilisez ONTAP 9.6 ou une version antérieure)
++
+https://community.netapp.com/t5/Virtualization-Articles-and-Resources/RBAC-User-Creator-tool-for-VSC-VASA-Provider-and-Storage-Replication-Adapter-7-0/ta-p/133203["Outil RBAC User Creator pour VSC, VASA Provider et Storage Replication adapter 7.0 pour VMware vSphere"]
+
+
+
+Chaque rôle ONTAP est associé à un nom d'utilisateur et une paire de mots de passe qui constituent les identifiants du rôle. Si vous ne vous connectez pas à l'aide de ces informations d'identification, vous ne pouvez pas accéder aux opérations de stockage associées au rôle.
+
+Par mesure de sécurité, les rôles ONTAP spécifiques à VSC sont classés par ordre hiérarchique. Le premier rôle est donc le rôle le plus restrictif et ne dispose que de privilèges associés à un ensemble d'opérations de stockage VSC de base. Le rôle suivant inclut à la fois ses propres privilèges et tous les privilèges associés au rôle précédent. Chaque rôle supplémentaire est moins restrictif en termes de termes de limites au niveau des opérations de stockage prises en charge.
+
+Voici certains des rôles RBAC ONTAP recommandés lors de l'utilisation de VSC. Une fois ces rôles créés, vous pouvez attribuer les rôles aux utilisateurs qui doivent effectuer des tâches associées au stockage, par exemple le provisionnement de machines virtuelles.
+
+. Détection
++
+Il permet donc d'ajouter des systèmes de stockage.
+
+. Créer un stockage
++
+Grâce à ce rôle, vous pouvez créer du stockage. Ce rôle inclut également l'ensemble des privilèges associés au rôle découverte.
+
+. Modifier le stockage
++
+Ce rôle vous permet de modifier le stockage. Ce rôle inclut également tous les privilèges associés au rôle découverte et au rôle Créer un stockage.
+
+. Détruire le stockage
++
+Vous pouvez ainsi détruire le stockage. Ce rôle inclut également tous les privilèges associés au rôle découverte, au rôle Créer un stockage et au rôle Modifier le stockage.
+
+
+
+Si vous utilisez VASA Provider pour ONTAP, vous devez également définir un rôle de gestion basée sur des règles (PBM). Il permet de gérer le stockage à l'aide de règles de stockage. Ce rôle requiert également que vous ayez défini le rôle « questions à poser ».

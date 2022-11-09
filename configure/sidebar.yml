@@ -1,0 +1,78 @@
+---
+section: configure
+title: Configurez les outils ONTAP
+entries:
+- title: Workflow de configuration des outils ONTAP
+  url: "/configure/concept_workflow_for_configuring_the_unified_appliance.html"
+- title: Configurer les paramètres ESXi
+  entries:
+  - title: Configurer les paramètres de chemins d'accès multiples et de délai d'attente
+      du serveur ESXi
+    url: "/configure/task_configure_esx_server_multipathing_and_timeout_settings.html"
+  - title: Valeurs de l'hôte ESXi définies à l'aide des outils ONTAP
+    url: "/configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html"
+- title: Configuration des systèmes d'exploitation invités
+  entries:
+  - title: Configurer les scripts des systèmes d'exploitation invités
+    url: "/configure/reference_configure_guest_operating_system_scripts.html"
+  - title: Définissez les valeurs de délai d'expiration des systèmes d'exploitation
+      invités Windows
+    url: "/configure/task_run_the_gos_timeout_scripts_for_windows.html"
+  - title: Définissez les valeurs de délai d'expiration pour les systèmes d'exploitation
+      invités Solaris
+    url: "/configure/task_run_the_gos_timeout_scripts_for_solaris.html"
+  - title: Définissez les valeurs de délai d'expiration des systèmes d'exploitation
+      invités Linux
+    url: "/configure/task_run_the_gos_timeout_scripts_for_rhel4_or_sles9.html"
+- title: Conditions requises pour l'enregistrement de VSC dans un environnement de
+    plusieurs serveurs vCenter
+  url: "/configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html"
+- title: Configurez le fichier de préférences ONTAP Tools
+  entries:
+  - title: Définissez IPv4 ou IPv6 à l'aide du fichier de préférences
+    url: "/configure/reference_set_ipv4_or_ipv6.html"
+  - title: Ajouter des sous-réseaux différents
+    url: "/configure/add_different_subnets.html"
+  - title: Activez le montage du datastore sur différents sous-réseaux
+    url: "/configure/task_enable_datastore_mounting_across_different_subnets.html"
+  - title: Régénérer un certificat SSL pour vsc
+    url: "/configure/task_regenerate_an_ssl_certificate_for_vsc.html"
+- title: Configuration des systèmes de stockage
+  entries:
+  - title: Présentation du système de stockage pour les outils ONTAP
+    url: "/configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html"
+  - title: Définissez les identifiants par défaut des systèmes de stockage
+    url: "/configure/task_set_default_credentials_for_storage_systems.html"
+  - title: Ajout de systèmes de stockage à VSC
+    url: "/configure/task_add_storage_systems.html"
+  - title: Découverte des systèmes et des hôtes de stockage
+    url: "/configure/task_discover_storage_systems_and_hosts.html"
+  - title: Actualiser l'affichage du système de stockage
+    url: "/configure/task_refresh_the_storage_system_display.html"
+  - title: Configurer les seuils d'alarme
+    url: "/configure/task_configure_alarm_thresholds.html"
+- title: Configurez les rôles et privilèges utilisateur
+  url: "/configure/task_configure_user_role_and_privileges.html"
+- title: Configurer les profils de capacité de stockage
+  entries:
+  - title: Présentation des profils de capacité de stockage
+    url: "/configure/concept_configure_storage_capability_profiles.html"
+  - title: Créer des profils de capacité de stockage
+    url: "/configure/task_create_storage_capability_profiles.html"
+  - title: Générez automatiquement des profils de capacité de stockage
+    url: "/configure/task_automatically_generating_scps.html"
+- title: Configurez les datastores
+  entries:
+  - title: Provisionner les datastores classiques
+    url: "/configure/task_provision_datastores.html"
+  - title: Mappage des datastores sur les profils de capacité de stockage
+    url: "/configure/task_map_storage_to_storage_capability_profiles.html"
+  - title: Attribuez des règles de QoS
+    url: "/configure/task_assign_qos_policies.html"
+  - title: Vérifiez la conformité du datastore avec le profil de capacité de stockage
+      mappé
+    url: "/configure/task_check_for_datastore_compliance_with_the_mapped_storage_capability_profile.html"
+  - title: Provisionner des datastores vVols
+    url: "/configure/task_provision_vvols_datastores.html"
+  - title: Rééquilibrent les datastores vVvols
+    url: "/configure/reference_rebalance_vvols_datastore.html"

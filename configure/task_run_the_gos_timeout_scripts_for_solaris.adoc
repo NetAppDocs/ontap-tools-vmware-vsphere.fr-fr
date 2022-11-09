@@ -1,0 +1,33 @@
+---
+permalink: configure/task_run_the_gos_timeout_scripts_for_solaris.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les scripts d"expiration du délai d"attente du système d"exploitation invité \(OS\) définissent les paramètres d"expiration du délai d"E/S SCSI pour Solaris 10. Vous pouvez spécifier un délai de 60 secondes ou un délai de 190 secondes.' 
+---
+= Définissez les valeurs de délai d'expiration pour les systèmes d'exploitation invités Solaris
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les scripts d'expiration du délai d'attente du système d'exploitation invité (OS) définissent les paramètres d'expiration du délai d'E/S SCSI pour Solaris 10. Vous pouvez spécifier un délai de 60 secondes ou un délai de 190 secondes.
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir monté l'image ISO contenant le script Solaris.
+
+*Étapes*
+
+. Accédez à la console de la machine virtuelle Solaris et connectez-vous à un compte disposant des privilèges root.
+. Exécutez le `solaris_gos_timeout-install.sh` script.
++
+Pour Solaris 10, un message similaire à ce qui suit s'affiche :
+
++
+[listing]
+----
+Setting I/O Timeout for /dev/s–a - SUCCESS!
+----
+. Démontez l'image ISO.
+

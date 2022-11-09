@@ -1,0 +1,32 @@
+---
+permalink: configure/task_configure_esx_server_multipathing_and_timeout_settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les outils ONTAP® pour VMware vSphere vérifient et définissent les paramètres de chemins d"accès multiples de l"hôte ESXi ainsi que les paramètres de délai d"expiration de l"adaptateur HBA qui fonctionnent le mieux avec les systèmes de stockage NetApp.' 
+---
+= Configurer les paramètres de chemins d'accès multiples et de délai d'attente du serveur ESXi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les outils ONTAP pour VMware vSphere vérifient et définissent les paramètres des chemins d'accès multiples de l'hôte ESXi ainsi que les paramètres de délai d'expiration de l'adaptateur HBA qui fonctionnent mieux avec les systèmes de stockage NetApp.
+
+*À propos de cette tâche*
+
+Ce processus peut prendre un certain temps, selon votre configuration et la charge du système. La progression de la tâche s'affiche dans le panneau tâches récentes. Lorsque les tâches sont terminées, l'icône d'alerte d'état de l'hôte est remplacée par l'icône Normal ou l'icône redémarrage en attente.
+
+*Étapes*
+
+. Dans la page d'accueil de VMware vSphere Web client, cliquez sur *vCenter* > *hosts*.
+. Cliquez avec le bouton droit de la souris sur un hôte, puis sélectionnez *actions* > *NetApp VSC* > *définir les valeurs recommandées*.
+. Dans la boîte de dialogue Paramètres recommandés par NetApp, sélectionnez les valeurs qui conviennent le mieux à votre système.
++
+Les valeurs standard recommandées sont définies par défaut.
+
++
+image::../media/vsc_recommended_hosts_settings.gif[paramètres des hôtes recommandés par vsc]
+
+. Cliquez sur *OK*.
+

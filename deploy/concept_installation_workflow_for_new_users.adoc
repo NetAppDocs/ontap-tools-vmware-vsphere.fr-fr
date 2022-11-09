@@ -1,0 +1,16 @@
+---
+permalink: deploy/concept_installation_workflow_for_new_users.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous êtes nouveau chez VMware et que vous n"avez jamais utilisé de produit NetApp VSC, vous devez configurer votre vCenter Server et un hôte ESXi avant de déployer et de configurer les outils ONTAP.' 
+---
+= Flux de travail de déploiement pour les nouveaux utilisateurs des outils ONTAP pour VMware vSphere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous êtes nouveau chez VMware et que vous n'avez jamais utilisé de produit NetApp ONTAP, vous devez configurer votre vCenter Server et un hôte ESXi avant de déployer et de configurer les outils ONTAP.
+
+image::../media/new_user_deployment_workflow_ontap_tools.png[Déploiement de nouveaux utilisateurs]

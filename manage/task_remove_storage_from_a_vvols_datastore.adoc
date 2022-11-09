@@ -1,0 +1,33 @@
+---
+permalink: manage/task_remove_storage_from_a_vvols_datastore.html 
+sidebar: sidebar 
+keywords: Remove vVol datastore 
+summary: 'Si un datastore VMware Virtual volumes \(vVvols\) possède plusieurs volumes FlexVol, vous pouvez supprimer un ou plusieurs volumes FlexVol du datastore vVvols sans supprimer le datastore.' 
+---
+= Supprimer le stockage d'un datastore vvols
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un datastore VMware Virtual volumes (vvols) comporte plusieurs volumes FlexVol, vous pouvez supprimer un ou plusieurs volumes FlexVol du datastore vVvols sans supprimer le datastore.
+
+*À propos de cette tâche*
+
+Il existe un datastore vVvols tant qu'au moins un volume FlexVol est disponible sur le datastore. Si vous souhaitez supprimer un datastore vvols dans un cluster HA, vous devez d'abord démonter le datastore de tous les hôtes du cluster HA, puis supprimer manuellement le dossier .vsphere-HA résidant à l'aide de l'interface utilisateur de vCenter Server. Vous pouvez ensuite supprimer le datastore vVvols.
+
+*Étapes*
+
+. Dans la page d'accueil de vSphere client, cliquez sur *hôtes et clusters*.
+. Cliquez avec le bouton droit de la souris sur le datastore vvols que vous souhaitez modifier, puis sélectionnez *NetApp ONTAP Tools* > *Remove Storage from vvols datastore*.
++
+La boîte de dialogue Supprimer le stockage de vvols datastore s'affiche.
+
+. Sélectionnez les volumes FlexVol que vous souhaitez supprimer du datastore vvols, puis cliquez sur *Supprimer*.
+. Cliquez sur *OK* dans la boîte de dialogue de confirmation.
++
+
+NOTE: Si vous sélectionnez tous les volumes FlexVol, un message d'erreur s'affiche, indiquant l'échec de l'opération.
+
+

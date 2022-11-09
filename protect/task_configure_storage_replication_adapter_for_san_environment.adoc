@@ -1,0 +1,72 @@
+---
+permalink: protect/task_configure_storage_replication_adapter_for_san_environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez configurer les systèmes de stockage avant d"exécuter Storage Replication adapter \(SRA\) pour site Recovery Manager \(SRM\).' 
+---
+= Configuration de Storage Replication adapter pour un environnement SAN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez configurer les systèmes de stockage avant d'exécuter Storage Replication adapter (SRA) pour site Recovery Manager (SRM).
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir installé les programmes suivants sur le site protégé et le site de reprise :
+
+* SRM
++
+La documentation relative à l'installation de SRM est disponible sur le site VMware.
+
++
+https://www.vmware.com/support/pubs/srm_pubs.html["Documentation VMware site Recovery Manager"]
+
+* SRA
++
+L'adaptateur est installé sur SRM.
+
+
+
+*Étapes*
+
+. Vérifiez que les hôtes ESXi principaux sont connectés aux LUN du système de stockage principal du site protégé.
+. Vérifiez que LES LUN sont dans des igroups qui ont `ostype` Option définie sur _VMware_ sur le système de stockage principal.
+. Vérifier que les hôtes ESXi du site de reprise disposent d'une connectivité FC ou iSCSI appropriée vers la machine virtuelle de stockage (SVM). Les hôtes ESXi du site secondaire doivent avoir accès au système de stockage du site secondaire, de même que les hôtes ESXi du site principal doivent avoir accès au stockage du site principal.
++
+Pour ce faire, vous pouvez vérifier que les hôtes ESXi disposent de LUN locales connectées sur la SVM ou à l'aide de `fcp show initiators` commande ou le `iscsi show initiators` Commande sur les SVM. Vérifiez l'accès LUN pour les LUN mappées dans ESXi afin de vérifier la connectivité FC et iSCSI.
+
+
+
+
+
+== Configuration de Storage Replication adapter pour un environnement NAS
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir installé les programmes suivants sur le site protégé et le site de reprise :
+
+* SRM
++
+La documentation relative à l'installation de SRM est disponible sur le site de VMware.
+
++
+https://www.vmware.com/support/pubs/srm_pubs.html["Documentation VMware site Recovery Manager"]
+
+* SRA
++
+L'adaptateur est installé sur SRM et le serveur SRA.
+
+
+
+*Étapes*
+
+. Vérifiez que les datastores du site protégé contiennent des machines virtuelles enregistrées auprès de vCenter Server.
+. Vérifier que les hôtes ESXi du site protégé ont monté les volumes NFS exportés depuis la machine virtuelle de stockage (SVM).
+. Vérifiez que les adresses valides telles que l'adresse IP, le nom d'hôte ou le FQDN sur lequel les exportations NFS sont présentes sont spécifiées dans le champ *NFS Addresses* lors de l'utilisation de l'assistant Array Manager pour ajouter des matrices à SRM.
+. Utilisez le `ping` Commande sur chaque hôte ESXi du site de reprise pour vérifier que l'hôte dispose d'un port VMkernel qui peut accéder aux adresses IP utilisées pour servir les exportations NFS à partir du SVM.
+
+
+https://mysupport.netapp.com/site/global/dashboard["Support NetApp"]

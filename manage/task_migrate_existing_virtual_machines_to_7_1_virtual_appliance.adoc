@@ -1,0 +1,30 @@
+---
+permalink: manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous utilisez la dernière version des outils ONTAP pour VMware vSphere, Il convient ensuite de migrer vos machines virtuelles provisionnées avec les mesures de qualité de service MaxThroughput OU MaxThroughput IOPS (MAXTHROUGHPUT Mbps) vers les nouveaux datastores VVol provisionnés avec les mesures de QoS « Max IOPS » de la dernière version des outils ONTAP.' 
+---
+= Migration de machines virtuelles avec des profils de fonctionnalités de stockage plus anciens
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez la dernière version des outils ONTAP pour VMware vSphere, Ensuite, il vous faut migrer vos machines virtuelles provisionnées avec les mesures de QoS `MoxThroughput MBPS' ou '`MaxThroughput IOPS''' aux nouveaux datastores VVol qui sont provisionnés avec les mesures de qualité de service '`max IOPS' de la dernière version des outils ONTAP.
+
+*À propos de cette tâche*
+
+Avec la dernière version des outils ONTAP, vous pouvez configurer les metrics de qualité de service pour chaque machine virtuelle ou disque de machine virtuelle (VMDK). Les metrics de qualité de service étaient précédemment appliquées au niveau du volume ONTAP FlexVol et étaient partagées par toutes les machines virtuelles ou les VMDK provisionnés sur ce volume FlexVol.
+
+Depuis la version 7.2 des outils ONTAP, les metrics de qualité de service d'une machine virtuelle ne sont pas partagées avec d'autres machines virtuelles.
+
+
+NOTE: Vous ne devez pas modifier la stratégie de stockage de VM existante, car les machines virtuelles risquent de ne pas être compatibles.
+
+*Étapes*
+
+. Créez des datastores vVvols en utilisant un nouveau profil de capacité de stockage avec la valeur "tax IOPS" requise.
+. Créez une règle de stockage des machines virtuelles, puis associez-la à celle du nouveau profil de capacité de stockage.
+. Migrez les machines virtuelles existantes vers les nouveaux datastores VVol en utilisant la nouvelle politique de stockage de VM.
+

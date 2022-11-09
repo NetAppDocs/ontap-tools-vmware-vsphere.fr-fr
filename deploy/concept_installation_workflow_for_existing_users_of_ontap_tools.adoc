@@ -1,0 +1,55 @@
+---
+permalink: deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html 
+sidebar: sidebar 
+keywords:  
+summary: Les versions 9.x des outils ONTAP pour VMware vSphere sont prises en charge et permettent la mise à niveau sans déplacement vers la dernière version. 
+---
+= Workflow de déploiement pour les utilisateurs existants des outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les versions 9.x des outils ONTAP pour VMware vSphere sont prises en charge et permettent la mise à niveau sans déplacement vers la dernière version.
+
+Les versions précédentes d'applications individuelles, telles que Virtual Storage Console 6.x, Storage Replication adapter 2.x, 3.x, 4.x et VASA Provider 6.x, utilisent un processus différent. Si votre configuration comprend des versions héritées de VSC ou VASA Provider ou SRA, vous devez effectuer les opérations suivantes :
+
+. Déployez la dernière version des outils ONTAP.
+. Migrer toutes les données de configuration existantes.
++
+Les données de configuration incluent des informations d'identification du système de stockage et des préférences disponibles dans le `kaminoprefs.xml` et `vscPreferences.xml` fichiers.
+
+
+
+link:../configure/reference_set_ipv4_or_ipv6.html["Définissez IPv4 ou IPv6 à l'aide du fichier de préférences"]
+
+Dans de nombreux cas, vous n'avez peut-être pas besoin de migrer les données de configuration. Toutefois, si vous avez précédemment personnalisé les fichiers de préférences, il est préférable de les vérifier et d'apporter des modifications similaires aux outils ONTAP récemment déployés. Vous pouvez ajouter les systèmes de stockage aux nouveaux outils ONTAP déployés et spécifier les identifiants au fur et à mesure de leur ajout.
+
+Si vous effectuez une mise à niveau à partir de VASA Provider 6.X, vous devez annuler l'enregistrement de VASA Provider avant la mise à niveau. Pour plus de détails, consultez la documentation de la version actuelle.
+
+Si vous effectuez une mise à niveau depuis SRA 4.0 ou version antérieure :
+
+* Si vous utilisez SRA 4.0P1, vous devez d'abord effectuer une mise à niveau vers SRA9.6, puis effectuer une mise à niveau sur place de la version SRA 9.6. Vous pouvez effectuer une mise à niveau vers la dernière version des outils ONTAP.
++
+link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Passez à la dernière version des outils ONTAP"]
+
+* Si vous utilisez SRA 2.1 ou 3.0, notez d'abord les informations de configuration du site existant.
++
+_Guide d'installation et de configuration de Storage Replication adapter 4.0 pour ONTAP_ contient les instructions détaillées dans la section « Présentation de la mise à niveau ». Ces versions de SRA sont également utilisées du fournisseur VASA. Vous devez donc annuler l'enregistrement de VASA Provider, puis déployer la dernière version des outils ONTAP. Version précédente du serveur (`.ova`) peut être supprimé une fois la mise à niveau terminée.
+
+
+
+Pour toute mise à niveau SRA, le logiciel SRA (l'adaptateur sur le serveur site Recovery Manager, installé par le `.msi` Le fichier) doit être supprimé du serveur site Recovery Manager. Vous pouvez utiliser le panneau de configuration du système Windows pour désinstaller le logiciel, puis installer le dernier logiciel SRA sur le serveur SRA à l'aide de `.msi` fichier.
+
+Si vous disposez de VASA Provider, alors après la mise à niveau à partir d'une configuration existante, vous devez configurer la taille de mémoire de vos outils ONTAP de 12 Go à l'aide de l' `Edit Settings` option. Vous devez également modifier la réservation de mémoire virtuelle. La machine virtuelle doit être mise hors tension pour modifier la taille de la mémoire.
+
+Si vous disposez de la version 7.2 ou 7.2.1 de l'appliance virtuelle pour VSC, VASA Provider et SRA, vous ne pouvez pas directement mettre à niveau vers 9.7P1 ou une version ultérieure de l'appliance unifiée. Vous devez d'abord mettre à niveau votre configuration existante vers la version 9.7 de l'appliance virtuelle, puis effectuer une mise à niveau vers la dernière version.
+
+Pour effectuer une mise à niveau vers les outils ONTAP 9.10, vous devez exécuter l'appliance virtuelle 9.7P1 ou une version ultérieure. La mise à niveau depuis une version antérieure à 9.7P1 de l'appliance virtuelle n'est pas prise en charge.
+
+Si vous allez déployer la dernière version des outils ONTAP, vous devez voir la rubrique `Requirements for deploying the ONTAP tools.` Le sujet `Upgrading to the latest release of ONTAP tools` possède des informations sur la réalisation d'une mise à niveau sur place.
+
+*Informations connexes*
+
+https://mysupport.netapp.com/site/tools[]

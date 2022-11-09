@@ -1,0 +1,63 @@
+---
+permalink: configure/task_enable_datastore_mounting_across_different_subnets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les outils ONTAP pour les fichiers de préférences VMware vSphere. Si vous ne modifiez pas le fichier de préférences, le provisionnement des datastores échoue car Virtual Storage Console \(VSC\) ne peut pas monter le datastore.' 
+---
+= Activez le montage du datastore sur différents sous-réseaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les outils ONTAP pour les fichiers de préférences VMware vSphere. Si vous ne modifiez pas le fichier de préférences, le provisionnement des datastores échoue car Virtual Storage Console (VSC) ne peut pas monter le datastore.
+
+*À propos de cette tâche*
+
+Lorsque le provisionnement du datastore échoue, VSC consigne les messages d'erreur suivants :
+
+`Impossible de continuer. Aucune adresse ip n'a été trouvée lors du référencement croisé des adresses ip du noyau et des adresses IP sur le contrôleur.
+
+Impossible de trouver un réseau correspondant au volume de montage NFS sur ces hôtes.`
+
+*Étapes*
+
+. Connectez-vous à votre instance de vCenter Server.
+. Lancez la console de maintenance à l'aide de votre machine virtuelle d'appliance unifiée.
++
+link:reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html["Console de maintenance des outils ONTAP pour VMware vSphere"]
+
+. Entrez `4` Pour accéder à l'option support and Diagnostics.
+. Entrez `2` Pour accéder à l'option Access diagnostic Shell.
+. Entrez `vi /opt/netapp/vscserver/etc/kamino/kaminoprefs.xml` pour mettre à jour le `kaminoprefs.xml` fichier.
+. Mettez à jour le `kaminoprefs.xml` fichier.
++
+|===
+
+
+| *Si vous utilisez...* | *Faites cela...* 
+
+
+ a| 
+ISCSI
+ a| 
+Modifiez la valeur de la clé d'entrée `default.allow.iscsi.mount.networks` De TOUT à la valeur de vos réseaux hôtes VMware ESXi.
+
+
+
+ a| 
+NFS
+ a| 
+Modifiez la valeur de la clé d'entrée `default.allow.nfs.mount.networks` De TOUT à la valeur de vos réseaux hôtes VMware ESXi.
+
+|===
++
+Le fichier de préférences contient des exemples de valeurs pour ces clés de saisie.
+
++
+
+NOTE: La valeur « TOUS » ne signifie pas tous les réseaux. La valeur « TOUS » permet d'utiliser tous les réseaux de correspondance, entre l'hôte et le système de stockage, pour le montage de datastores. Lorsque vous spécifiez des réseaux hôtes, vous ne pouvez activer le montage que sur les sous-réseaux spécifiés.
+
+. Enregistrez et fermez le `kaminoprefs.xml` fichier.
+

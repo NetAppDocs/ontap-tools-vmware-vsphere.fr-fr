@@ -1,0 +1,26 @@
+---
+permalink: protect/concept_migration_of_disaster_recovery_setup_from_windows_to_appliance.html 
+sidebar: sidebar 
+keywords: Migration 
+summary: 'Si vous utilisez le Gestionnaire de reprise sur site Windows \(SRM\) pour la reprise après incident et que vous souhaitez utiliser l"appliance SRM pour la même configuration, vous devez migrer la configuration de la reprise après incident Windows vers la solution SRM basée sur l"appliance.' 
+---
+= Migration de Windows SRM vers l'appliance SRM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez Windows site Recovery Manager (SRM) pour la reprise après incident et que vous souhaitez utiliser l'appliance SRM pour la même configuration, vous devez migrer la configuration de la reprise après incident Windows vers la solution SRM basée sur l'appliance.
+
+Les étapes de la migration de la reprise sur incident sont les suivantes :
+
+. Mise à niveau de vos outils ONTAP existants vers la version 9.7.1.
++
+link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Passez à la dernière version des outils ONTAP"]
+
+. Migration de l'adaptateur de réplication du stockage Windows vers SRA basé sur l'appliance.
+. Migration des données Windows SRM vers l'appliance SRM.
+
+
+Voir https://docs.vmware.com/en/Site-Recovery-Manager/8.2/com.vmware.srm.install_config.doc/GUID-F39A84D3-2E3D-4018-97DD-5D7F7E041B43.html["Migrer de site Recovery Manager for Windows vers site Recovery Manager Virtual Appliance"] pour des étapes détaillées

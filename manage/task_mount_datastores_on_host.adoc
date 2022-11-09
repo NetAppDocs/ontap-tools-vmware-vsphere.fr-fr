@@ -1,0 +1,29 @@
+---
+permalink: manage/task_mount_datastores_on_host.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le montage d"un datastore permet d"accéder au stockage à des hôtes supplémentaires. Après avoir ajouté les hôtes à votre environnement VMware, vous pouvez monter le datastore sur les hôtes supplémentaires.' 
+---
+= Montage du datastore sur des hôtes supplémentaires
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le montage d'un datastore permet d'accéder au stockage à des hôtes supplémentaires. Après avoir ajouté les hôtes à votre environnement VMware, vous pouvez monter le datastore sur les hôtes supplémentaires.
+
+*Ce dont vous aurez besoin*
+
+Vous devez vous assurer que les détails de sous-réseau de tous les réseaux auxquels le ESXi hébergé est connecté sont saisis dans le `Kaminoprefs.xml`.
+
+Reportez-vous à la section activation du montage du datastore sur différents sous-réseaux.
+
+*Étapes*
+
+. Dans la page d'accueil de vSphere client, cliquez sur *hôtes et clusters*.
+. Dans le volet de navigation, sélectionnez le centre de données qui contient l'hôte.
+. Répétez l'étape 2 pour tout hôte supplémentaire.
+. Cliquez avec le bouton droit de la souris sur l'hôte, puis sélectionnez *Outils NetApp ONTAP* > *Mount datastores*.
+. Sélectionnez les datastores à monter, puis cliquez sur *OK*.
+

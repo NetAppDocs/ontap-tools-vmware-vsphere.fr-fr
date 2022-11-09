@@ -1,0 +1,38 @@
+---
+permalink: manage/concept_decide_whether_to_use_this_guide.html 
+sidebar: sidebar 
+keywords: scope of guide 
+summary: 'Ce guide vous aidera à trouver rapidement des informations sur les tâches de provisionnement et d"optimisation du stockage et de surveillance des datastores et des machines virtuelles.' 
+---
+= Choisissez d'utiliser ou non ce guide
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ce guide vous aidera à trouver rapidement des informations sur les tâches de provisionnement et d'optimisation du stockage et de surveillance des datastores et des machines virtuelles.
+
+Les informations de ce guide sont destinées à l'utilisateur VSC, pas à l'administrateur système. Ce guide fournit des informations sur toutes les tâches de post-déploiement des outils ONTAP® pour VMware vSphere.
+
+* Conditions d'utilisation de ce guide*
+
+Ce guide est basé sur les hypothèses suivantes :
+
+* Vous avez installé et configuré VSC.
+* Les fonctions dont vous avez besoin pour les tâches que vous effectuez ont été installées.
++
+Peut-être le plug-in NFS pour VMware VAAI, VASA Provider pour ONTAP et Storage Replication adapter.
+
+* VSC a découvert tous les systèmes de stockage que vous utilisez.
+* Un contrôle d'accès basé sur des rôles (RBAC) a été configuré pour vCenter Server et ONTAP.
++
+Si vous ne disposez pas de tous les privilèges et autorisations nécessaires, la tâche que vous exécutez peut sembler fonctionner au fur et à mesure que vous passez par l'assistant, mais que vous n'avez toujours pas réussi à terminer.
+
+
+
+La plupart des tâches présentées dans ce guide nécessitent également qu'une seule opération à la fois soit effectuée sur le datastore cible ou la machine virtuelle.
+
+Pour toute question sur VSC ou pour partager des informations avec d'autres utilisateurs VSC, rendez-vous sur le forum NetApp Communities.
+
+https://community.netapp.com/t5/Products-and-Services/ct-p/products-and-solutions["Communauté NetApp : Virtual Storage Console pour VMware vSphere"]

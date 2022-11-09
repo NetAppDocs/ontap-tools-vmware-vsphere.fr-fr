@@ -1,0 +1,23 @@
+---
+permalink: concepts/concept_manage_disaster_recovery_setup_using_srm.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez créer et gérer la configuration de reprise sur incident dans votre serveur vCenter avec le Gestionnaire de récupération sur site \(SRM\) de VMware.' 
+---
+= Configurer la configuration de la reprise après incident
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer et gérer la configuration de la reprise après incident dans vCenter Server avec SRM (site Recovery Manager) de VMware.
+
+Vasa Provider intègre désormais les fonctionnalités de Storage Replication adapter (SRA). Si vous avez configuré des datastores vvols dans votre datacenter, alors pour la restauration de datastores vvols, il n'est pas nécessaire d'installer SRA séparément pour la reprise après incident. Dans site Recovery Manager (SRM), vous devez coupler les sites protégés et de reprise. Une fois le couplage du site effectué, la partie suivante de la configuration SRM implique la configuration d'une paire de matrices qui permet à SRM de communiquer avec le système de stockage pour détecter les périphériques et la réplication des périphériques. Avant de pouvoir configurer la paire de matrices, vous devez d'abord créer une paire de sites dans SRM.
+
+Cette version des outils ONTAP vous offre la possibilité d'utiliser la configuration SnapMirror synchrone pour la reprise après incident.
+
+
+NOTE: VMware site Recovery Manager (SRM) n'utilise pas SRA pour la gestion de la reprise après incident des datastores vVvols. Au contraire, VASA Provider est utilisé pour la réplication et le contrôle de basculement des datastores vvols sur des clusters ONTAP 9.7 et versions ultérieures.
+
+link:../protect/task_enable_storage_replication_adapter.html["Activez Storage Replication adapter"]

@@ -1,0 +1,41 @@
+---
+permalink: configure/task_enable_vasa_provider_for_configuring_virtual_datastores.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La fonctionnalité VASA Provider est activée par défaut dans les outils ONTAP pour VMware vSphere. Vous pouvez configurer des datastores VMware Virtual volumes \(vVvols\) avec des profils de capacité de stockage requis pour chaque datastore vvols.' 
+---
+= Activez VASA Provider pour la configuration des datastores virtuels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fonctionnalité VASA Provider est activée par défaut dans les outils ONTAP pour VMware vSphere. Il est possible de configurer des datastores VMware Virtual volumes (vvols) avec les profils de capacité de stockage requis pour chaque datastore vvols.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir configuré votre instance vCenter Server et ESXi.
+* Vous devez avoir déployé des outils ONTAP .
+
+
+*À propos de cette tâche*
+
+Si la fonctionnalité VASA Provider est désactivée avant la mise à niveau vers la version 9.7.1 des outils ONTAP , la fonctionnalité VASA Provider reste désactivée après la mise à niveau. Cette version vous permet d'activer la fonctionnalité de réplication de vvols pour les datastores vvols.
+
+*Étapes*
+
+. Connectez-vous à l'interface utilisateur Web de VMware vSphere.
+. Dans vSphere client, cliquez sur *Menu* > *ONTAP Tools Console*.
+. Cliquez sur *Paramètres*.
+. Cliquez sur *gérer les fonctionnalités* dans l'onglet Paramètres d'administration.
+. Dans la boîte de dialogue gérer les fonctionnalités, sélectionnez l'extension VASA Provider à activer.
+. Si vous souhaitez utiliser la capacité de réplication pour les datastores vVvols, utilisez le bouton bascule *Activer la réplication vVvols*.
+. Entrez l'adresse IP des outils ONTAP et le mot de passe administrateur, puis cliquez sur *appliquer*.
++
+
+NOTE: Si l'état de VASA Provider s'affiche comme « hors ligne » même après l'activation de VASA Provider extesnsion, vérifiez alors le fichier /var/log/vmware/vmware-sps/sps.log à la recherche d'éventuelles erreurs de connexion avec VASA Provider ou redémarrez le service « vmware-sps ».
+
+
+
+Si vous utilisez ONTAP 9.6 ou des clusters antérieurs, vous devez enregistrer OnCommand API Services avec VASA Provider pour obtenir les détails des datastores vvols et des machines virtuelles utilisées dans les rapports de datastore SAN vVols VM et SAN vvols. Mais si vous utilisez ONTAP 9.7 ou version ultérieure, vous n'avez pas besoin d'enregistrer les services d'API OnCommand auprès de VASA Provider.

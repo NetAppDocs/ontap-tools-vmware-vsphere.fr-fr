@@ -1,0 +1,16 @@
+---
+permalink: configure/concept_workflow_for_configuring_the_unified_appliance.html 
+sidebar: sidebar 
+keywords:  
+summary: La configuration des outils ONTAP implique de configurer vos systèmes de stockage, de créer un profil de fonctionnalité de stockage, de provisionner le datastore et, éventuellement, de configurer SRA pour la reprise après incident. 
+---
+= Workflow de configuration des outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuration des outils ONTAP implique de configurer vos systèmes de stockage, de créer un profil de fonctionnalité de stockage, de provisionner le datastore et, éventuellement, de configurer SRA pour la reprise après incident.
+
+image::../media/use_case_vsc_users.gif[Workflow de configuration des outils ONTAP]

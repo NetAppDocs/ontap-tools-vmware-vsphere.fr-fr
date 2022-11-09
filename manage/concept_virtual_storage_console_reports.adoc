@@ -1,0 +1,164 @@
+---
+permalink: manage/concept_virtual_storage_console_reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser le menu Rapports de la console des outils ONTAP pour afficher des rapports prédéfinis pour tous les datastores gérés par une instance VSC sélectionnée dans un serveur vCenter particulier. Vous pouvez effectuer des opérations telles que le tri et l"exportation de rapports.' 
+---
+= Présentation des rapports ONTAP Tools datastore et vVols
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le menu *Reports* de la console des outils ONTAP pour afficher des rapports prédéfinis pour tous les datastores gérés par une instance VSC sélectionnée dans un serveur vCenter particulier. Vous pouvez effectuer des opérations telles que le tri et l'exportation de rapports.
+
+Les rapports affichent des informations détaillées sur les datastores et les machines virtuelles, qui vous permettent d'examiner et d'identifier les problèmes potentiels liés aux datastores et aux machines virtuelles de votre serveur vCenter
+
+Vous pouvez afficher, trier et exporter des rapports.
+
+Virtual Storage Console (VSC) propose les rapports prédéfinis suivants :
+
+* Rapport datastore
+* Rapport de machine virtuelle
+* Rapport de datastore vVvols
+* Rapport machine virtuelle vVvols
+
+
+
+
+== Rapports sur les datastores
+
+Les rapports datastore fournissent des informations détaillées sur les datastores traditionnels et les machines virtuelles créées sur ces datastores.
+
+Le tableau de bord traditionnel vous permet d'examiner et d'identifier les problèmes potentiels avec les datastores et les machines virtuelles de votre serveur vCenter. Vous pouvez afficher, trier et exporter des rapports. Le rapport sur les données des datastores traditionnels et des machines virtuelles est fourni par vCenter Server. Toutefois, ONTAP a fourni des mesures telles que la latence, le débit et les IOPS, grâce à l'introduction de la prise en charge des datastores pris en charge par les data stores pris en charge par FlexGroup.
+
+
+NOTE: Le contrôle des fichiers n'est pas pris en charge pour les datastores FlexGroup configurés sur des SVM (Direct Storage Virtual machines).
+
+Le datastore fournit les rapports prédéfinis suivants :
+
+* Rapport datastore
+* Rapport de machine virtuelle
+
+
+*Rapport datastore*
+
+Le menu Rapport datastore fournit des informations sur les paramètres suivants pour les datastores :
+
+* Nom du datastore
+* Type de datastore : NFS ou VMFS
+* Style de volume
++
+Le style de volume peut être un volume FlexVol ou FlexGroup.
+
+* Espace libre
+* Espace utilisé
+* Espace total
+* Pourcentage d'espace utilisé
+* Pourcentage d'espace disponible
+* D'IOPS
++
+Le rapport affiche les opérations d'E/S par seconde du datastore.
+
+* Latence
++
+Le rapport affiche les informations de latence pour le datastore.
+
++
+Vous pouvez également vérifier l'heure à laquelle le rapport a été généré. Le menu Rapport datastore vous permet d'organiser le rapport selon vos besoins, puis d'exporter le rapport organisé à l'aide du bouton *Exporter vers CSV*. Les noms de datastores du rapport sont des liens qui se trouvent dans l'onglet Monitor du datastore sélectionné, dans lequel vous pouvez afficher les mesures de performances du datastore.
+
+
+
+*Rapport de machine virtuelle*
+
+Le menu Virtual machine Report fournit les mesures de performances de toutes les machines virtuelles qui utilisent des datastores provisionnés par VSC pour un serveur vCenter sélectionné. Les indicateurs de machine virtuelle affichés dans les rapports de machine virtuelle sont des données historiques collectées toutes les 30 minutes pour les machines virtuelles sur des datastores traditionnels. La « dernière heure d'actualisation » et la « prochaine heure d'actualisation » sont ajoutées au tableau pour fournir des détails sur le moment où les données ont été collectées et quand sera la prochaine collecte de données.
+
+* Nom de la machine virtuelle
+* Nom du datastore
+* Style de volume
++
+Le style de volume peut être un volume FlexVol ou FlexGroup.
+
+* Source
++
+La source permettant de collecter des détails sur la machine virtuelle peut être ONTAP ou vCenter Server.
+
+* Latence
++
+Le rapport affiche la latence des machines virtuelles sur tous les datastores associés aux machines virtuelles.
+
+* D'IOPS
+* Débit
+* De la capacité
++
+Le rapport affiche la valeur de la capacité engagée pour une machine virtuelle.
+
+* Hôte
++
+Le rapport affiche les systèmes hôtes sur lesquels la machine virtuelle est disponible.
+
+* Continuité
++
+Le rapport indique l'heure à laquelle la machine virtuelle est mise sous tension et disponible sur un hôte ESXi.
+
+* État de l'alimentation
++
+Le rapport indique si la machine virtuelle est sous tension ou hors tension.
+
+
+
+Chaque nom de machine virtuelle dans le rapport est un lien vers l'onglet Monitor de la machine virtuelle sélectionnée. Vous pouvez trier le rapport de la machine virtuelle selon vos besoins et exporter le rapport dans un fichier .CSV, puis enregistrer le rapport sur votre système local. L'horodatage du rapport est également ajouté au rapport enregistré.
+
+Pour les machines virtuelles qui sont sauvegardées par des volumes FlexGroup, lorsque la nouvelle machine virtuelle est mise sous tension, les fichiers sont enregistrés pour surveillance sur ONTAP. Les mesures historiques de latence, de débit et d'IOPS sont obtenues lors de l'accès aux rapports des machines virtuelles à partir de ONTAP.
+
+
+
+== Rapports vVols
+
+Les rapports vvols affichent des informations détaillées sur les datastores VMware Virtual volumes (vvols) et les machines virtuelles qui sont créées sur ces datastores. Le tableau de bord vVvols vous permet d'examiner et d'identifier les problèmes potentiels avec les datastores vvols et les machines virtuelles de votre serveur vCenter.
+
+Vous pouvez afficher, organiser et exporter des rapports. Les données pour les datastores vvols et les machines virtuelles sont fournies par ONTAP avec OnCommand API Services.
+
+VVvols fournit les rapports prédéfinis suivants :
+
+* Rapport de datastore vVvols
+* Rapport VM vVvols
+
+
+*VVvols datastore Report*
+
+Le menu vVvols datastore Report fournit des informations sur les paramètres suivants pour les datastores :
+
+* Nom du datastore vVols
+* Espace libre
+* Espace utilisé
+* Espace total
+* Pourcentage d'espace utilisé
+* Pourcentage d'espace disponible
+* D'IOPS
+* Les metrics de performance de latence sont disponibles pour les datastores NFS basés sur ONTAP 9.8 et versions ultérieures. Vous pouvez également vérifier l'heure à laquelle le rapport a été généré. Le menu de rapport de datastore vVvols vous permet d'organiser le rapport selon vos besoins, puis d'exporter le rapport organisé à l'aide du bouton *Exporter vers CSV*. Chaque nom de datastore SAN vVols du rapport est un lien qui navigue vers l'onglet Monitor du datastore SAN vVvols sélectionné, que vous pouvez utiliser pour afficher les metrics de performances.
+
+
+*VVvols Virtual machine Report*
+
+Le menu Rapport récapitulatif de machine virtuelle de vvols fournit les indicateurs de performance de toutes les machines virtuelles qui utilisent les datastores SAN vvols qui sont provisionnés par VASA Provider pour ONTAP pour un serveur vCenter sélectionné. Les indicateurs de machine virtuelle affichés dans les rapports VM sont des données historiques collectées toutes les 10 minutes pour les machines virtuelles sur les datastores vVvols. La « dernière heure d'actualisation » et la « prochaine heure d'actualisation » sont ajoutées au tableau pour fournir des informations sur la date de collecte des données et la date de la prochaine collecte des données.
+
+* Nom de la machine virtuelle
+* De la capacité
+* Continuité
+* D'IOPS
+* Débit
++
+Le rapport indique si la machine virtuelle est sous tension ou hors tension.
+
+* Espace logique
+* Hôte
+* État de l'alimentation
+* Latence
++
+Le rapport affiche la latence des machines virtuelles sur tous les datastores vvols qui sont associés aux machines virtuelles.
+
+
+
+Chaque nom de machine virtuelle dans le rapport est un lien vers l'onglet Monitor de la machine virtuelle sélectionnée. Vous pouvez organiser le rapport de la machine virtuelle en fonction de vos besoins, exportez-le dans `.CSV` formatez, puis enregistrez le rapport sur votre système local. L'horodatage du rapport est ajouté au rapport enregistré.

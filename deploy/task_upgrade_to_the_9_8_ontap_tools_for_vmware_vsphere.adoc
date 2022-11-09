@@ -1,0 +1,78 @@
+---
+permalink: deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: Virtual Storage Console, Storage Replication Adapter 
+summary: Vous pouvez effectuer une mise à niveau sans déplacement des données vers la dernière version des outils ONTAP à partir de votre configuration existante 9.7.1 ou ultérieure en suivant les instructions fournies ici. 
+---
+= Passez à la dernière version des outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer une mise à niveau sans déplacement des données vers la dernière version des outils ONTAP à partir de la version 9.7P1 existante ou ultérieure en suivant les instructions fournies ici.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir téléchargé le fichier _.iso_ pour la dernière version des outils ONTAP.
+* Vous devez avoir réservé au moins 12 Go de RAM pour que les outils ONTAP fonctionnent de façon optimale après la mise à niveau.
+* Vous devez nettoyer le cache du navigateur vSphere client.
++
+link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["Effacez les packages de plug-in téléchargés dans le cache vSphere"]
+
+
+
+Après la mise à niveau, l'état de VASA Provider depuis le déploiement existant est conservé. Vous devez activer ou désactiver manuellement VASA Provider en fonction de vos besoins après la mise à niveau. Cependant, il est recommandé d'activer VASA Provider, même si VMware Virtual volumes (vvols) n'est pas utilisé, car il permet de gérer les profils de capacité de stockage pour le provisionnement classique des datastores, et les alarmes de stockage.
+
+
+NOTE: Vous pouvez effectuer une mise à niveau sans déplacement des données vers la dernière version des outils ONTAP uniquement à partir des versions 9.7P1 et ultérieures. Lorsque vous effectuez une mise à niveau vers la version 9.7.1 des outils ONTAP et que vous souhaitez utiliser la réplication vvols, vous devrez configurer un autre serveur vCenter avec les outils ONTAP avec site Recovery Manager (SRM) installé.
+
+*Étapes*
+
+. Montez le fichier _.iso_ téléchargé sur les outils ONTAP :
++
+.. Cliquez sur *Modifier les paramètres* > *lecteur DVD/CD-ROM*.
+.. Sélectionnez le fichier *datastore ISO* dans la liste déroulante.
+.. Recherchez et sélectionnez le fichier _.iso_ téléchargé, puis cochez la case *se connecter à la mise sous tension*.
+
+
+. Accédez à l'onglet Récapitulatif des outils ONTAP déployés.
+. Cliquez sur *image:../media/launch_maintenance_console.gif[""]* pour démarrer la console de maintenance.
+. À l'invite "Menu principal", entrez option `2` Pour *Configuration du système*, puis entrez option `8` Pour *Upgrade*.
++
+Une fois la mise à niveau terminée, les outils ONTAP redémarre. Les outils ONTAP sont enregistrés sur le serveur vCenter avec la même adresse IP qu'avant la mise à niveau.
+
+. Si vous souhaitez que les outils ONTAP soient enregistrés auprès du serveur vCenter avec l'adresse IPv6, vous devez effectuer les opérations suivantes :
++
+.. Annuler l'inscription des outils ONTAP.
+.. Enregistrez l'adresse IPv6 des outils ONTAP dans vCenter Server à l'aide de la page *Inscription*.
+.. Régénérer les certificats VSC et VASA Provider après l'enregistrement.
+
+
++
+
+IMPORTANT: IPv6 est pris en charge uniquement avec vCenter Server 6.7 et versions ultérieures.
+
+. Déconnectez-vous puis reconnectez-vous au client vSphere pour afficher les outils ONTAP déployés.
++
+.. Déconnectez-vous de votre client Web vSphere ou de vSphere client existant et fermez la fenêtre.
+.. Connectez-vous au client vSphere.
++
+La mise à jour du plug-in peut prendre quelques minutes dans le client vSphere.
+
+
+
+
+
+[NOTE]
+====
+* Si vous procédez à la mise à niveau de la version 7.0 des outils ONTAP vers la dernière version des outils ONTAP, vous devez d'abord créer des profils de capacité de stockage avant de tenter de modifier une stratégie de stockage de machine virtuelle existante, ou si vous obtenez une erreur indiquant que les valeurs sont incorrectes ou manquantes.
+* Si vous effectuez une mise à niveau d'une version antérieure vers la dernière version des outils ONTAP, vous trouverez que le `vvol.rebalance.threshold` la propriété est manquante dans le fichier `vvol.properties.
++
+La valeur par défaut de la propriété est définie sur 85 %.
+
+* Après avoir effectué la mise à niveau vers la dernière version d'OTV(9.10) avec FIPS activé mais que vous disposez d'une version plus ancienne de vCenter où FIPS n'est pas pris en charge, le déploiement fonctionnera toujours. Cependant, si vous mettez à niveau vCenter vers la dernière version prise en charge par FIPS et que vous disposez d'une version antérieure des outils ONTAP, le déploiement ne fonctionnera que si FIPS est désactivé sur vCenter.
+
+
+====

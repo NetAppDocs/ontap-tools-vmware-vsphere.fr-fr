@@ -1,0 +1,52 @@
+---
+permalink: deploy/task_upgrade_storage_replication_adapter.html 
+sidebar: sidebar 
+keywords: SRA, upgrade 
+summary: 'Après la mise à niveau des outils ONTAP ou le déploiement de la dernière version des outils ONTAP, vous devez mettre à niveau votre Storage Replication adapter \(SRA\).' 
+---
+= Mettre à niveau Storage Replication adapter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après la mise à niveau des outils ONTAP ou le déploiement de la dernière version des outils ONTAP, vous devez mettre à niveau Storage Replication adapter (SRA).
+
+*Étape*
+
+. Vous devez effectuer la mise à niveau vers la dernière carte à l'aide de l'une des procédures suivantes en fonction de votre adaptateur :
++
+|===
+
+
+| *Pour...* | *Effectuez les opérations suivantes...* 
+
+
+ a| 
+Répertoires de base
+ a| 
+.. Connectez-vous à SRM Windows Server.
+.. Désinstallez le programme d'installation SRA _.msi_ existant de SRM Server.
+.. Définissez le chemin du système sur `C:\Program Files\VMware\VMware vCenter Site Recovery Manager\external\perl\c\bin`
+.. Double-cliquez sur le programme d'installation _.msi_ que vous avez téléchargé sur le site du support NetApp et suivez les instructions à l'écran.
+.. Entrez l'adresse IP et le mot de passe de vos outils ONTAP déployés .
+
+
+
+
+ a| 
+Adaptateur basé sur l'appliance
+ a| 
+.. Connectez-vous à la page gestion de l'appliance SRM.
+.. Cliquez sur *Storage Replication adapter*, puis sur *Delete* pour supprimer le SRA existant.
+.. Cliquez sur *Nouvelle carte* > *Parcourir*.
+.. Cliquez sur pour sélectionner le fichier tarball de SRA que vous avez téléchargé depuis le site du support NetApp, puis cliquez sur *Install*.
+.. Configurez SRA sur l'appliance SRM.
++
+link:../protect/task_configure_sra_on_srm_appliance.html["Configuration de SRA sur l'appliance SRM"]
+
+
+
+|===
+

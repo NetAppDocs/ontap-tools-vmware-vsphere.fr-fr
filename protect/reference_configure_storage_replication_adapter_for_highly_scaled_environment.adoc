@@ -1,0 +1,76 @@
+---
+permalink: protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez configurer les intervalles d"expiration du stockage en fonction des paramètres recommandés pour l"adaptateur de réplication du stockage \(SRA\) afin de réaliser de manière optimale dans les environnements à grande échelle.' 
+---
+= Configurer Storage Replication adapter pour un environnement à grande échelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez configurer les intervalles d'expiration du stockage en fonction des paramètres recommandés pour Storage Replication adapter (SRA) afin de bénéficier de performances optimales dans les environnements à grande échelle.
+
+
+
+== Paramètres du fournisseur de stockage
+
+Vous devez définir les valeurs de délai suivantes sur SRM pour l'environnement mis à l'échelle :
+
+|===
+
+
+| *Paramètres avancés* | *Valeurs de temporisation* 
+
+
+ a| 
+`StorageProvider.resignatureTimeout`
+ a| 
+Augmentez la valeur du réglage de 900 à 12000 secondes.
+
+
+
+ a| 
+`storageProvider.hostRescanDelaySec`
+ a| 
+60
+
+
+
+ a| 
+`storageProvider.hostRescanRepeatCnt`
+ a| 
+20
+
+
+
+ a| 
+`storageProvider.hostRescanTimeoutSec`
+ a| 
+Définir une valeur élevée (par exemple : 99999)
+
+|===
+Vous devez également activer le `StorageProvider.autoResignatureMode` option.
+
+Pour plus d'informations sur la modification des paramètres du fournisseur de stockage, reportez-vous à la documentation VMware.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Documentation VMware vSphere : modifiez les paramètres du fournisseur de stockage"]
+
+
+
+== Paramètres de stockage
+
+Vous devez définir la valeur du `storage.commandTimeout` et `storage.maxConcurrentCommandCnt` intervalle d'expiration pour les environnements hautement évolutifs jusqu'à 99,999 secondes.
+
+
+NOTE: L'intervalle de temporisation spécifié est la valeur maximale. Il n'est pas nécessaire d'attendre que le délai maximum soit atteint. La plupart des commandes se terminent dans l'intervalle maximal défini de temps d'attente.
+
+Vous devez également définir le délai maximum pour que SRA effectue une seule opération dans le fichier vvol.properties : offtap.operation.timeout.period.seconds=86400.
+
+https://kb.netapp.com/app/answers/answer_view/a_id/1001111["Réponse de la base de connaissances NetApp 1001111 : Guide de dimensionnement de NetApp Storage Replication adapter 4.0/7.X pour ONTAP"]
+
+La documentation VMware sur la modification des paramètres du fournisseur de SAN contient davantage d'informations.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentation de VMware site Recovery Manager : modifiez les paramètres de stockage"]

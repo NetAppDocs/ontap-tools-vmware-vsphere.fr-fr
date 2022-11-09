@@ -1,0 +1,12 @@
+---
+permalink: deploy/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Guide de déploiement et de configuration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

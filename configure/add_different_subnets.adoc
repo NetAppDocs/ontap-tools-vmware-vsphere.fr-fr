@@ -1,0 +1,24 @@
+---
+permalink: configure/add_different_subnets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez désormais ajouter des sous-réseaux différents pour le montage de datastore à l"aide de l"interface des outils ONTAP.' 
+---
+= Ajouter des sous-réseaux différents
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser l'interface des outils ONTAP ou les API REST pour ajouter différents sous-réseaux d'hôtes ESXi. Cela vous permet d'autoriser ou de limiter les sous-réseaux pour l'opération de montage du datastore après le provisionnement des systèmes de stockage. Si vous n'ajoutez pas de sous-réseaux d'hôtes ESXi, l'outil ONTAP bloque le montage des datastores pour ces sous-réseaux.
+
+*Étapes*
+
+. Connectez-vous à votre instance vCenter Server et accédez aux outils ONTAP.
+. Sur la page d'accueil, cliquez sur *Paramètres* > *gérer l'accès au sous-réseau*.
+. Dans la boîte de dialogue gérer l'accès au sous-réseau, cliquez sur l'option *sélectionné* dans les sous-réseaux autorisés pour l'accès aux sous-réseaux NFS.
+. Entrez les valeurs des sous-réseaux requis, puis cliquez sur *ADD*.
+. Sélectionnez *aucun* ou *sélectionné* pour les sous-réseaux restreints.
+. Répétez les étapes ci-dessus pour l'accès aux sous-réseaux iSCSI, puis cliquez sur *appliquer*.
+

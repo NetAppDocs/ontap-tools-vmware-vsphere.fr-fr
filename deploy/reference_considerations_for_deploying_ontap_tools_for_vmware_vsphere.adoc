@@ -1,0 +1,168 @@
+---
+permalink: deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: Virtual Storage Console,Storage Replication Adapter 
+summary: Avant de déployer les outils ONTAP pour VMware vSphere, il est conseillé de planifier votre déploiement et de choisir comment configurer les outils ONTAP dans votre environnement. 
+---
+= Considérations relatives au déploiement des outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de déployer les outils ONTAP pour VMware vSphere, il est conseillé de planifier votre déploiement et de choisir comment configurer les outils ONTAP dans votre environnement.
+
+Le tableau suivant présente les éléments à prendre en compte avant de déployer les outils ONTAP.
+
+|===
+
+
+| *Considérations* | *Description* 
+
+
+ a| 
+Premier déploiement des outils ONTAP
+ a| 
+Le déploiement des outils ONTAP installe automatiquement les fonctionnalités de VSC.
+
+link:../deploy/concept_deploy_or_upgrade_ontap_tools.html["Déploiement et mise à niveau des outils ONTAP"]
+
+link:../deploy/concept_installation_workflow_for_new_users.html["Flux de travail de déploiement pour les nouveaux utilisateurs des outils ONTAP pour VMware vSphere"]
+
+
+
+ a| 
+Mise à niveau depuis un déploiement VSC existant
+ a| 
+La procédure de mise à niveau depuis un déploiement existant de VSC vers les outils ONTAP dépend de la version de VSC et si vous avez déployé des outils ONTAP. La section flux de travail de déploiement et mise à niveau contient plus d'informations.
+
+link:../deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html["Workflow de déploiement pour les utilisateurs existants des outils ONTAP"]
+
+Meilleures pratiques avant la mise à niveau :
+
+* Vous devez enregistrer des informations sur les systèmes de stockage utilisés et leurs identifiants.
++
+Après la mise à niveau, vérifiez que tous les systèmes de stockage ont été automatiquement découverts et qu'ils disposent des informations d'identification appropriées.
+
+* Si vous avez modifié l'un des rôles VSC standard, vous devez copier ces rôles pour enregistrer vos modifications.
++
+À chaque redémarrage du service VSC, la fonction VSC remplace les rôles standard par défaut.
+
+
+
+
+
+ a| 
+Régénération d'un certificat SSL pour VSC
+ a| 
+Le certificat SSL est automatiquement généré lorsque vous déployez les outils ONTAP. Vous devrez peut-être régénérer le certificat SSL pour créer un certificat spécifique au site.
+
+link:../configure/task_regenerate_an_ssl_certificate_for_vsc.html["Régénérer un certificat SSL pour Virtual Storage Console"]
+
+
+
+ a| 
+Définition des valeurs du serveur VMware ESXi
+ a| 
+Bien que la plupart des valeurs de votre serveur ESXi soient définies par défaut, il est recommandé de vérifier les valeurs. Ces valeurs sont basées sur des tests internes. Selon votre environnement, vous devrez peut-être modifier certaines valeurs pour améliorer les performances.
+
+* link:../configure/task_configure_esx_server_multipathing_and_timeout_settings.html["Configurer les paramètres de chemins d'accès multiples et de délai d'attente du serveur ESXi"]
+* link:../configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html["Valeurs de l'hôte VMware ESXi définies à l'aide des outils ONTAP® pour VMware vSphere"]
+
+
+
+
+ a| 
+Valeurs de temporisation du système d'exploitation invité
+ a| 
+Les scripts d'expiration du délai d'attente du système d'exploitation invité (OS invité) définissent les valeurs d'expiration du délai d'E/S SCSI pour les systèmes d'exploitation invités Linux, Solaris et Windows pris en charge pour fournir un comportement de basculement correct.
+
+|===
+Le tableau ci-dessous présente le besoin pour configurer les outils ONTAP.
+
+|===
+
+
+| *Considérations* | *Description* 
+
+
+ a| 
+Exigences du contrôle d'accès basé sur des rôles (RBAC)
+ a| 
+VSC prend en charge le RBAC de vCenter Server et le RBAC de ONTAP. Compte utilisé pour enregistrer VSC sur vCenter Server (`https://<appliance_ip>:8143/Register.html`) Doit être un administrateur vCenter Server (affecté à l'administrateur vCenter Server ou au rôle d'administrateur). Si vous prévoyez d'exécuter VSC en tant qu'administrateur, vous devez disposer de tous les privilèges et autorisations requis pour toutes les tâches.
+
+Si votre entreprise exige que vous restreignez l'accès aux objets vSphere, vous pouvez créer et attribuer des rôles VSC standard aux utilisateurs pour répondre aux exigences de vCenter Server.
+
+Vous pouvez créer les rôles ONTAP recommandés en utilisant ONTAP System Manager à l'aide du fichier JSON fourni avec les outils ONTAP.
+
+Si un utilisateur tente d'effectuer une tâche sans les privilèges et autorisations appropriés, les options de tâche sont grisées.
+
+* link:../concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html["Rôles standard fournis avec les outils ONTAP"]
+* link:../concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html["Autorisations pour les systèmes de stockage ONTAP et les objets vSphere"]
+
+
+
+
+ a| 
+Version ONTAP
+ a| 
+Vos systèmes de stockage doivent exécuter ONTAP 9.3, 9.5, 9.6, 9.7, 9.8P1 ou une version ultérieure.
+
+
+
+ a| 
+Profils de capacité de stockage
+ a| 
+Pour utiliser des profils de capacité de stockage ou configurer des alarmes, vous devez activer VASA Provider pour ONTAP. Une fois VASA Provider activé, vous pouvez configurer les datastores VMware Virtual volumes (vvols). Vous pouvez également créer et gérer des profils et des alarmes de capacité de stockage. Les alarmes vous avertissent lorsqu'un volume ou un agrégat est à presque pleine capacité ou lorsqu'un datastore n'est plus conforme au profil de capacité de stockage associé.
+
+|===
+
+
+== Autres considérations relatives au déploiement
+
+Vous devez tenir compte de quelques exigences tout en personnalisant les outils ONTAP de déploiement.
+
+
+
+=== Mot de passe utilisateur administrateur de l'appliance
+
+Vous ne devez pas utiliser d'espace dans le mot de passe administrateur.
+
+
+
+=== Identifiants de la console de maintenance de l'appliance
+
+Vous devez accéder à la console de maintenance en utilisant le nom d'utilisateur "maaint". Vous pouvez définir le mot de passe pour l'utilisateur "saint" pendant le déploiement. Vous pouvez utiliser le menu Configuration de l'application de la console de maintenance de vos outils ONTAP pour modifier le mot de passe.
+
+
+
+=== Informations d'identification de l'administrateur vCenter Server
+
+Vous pouvez définir les informations d'identification d'administrateur pour vCenter Server lors du déploiement des outils ONTAP.
+
+Si le mot de passe du serveur vCenter change, vous pouvez mettre à jour le mot de passe de l'administrateur à l'aide de l'URL suivante : ``\https://<IP>:8143/Register.html` Où se trouve l'adresse IP des outils ONTAP que vous fournissez pendant le déploiement.
+
+
+
+=== Adresse IP du serveur vCenter
+
+* Vous devez indiquer l'adresse IP (IPv4 ou IPv6) de l'instance de vCenter Server à laquelle vous souhaitez enregistrer les outils ONTAP.
++
+Le type de certificats VSC et VASA générés dépend de l'adresse IP (IPv4 ou IPv6) que vous avez fournie lors du déploiement. Lors du déploiement des outils ONTAP, si vous n'avez pas saisi de détails IP statiques et si votre DHCP alors le réseau fournit à la fois des adresses IPv4 et IPv6.
+
+* L'adresse IP des outils ONTAP utilisée pour s'enregistrer auprès de vCenter Server dépend du type d'adresse IP du serveur vCenter (IPv4 ou IPv6) saisi dans l'assistant de déploiement.
++
+Les certificats VSC et VASA seront générés à l'aide du même type d'adresse IP utilisé lors de l'enregistrement de vCenter Server.
+
++
+
+NOTE: IPv6 est pris en charge uniquement avec vCenter Server 6.7 et versions ultérieures.
+
+
+
+
+
+=== Propriétés du réseau de l'appliance
+
+Si vous n'utilisez pas DHCP, spécifiez un nom d'hôte DNS valide (non qualifié) ainsi que l'adresse IP statique pour les outils ONTAP et les autres paramètres réseau. Tous ces paramètres sont nécessaires pour une installation et un fonctionnement corrects.

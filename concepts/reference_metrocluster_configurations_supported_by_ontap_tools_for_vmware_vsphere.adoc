@@ -1,0 +1,39 @@
+---
+permalink: concepts/reference_metrocluster_configurations_supported_by_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: Les outils ONTAP pour VMware vSphere prennent en charge les environnements qui utilisent les configurations MetroCluster IP et FC pour ONTAP. La majeure partie de ce support est automatique. Toutefois, vous remarquerez peut-être quelques différences si vous utilisez un environnement MetroCluster avec VSC et VASA Provider. 
+---
+= Configurations MetroCluster prises en charge par les outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les outils ONTAP pour VMware vSphere prennent en charge les environnements qui utilisent les configurations MetroCluster IP et FC pour ONTAP. La majeure partie de ce support est automatique. Toutefois, vous remarquerez peut-être quelques différences si vous utilisez un environnement MetroCluster avec VSC et VASA Provider.
+
+
+NOTE: SRA ne prend pas en charge les configurations MetroCluster.
+
+
+
+== Les configurations MetroCluster et VSC
+
+Vous devez vous assurer que VSC détecte les contrôleurs du système de stockage sur le site principal et sur le site secondaire. En général, VSC détecte automatiquement les contrôleurs de stockage. Si vous utilisez une LIF de gestion de cluster, il est recommandé de vérifier que VSC a détecté les clusters sur les deux sites. Vous pouvez également ajouter manuellement les contrôleurs de stockage à VSC. Vous pouvez également modifier les paires de noms d'utilisateur et de mots de passe que VSC utilise pour se connecter aux contrôleurs de stockage.
+
+Lorsqu'un basculement se produit, les SVM sur le site secondaire prennent le contrôle. Ces SVM ont le suffixe «`-mc» ajouté à leurs noms. En cas de basculement lorsque vous effectuez des opérations telles que le provisionnement d'un datastore, le nom de la SVM où réside le datastore est modifié afin d'inclure le suffixe «`-mc ». Ce suffixe est supprimé lorsque le rétablissement se produit, et que les SVM du contrôle de reprise sur le site principal.
+
+
+NOTE: Si vous avez ajouté des SVM directs avec la configuration MetroCluster à VSC, la modification du nom du SVM (l'ajout du suffixe «`-mc ») n'est pas reflétée. Toutes les autres opérations de basculement continuent à s'exécuter normalement.
+
+En cas de basculement ou de rétablissement, VSC peut prendre quelques minutes pour détecter et détecter automatiquement les clusters. Si cela se produit pendant l'exécution d'une opération VSC comme le provisionnement d'un datastore, vous risquez de rencontrer un retard.
+
+
+
+== Configurations MetroCluster et VASA Provider
+
+Vasa Provider prend automatiquement en charge les environnements qui utilisent les configurations MetroCluster. Le basculement est transparent dans les environnements VASA Provider. Vous ne pouvez pas ajouter de SVM directs à VASA Provider.
+
+
+NOTE: Vasa Provider n'ajoute pas le suffixe «`-mc » aux noms des SVM sur le site secondaire après un basculement.

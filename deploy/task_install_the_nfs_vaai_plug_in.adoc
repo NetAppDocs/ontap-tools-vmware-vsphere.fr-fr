@@ -1,0 +1,47 @@
+---
+permalink: deploy/task_install_the_nfs_vaai_plug_in.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez installer le plug-in NetApp NFS pour les API VMware vStorage pour l"intégration de baies \(VAAI\) à l"aide de l"interface graphique des outils ONTAP pour VMware vSphere.' 
+---
+= Installez le plug-in NFS VAAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez installer le plug-in NetApp NFS pour les API VMware vStorage pour l'intégration de baies (VAAI) à l'aide de l'interface graphique des outils ONTAP pour VMware vSphere.
+
+*Ce dont vous aurez besoin*
+
+* Vous devriez avoir téléchargé le pack d'installation du plug-in NFS pour VAAI (``.vib`) Sur le site de support NetApp.
++
+https://mysupport.netapp.com/site/global/dashboard["Support NetApp"]
+
+* Vous devez avoir installé ESXi host 6.5 ou version ultérieure et ONTAP 9.1 ou version ultérieure.
+* Vous devez avoir mis sous tension l'hôte ESXi et monté un datastore NFS.
+* Vous devez avoir défini les valeurs du `DataMover.HardwareAcceleratedMove`, `DataMover.HardwareAcceleratedInit`, et `VMFS3.HardwareAcceleratedLocking` paramètres de l'hôte sur « 1 ».
++
+Ces valeurs sont définies automatiquement sur l'hôte ESXi lorsque la boîte de dialogue Paramètres recommandés est mise à jour.
+
+* Vous devez avoir activé l'option vstorage sur la machine virtuelle de stockage (SVM) à l'aide de `vserver nfs modify -vserver vserver_name -vstorage enabled` commande.
+* Vous devez disposer de la mise à jour ESXi 7.0 ou d'une version ultérieure si vous utilisez le plug-in NetApp NFS VAAI 2.0.
+
+
+*Étapes*
+
+. Renommez le `.vib` Le fichier que vous avez téléchargé du site de support NetApp vers NetAppNasPlugin.vib afin de correspondre au nom prédéfini utilisé par VSC.
+. Cliquez sur *Paramètres* dans la page d'accueil des outils ONTAP.
+. Cliquez sur l'onglet *NFS VAAI Tools*.
+. Cliquez sur *Modifier* dans la section *version existante*.
+. Parcourez et sélectionnez le renommé `.vib` Puis cliquez sur *Upload* pour télécharger le fichier vers les outils ONTAP.
+. Dans la section installer sur les hôtes ESXi, sélectionnez l'hôte ESXi sur lequel vous souhaitez installer le plug-in NFS VAAI, puis cliquez sur *installer*.
++
+Suivez les instructions à l'écran pour terminer l'installation. Vous pouvez suivre la progression de l'installation dans la section tâches du client Web vSphere.
+
+. Redémarrez l'hôte ESXi une fois l'installation terminée.
++
+Lorsque vous redémarrez l'hôte ESXi, VSC détecte automatiquement le plug-in NFS VAAI. Il n'est pas nécessaire d'effectuer d'autres étapes pour activer le plug-in.
+
+

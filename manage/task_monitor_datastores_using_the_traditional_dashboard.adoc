@@ -1,0 +1,53 @@
+---
+permalink: manage/task_monitor_datastores_using_the_traditional_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez surveiller les datastores classiques et les machines virtuelles à l"aide du tableau de bord traditionnel des outils ONTAP. Les données du tableau de bord vous permettent d"analyser l"utilisation du datastore et de prendre des mesures correctives pour éviter que les machines virtuelles ne s"exécutent dans des contraintes d"espace.' 
+---
+= Analysez les données de performance à l'aide du tableau de bord classique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez surveiller les datastores classiques et les machines virtuelles à l'aide du tableau de bord traditionnel des outils ONTAP. Les données du tableau de bord vous permettent d'analyser l'utilisation du datastore et de prendre des mesures correctives pour éviter que les machines virtuelles ne s'exécutent dans des contraintes d'espace.
+
+*Ce dont vous aurez besoin*
+
+Sélectionnez l'option *Activer le contrôle d'E/S de stockage et la collecte de statistiques* ou *Désactiver le contrôle d'E/S de stockage mais activer la collecte de statistiques* dans la boîte de dialogue configurer le contrôle d'E/S de stockage. Vous pouvez activer le contrôle des E/S de stockage uniquement si vous disposez de la licence Enterprise plus de VMware.
+
+https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-BB5D9BAB-9E0E-4204-A76A-54634CD8AD51.html["Documentation VMware vSphere : activation du contrôle des E/S du stockage"]
+
+Le tableau de bord traditionnel affiche les mesures relatives aux IOPS, à l'espace utilisé, à la latence et à la capacité dédiée obtenues auprès de votre vCenter Server. ONTAP fournit des metrics de gain d'espace à l'agrégat par rapport au tableau de bord classique. Vous pouvez afficher les gains d'espace pour un agrégat spécifique. Ces paramètres de performances vous permettent d'identifier les goulets d'étranglement des performances dans l'environnement virtuel et de prendre des mesures correctives pour résoudre ces problèmes.
+
+
+NOTE: Le contrôle des fichiers n'est pas pris en charge pour les datastores FlexGroup configurés sur des SVM (Direct Storage Virtual machines).
+
+Le tableau de bord traditionnel des outils ONTAP vous permet de voir les datastores NFS ou VMFS. Vous pouvez cliquer sur un datastore pour accéder à la vue détaillée du datastore fournie par l'instance de vCenter Server pour afficher et résoudre les problèmes éventuels rencontrés avec les datastores de votre serveur vCenter.
+
+*Étapes*
+
+. Dans la page d'accueil de vSphere client, cliquez sur *Outils ONTAP pour VMware vSphere*.
+. Sélectionnez le serveur vCenter requis à l'aide du menu déroulant vCenter Server pour afficher les datastores.
+. Cliquez sur *Tableau de bord traditionnel*.
++
+Le portlet datastores fournit les informations suivantes :
+
++
+** Le nombre de datastores classiques et les mesures de performances sont gérées par VSC dans votre instance vCenter Server
+** Les cinq principaux datastores d'après l'utilisation des ressources et les paramètres de performance qui peuvent être modifiés, vous pouvez modifier dans l'ordre la liste des datastores en fonction de l'espace utilisé, des IOPS, de la latence ou de l'espace requis.
+
+
++
+Le portlet machines virtuelles fournit les informations suivantes :
+
++
+** Nombre de machines virtuelles utilisant des datastores NetApp dans votre serveur vCenter
+** Les cinq meilleures machines virtuelles basées sur la capacité d'engagement, la latence, les IOPS, le débit et la disponibilité
++
+Les données d'IOPS et de débit du portlet ordinateurs virtuels ne sont disponibles que pour les datastores créés sur des volumes sauvegardés FlexGroup.
+
+
+
+

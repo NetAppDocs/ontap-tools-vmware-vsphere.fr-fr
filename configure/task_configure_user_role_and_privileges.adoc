@@ -1,0 +1,45 @@
+---
+permalink: configure/task_configure_user_role_and_privileges.html 
+sidebar: sidebar 
+keywords: user roles 
+summary: 'Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion des systèmes de stockage à l"aide du fichier JSON fourni avec les outils ONTAP et ONTAP System Manager.' 
+---
+= Configurez les rôles et privilèges utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion des systèmes de stockage à l'aide du fichier JSON fourni avec les outils ONTAP et ONTAP System Manager.
+
+*Ce dont vous aurez besoin*
+
+* Vous devriez avoir téléchargé le fichier privilèges ONTAP à partir des outils ONTAP à l'aide de \https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip.
+* Vous devez avoir configuré le stockage ONTAP 9.8P1 ou une version ultérieure.
+* Vous devez avoir ouvert une session avec les privilèges d'administrateur pour le système de stockage.
+
+
+*Étapes*
+
+. Décompressez le fichier téléchargé `\https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip` fichier.
+. Accédez à ONTAP System Manager.
+. Cliquez sur *CLUSTER* > *Paramètres* > *utilisateurs et rôles*.
+. Cliquez sur *Ajouter un utilisateur*.
+. Dans la boîte de dialogue Ajouter un utilisateur, sélectionnez *produits de virtualisation*.
+. Cliquez sur *Parcourir* pour sélectionner et télécharger le fichier JSON de privilèges ONTAP.
++
+Le champ PRODUIT est rempli automatiquement.
+
+. Sélectionnez la fonctionnalité requise dans le menu déroulant FONCTIONNALITÉS DU PRODUIT.
++
+Le champ *ROLE* est renseigné automatiquement en fonction de la capacité du produit sélectionnée.
+
+. Saisissez le nom d'utilisateur et le mot de passe requis.
+. Sélectionnez les privilèges (Discovery, Create Storage, Modify Storage, Destroy Storage) requis pour l'utilisateur, puis cliquez sur *Add*.
+
+
+Le nouveau rôle et l'utilisateur sont ajoutés et vous pouvez voir les privilèges détaillés sous le rôle que vous avez configuré.
+
+
+NOTE: L'opération de désinstallation ne supprime pas les rôles VSC mais supprime les noms localisés correspondant aux privilèges VSC. Elle ajoute le préfixe « XXX Privilege manquant ». Ce comportement se produit car vCenter Server ne fournit pas d'option permettant de supprimer des privilèges. Lorsque vous réinstallez VSC ou effectuez une mise à niveau vers une version plus récente de VSC, tous les rôles standard VSC et tous les privilèges spécifiques à VSC sont restaurés.

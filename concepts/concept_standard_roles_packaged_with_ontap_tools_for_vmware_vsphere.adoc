@@ -1,0 +1,88 @@
+---
+permalink: concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour simplifier le travail avec les privilèges vCenter Server et le contrôle d"accès basé sur des rôles \(RBAC\), Virtual Storage Console \(VSC\) propose des rôles VSC standard qui vous permettent d"effectuer les principales tâches VSC. Il existe également un rôle en lecture seule qui vous permet de consulter les informations de VSC, mais ne pas effectuer de tâches.' 
+---
+= Rôles standard fournis avec les outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour simplifier la utilisation des privilèges vCenter Server et du contrôle d'accès basé sur des rôles (RBAC), Virtual Storage Console (VSC) propose des rôles VSC standard qui vous permettent d'effectuer des tâches VSC clés. Il existe également un rôle en lecture seule qui vous permet de consulter les informations de VSC, mais ne pas effectuer de tâches.
+
+Les rôles VSC standard disposent à la fois des privilèges spécifiques à VSC et des privilèges vCenter Server natifs requis pour que les utilisateurs puissent effectuer des tâches VSC. En outre, les rôles sont configurés de manière à disposer des privilèges requis pour toutes les versions prises en charge de vCenter Server.
+
+En tant qu'administrateur, vous pouvez attribuer ces rôles aux utilisateurs selon les besoins.
+
+
+NOTE: Lorsque vous mettez à niveau VSC vers la dernière version, les rôles standard sont automatiquement mis à niveau pour fonctionner avec la nouvelle version de VSC.
+
+Vous pouvez afficher les rôles standard VSC en cliquant sur *Roles* sur la page d'accueil du client vSphere.
+
+Les rôles décrits dans VSC vous permettent d'effectuer les tâches suivantes :
+
+|===
+
+
+| *Rôle* | *Description* 
+
+
+ a| 
+Administrateur VSC
+ a| 
+Fournit tous les privilèges vCenter Server natifs et les privilèges spécifiques à VSC requis pour effectuer toutes les tâches VSC.
+
+
+
+ a| 
+VSC en lecture seule
+ a| 
+Fournit un accès en lecture seule à VSC. Ces utilisateurs ne peuvent pas effectuer d'actions VSC contrôlées par l'accès.
+
+
+
+ a| 
+Provisionnement VSC
+ a| 
+Fournit tous les privilèges vCenter Server natifs et les privilèges spécifiques à VSC requis pour le provisionnement du stockage. Vous pouvez effectuer les tâches suivantes :
+
+* Créer de nouveaux datastores
+* Détruire les datastores
+* Afficher des informations sur les profils de capacité de stockage
+
+
+|===
+
+
+== Instructions d'utilisation des rôles standard VSC
+
+Lorsque vous utilisez les outils ONTAP standard pour les rôles VMware vSphere, vous devez suivre certaines directives.
+
+Vous ne devez pas modifier directement les rôles standard. Si vous le faites, VSC remplacera vos modifications à chaque fois que vous mettez à niveau VSC. À chaque mise à niveau de VSC, le programme d'installation met à jour les définitions de rôles standard. Vous êtes ainsi assuré que les rôles sont à jour pour votre version de VSC et pour toutes les versions prises en charge de vCenter Server.
+
+Vous pouvez toutefois utiliser les rôles standard pour créer des rôles adaptés à votre environnement. Pour ce faire, vous devez copier le rôle standard VSC, puis modifier le rôle copié. En créant un nouveau rôle, vous pouvez le conserver même lorsque vous redémarrez ou mettez à niveau le service Windows VSC.
+
+Les rôles standard de VSC comme vous le souhaitez peuvent être utilisés comme suit :
+
+* Utilisation des rôles standard VSC pour toutes les tâches VSC.
++
+Dans ce scénario, les rôles standard fournissent tous les privilèges dont l'utilisateur a besoin pour effectuer les tâches VSC.
+
+* Associer des rôles pour développer les tâches qu'un utilisateur peut effectuer.
++
+Si les rôles standard VSC fournissent une granularité trop importante pour votre environnement, vous pouvez développer les rôles en créant des groupes de niveau supérieur contenant plusieurs rôles.
+
++
+Si un utilisateur doit effectuer d'autres tâches non VSC qui nécessitent des privilèges vCenter Server natifs supplémentaires, vous pouvez créer un rôle qui fournit ces privilèges et l'ajouter au groupe également.
+
+* Créer des rôles plus précis.
++
+Si votre entreprise exige que vous implémentiez des rôles plus restrictifs que les rôles VSC standard, vous pouvez utiliser les rôles VSC pour créer de nouveaux rôles.
+
++
+Dans ce cas, vous clonez les rôles VSC nécessaires, puis modifiez le rôle cloné de sorte que celui-ci dispose uniquement des privilèges dont l'utilisateur a besoin.
+
+

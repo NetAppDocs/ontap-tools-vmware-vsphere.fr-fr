@@ -1,0 +1,65 @@
+---
+permalink: manage/task_edit_esxi_host_settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez utiliser le tableau de bord des outils ONTAP pour VMware vSphere afin de modifier les paramètres de votre hôte ESXi. 
+---
+= Modifiez les paramètres de l'hôte VMware ESXi à l'aide des outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le tableau de bord des outils ONTAP pour VMware vSphere afin de modifier les paramètres de votre hôte ESXi.
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir configuré un système hôte ESXi pour votre instance vCenter Server.
+
+En cas de problème avec les paramètres de votre hôte VMware ESXi, le problème s'affiche dans le portlet systèmes hôtes VMware ESXi du tableau de bord. Vous pouvez cliquer sur le problème pour afficher le nom d'hôte ou l'adresse IP de l'hôte ESXi qui présente le problème.
+
+*Étapes*
+
+. Dans la page d'accueil du client vSphere, cliquez sur *ONTAP Tools*.
+. Modifiez les paramètres de l'hôte VMware ESXi.
++
+|===
+
+
+| *Si vous souhaitez modifier les paramètres de l'hôte VMware ESXi à partir de...* | *Faites cela...* 
+
+
+ a| 
+Problèmes affichés
+ a| 
+.. Cliquez sur le problème dans le portlet systèmes hôtes VMware ESXi.
+.. Cliquez sur les noms d'hôte VMware ESXi pour lesquels vous souhaitez modifier les paramètres.
+.. Cliquez avec le bouton droit de la souris sur le nom d'hôte ESXi, puis cliquez sur *Outils NetApp ONTAP* > *définir les valeurs recommandées*.
+.. Modifiez les paramètres requis, puis cliquez sur *OK*.
+
+
+
+
+ a| 
+Page d'accueil de vSphere client
+ a| 
+.. Cliquez sur *Menu* > *hôtes et clusters*.
+.. Cliquez avec le bouton droit de la souris sur l'hôte ESXi requis et sélectionnez *NetApp ONTAP Tools* > *Set Recommended Value*.
+.. Cliquez sur *OK*.
+
+
+
+
+ a| 
+Portlet systèmes hôtes VMware ESXi
+ a| 
+.. Cliquez sur l'onglet *Ttional Dashboard* (Tableau de bord traditionnel) dans la section Overview (Présentation) de VSC.
+.. Cliquez sur *Modifier les paramètres de l'hôte VMware ESXi*.
+.. Sélectionnez le nom d'hôte ESXi dans l'onglet Paramètres de l'hôte et état pour lequel vous souhaitez modifier les paramètres, puis cliquez sur *SUIVANT*.
+.. Sélectionnez les paramètres requis dans l'onglet Paramètres d'hôte recommandés, puis cliquez sur *Suivant*.
+.. Vérifiez votre sélection dans l'onglet Résumé, puis cliquez sur *TERMINER*.
+
+
+|===
+

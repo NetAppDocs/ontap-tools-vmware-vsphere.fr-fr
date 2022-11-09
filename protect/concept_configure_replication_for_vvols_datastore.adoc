@@ -1,0 +1,28 @@
+---
+permalink: protect/concept_configure_replication_for_vvols_datastore.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez configurer la réplication de votre datastore vvols à l"aide des outils ONTAP. L"objectif principal de la réplication vvols est de protéger les machines virtuelles stratégiques pendant une reprise après incident à l"aide de VMware site Recovery Manager \(SRM\).' 
+---
+= Configurez la réplication pour les datastores vvols afin de protéger les machines virtuelles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer la réplication de votre datastore vvols à l'aide des outils ONTAP. L'objectif principal de la réplication de vvols est de protéger les ordinateurs virtuels stratégiques lors d'une reprise après incident à l'aide de VMware site Recovery Manager (SRM).
+
+Cependant, pour configurer la réplication de vvols pour les outils ONTAP, la fonctionnalité de VASA Provider et la réplication de vvols doivent être activées. Vasa Provider est activé par défaut dans les outils ONTAP. La réplication basée sur les baies est effectuée au niveau FlexVol. Chaque datastore vvols est mappé à un conteneur de stockage composé d'un ou plusieurs volumes FlexVol. Les volumes FlexVol doivent être préconfigurés avec SnapMirror à partir de ONTAP.
+
+
+WARNING: Vous ne devez pas configurer un mélange de machines virtuelles protégées et non protégées dans un seul datastore vvols. Une opération de reprotection après le basculement entraîne la suppression des machines virtuelles non protégées. Assurez-vous que tous les ordinateurs virtuels d'un datastore vVols sont protégés lors de l'utilisation de la réplication.
+
+Des groupes de réplication sont créés lors de la création du workflow de data store vVvols pour chaque volume FlexVol. Pour utiliser la réplication vvols, vous devrez créer des stratégies de stockage de machines virtuelles incluant l'état et la planification de la réplication avec le profil de capacité de stockage. Un groupe de réplication comprend des machines virtuelles répliquées dans le cadre de la reprise sur incident vers le site cible. Vous pouvez configurer des groupes de réplication avec des groupes de protection et des plans de restauration à l'aide de la console SRM, pour les flux de travail de reprise après incident.
+
+
+NOTE: Si vous utilisez une reprise après incident pour le datastore vvols, il n'est pas nécessaire de configurer Storage Replication adapter (SRA) séparément puisque la fonctionnalité VASA Provider est améliorée pour disposer d'une réplication vvols.
+
+image::../media/vvols_replication.png[réplication vvol]
+
+link:../protect/configure_vvols_replication_existing_datastore.html["Configurez la réplication vvols pour les datastores existants"]

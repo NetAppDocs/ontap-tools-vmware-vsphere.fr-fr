@@ -1,0 +1,28 @@
+---
+permalink: configure/task_assign_qos_policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le provisionnement des datastores FlexGroup ne prend pas en charge l"attribution de profils de capacité de stockage aux datastores. Toutefois, vous pouvez attribuer des règles de QoS aux machines virtuelles créées sur les datastores pris en charge par FlexGroup.' 
+---
+= Attribuez des règles de QoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le provisionnement des datastores FlexGroup ne prend pas en charge l'attribution de profils de capacité de stockage aux datastores. Toutefois, vous pouvez attribuer des règles de QoS aux machines virtuelles créées sur les datastores pris en charge par FlexGroup.
+
+*À propos de cette tâche*
+
+Les politiques de qualité de service peuvent être appliquées au niveau du serveur virtuel ou du datastore. Les règles de QoS sont nécessaires pour qu'un datastore configure les seuils de débit (IOPS max et min). Lorsque vous définissez la QoS sur un datastore, elle est appliquée aux machines virtuelles résidant sur le datastore et non sur le volume FlexGroup. Cependant, si vous définissez la qualité de service sur toutes les machines virtuelles d'un datastore, tous les paramètres de QoS individuels des machines virtuelles sont remplacés. Cette fonctionnalité s'applique uniquement aux machines virtuelles disponibles dans le datastore et non aux machines virtuelles migrées ou ajoutées. Si vous souhaitez appliquer la qualité de service aux machines virtuelles nouvellement ajoutées ou migrées d'un datastore spécifique, vous devez définir manuellement les valeurs QoS.
+
+
+NOTE: Vous ne pouvez pas appliquer de paramètres de QoS au niveau d'un datastore ou d'une machine virtuelle pour les datastores provisionnés sur des machines virtuelles de stockage directes car ONTAP ne prend pas en charge la QoS au niveau de la gestion des machines virtuelles de stockage.
+
+*Étapes*
+
+. Sur la page d'accueil des outils ONTAP, cliquez sur *Menu* > *hôte et clusters*.
+. Cliquez avec le bouton droit de la souris sur le datastore ou la machine virtuelle requis et cliquez sur *Outils NetApp ONTAP* > *affecter QoS*.
+. Dans la boîte de dialogue attribuer QoS, entrez les valeurs d'IOPS requises, puis cliquez sur *appliquer*.
+

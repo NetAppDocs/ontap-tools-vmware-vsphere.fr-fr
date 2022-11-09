@@ -1,0 +1,29 @@
+---
+permalink: deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: Virtual Storage Console,Storage Replication Adapter 
+summary: Avant de déployer les outils ONTAP pour VMware vSphere, vous devez connaître les besoins en espace requis pour le package de déploiement et la configuration système hôte de base requise. 
+---
+= Exigences en matière d'espace et de dimensionnement pour les outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de déployer les outils ONTAP pour VMware vSphere, vous devez connaître les besoins en espace requis pour le package de déploiement et la configuration système hôte de base requise.
+
+* *Espace requis pour le package d'installation*
++
+** 2.1 Go pour les installations à provisionnement fin
+** 54.0 Go pour les installations à provisionnement lourd
+
+
+* *Exigences de dimensionnement du système hôte*
++
+** ESXi 6.5U3 ou version ultérieure
+** Mémoire recommandée : 12 Go de RAM
+** CPU recommandés : 2
+
+
+

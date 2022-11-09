@@ -1,0 +1,246 @@
+---
+permalink: deploy/vmware_cloud_foundation_mode_deployment.html 
+sidebar: sidebar 
+keywords:  
+summary: Les outils ONTAP pour VMware vSphere peuvent être déployés dans un environnement VMware Cloud base. 
+---
+= Mode de déploiement VMware Cloud Foundation pour les outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les outils ONTAP pour VMware vSphere peuvent être déployés dans un environnement VMware Cloud Foundation (VCF). Le principal objectif du déploiement des FCV est d'utiliser les outils ONTAP dans une configuration cloud et de créer des conteneurs sans vCenter Server.
+
+Le mode VCF vous permet de créer des conteneurs pour votre stockage sans avoir besoin de vCenter Server. Vasa Provider est activé par défaut après le déploiement des outils ONTAP en mode VCF. Une fois le déploiement terminé, vous pouvez ajouter des systèmes de stockage et créer des conteneurs à l'aide d'API REST. Une nouvelle API est introduite pour générer le _appliance-api-token_ qui authentifie les appels API. Certaines API existantes sont modifiées pour inclure l'en-tête _appliance-api-token_.
+
+Les API disponibles pour le mode de déploiement VCF sont :
+
+|===
+
+
+| *API* | *Méthode HTTP* | *Nouveau/modifié* | *En-tête de section* 
+
+
+ a| 
+/1.0/admin/containers
+ a| 
+OBTENEZ
+ a| 
+Nouveau
+ a| 
+Conteneur
+
+
+
+ a| 
+/1.0/admin/containers
+ a| 
+POST
+ a| 
+Nouveau
+ a| 
+Conteneur
+
+
+
+ a| 
+/1.0/vcf/user/login
+ a| 
+POST
+ a| 
+Nouveau
+ a| 
+Authentification utilisateur
+
+
+
+ a| 
+/1.0/admin/storage-systems
+ a| 
+OBTENEZ
+ a| 
+Modifié
+ a| 
+Systèmes de stockage
+
+
+
+ a| 
+/1.0/admin/storage-systems
+ a| 
+POST
+ a| 
+Modifié
+ a| 
+Systèmes de stockage
+
+
+
+ a| 
+/2.0/stockage/clusters/découverte
+ a| 
+POST
+ a| 
+Modifié
+ a| 
+Systèmes de stockage
+
+
+
+ a| 
+/2.0/stockage/profils-capacité
+ a| 
+OBTENEZ
+ a| 
+Modifié
+ a| 
+Profil des capacités de stockage
+
+
+
+ a| 
+/2.0/tâches/{id}
+ a| 
+OBTENEZ
+ a| 
+Modifié
+ a| 
+Tâche
+
+|===
+Vous ne pouvez travailler qu'avec des datastores vVvols en mode de déploiement VCF. Pour créer un conteneur, vous devez utiliser des API REST personnalisées pour le déploiement de VCF. Une fois le déploiement terminé, les API REST sont accessibles depuis l'interface swagger. Lors de la création de conteneurs en mode VCF, indiquez les noms de VM de stockage, d'agrégat et de volume. Vous devez utiliser les API ONTAP pour en savoir plus, car les outils ONTAP GET API for ces ressources ne sont pas mis à jour.
+
+|===
+
+
+| *Objet de stockage* | *API* 
+
+
+ a| 
+VM de stockage
+ a| 
+api/svm/svm
+
+
+
+ a| 
+Agrégat
+ a| 
+stockage/agrégats
+
+
+
+ a| 
+Volumétrie
+ a| 
+stockage/volumes
+
+|===
+Lors de l'exécution du conteneur create API, vous pouvez ajouter des volumes existants au conteneur. Mais vous devez vous assurer que les valeurs de compression et de déduplication des volumes existants correspondent à la capacité de stockage du conteneur. La création de la machine virtuelle échoue lorsque les valeurs ne correspondent pas. Le tableau suivant fournit des détails sur les valeurs que les volumes existants doivent avoir pour les profils de capacité de stockage correspondants.
+
+|===
+
+
+| *Profil de capacité de stockage de conteneurs* | *Déduplication* | *Compression* 
+
+
+ a| 
+Platinum
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Aff_Thick
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Aff_Default
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Tiering_AFF
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Aff_chiffré
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Tiering_chiffré_AFF
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Aff_chiffré_Min50
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+FAS_Default
+ a| 
+Contexte
+ a| 
+Aucune
+
+
+
+ a| 
+FAS_Max20
+ a| 
+Contexte
+ a| 
+Aucune
+
+
+
+ a| 
+Bronze
+ a| 
+Aucune
+ a| 
+Aucune
+
+|===
+Vous pouvez utiliser l'API DE CORRECTIF ONTAP pour définir les valeurs appropriées.
+
+`https://<machine_IP>/api/storage/volumes/{uuid}`
+
+Le déploiement VCF des outils ONTAP n'autorise que les flux de travail de création de conteneurs. Si vous souhaitez utiliser d'autres workflows, comme le provisionnement de datastores, la création de profils de capacité de stockage ou la reprise après incident, vous devez enregistrer les outils ONTAP avec vCenter Server à l'aide de la page Register.html. La limitation des outils ONTAP en mode VCF est que vous ne pouvez pas configurer SRA pour la reprise après incident.
+
+image::../media/VCF_deployment.png[Flux de travail du déploiement de VMware Cloud Foundation]
+
+link:../deploy/task_deploy_ontap_tools.html["Comment déployer les outils ONTAP"]

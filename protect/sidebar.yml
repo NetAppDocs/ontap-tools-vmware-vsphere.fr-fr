@@ -1,0 +1,49 @@
+---
+section: protect
+title: Protection des datastores et des machines virtuelles
+entries:
+- title: Activez Storage Replication adapter pour protéger les datastores
+  url: "/protect/task_enable_storage_replication_adapter.html"
+- title: Configuration du système de stockage pour la reprise après incident
+  entries:
+  - title: Configuration des systèmes de stockage pour les environnements SAN et NAS
+    url: "/protect/task_configure_storage_replication_adapter_for_san_environment.html"
+  - title: Configuration du stockage pour les environnements à grande échelle
+    url: "/protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html"
+- title: Configurez SRA sur l'appliance SRM
+  url: "/protect/task_configure_sra_on_srm_appliance.html"
+- title: Mettez à jour les informations d'identification SRA
+  url: "/protect/task_update_sra_credentials.html"
+- title: Migrez Windows SRM vers l'appliance SRM
+  url: "/protect/concept_migration_of_disaster_recovery_setup_from_windows_to_appliance.html"
+- title: Configurez la réplication pour les datastores vvols afin de protéger les
+    machines virtuelles
+  url: "/protect/concept_configure_replication_for_vvols_datastore.html"
+- title: Configurez la réplication vvols pour les datastores existants
+  url: "/protect/configure_vvols_replication_existing_datastore.html"
+- title: Protection des machines virtuelles non protégées
+  url: "/protect/task_protect_non_protected_virtual_machines.html"
+- title: Configuration des sites protégés et de reprise après incident
+  entries:
+  - title: Configurer les règles de stockage des VM
+    url: "/protect/task_configure_vm_storage_policies.html"
+  - title: Configuration des groupes de protection
+    url: "/protect/task_configure_protection_groups.html"
+  - title: Protection par paires et sites de reprise après incident
+    url: "/protect/task_pair_protected_and_recovery_sites.html"
+  - title: Configuration des ressources protégées et du site de reprise
+    entries:
+    - title: Configurer les mappages du réseau
+      url: "/protect/task_configure_network_mappings.html"
+    - title: Configurer les mappages de dossiers
+      url: "/protect/task_configure_folder_mappings.html"
+    - title: Configurer les mappages de ressources
+      url: "/protect/task_configure_resource_mappings.html"
+    - title: Mappage des règles de stockage
+      url: "/protect/task_map_storage_policies.html"
+    - title: Configurez les datastores à espace réservé
+      url: "/protect/task_configure_placeholder_datastores.html"
+    - title: Configurez SRA à l'aide du gestionnaire de baies
+      url: "/protect/task_configure_array_manager.html"
+  - title: Vérifier les systèmes de stockage répliqués
+    url: "/protect/task_verify_the_replicated_storage_environment.html"

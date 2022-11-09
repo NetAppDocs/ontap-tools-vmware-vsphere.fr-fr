@@ -1,0 +1,124 @@
+---
+permalink: configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez définir des délais d"expiration et d"autres valeurs sur les hôtes ESXi à l"aide des outils ONTAP pour VMware vSphere afin de garantir des performances optimales et un basculement réussi. Les valeurs des jeux de VSC \(VSC\) Virtual Storage Console sont basées sur des tests internes de NetApp.' 
+---
+= Valeurs de l'hôte ESXi définies à l'aide des outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez définir des délais d'expiration et d'autres valeurs sur les hôtes ESXi à l'aide des outils ONTAP pour VMware vSphere afin de garantir des performances optimales et un basculement réussi. Les valeurs des jeux d'outils ONTAP sont basées sur les tests internes de NetApp.
+
+Vous pouvez définir les valeurs suivantes sur un hôte ESXi :
+
+
+
+== Configuration avancée ESXi
+
+* *VMFS3.HardwareAccélérationde Locaking*
++
+Vous devez définir cette valeur sur 1.
+
+* *VMFS3.EnableBlockDelete*
++
+Vous devez définir cette valeur sur 0.
+
+
+
+
+
+== Paramètres NFS
+
+* *Net.TcpipeHeapSize*
++
+Si vous utilisez vSphere 6.0 ou version ultérieure, vous devez définir cette valeur sur 32.
+
+* *Net.TcpipeHeapMax*
++
+Vous devez définir cette valeur sur 512 Mo pour les versions vSphere 6.X, à l'exception des versions 6.5U3 et 6.7U3. Pour vSphere 6.5U3 et 6.7U3, cette valeur est définie sur 1024 Mo. Si vous utilisez vSphere 7.0 ou une version ultérieure, vous devez définir cette valeur sur 1024 Mo.
+
+* *NFS.Maxvolumes*
++
+Si vous utilisez vSphere 6.0 ou version ultérieure, vous devez définir cette valeur sur 256.
+
+* *NFS41.MaxVolumes*
++
+Si vous utilisez vSphere 6.0 ou version ultérieure, vous devez définir cette valeur sur 256.
+
+* *NFS.MaxQueueDepth*
++
+Si vous utilisez la version vSphere 6.0 ou ultérieure de l'hôte ESXi, vous devez définir cette valeur sur 128 ou plus pour éviter les goulots d'étranglement dans la mise en file d'attente.
+
++
+Dans le cas des versions vSphere antérieures à la version 6.0, définissez cette valeur sur 64.
+
+* *NFS.HeartbeatMaxFailures*
++
+Définissez cette valeur sur 10 pour toutes les configurations NFS.
+
+* *NFS.HeartbeatFrequency*
++
+Définissez cette valeur sur 12 pour toutes les configurations NFS.
+
+* *NFS.HeartbeatTimeout*
++
+Définissez cette valeur sur 5 pour toutes les configurations NFS.
+
+
+
+
+
+== Paramètres FC/FCoE
+
+* *Politique de sélection de chemin*
++
+Vous devez définir cette valeur sur « RR » (Round Robin) lorsque des chemins FC avec ALUA sont utilisés.
+
++
+Vous devez définir cette valeur sur « FIXE » pour toutes les autres configurations.
+
++
+La définition de cette valeur sur « RR » permet d'équilibrer la charge entre tous les chemins actifs/optimisés. La valeur « FIXE » est utilisée pour les anciennes configurations non ALUA et permet d'éviter les E/S proxy
+
+* *Disk.QFullSampleSize*
++
+Définissez cette valeur sur 32 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S.
+
+* *Disk.QFullThreshold*
++
+Définissez cette valeur sur 8 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S.
+
+* *Délais de connexion HBA FC Emulex*
++
+Utilisez la valeur par défaut.
+
+* *Délais de connexion HBA FC QLogic*
++
+Utilisez la valeur par défaut.
+
+
+
+
+
+== Paramètres iSCSI
+
+* *Politique de sélection de chemin*
++
+Vous devez définir cette valeur sur « RR » pour tous les chemins iSCSI.
+
++
+La définition de cette valeur sur « RR » permet d'équilibrer la charge entre tous les chemins actifs/optimisés.
+
+* *Disk.QFullSampleSize*
++
+Définissez cette valeur sur 32 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S.
+
+* *Disk.QFullThreshold*
++
+Définissez cette valeur sur 8 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S.
+
+

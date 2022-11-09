@@ -1,0 +1,32 @@
+---
+permalink: configure/concept_considerations_for_creating_and_editing_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous devez tenir compte des considérations relatives à la création et à la modification de profils de capacité de stockage. 
+---
+= Considérations relatives à la création et à la modification de profils de capacité de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez tenir compte des considérations relatives à la création et à la modification de profils de capacité de stockage.
+
+* Vous pouvez configurer min IOPS uniquement sur les systèmes AFF.
+* Vous pouvez configurer les metrics de qualité de service au niveau du datastore de volume virtuel (VVol).
++
+Cette fonctionnalité offre une plus grande flexibilité lors de l'affectation de metrics QoS variés pour les différents VMDK de la même machine virtuelle provisionnée dans un datastore virtuel.
+
+* Vous pouvez configurer des profils de capacité de stockage pour les datastores FAS et AFF.
++
+Pour les systèmes FAS avec AFF, il est possible de configurer la réserve d'espace pour qu'elle soit fine ou non.
+
+* Vous pouvez utiliser des profils de capacité de stockage pour assurer le cryptage de vos datastores.
+* Vous ne pouvez pas modifier des profils de capacité de stockage existants (créés avant la version 7.2) après la mise à niveau d'une version antérieure des outils ONTAP pour VMware vSphere vers la dernière version des outils ONTAP.
++
+Les profils de capacité de stockage hérités sont conservés pour une rétrocompatibilité. Si les modèles par défaut ne sont pas utilisés, cela signifie qu'au cours de la mise à niveau vers la dernière version des outils ONTAP, les modèles existants sont remplacés pour refléter les nouvelles mesures de QoS associées aux performances des profils de capacités de stockage.
+
+* Vous ne pouvez ni modifier, ni utiliser les profils de capacité de stockage hérités pour provisionner de nouveaux datastores virtuels ni appliquer les règles de stockage de machines virtuelles.
+* Vous devez utiliser de nouveaux profils de capacité de stockage pour tous les nouveaux datastores.
+
