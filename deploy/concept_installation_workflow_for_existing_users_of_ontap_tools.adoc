@@ -46,7 +46,7 @@ Si vous disposez de VASA Provider, alors après la mise à niveau à partir d'un
 
 Si vous disposez de la version 7.2 ou 7.2.1 de l'appliance virtuelle pour VSC, VASA Provider et SRA, vous ne pouvez pas directement mettre à niveau vers 9.7P1 ou une version ultérieure de l'appliance unifiée. Vous devez d'abord mettre à niveau votre configuration existante vers la version 9.7 de l'appliance virtuelle, puis effectuer une mise à niveau vers la dernière version.
 
-Pour effectuer une mise à niveau vers les outils ONTAP 9.10, vous devez exécuter l'appliance virtuelle 9.7P1 ou une version ultérieure. La mise à niveau depuis une version antérieure à 9.7P1 de l'appliance virtuelle n'est pas prise en charge.
+Pour effectuer une mise à niveau à partir des outils ONTAP 9.10 et versions ultérieures, exécutez l'appliance virtuelle 9.7P1 ou version ultérieure. La mise à niveau depuis une version antérieure à 9.7P1 de l'appliance virtuelle n'est pas prise en charge.
 
 Si vous allez déployer la dernière version des outils ONTAP, vous devez voir la rubrique `Requirements for deploying the ONTAP tools.` Le sujet `Upgrading to the latest release of ONTAP tools` possède des informations sur la réalisation d'une mise à niveau sur place.
 
