@@ -565,7 +565,6 @@
   <block id="5cd110d372988e6fedf83dab3b77194b" category="list-text">Exécutez la commande<block ref="ab64b2f5839594835c3c4d3e3c725c7c" prefix=" " category="inline-code"></block> pour accéder au répertoire du journal.</block>
   <block id="9d58dbd20800ce51e37de67c2297da5f" category="list-text">Dans le journal location, entrez la commande pour obtenir l'ID docker utilisé par SRA :<block ref="c3933049d26fccba0396e7760f0fba06" prefix=" " category="inline-code"></block></block>
   <block id="7202896d218d74a45a1995fe74164f61" category="list-text">Pour vous connecter à l'ID de conteneur, entrez la commande :<block ref="1b6eefce0212551da88d489c9ed8f5e9" prefix=" " category="inline-code"></block></block>
-  <block id="6408528f5006f0df83e2b2cc7b5f3eae" category="list-text">Configurer SRM avec l'adresse IP et le mot de passe des outils ONTAP à l'aide de la commande :<block ref="31ba3f744db79546f73a60bc44a81da2" prefix=" " category="inline-code"></block></block>
   <block id="3e06c9490934f18ce97a637bf06b781e" category="paragraph">Un message de confirmation de la mémorisation des identifiants de stockage s'affiche. SRA peut communiquer avec le serveur SRA à l'aide de l'adresse IP, du port et des informations d'identification fournis.</block>
   <block id="8ebe726ad95e28b7a4c0239a1c8a5242" category="summary">Vous devez mapper vos ressources sur le site protégé et le site de reprise afin que les ordinateurs virtuels puissent basculer vers un groupe d'hôtes ou un autre.</block>
   <block id="7e4aa301715707912ba8ed9cba9c0eb7" category="doc">Configurer les mappages de ressources</block>
@@ -2002,4 +2001,5 @@
   <block id="544c4e9e8bb8792201c78fc0c53ee086" category="sidebar">Configurer les profils de capacité de stockage</block>
   <block id="f98484fc38c578aca640fd781e7196ae" category="sidebar">Configurez les datastores</block>
   <block id="ed2b91672ee08a221afee30153dc24a9" category="paragraph">Pour effectuer une mise à niveau à partir des outils ONTAP 9.10 et versions ultérieures, exécutez l'appliance virtuelle 9.7P1 ou version ultérieure. La mise à niveau depuis une version antérieure à 9.7P1 de l'appliance virtuelle n'est pas prise en charge.</block>
+  <block id="65f6fb9b3fd7c8798ba4a7010e84a65b" category="list-text">Configurer SRM avec l'adresse IP et le mot de passe des outils ONTAP à l'aide de la commande :<block ref="2ca82e2fa9750815c3356b6e1692f9ca" prefix=" " category="inline-code"></block></block>
 </blocks>

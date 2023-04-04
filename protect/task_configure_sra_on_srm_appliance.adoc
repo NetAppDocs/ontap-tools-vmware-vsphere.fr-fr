@@ -31,7 +31,7 @@ La configuration de SRA sur SRM Appliance stocke les informations d'identificati
 . Exécutez la commande `cd /var/log/vmware/srm` pour accéder au répertoire du journal.
 . Dans le journal location, entrez la commande pour obtenir l'ID docker utilisé par SRA : `docker ps -l`
 . Pour vous connecter à l'ID de conteneur, entrez la commande : `docker exec -it -u srm <container id> sh`
-. Configurer SRM avec l'adresse IP et le mot de passe des outils ONTAP à l'aide de la commande : `perl command.pl -I <va-IP> administrator <va-password>`
+. Configurer SRM avec l'adresse IP et le mot de passe des outils ONTAP à l'aide de la commande : `perl command.pl -I <otv-IP> administrator <va-password>`
 +
 Un message de confirmation de la mémorisation des identifiants de stockage s'affiche. SRA peut communiquer avec le serveur SRA à l'aide de l'adresse IP, du port et des informations d'identification fournis.
 
