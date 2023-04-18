@@ -631,7 +631,6 @@
   <block id="bc5ad92fecd3f6eeb4473c9df6479d46" category="list-text"><block ref="4609acba202877f99742342f4195d95e" prefix="" category="inline-code"></block></block>
   <block id="42f35b3ef9c82737da1f02ca0b45f308" category="list-text">Exécutez la commande perl pour configurer SRA avec les nouvelles informations d'identification :</block>
   <block id="325c22d13dffac10de126d900c39ff29" category="list-text"><block ref="c8a7687f579de473b4cc34b8e40736ff" prefix="" category="inline-code"></block></block>
-  <block id="000595390ba91f5d02fbc87c52ad2a40" category="list-text"><block ref="31ba3f744db79546f73a60bc44a81da2" prefix="" category="inline-code"></block></block>
   <block id="98d59005c67ca250b0aded3cd7b53448" category="summary">Vous devez configurer les systèmes de stockage avant d'exécuter Storage Replication adapter \(SRA\) pour site Recovery Manager \(SRM\).</block>
   <block id="c50f5025436d48e4a3b85a8face3e337" category="doc">Configuration de Storage Replication adapter pour un environnement SAN</block>
   <block id="fef16cb3691cc1ab2b1c978c84a447b3" category="paragraph">Vous devez configurer les systèmes de stockage avant d'exécuter Storage Replication adapter (SRA) pour site Recovery Manager (SRM).</block>
@@ -1068,7 +1067,6 @@
   <block id="be280321d69d14f5dfce8709e117a691" category="list-text">Passez à l'utilisateur root :<block ref="ed4421a15b86845cfea13385b427b340" prefix=" " category="inline-code"></block></block>
   <block id="9d7f1b1965b299ca0f83a93983a67fa9" category="list-text">Dans la commande log location, entrez pour obtenir l'ID docker utilisé par docker SRA :<block ref="c3933049d26fccba0396e7760f0fba06" prefix=" " category="inline-code"></block></block>
   <block id="a3fbfd6ca26f7eba2deb3733ea046eb1" category="list-text">Connectez-vous à l'ID de conteneur :<block ref="1b6eefce0212551da88d489c9ed8f5e9" prefix=" " category="inline-code"></block></block>
-  <block id="c93a0f0ebeda9ccb76c7ccdb97a1b6fc" category="list-text">Configurer SRM à l'aide de l'adresse IP et du mot de passe des outils ONTAP :<block ref="31ba3f744db79546f73a60bc44a81da2" prefix=" " category="inline-code"></block>Un message de confirmation de la mémorisation des identifiants de stockage s'affiche.</block>
   <block id="3849324d415efa553fdff378e6dd712e" category="section-title">Mise à jour des informations d'identification SRA</block>
   <block id="744ec7526945686620ba725a3be0778f" category="list-text">Supprimez le contenu du répertoire /srm/sra/conf en utilisant :</block>
   <block id="9394c3b706fe8eb791b91c156fbd1c93" category="section-title">Activation de VASA Provider et SRA</block>
@@ -2001,5 +1999,7 @@
   <block id="544c4e9e8bb8792201c78fc0c53ee086" category="sidebar">Configurer les profils de capacité de stockage</block>
   <block id="f98484fc38c578aca640fd781e7196ae" category="sidebar">Configurez les datastores</block>
   <block id="ed2b91672ee08a221afee30153dc24a9" category="paragraph">Pour effectuer une mise à niveau à partir des outils ONTAP 9.10 et versions ultérieures, exécutez l'appliance virtuelle 9.7P1 ou version ultérieure. La mise à niveau depuis une version antérieure à 9.7P1 de l'appliance virtuelle n'est pas prise en charge.</block>
-  <block id="65f6fb9b3fd7c8798ba4a7010e84a65b" category="list-text">Configurer SRM avec l'adresse IP et le mot de passe des outils ONTAP à l'aide de la commande :<block ref="2ca82e2fa9750815c3356b6e1692f9ca" prefix=" " category="inline-code"></block></block>
+  <block id="a88efd6c9b7763df783d278ede79c4a6" category="list-text">Configurer SRM à l'aide de l'adresse IP et du mot de passe des outils ONTAP :<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block>Un message de confirmation de la mémorisation des identifiants de stockage s'affiche.</block>
+  <block id="092016eb57c00c965fc19b3bff7ff343" category="list-text"><block ref="4222690b3b5a5c9afb047223bc02154e" prefix="" category="inline-code"></block></block>
+  <block id="b8e3b3982008f247b4868b6fd9b104d8" category="list-text">Configurer SRM avec l'adresse IP et le mot de passe des outils ONTAP à l'aide de la commande :<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block></block>
 </blocks>

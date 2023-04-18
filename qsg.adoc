@@ -154,7 +154,7 @@ Vous pouvez déployer SRA sur le serveur Windows SRM ou sur l'appliance 8.2 SRM.
 . Passez à l'utilisateur root : `su root`
 . Dans la commande log location, entrez pour obtenir l'ID docker utilisé par docker SRA : `docker ps -l`
 . Connectez-vous à l'ID de conteneur : `docker exec -it -u srm <container id> sh`
-. Configurer SRM à l'aide de l'adresse IP et du mot de passe des outils ONTAP : `perl command.pl -I <va-IP> administrator <va-password>`Un message de confirmation de la mémorisation des identifiants de stockage s'affiche.
+. Configurer SRM à l'aide de l'adresse IP et du mot de passe des outils ONTAP : `perl command.pl -I <otv-IP> administrator <otv-password>`Un message de confirmation de la mémorisation des identifiants de stockage s'affiche.
 
 
 
@@ -171,7 +171,7 @@ Vous pouvez déployer SRA sur le serveur Windows SRM ou sur l'appliance 8.2 SRM.
 . Exécutez la commande perl pour configurer SRA avec les nouvelles informations d'identification :
 +
 .. `cd /srm/sra/`
-.. `perl command.pl -I <va-IP> administrator <va-password>`
+.. `perl command.pl -I <otv-IP> administrator <otv-password>`
 
 
 
