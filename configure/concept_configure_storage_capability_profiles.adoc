@@ -11,7 +11,7 @@ summary: 'Vasa Provider pour ONTAP vous permet de créer des profils de capacit�
 
 
 [role="lead"]
-Vasa Provider pour ONTAP vous permet de créer des profils de capacité de stockage et de les mapper sur votre stockage. Cela vous permet de préserver la cohérence dans l'ensemble du stockage. Vous pouvez également utiliser VASA Provider pour vérifier la conformité entre les profils de stockage et de capacité de stockage.
+Vasa Provider pour ONTAP vous permet de créer des profils de capacité de stockage et de les mapper sur votre stockage. Cela permet d'assurer la cohérence dans l'ensemble du stockage. Vous pouvez également utiliser VASA Provider pour vérifier la conformité entre les profils de stockage et de capacité de stockage.
 
 Une fonctionnalité de stockage est un ensemble d'attributs du système de stockage qui identifie un niveau spécifique de performances de stockage, d'efficacité du stockage et d'autres fonctionnalités telles que le chiffrement de l'objet de stockage associé à la fonctionnalité de stockage.
 
@@ -36,9 +36,6 @@ Lorsqu'il est utilisé avec vvols, le profil de capacité de stockage est égale
 VCenter Server associe ensuite la fonctionnalité de stockage d'une LUN ou d'un volume au datastore provisionné sur cette LUN ou ce volume. Cela vous permet de provisionner une machine virtuelle dans un datastore qui correspond au profil de stockage de la machine virtuelle et de vous assurer que tous les datastores d'un cluster de datastore disposent des mêmes niveaux de service de stockage.
 
 Avec les outils ONTAP, vous pouvez configurer chaque datastore de volume virtuel (vvols) avec un nouveau profil de capacité de stockage qui prend en charge le provisionnement de machines virtuelles avec des besoins en IOPS variables sur le même datastore vvols. Lors de l'exécution du workflow de provisionnement de VM avec un besoin d' IOPS, tous les datastores vvols sont répertoriés dans la liste de datastores compatibles.
-
-
-NOTE: Lorsque vous essayez de provisionner ou de modifier des machines virtuelles pour vCenter Server avant 6.5, seuls les datastores vvols contenant des profils de capacité de stockage avec des performances définies sur "`AX_IOPS" sont répertoriés dans la liste de datastores compatibles. Les datastores vVvols restants sont répertoriés dans la liste de datastores incompatibles. Vous pouvez ignorer cette classification et sélectionner n'importe quel datastore vvols dans la liste de datastores incompatibles pour provisionner ou modifier la machine virtuelle.
 
 
 

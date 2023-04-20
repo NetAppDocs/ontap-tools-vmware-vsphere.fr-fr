@@ -19,22 +19,7 @@ Vasa Provider ne peut accéder aux systèmes de stockage qu'au niveau du cluster
 
 Pour créer un nouvel utilisateur et connecter un cluster ou un SVM aux outils ONTAP, il faut effectuer les opérations suivantes :
 
-* Créer un administrateur de cluster ou un rôle d'administrateur SVM
-+
-
-NOTE: Pour créer ces rôles, vous pouvez utiliser l'une des méthodes suivantes :
-
-+
-** ONTAP System Manager 9.8P1 ou version ultérieure
-+
-link:../configure/task_configure_user_role_and_privileges.html["Configurez les rôles et privilèges utilisateur"]
-
-** Créateur d'utilisateurs RBAC pour l'outil ONTAP (si vous utilisez ONTAP 9.6 ou une version antérieure)
-+
-https://community.netapp.com/t5/Virtualization-Articles-and-Resources/RBAC-User-Creator-tool-for-VSC-VASA-Provider-and-Storage-Replication-Adapter-7-0/ta-p/133203/t5/Virtualization-Articles-and-Resources/How-to-use-the-RBAC-User-Creator-for-Data-ONTAP/ta-p/86601["Outil RBAC User Creator pour VSC, VASA Provider et Storage Replication adapter 7.0 pour VMware vSphere"]
-
-
-
+* Créer un rôle d'administrateur de cluster ou SVM à l'aide de ONTAP System Manager 9.8P1 ou version ultérieure. Voir link:../configure/task_configure_user_role_and_privileges.html["Configurez les rôles et privilèges utilisateur"] pour en savoir plus.
 * Créez des utilisateurs avec le rôle attribué et le jeu d'applications approprié à l'aide de ONTAP
 +
 Ces identifiants sont nécessaires pour configurer les systèmes de stockage pour VSC. Vous pouvez configurer les systèmes de stockage pour VSC en saisissant les identifiants dans VSC. Chaque fois que vous vous connectez à un système de stockage avec ces identifiants, vous disposez d'autorisations pour accéder aux fonctions VSC que vous avez configurées dans ONTAP lors de la création des identifiants.

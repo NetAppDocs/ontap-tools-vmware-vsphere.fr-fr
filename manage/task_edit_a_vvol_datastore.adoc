@@ -1,5 +1,5 @@
 ---
-permalink: manage/task_edit_a_vvols_datastore.html 
+permalink: manage/task_edit_a_vvol_datastore.html 
 sidebar: sidebar 
 keywords:  
 summary: 'Vous pouvez modifier un datastore VMware Virtual volumes \(vVvols\) existant pour modifier le profil de capacité de stockage par défaut. Le profil de capacité de stockage par défaut est principalement utilisé pour Swap vvols.' 

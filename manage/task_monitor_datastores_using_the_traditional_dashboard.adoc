@@ -29,8 +29,8 @@ Le tableau de bord traditionnel des outils ONTAP vous permet de voir les datasto
 *Étapes*
 
 . Dans la page d'accueil de vSphere client, cliquez sur *Outils ONTAP pour VMware vSphere*.
-. Sélectionnez le serveur vCenter requis à l'aide du menu déroulant vCenter Server pour afficher les datastores.
-. Cliquez sur *Tableau de bord traditionnel*.
+. Sélectionnez le serveur vCenter requis à l'aide du sélecteur *INSTANCE* pour afficher les datastores.
+. Cliquez sur *vue d'ensemble > Tableau de bord classique*.
 +
 Le portlet datastores fournit les informations suivantes :
 

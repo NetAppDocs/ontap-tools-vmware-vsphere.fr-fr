@@ -11,7 +11,7 @@ summary: Vous devez tenir compte des considérations relatives à la création e
 
 
 [role="lead"]
-Vous devez tenir compte des considérations relatives à la création et à la modification de profils de capacité de stockage.
+Vous trouverez ci-dessous les considérations relatives à la création et à la modification des profils de capacité de stockage.
 
 * Vous pouvez configurer min IOPS uniquement sur les systèmes AFF.
 * Vous pouvez configurer les metrics de qualité de service au niveau du datastore de volume virtuel (VVol).

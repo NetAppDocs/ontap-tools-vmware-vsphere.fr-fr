@@ -35,26 +35,23 @@ Vous devez définir cette valeur sur 0.
 
 * *Net.TcpipeHeapSize*
 +
-Si vous utilisez vSphere 6.0 ou version ultérieure, vous devez définir cette valeur sur 32.
+Définissez cette valeur sur 32.
 
 * *Net.TcpipeHeapMax*
 +
-Vous devez définir cette valeur sur 512 Mo pour les versions vSphere 6.X, à l'exception des versions 6.5U3 et 6.7U3. Pour vSphere 6.5U3 et 6.7U3, cette valeur est définie sur 1024 Mo. Si vous utilisez vSphere 7.0 ou une version ultérieure, vous devez définir cette valeur sur 1024 Mo.
+Définissez cette valeur sur 1024 Mo.
 
 * *NFS.Maxvolumes*
 +
-Si vous utilisez vSphere 6.0 ou version ultérieure, vous devez définir cette valeur sur 256.
+Définissez cette valeur sur 256.
 
 * *NFS41.MaxVolumes*
 +
-Si vous utilisez vSphere 6.0 ou version ultérieure, vous devez définir cette valeur sur 256.
+Définissez cette valeur sur 256.
 
 * *NFS.MaxQueueDepth*
 +
-Si vous utilisez la version vSphere 6.0 ou ultérieure de l'hôte ESXi, vous devez définir cette valeur sur 128 ou plus pour éviter les goulots d'étranglement dans la mise en file d'attente.
-
-+
-Dans le cas des versions vSphere antérieures à la version 6.0, définissez cette valeur sur 64.
+Définissez cette valeur sur 128 ou plus pour éviter les goulots d'étranglement dans la file d'attente.
 
 * *NFS.HeartbeatMaxFailures*
 +
@@ -76,10 +73,10 @@ Définissez cette valeur sur 5 pour toutes les configurations NFS.
 
 * *Politique de sélection de chemin*
 +
-Vous devez définir cette valeur sur « RR » (Round Robin) lorsque des chemins FC avec ALUA sont utilisés.
+Définissez cette valeur sur « RR » (round Robin) lorsque les chemins FC avec ALUA sont utilisés.
 
 +
-Vous devez définir cette valeur sur « FIXE » pour toutes les autres configurations.
+Définissez cette valeur sur « FIXE » pour toutes les autres configurations.
 
 +
 La définition de cette valeur sur « RR » permet d'équilibrer la charge entre tous les chemins actifs/optimisés. La valeur « FIXE » est utilisée pour les anciennes configurations non ALUA et permet d'éviter les E/S proxy
@@ -108,7 +105,7 @@ Utilisez la valeur par défaut.
 
 * *Politique de sélection de chemin*
 +
-Vous devez définir cette valeur sur « RR » pour tous les chemins iSCSI.
+Définissez cette valeur sur « RR » pour tous les chemins iSCSI.
 
 +
 La définition de cette valeur sur « RR » permet d'équilibrer la charge entre tous les chemins actifs/optimisés.

@@ -44,7 +44,7 @@ link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html
 
 . Connectez-vous au client vSphere.
 . Sélectionnez *Accueil* > *hôte et clusters*.
-. Cliquez avec le bouton droit de la souris sur le centre de données requis, puis cliquez sur *déployer le modèle OVA*.
+. Cliquez avec le bouton droit de la souris sur le centre de données requis, puis cliquez sur *déployer le modèle OVF...*.
 . Sélectionnez la méthode applicable pour fournir le fichier de déploiement pour les outils ONTAP, puis cliquez sur *Suivant*.
 +
 |===
@@ -63,7 +63,7 @@ Indiquez l'URL du fichier _.ova_ pour les outils ONTAP.
  a| 
 Dossier
  a| 
-Sélectionnez le fichier _.ova_ pour les outils ONTAP à partir de l'emplacement enregistré.
+Extrayez le fichier .zip, qui contient le fichier .ova sur votre système local. Sur la page Sélectionner un modèle OVF, indiquez l'emplacement du fichier .ova dans le dossier extrait.
 
 |===
 . Entrez les détails nécessaires à la personnalisation de l'assistant de déploiement.
@@ -81,7 +81,7 @@ Lorsque vous attendez la fin du déploiement, vous pouvez afficher la progressio
 
 . Mettez la machine virtuelle sous tension des outils ONTAP, puis ouvrez une console de la machine virtuelle exécutant les outils ONTAP.
 . Vérifiez que les outils ONTAP sont en cours d'exécution une fois le déploiement terminé.
-. Si les outils ONTAP ne sont enregistrés avec aucun serveur vCenter, utilisez ``\https://appliance_ip:8143/Register.html` Pour enregistrer l'instance VSC.
+. Si les outils ONTAP ne sont enregistrés avec aucun serveur vCenter, utilisez `\https://appliance_ip:8143/Register.html` Pour enregistrer l'instance VSC. Le Register.html vous redirige vers la page swagger. À partir de ONTAP Tools 9.12, l'enregistrement des outils ONTAP avec vCenter se fait à partir de la page swagger.
 . Déconnectez-vous puis reconnectez-vous au client vSphere pour afficher les outils ONTAP déployés.
 +
 La mise à jour du plug-in peut prendre quelques minutes dans le client vSphere.
@@ -93,9 +93,6 @@ La mise à jour du plug-in peut prendre quelques minutes dans le client vSphere.
 link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["Effacez les packages de plug-in téléchargés dans le cache vSphere"]
 
 
-
-
-NOTE: Si vous utilisez ONTAP 9.6 ou une version antérieure, alors pour afficher le tableau de bord vvols, vous devez télécharger et installer OnCommand API Services. Mais pour ONTAP 9.7, vous n'avez pas besoin d'enregistrer les services d'API OnCommand auprès de VASA Provider.
 
 link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["Activez VASA Provider pour la configuration des datastores virtuels"]
 

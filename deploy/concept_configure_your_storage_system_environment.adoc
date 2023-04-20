@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Les outils ONTAP® pour VMware vSphere fournissent un mécanisme unique de détection des systèmes de stockage et de définition des informations d"identification du stockage. Ces identifiants fournissent les autorisations ONTAP requises pour permettre aux utilisateurs de Virtual Storage Console \(VSC\) d"effectuer des tâches à l"aide des systèmes de stockage.' 
 ---
-= Configurer les outils ONTAP® pour le système de stockage VMware vSphere
+= Configuration des outils ONTAP pour le système de stockage VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,14 +18,14 @@ Avant que VSC ne puisse afficher et gérer les ressources de stockage, VSC doit 
 
 NOTE: Si vous vous connectez en tant qu'administrateur, vous disposez automatiquement de tous les privilèges pour ce système de stockage.
 
-Lorsque vous ajoutez un système de stockage à VSC, vous devez fournir une adresse IP pour le système de stockage et la paire nom d'utilisateur et mot de passe associée à ce système. Vous pouvez configurer les identifiants par défaut que VSC utilisera lors de la détection du système de stockage ou vous pouvez saisir manuellement des informations d'identification lors de la découverte du système de stockage. Les détails du système de stockage ajouté à VSC sont automatiquement transmis aux extensions que vous activez lors du déploiement. Vous n'avez pas besoin d'ajouter manuellement du stockage à VASA Provider et Storage Replication adapter (SRA). VSC et SRA prennent en charge l'ajout des identifiants au niveau du cluster et des machines virtuelles de stockage. Vasa Provider prend uniquement en charge les identifiants au niveau du cluster lors de l'ajout de systèmes de stockage.
+Lorsque vous ajoutez un système de stockage à VSC, vous devez fournir une adresse IP pour le système de stockage et la paire nom d'utilisateur et mot de passe associée à ce système. Vous pouvez configurer les identifiants par défaut que VSC utilisera lors de la détection du système de stockage ou vous pouvez saisir manuellement des informations d'identification lors de la découverte du système de stockage. Les détails du système de stockage ajouté à VSC sont automatiquement transmis aux extensions que vous activez lors du déploiement. Vous n'avez pas besoin d'ajouter manuellement du stockage à VASA Provider et Storage Replication adapter (SRA). VSC et SRA prennent en charge l'ajout des identifiants au niveau du cluster et des machines virtuelles de stockage. Vasa Provider prend uniquement en charge les identifiants au niveau du cluster lors de l'ajout de systèmes de stockage. Lorsque vous ajoutez un système de stockage, toute communication entre le plug-in d'outils ONTAP et le système de stockage doit être authentifiée mutuellement.
 
 Si votre environnement inclut plusieurs instances vCenter Server, lorsque vous ajoutez un système de stockage à VSC à partir de la page Storage Systems (systèmes de stockage), la boîte de dialogue Add Storage System (Ajouter un système de stockage) affiche une boîte de dialogue vCenter Server dans laquelle vous pouvez spécifier l'instance de vCenter Server à laquelle le système de stockage doit être ajouté. Si vous ajoutez un système de stockage en cliquant avec le bouton droit de la souris sur un nom de datacenter, vous n'avez pas la possibilité de spécifier une instance de vCenter Server car le serveur est déjà associé à ce datacenter.
 
 La découverte se fait de l'une des manières suivantes. Dans chaque cas, vous devez fournir des informations d'identification pour tout système de stockage nouvellement découvert.
 
 * Au démarrage du service VSC, VSC démarre son processus de détection automatique en arrière-plan.
-* Vous pouvez cliquer sur le bouton *REDÉCOUVRIR tout* de la page systèmes de stockage ou sur un hôte ou un datacenter pour le sélectionner dans le menu *actions* (*actions* > *NetApp VSC* > *mettre à jour les données hôte et de stockage*). Vous pouvez également cliquer sur *DÉCOUVRIR* dans l'onglet mise en route de la section vue d'ensemble.
+* Vous pouvez cliquer sur le bouton *REDÉCOUVRIR tout* de la page systèmes de stockage, ou sur un hôte ou un centre de données pour le sélectionner dans le menu *actions* (*actions* > *Outils ONTAP NetApp* > *mettre à jour les données d'hôte et de stockage*). Vous pouvez également cliquer sur *DÉCOUVRIR* dans l'onglet mise en route de la section vue d'ensemble.
 
 
 Toutes les fonctionnalités de VSC requièrent des autorisations spécifiques pour effectuer des tâches. Vous pouvez limiter ce que les utilisateurs peuvent faire en fonction des informations d'identification associées au rôle ONTAP. Tous les utilisateurs disposant des mêmes nom d'utilisateur et paire de mots de passe du système de stockage partagent le même ensemble d'informations d'identification du système de stockage et peuvent effectuer les mêmes opérations.

@@ -11,7 +11,7 @@ summary: 'Si vous utilisez des outils ONTAP® pour VMware vSphere dans un enviro
 
 
 [role="lead"]
-Si vous utilisez les outils ONTAP pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de vCenter Server, vous devez enregistrer une instance de VSC avec chaque serveur vCenter Server de sorte qu'il existe un couplage 1:1 entre VSC et vCenter Server. Cela vous permet de gérer tous les serveurs exécutant vCenter 6.0 ou version ultérieure en mode lié et en mode non lié à partir d'un seul client HTML5 vSphere.
+Si vous utilisez les outils ONTAP pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de vCenter Server, vous devez enregistrer une instance de VSC avec chaque serveur vCenter Server de sorte qu'il existe un couplage 1:1 entre VSC et vCenter Server. Cela vous permet de gérer tous les serveurs exécutant vCenter 7.0 ou version ultérieure en mode lié et en mode non lié à partir d'un seul client vSphere HTML5.
 
 
 NOTE: Si vous souhaitez utiliser VSC avec un serveur vCenter, vous devez avoir configuré ou enregistré une instance VSC pour chaque instance de vCenter Server à gérer. Chaque instance VSC enregistrée doit avoir la même version.
@@ -36,7 +36,7 @@ Vous devez également disposer des autorisations RBAC appropriées.
 
 
 
-Lorsque vous effectuez une tâche qui nécessite la spécification d'un serveur vCenter, la liste déroulante *vCenter Server* affiche les serveurs vCenter disponibles dans l'ordre alphanumérique. Le serveur vCenter par défaut est toujours le premier serveur de la liste déroulante.
+Lorsque vous effectuez une tâche nécessitant la spécification d'un serveur vCenter, le sélecteur *INSTANCE* situé dans le coin supérieur gauche de l'écran affiche les serveurs vCenter disponibles dans l'ordre alphanumérique. Le serveur vCenter par défaut est toujours le premier serveur de la liste déroulante.
 
 Si l'emplacement du stockage est connu (par exemple, lorsque vous utilisez l'assistant de provisionnement et que le datastore se trouve sur un hôte géré par un serveur vCenter spécifique), la liste vCenter Server s'affiche sous la forme d'une option en lecture seule. Cela se produit uniquement lorsque vous utilisez l'option clic droit pour sélectionner un élément dans vSphere Web client.
 

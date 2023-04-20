@@ -13,7 +13,7 @@ summary: 'Les rapports vVvols affichent des informations détaillées sur les da
 [role="lead"]
 Les rapports vvols affichent des informations détaillées sur les datastores VMware Virtual volumes (vvols) et les machines virtuelles qui sont créées sur ces datastores. Le tableau de bord vVvols vous permet d'examiner et d'identifier les problèmes potentiels avec les datastores vvols et les machines virtuelles de votre serveur vCenter.
 
-Vous pouvez afficher, organiser et exporter des rapports. Les données pour les datastores vvols et les machines virtuelles sont fournies par ONTAP avec OnCommand API Services.
+Vous pouvez afficher, organiser et exporter des rapports. Les données du rapport des datastores vVols et des machines virtuelles sont fournies par ONTAP.
 
 VVvols fournit les rapports prédéfinis suivants :
 

@@ -11,10 +11,8 @@ summary: Vous pouvez télécharger le fichier .ova pour les outils ONTAP pour VM
 
 
 [role="lead"]
-Vous pouvez télécharger le fichier _.ova_ pour les outils ONTAP pour VMware vSphere à partir du site de support NetApp.
+Vous pouvez télécharger le `.zip` Fichier contenant des binaires (_.ova_) et des certificats signés pour les outils ONTAP pour VMware vSphere à partir du https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de support NetApp"^].
 
-Le fichier _.ova_ comprend les outils ONTAP. Une fois le déploiement terminé, les trois produits sont installés dans votre environnement. Par défaut, VSC commence à travailler dès que vous décidez du modèle de déploiement qui vous convient et vous choisissez d'activer VASA Provider et SRA en fonction de vos besoins.
-
-Vous pouvez télécharger les outils ONTAP depuis le https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de support NetApp"] à l'aide de la page de téléchargement du logiciel.
+Le fichier _.ova_ comprend les outils ONTAP. Une fois le déploiement terminé, les produits VSC, VASA et SRA sont installés dans votre environnement. Par défaut, VSC commence à travailler dès que vous décidez du modèle de déploiement qui vous convient et vous choisissez d'activer VASA Provider et SRA en fonction de vos besoins.
 
 Si vous souhaitez activer SRA dans votre déploiement des outils ONTAP, vous devez avoir installé le plug-in SRA sur le serveur SRM (site Recovery Manager). Vous pouvez télécharger le fichier d'installation du plug-in SRA à partir du menu *Storage Replication adapter pour ONTAP* de la section Téléchargement de logiciels.

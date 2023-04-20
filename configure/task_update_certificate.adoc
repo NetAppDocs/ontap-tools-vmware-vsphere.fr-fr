@@ -1,0 +1,18 @@
+---
+permalink: configure/task_update_certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez mettre à jour le certificat à l"expiration du certificat ou lorsque celui-ci est modifié manuellement. Lorsque le certificat du client ou du cluster expire ou ne correspond pas, la communication avec le système ONTAP est interrompue.' 
+---
+= Mettre à jour le certificat
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez mettre à jour le certificat lorsque le certificat du client ou du cluster est sur le point d'expirer ou a expiré, ou lorsque le certificat du cluster est modifié manuellement. Lorsque le certificat du client ou du cluster expire ou ne correspond pas, la communication avec le système ONTAP est interrompue.
+
+Le certificat de cluster est le certificat de serveur généré côté ONTAP par l'administrateur du stockage. Le certificat client peut être généré dans les outils ONTAP. Lorsque le certificat de cluster expire, l'administrateur du stockage doit générer le nouveau certificat côté ONTAP. La fenêtre Modifier le système de stockage a automatiquement extrait le certificat de cluster du stockage ONTAP et vous devez autoriser le certificat de cluster.
+
+Lorsque le certificat est sur le point d'expirer ou s'il a déjà expiré, suivez la procédure décrite dans link:../configure/task_modify_storage_system.html["Modifier les systèmes de stockage"] pour mettre à jour le certificat.

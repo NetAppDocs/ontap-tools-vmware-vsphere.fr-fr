@@ -1,0 +1,41 @@
+---
+permalink: manage/task_syslog_files.html 
+sidebar: sidebar 
+keywords:  
+summary: Syslog est utilisé pour envoyer les journaux système au serveur de consignation centralisé. 
+---
+= Gérer syslog
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez syslog pour envoyer les journaux système au serveur de journalisation centralisé.
+
+*À propos de cette tâche*
+
+Les outils ONTAP pour VMware vSphere 9.12 suppriment les 2.0 API syslog précédentes et contiennent les nouvelles API syslog 3.0 qui prennent en charge l'authentification mutuelle. Suivez les étapes ci-dessous pour configurer syslog.
+
+*Étapes*
+
+. Exécutez _POST /2.0/Security/user/login pour obtenir_ un ID de session.
+. Exécutez _POST /3.0/appliance-management/logging-client-certificate_ en transmettant le sessionid reçu dans la réponse ci-dessus.
++
+Cela génère des certificats pour le serveur VP ainsi que pour le serveur VSC.
+
+. Copiez les deux certificats sur votre serveur syslog et faites-les confiance sur le serveur syslog.
++
+Voici un exemple de procédure à suivre pour syslog-ng docker :
+
++
+** JSON annule les deux certificats et copie les certificats au format pem dans le répertoire ca.d
+** `openssl x509 -noout -hash -in vsccert.pem` le résultat est un hachage (par exemple 6d2962a8)
+** `ln -s vsccert.pem 6d2962a8.0` cela crée un lien symbolique vers le certificat sous forme de hachage avec le suffixe .0
+** démarrez le serveur syslog
+
+
+. Exécutez _PATCH /3.0/appliance-management/syslog-config_ API en transmettant l'adresse IP du serveur, le port, le modèle(FACULTATIF), le niveau_journal et le certificat public du serveur syslog.
+
+
+Les journaux sont acheminés vers le serveur syslog spécifié.

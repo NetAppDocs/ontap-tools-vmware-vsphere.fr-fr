@@ -13,9 +13,9 @@ summary: 'Vous pouvez utiliser VASA Provider pour ONTAP pour créer et gérer de
 [role="lead"]
 Vous pouvez utiliser VASA Provider pour ONTAP pour créer et gérer des volumes virtuels VMware (vvols). Vous pouvez provisionner, modifier, monter et supprimer un datastore vvols. Vous pouvez également ajouter du stockage au datastore vvols ou supprimer du stockage du datastore vvols. pour plus de flexibilité. Vous pouvez provisionner et gérer chaque machine virtuelle et le VMDK associé.
 
-Un datastore vvols est constitué d'un ou plusieurs volumes FlexVol au sein d'un container de stockage (également appelé « sauvegarde de stockage »). Une machine virtuelle peut être répartie entre un datastore vvols ou plusieurs datastores vvols.
+Un datastore vVols se compose d'un ou plusieurs volumes FlexVol au sein d'un conteneur de stockage (également appelé stockage de support). Une machine virtuelle peut être répartie entre un datastore vvols ou plusieurs datastores vvols.
 
-Vous pouvez créer un datastore vvols comprenant plusieurs volumes FlexVol. Toutefois, tous les volumes FlexVol du conteneur de stockage doivent utiliser le même protocole (NFS, iSCSI ou FCP) et les mêmes serveurs virtuels de stockage (SVM).
+Même si vous pouvez créer un datastore vVols ayant plusieurs volumes FlexVol, tous les volumes FlexVol au sein du conteneur de stockage doivent utiliser le même protocole (NFS, iSCSI, FCP ou NVMe/FC) et les mêmes serveurs virtuels de stockage (SVM).
 
 Vous ne devez pas avoir de connaissances détaillées sur le stockage sous-jacent. Par exemple, vous n'avez pas besoin d'identifier un volume FlexVol spécifique pour contenir le stockage. Une fois que vous avez ajouté des volumes FlexVol dans le datastore vvols, le conteneur de stockage gère les exigences de stockage et prévient toutes les situations lors du provisionnement de machines virtuelles, où VMware a provisionné dans un volume de sauvegarde sans capacité.
 

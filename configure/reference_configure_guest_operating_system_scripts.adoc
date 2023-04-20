@@ -45,6 +45,6 @@ Solaris
 \https://<appliance_ip>:8143/vsc/public/writable/solaris_gos_timeout_190-install.iso
 
 |===
-Vous devez installer le script à partir de la copie de l'instance VSC enregistrée sur vCenter Server qui gère la machine virtuelle. Si votre environnement inclut plusieurs serveurs vCenter, sélectionnez le serveur qui contient la machine virtuelle pour laquelle vous souhaitez définir les valeurs de délai de stockage.
+Vous devez installer le script à partir de la copie de l'instance VSC enregistrée sur le serveur vCenter (ELM) qui gère la machine virtuelle. Si votre environnement comprend plusieurs serveurs vCenter, vous devez sélectionner l'instance contenant la machine virtuelle pour laquelle vous souhaitez définir les valeurs de délai de stockage.
 
 Vous devez vous connecter à la machine virtuelle, puis exécuter le script pour définir les valeurs de délai de stockage.

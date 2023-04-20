@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Vous pouvez ajouter manuellement un système de stockage à Virtual Storage Console \(VSC\).' 
 ---
-= Ajout de systèmes de stockage à VSC
+= Ajout de systèmes de stockage
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,24 +13,53 @@ summary: 'Vous pouvez ajouter manuellement un système de stockage à Virtual St
 [role="lead"]
 Vous pouvez ajouter manuellement un système de stockage à Virtual Storage Console (VSC).
 
+
+NOTE: Si le cluster ONTAP est compatible SAML, la communication avec ONTAP s'effectue avec l'authentification de base.
+
 *À propos de cette tâche*
 
 Chaque fois que vous démarrez Virtual Storage Console (VSC) ou que vous sélectionnez l'option *REDÉCOUVREZ tout*, VSC détecte automatiquement les systèmes de stockage disponibles.
 
 *Étapes*
 
-. Ajoutez un système de stockage à VSC en utilisant la page d'accueil des outils ONTAP :
+. Pour ajouter un système de stockage à VSC, utilisez l'une des options de la page d'accueil des outils ONTAP :
 +
-** Cliquez sur *Storage Systems* > *Add*.
+** Cliquez sur *Storage Systems* > *Add*. ou
 ** Cliquez sur *Présentation* > *pour commencer*, puis sur le bouton *AJOUTER* sous Ajouter un système de stockage.
 
 
 . Dans la boîte de dialogue *Ajouter un système de stockage*, entrez l'adresse IP de gestion et les informations d'identification pour ce système de stockage.
 +
-Vous pouvez également ajouter des systèmes de stockage en utilisant l'adresse IPv6 du cluster ou de la SVM. Vous pouvez également modifier les valeurs par défaut pour TLS et le numéro de port dans cette boîte de dialogue.
+Lorsque vous ajoutez un système de stockage, toute communication entre le plug-in d'outils ONTAP et le système de stockage doit être authentifiée mutuellement.
 
 +
-Lorsque vous ajoutez du stockage depuis la page VSC Storage System, vous devez également spécifier l'instance vCenter Server sur laquelle le système de stockage sera situé. La boîte de dialogue Ajouter un système de stockage fournit une liste déroulante des instances de vCenter Server disponibles. VSC n'affiche pas cette option si vous ajoutez du stockage à un data Center déjà associé à une instance de vCenter Server.
+Vous pouvez également ajouter des systèmes de stockage en utilisant l'adresse IPv6 du cluster ou de la SVM.
+
++
+Lorsque vous ajoutez du stockage à partir de la page VSC Storage System, spécifiez l'instance vCenter Server où se trouve le stockage. La boîte de dialogue Ajouter un système de stockage fournit une liste déroulante des instances de vCenter Server disponibles. VSC n'affiche pas cette option si vous ajoutez du stockage à un data Center déjà associé à une instance de vCenter Server.
+
++
+REMARQUE :
+
++
+** À partir de la version 9.12 des outils ONTAP, toutes les communications des systèmes de stockage ONTAP se produisent par le biais d'une authentification basée sur des certificats.
+** Les actions traditionnelles du datastore telles que Supprimer, Redimensionner et Monter ne sont pas autorisées lorsque le certificat du client ou du cluster n'est pas valide.
+** Les actions du datastore vVol telles que développer le stockage, Monter le datastore ne sont pas autorisées lorsque le certificat du client ou du cluster n'est pas valide.
+** Les actions telles que Supprimer, Supprimer le stockage et Modifier les propriétés sont autorisées car ces actions ne nécessitent pas de communication ONTAP.
+** Pour ajouter un système de stockage avec l'utilisateur délimité par des SVM, l'administrateur du cluster du système de stockage doit modifier l'utilisateur et ajouter la méthode d'authentification *Certificate* aux applications HTTP et ONTAPI.
++
+Dans les options avancées, il existe deux façons de télécharger le *certificat de cluster ONTAP* :
+
++
+... *Extraction automatique* - récupère automatiquement les certificats.
+... *Téléchargement manuel* - vous devez naviguer manuellement jusqu'à l'emplacement où se trouve le certificat et télécharger le certificat.
+
+
+
 
 . Cliquez sur *OK* après avoir ajouté toutes les informations requises.
++
+La fenêtre contextuelle Autoriser le certificat de cluster s'affiche.
+
+. Cliquez sur *Afficher le certificat* pour afficher les détails du certificat. Cliquez sur *Oui* pour ajouter le système de stockage
 

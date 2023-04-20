@@ -54,21 +54,21 @@ NOTE: La version 9.10 des outils ONTAP prend en charge la création de datastore
  a| 
 Tous les hôtes d'un data Center
  a| 
-Cliquez avec le bouton droit sur un data Center, puis sélectionnez *NetApp VSC* > *Provision datastore*.
+Cliquez avec le bouton droit de la souris sur un data Center, puis sélectionnez *NetApp ONTAP Tools* > *Provision datastore*.
 
 
 
  a| 
 Tous les hôtes d'un cluster
  a| 
-Cliquez avec le bouton droit sur un cluster, puis sélectionnez *NetApp VSC* > *Provision datastore*.
+Cliquez avec le bouton droit de la souris sur un cluster, puis sélectionnez *Outils ONTAP NetApp* > *Provision datastore*.
 
 
 
  a| 
 Un hôte unique
  a| 
-Cliquez avec le bouton droit sur un hôte, puis sélectionnez *NetApp VSC* > *Provision datastore*.
+Cliquez avec le bouton droit de la souris sur un hôte, puis sélectionnez *Outils ONTAP NetApp* > *Provision datastore*.
 
 |===
 . Renseignez les champs de la boîte de dialogue Nouveau datastore pour créer le datastore.
@@ -86,6 +86,11 @@ La plupart des champs de la boîte de dialogue sont explicites. Le tableau suiva
 Généralités
  a| 
 La section général de la boîte de dialogue Nouveau datastore propose des options permettant de saisir l'emplacement, le nom, la description, le type et le protocole du nouveau datastore. Le type de datastore vVvols est utilisé pour configurer un datastore vVvols.
+
+Vous pouvez provisionner le datastore vVols si la fonctionnalité du fournisseur VASA est activée. Voir, link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["Activez VASA Provider pour la configuration des datastores virtuels"] pour plus d'informations. Le datastore vVols prend en charge les protocoles NFS, iSCSI, FC/FEoE et NVMe/FC.
+
+
+NOTE: Le protocole NVMe/FC pour le datastore vVols est disponible si les outils ONTAP sont enregistrés dans vCenter 8.0 et versions ultérieures, et si la version ONTAP est ONTAP 9.91P3 et versions ultérieures.
 
 
 NOTE: Si vous provisionnez un datastore iSCSI vvols pour la réplication vvols, avant de créer un datastore vvols sur le site cible, vous devez procéder à une mise à jour SnapMirror et à une redécouverte de clusters.
@@ -115,7 +120,7 @@ Dans la liste existante, vous devez sélectionner la planification de SnapMirror
 
 
 |===
-. Dans la section Résumé, cliquez sur **Terminer**.
+. Dans la section Résumé, cliquez sur *Terminer*.
 
 
 *Résultat*

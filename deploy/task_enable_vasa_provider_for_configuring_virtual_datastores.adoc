@@ -26,7 +26,7 @@ Si la fonctionnalité VASA Provider est désactivée avant la mise à niveau ver
 *Étapes*
 
 . Connectez-vous à l'interface utilisateur Web de VMware vSphere.
-. Dans vSphere client, cliquez sur *Menu* > *ONTAP Tools Console*.
+. Depuis le client vSphere, cliquez sur *Menu* > *Console des outils NetApp ONTAP*.
 . Cliquez sur *Paramètres*.
 . Cliquez sur *gérer les fonctionnalités* dans l'onglet Paramètres d'administration.
 . Dans la boîte de dialogue gérer les fonctionnalités, sélectionnez l'extension VASA Provider à activer.
@@ -35,42 +35,6 @@ Si la fonctionnalité VASA Provider est désactivée avant la mise à niveau ver
 +
 
 NOTE: Si l'état de VASA Provider s'affiche en tant que « hors ligne » même après l'activation de l'extension VASA Provider, vérifiez alors le ``/var/log/vmware/vmware-sps/sps.log` File pour toute erreur de connexion avec VASA Provider ou redémarrez le service « vmware-sps ».
-
-
-
-
-
-== Enregistrez les services de l'API OnCommand avec ONTAP 9.6 ou une version antérieure
-
-Si vous utilisez ONTAP 9.6 ou une version antérieure, le tableau de bord vvols peut afficher les détails des datastores VMware Virtual volumes (vvols) et des machines virtuelles uniquement si vous avez enregistré OnCommand API Services pour VASA Provider pour obtenir des données pour les rapports vVvols VM et datastore.
-
-*Ce dont vous aurez besoin*
-
-Vous devez avoir téléchargé les services d'API OnCommand version 2.1 ou ultérieure depuis le site de support NetApp.
-
-
-NOTE: Le tableau de bord vVvols affiche les indicateurs de performances uniquement lorsque les datastores et les machines virtuelles SAN vvols sont configurés à l'aide de ONTAP 9.3 ou version ultérieure.
-
-*Étapes*
-
-. Dans la page d'accueil des outils ONTAP, cliquez sur *Paramètres*.
-. Cliquez sur *gérer l'extension* dans l'onglet Paramètres d'administration.
-. Utilisez le curseur Enregistrer les services d'API OnCommand pour activer les services d'API OnCommand.
-. Saisissez l'adresse IP, le port de service et les informations d'identification des services d'API OnCommand.
-+
-Vous pouvez également utiliser la boîte de dialogue gérer les extensions VASA Provider pour les modifications suivantes :
-
-+
-** Pour mettre à jour l'enregistrement des services d'API OnCommand en cas de modification des informations d'identification.
-** Pour annuler l'enregistrement de OnCommand API Services lorsque vous n'avez plus besoin du tableau de bord vvols.
-+
-Vous devez décocher la case Enregistrer les services d'API OnCommand pour supprimer l'enregistrement des services d'API OnCommand pour VASA Provider.
-
-
-
-. Cliquez sur *appliquer*.
-+
-Le tableau de bord vVvols affiche les metrics pour les datastores ONTAP 9.6 ou antérieurs SAN vvols uniquement après l'enregistrement des services API OnCommand.
 
 
 

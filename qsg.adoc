@@ -80,7 +80,7 @@ Exigences minimales en matière de stockage et d'applications :
 | *Stockage, hôte et applications* | *Exigences de version* 
 
 
-| ONTAP | ONTAP 9.3, 9.5, 9.6, 9.7, 9.8P1 ou version ultérieure. 
+| ONTAP | ONTAP 9.7, 9.8P1 ou version ultérieure. 
 
 
 | VMware vSphere, vCenter Server, hôtes ESXi, site Recovery Manager (SRM), applications de plug-ins et bases de données colonne 1 | Voir la https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Matrice d'interopérabilité"^] 
@@ -95,51 +95,67 @@ Exigences minimales en matière de stockage et d'applications :
 * Supprimez le cache du navigateur pour éviter tout problème de cache du navigateur pendant le déploiement des outils ONTAP.
 * Configurez la passerelle par défaut à utiliser par l'appliance virtuelle pour répondre aux requêtes ping ICMP.
 * Nom d'hôte DNS valide pour l'appliance virtuelle.
-* Téléchargez et installez OnCommand API Services pour ONTAP 9.6 ou version antérieure si vous souhaitez visualiser le tableau de bord vvols. Il n'est pas nécessaire d'enregistrer des services d'API OnCommand auprès de VASA Provider si vous utilisez ONTAP 9.7 ou une version ultérieure.
 
 
 
 
 === Exigences facultatives pour SRA
 
-Si vous déployez l'appliance virtuelle pour une utilisation avec VMware site Recovery Manager, vous devez avoir : * téléchargé le `.msi` Fichier du plug-in SRA uniquement si vous souhaitez configurer la solution de reprise après incident site Recovery Manager (SRM). Colonne 1 * téléchargé le `.tar.gz` Fichier pour SRA si vous utilisez l'appliance SRM.
+Si vous déployez l'appliance virtuelle pour une utilisation avec VMware site Recovery Manager, vous devez avoir : * téléchargé le `.tar.gz` Fichier pour SRA si vous utilisez l'appliance SRM.
 
 
 
 == Déploiement des outils ONTAP
 
 .Étapes
-. Téléchargez le `.ova` fichier du https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de support NetApp"^] Sur un système vSphere client pour déployer les outils ONTAP.
+. Télécharger `.zip` fichier contenant des binaires et des certificats signés à partir du https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de support NetApp"^] Sur un système vSphere client pour déployer les outils ONTAP.
+. Extraire le `.zip` et déployez le `.ova` fichier.
 +
 Vous devez déployer le `.ova` Fichier sur les sites source et de destination si vous déployez SRA.
 
 . Connectez-vous au client Web vSphere, sélectionnez *Accueil* > *hôte et clusters*.
 . Cliquez avec le bouton droit de la souris sur le centre de données requis, puis cliquez sur *déployer le modèle OVF*.
++
+Si vous utilisez vCenter7.0u3e et les versions ultérieures, effectuez les opérations suivantes, sinon passez à l'étape 5. Il s'agit d'une étape facultative pour vérifier que l'intégrité binaire OVA n'est pas altérée.
+
++
+** Téléchargez le fichier _OTV_INTER_ROOT_CERT_CHAIN.pem_ sur le site de support NetApp.
+** Accédez à *vcenter* > *administration* > *gestion des certificats*.
+** Cliquez sur l'option *Ajouter un certificat racine approuvé*.
+** Cliquez sur *Browse* et indiquez le chemin d'accès pour _OTV_INTER_ROOT_CERT_CHAIN.pem_ file.
+** Cliquez sur *Ajouter*.
++
+
+NOTE: Le message Entrust Code Signing - OVCS2 (Trusted Certificate) confirme l'intégrité du fichier OVA téléchargé. Si le message Entrust Code Signing - OVCS2 (Invalid Certificate) s'affiche, mettez à niveau VMware vCenter Server vers 7.0U3E ou une version supérieure.
+
+
+
 . Vous pouvez soit saisir l'URL du fichier .ova, soit rechercher le dossier dans lequel le fichier .ova est enregistré, puis cliquer sur *Suivant*.
 . Entrez les informations requises pour terminer le déploiement.
-+
+
+
 
 NOTE: (Facultatif) si vous souhaitez créer des conteneurs sans vous inscrire à vCenter Server, cochez la case Activer VMware Cloud Foundation (VCF) dans la section configurer vCenter ou Activer VCF.
 
-
-
 Vous pouvez afficher la progression du déploiement à partir de l'onglet *tâches* et attendre la fin du déploiement.
+
+Des vérifications du checksum du déploiement sont effectuées. Si le déploiement échoue, procédez comme suit :
+
+. Vérifiez vpserver/logs/checksum.log. Si le message « échec de la vérification de la somme de contrôle » s'affiche, vous pouvez voir la vérification du fichier JAR qui a échoué dans le même journal.
++
+Le fichier journal contient l'exécution de _sha256sum -c /opt/netapp/vpserver/conf/Checksums_.
+
+. Vérifiez vscserver/log/checksum.log. Si le message « échec de la vérification de la somme de contrôle » s'affiche, vous pouvez voir la vérification du fichier JAR qui a échoué dans le même journal.
++
+Le fichier journal contient l'exécution de _sha256sum -c /opt/netapp/vscerver/etc/Checksums_.
+
+
 
 
 
 === Déployer SRA sur SRM
 
 Vous pouvez déployer SRA sur le serveur Windows SRM ou sur l'appliance 8.2 SRM.
-
-
-
-==== Installation de SRA sur le serveur Windows SRM
-
-.Étapes
-. Téléchargez le `.msi` Installateur du plug-in SRA accessible depuis le site du support NetApp.
-. Double-cliquez sur le téléchargé `.msi` Installer le plug-in SRA et suivre les instructions à l'écran.
-. Entrez l'adresse IP et le mot de passe de votre appliance virtuelle déployée pour terminer l'installation du plug-in SRA sur le serveur SRM.
-
 
 
 
@@ -181,9 +197,9 @@ Vous pouvez déployer SRA sur le serveur Windows SRM ou sur l'appliance 8.2 SRM.
 ==== Activation de VASA Provider et SRA
 
 .Étapes
-. Connectez-vous au client Web vSphere en utilisant l'adresse IP que vous avez spécifiée lors du déploiement.
-. Cliquez sur l'icône *OTV* et entrez le nom d'utilisateur et le mot de passe spécifiés pendant le déploiement, puis cliquez sur *connexion*.
-. Dans le volet gauche d'OTV, *Paramètres > Paramètres d'administration > gérer les fonctionnalités* et activez les fonctionnalités requises.
+. Connectez-vous au client Web vSphere à l'aide de l'adresse IP vCenter fournie lors du déploiement des outils ONTAP OVA.
+. Dans la page des raccourcis, cliquez sur *NetApp ONTAP Tools* dans la section des plug-ins.
+. Dans le volet gauche des outils ONTAP, *Paramètres > Paramètres d'administration > gérer les capacités*, et activez les fonctionnalités requises.
 +
 
 NOTE: Vasa Provider est activé par défaut. Si vous souhaitez utiliser la capacité de réplication pour les datastores vVvols, utilisez ensuite le bouton bascule Activer la réplication vvols.

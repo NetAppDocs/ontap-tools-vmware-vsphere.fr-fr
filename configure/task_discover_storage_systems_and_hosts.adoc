@@ -16,7 +16,7 @@ Lorsque vous exécutez Virtual Storage Console (VSC) pour la première fois dans
 *Ce dont vous aurez besoin*
 
 * Tous les hôtes ESXi doivent être sous tension et connectés.
-* Tous les SVM de stockage détectés doivent être exécutés, et chaque nœud de cluster doit disposer d'au moins une LIF de données configurée pour le protocole de stockage utilisé (NFS, iSCSI ou FC).
+* Tous les SVM à découvrir doivent être en cours d'exécution, et chaque nœud de cluster doit disposer d'au moins une LIF de données configurée pour le protocole de stockage utilisé (NFS, iSCSI, FC ou NVMe/FC).
 
 
 *À propos de cette tâche*
@@ -28,14 +28,14 @@ Lors de la découverte des systèmes de stockage, VSC collecte les informations 
 *Étapes*
 
 . Dans la page d'accueil de vSphere client, sélectionnez *hôtes et clusters*.
-. Cliquez avec le bouton droit de la souris sur le data Center requis, puis sélectionnez *NetApp VSC* > *mettre à jour les données hôte et de stockage* .
+. Cliquez avec le bouton droit de la souris sur le centre de données requis, puis sélectionnez *NetApp ONTAP Tools* > *Update Host and Storage Data* (mettre à jour les données d'hôte et de stockage*).
 +
-VSC affiche une boîte de dialogue confirmer qui vous indique que cette opération peut prendre un certain temps.
+VSC affiche une boîte de dialogue de confirmation vous informant que cette action va redémarrer la détection de tous les systèmes de stockage connectés et peut prendre quelques minutes. Voulez-vous continuer ?
 
-. Cliquez sur *OK*.
-. Sélectionnez les contrôleurs de stockage découverts ayant l'état « échec d'authentification », puis cliquez sur *ACTIONS* > *Modifier*.
-. Renseignez les informations requises dans la boîte de dialogue Modifier le système de stockage.
-. Répétez les étapes 4 et 5 pour tous les contrôleurs de stockage avec le statut « échec d'authentification ».
+. Cliquez sur *OUI*.
+. Sélectionnez les contrôleurs de stockage détectés qui sont à l'état `Authentication Failure`, Puis cliquez sur *ACTIONS* > *Modifier*.
+. Renseignez les informations requises dans la boîte de dialogue *Modifier le système de stockage*.
+. Répétez les étapes 4 et 5 pour tous les contrôleurs de stockage avec `Authentication Failure` état.
 
 
 Une fois le processus de détection terminé, procédez comme suit :

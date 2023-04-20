@@ -11,7 +11,7 @@ summary: 'Les fichiers de préférences contiennent des paramètres qui contrôl
 
 
 [role="lead"]
-Les fichiers de préférences contiennent des paramètres qui contrôlent les outils ONTAP® pour les opérations VMware vSphere. Dans la plupart des cas, il n'est pas nécessaire de modifier les paramètres de ces fichiers. Il est utile de savoir quels fichiers de préférences Virtual Storage Console (VSC) utilise.
+Les fichiers de préférences contiennent des paramètres qui contrôlent les outils ONTAP pour les opérations VMware vSphere. Dans la plupart des cas, il n'est pas nécessaire de modifier les paramètres de ces fichiers. Il est utile de savoir quels fichiers de préférences Virtual Storage Console (VSC) utilise.
 
 VSC possède plusieurs fichiers de préférences. Ces fichiers incluent des clés d'entrée de gamme et des valeurs qui déterminent la façon dont VSC effectue diverses opérations. Voici quelques fichiers de préférences utilisés par VSC :
 
@@ -19,4 +19,4 @@ VSC possède plusieurs fichiers de préférences. Ces fichiers incluent des clé
 
 `/opt/netapp/vscserver/etc/vsc/vscPreferences.xml`
 
-Vous devrez peut-être modifier les fichiers de préférences dans certaines situations. Par exemple, si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les fichiers de préférences. Si vous ne modifiez pas les paramètres du fichier de préférences, le provisionnement des datastores échoue car VSC ne peut pas monter le datastore.
+Vous devrez peut-être modifier les fichiers de préférences dans certaines situations. Par exemple, si vous utilisez iSCSI, NFS ou NVMe/FC et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les fichiers de préférences. Si vous ne modifiez pas les paramètres du fichier de préférences, le provisionnement des datastores échoue car VSC ne peut pas monter le datastore.

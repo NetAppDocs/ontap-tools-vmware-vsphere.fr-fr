@@ -15,13 +15,13 @@ Vous pouvez utiliser la fonction de mise à jour fournie par les outils ONTAP® 
 
 *À propos de cette tâche*
 
-L'option « reneuf » est utile si vous avez modifié les identifiants par défaut des systèmes de stockage après avoir reçu une erreur d'authentification. Vous devez toujours effectuer une mise à jour si vous avez modifié les informations d'identification du système de stockage après que le système de stockage ait signalé un « État d'échec d'authentification ». Lors de l'opération de mise à jour, VSC tente de se connecter au système de stockage à l'aide des nouvelles informations d'identification.
+Le `refresh` cette option est utile si vous avez modifié les informations d'identification par défaut des systèmes de stockage après avoir reçu une erreur d'authentification. Vous devez toujours effectuer une opération de mise à jour si vous avez modifié les informations d'identification du système de stockage après que le système de stockage a signalé un `Authentication Failure Status`. Lors de l'opération de mise à jour, VSC tente de se connecter au système de stockage à l'aide des nouvelles informations d'identification.
 
 Selon la configuration de votre système, cette tâche peut prendre un certain temps.
 
 *Étapes*
 
-. Sur la page d'accueil du client VMware vSphere, cliquez sur *Storage Systems*.
+. Sur la page d'accueil du client VMware vSphere, cliquez sur *Storage*.
 . Lancer la mise à jour :
 +
 |===
@@ -40,7 +40,7 @@ L'icône *REDÉCOUVRIR TOUT*.
  a| 
 Data Center
  a| 
-Cliquez avec le bouton droit de la souris sur le data Center, puis cliquez sur *NetApp VSC* > *Update Host and Storage Data*.
+Cliquez avec le bouton droit de la souris sur le centre de données, puis cliquez sur *NetApp ONTAP Tools* > *Update Host and Storage Data*.
 
 |===
 . Dans la boîte de dialogue mettre à jour l'hôte et les données de stockage, cliquez sur *OK*.

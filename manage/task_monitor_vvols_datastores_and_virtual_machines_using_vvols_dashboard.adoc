@@ -15,38 +15,22 @@ Vous pouvez surveiller les performances et afficher les cinq principaux datastor
 
 *Ce dont vous aurez besoin*
 
-* Vous devez avoir activé les services d'API OnCommand 2.1 ou version ultérieure si vous utilisez ONTAP 9.6 ou version antérieure.
-+
-Il n'est pas nécessaire d'enregistrer des services d'API OnCommand avec VASA Provider pour obtenir les détails de SAN vvols datastore ou SAN vvols VM datastore pour ONTAP 9.7 ou version ultérieure.
-
-+
-https://mysupport.netapp.com/site/global/dashboard[]
-
-* Vous devez utiliser ONTAP 9.3 ou version ultérieure pour votre système de stockage.
+* Vous devez utiliser ONTAP 9.7 ou une version ultérieure pour votre système de stockage.
 
 
 Les données IOPS fournies par ONTAP sont arrondies et affichées sur le tableau de bord vvols. Il peut y avoir une différence entre la valeur IOPS réelle fournie par ONTAP et la valeur IOPS affichée sur le tableau de bord vvols. Les outils ONTAP permettent de surveiller les performances des datastores vvols basés sur NFS.
 
-
-NOTE: Si vous enregistrez des services d'API OnCommand pour la première fois, vous pouvez afficher toutes les données de metrics de performance pour les datastores SAN vvols sur le tableau de bord vVvols uniquement après 15 à 30 minutes.
-
 * Les données du tableau de bord vvols sont régulièrement actualisées, à un intervalle de 10 minutes.
 * Si vous avez ajouté, modifié ou supprimé un système de stockage de votre instance vCenter Server, vous ne remarquerez peut-être pas de changement dans les données du tableau de bord vvols pendant un certain temps.
-+
-Car il faut du temps pour obtenir les metrics à jour à partir de ONTAP avec les services d'API OnCommand.
-
 * La valeur d'IOPS totale affichée dans le portlet vue d'ensemble du tableau de bord vVols n'est pas une valeur cumulée de la valeur d'IOPS de lecture et d'écriture.
-+
-Les IOPS de lecture, les IOPS d'écriture et le nombre total d'IOPS sont des metrics distincts fournis par les services d'API OnCommand. S'il y a une différence entre la valeur IOPS totale et la valeur IOPS cumulée (valeur IOPS en lecture + valeur IOPS en écriture) fournie par OnCommand API Services, la même différence est observée dans les valeurs IOPS du tableau de bord vVvols.
-
 * Les données NFS vVvols provisionnés sur ONTAP 9.8 et versions ultérieures sont automatiquement enregistrés pour la surveillance des performances dans le tableau de bord vvols.
 
 
 *Étapes*
 
 . Dans la page d'accueil de vSphere client, cliquez sur *ONTAP Tools*.
-. Sélectionnez le serveur vCenter requis à l'aide du menu déroulant *serveur vCenter* pour afficher les datastores.
-. Cliquez sur *vVols Dashboard*.
+. Sélectionnez le serveur vCenter requis à l'aide du sélecteur *INSTANCE* pour afficher les datastores.
+. Cliquez sur *Présentation > vVols Dashboard*.
 +
 Le portlet datastores fournit les informations suivantes :
 
@@ -75,32 +59,13 @@ Vous devez vérifier certaines exigences importantes du tableau de bord vVvols p
 Le tableau suivant présente un aperçu de ce que vous devez vérifier si le tableau de bord vvols n'affiche pas les indicateurs de performances pour les datastores SAN vvols et les machines virtuelles provisionnés.
 
 |===
-
-
 | *Considérations* | *Description* 
-
-
- a| 
-Premier déploiement des services d'API OnCommand
- a| 
-* Si vous utilisez des clusters ONTAP version 9.6 ou antérieure, vous utilisez les services d'API OnCommand version 2.1 ou ultérieure.
-+
-Vous n'avez pas besoin d'enregistrer les services d'API OnCommand auprès de VASA Provider si vous utilisez ONTAP 9.7 ou version ultérieure.
-
-* Vous devez avoir suivi les instructions d'installation fournies dans le _guide d'installation et de configuration des services d'API OnCommand_ après le téléchargement et l'installation des services d'API OnCommand sur le site de support NetApp.
-* Chaque instance de VASA Provider doit disposer d'une instance de services d'API OnCommand dédiée.
-+
-Les services d'API OnCommand ne doivent pas être partagés entre plusieurs instances de VASA Provider ou des serveurs vCenter.
-
-* Les services d'API OnCommand sont en cours d'exécution et accessibles.
-
-
 
 
  a| 
 Adieu les migrations de données onéreuses
  a| 
-* Vous utilisez ONTAP 9.3 ou version ultérieure.
+* Vous utilisez ONTAP 9.7 ou une version ultérieure.
 * Vous utilisez les identifiants appropriés pour le système de stockage.
 * Votre système de stockage est actif et accessible.
 * La machine virtuelle que vous avez sélectionnée doit utiliser au moins un datastore vvols et les opérations d'E/S s'exécutent sur le disque de la machine virtuelle.

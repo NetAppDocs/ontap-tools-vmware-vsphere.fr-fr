@@ -19,8 +19,8 @@ Le client web vSphere fournit des règles de stockage par défaut. Mais vous pou
 
 *Étapes*
 
-. Sur la page vSphere client, cliquez sur *Menu* > *stratégies et profils*.
-. Cliquez sur *VM Storage Policies* > *Create VM Storage Policy*.
+. Sur la page client vSphere, cliquez sur *stratégies et profils*.
+. Dans la page VM Storage Policies, cliquez sur *CREATE*.
 . Dans la page Créer une stratégie de stockage VM, fournissez les informations suivantes :
 +
 .. Entrez un nom et une description pour la politique de stockage de VM.

@@ -9,9 +9,9 @@ entries:
   - title: Redimensionner les datastores
     url: "/manage/task_resize_datastores.html"
   - title: Modifiez un datastore vVols
-    url: "/manage/task_edit_a_vvols_datastore.html"
+    url: "/manage/task_edit_a_vvol_datastore.html"
   - title: Ajoutez du stockage dans un datastore vvols
-    url: "/manage/task_add_storage_to_a_vvols_datastore.html"
+    url: "/manage/task_add_storage_to_a_vvol_datastore.html"
   - title: Supprimer le stockage d'un datastore vvols
     url: "/manage/task_remove_storage_from_a_vvols_datastore.html"
   - title: Montez un datastore vvols
@@ -25,6 +25,8 @@ entries:
   - title: Migration de machines virtuelles avec des profils de fonctionnalités de
       stockage plus anciens
     url: "/manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html"
+  - title: Nettoyage de Vasa
+    url: "/manage/task_delete_virtual_machines.html"
 - title: Modifier les paramètres de l'hôte VMware ESXi
   url: "/manage/task_edit_esxi_host_settings.html"
 - title: Accédez à la console de maintenance des outils ONTAP
@@ -41,6 +43,8 @@ entries:
     url: "/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html"
 - title: Collectez les fichiers journaux
   url: "/manage/task_collect_the_log_files.html"
+- title: Gérer syslog
+  url: "/manage/task_syslog_files.html"
 - title: Surveillez la performance des datastores et des rapports vvols
   entries:
   - title: Présentation des datastores ONTAP et des rapports des machines virtuelles

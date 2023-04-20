@@ -18,7 +18,7 @@ Si vous utilisez ONTAP 9.6 ou une version antérieure, le tableau de bord vvols 
 Vous devez avoir téléchargé les services d'API OnCommand version 2.1 ou ultérieure depuis le site de support NetApp.
 
 
-NOTE: Le tableau de bord vVvols affiche les indicateurs de performances uniquement lorsque les datastores et les machines virtuelles SAN vvols sont configurés à l'aide de ONTAP 9.3 ou version ultérieure.
+NOTE: Le tableau de bord vVols affiche les mesures de performances uniquement lorsque les datastores SAN vVols et les machines virtuelles sont configurés à l'aide de ONTAP 9.7 ou version ultérieure.
 
 *Étapes*
 

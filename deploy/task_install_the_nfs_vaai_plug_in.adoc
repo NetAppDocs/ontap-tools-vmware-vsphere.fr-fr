@@ -15,10 +15,7 @@ Vous pouvez installer le plug-in NetApp NFS pour les API VMware vStorage pour l'
 
 *Ce dont vous aurez besoin*
 
-* Vous devriez avoir téléchargé le pack d'installation du plug-in NFS pour VAAI (``.vib`) Sur le site de support NetApp.
-+
-https://mysupport.netapp.com/site/global/dashboard["Support NetApp"]
-
+* Vous devriez avoir téléchargé le pack d'installation du plug-in NFS pour VAAI (``.vib`) Sur le site de support NetApp. https://mysupport.netapp.com/site/global/dashboard["Support NetApp"]
 * Vous devez avoir installé ESXi host 6.5 ou version ultérieure et ONTAP 9.1 ou version ultérieure.
 * Vous devez avoir mis sous tension l'hôte ESXi et monté un datastore NFS.
 * Vous devez avoir défini les valeurs du `DataMover.HardwareAcceleratedMove`, `DataMover.HardwareAcceleratedInit`, et `VMFS3.HardwareAcceleratedLocking` paramètres de l'hôte sur « 1 ».
@@ -27,6 +24,7 @@ Ces valeurs sont définies automatiquement sur l'hôte ESXi lorsque la boîte de
 
 * Vous devez avoir activé l'option vstorage sur la machine virtuelle de stockage (SVM) à l'aide de `vserver nfs modify -vserver vserver_name -vstorage enabled` commande.
 * Vous devez disposer de la mise à jour ESXi 7.0 ou d'une version ultérieure si vous utilisez le plug-in NetApp NFS VAAI 2.0.
+* Vous devez disposer des versions de vSphere 7.x car vSphere 6.5 est obsolète et vSphere 8.x n'est pas pris en charge.
 
 
 *Étapes*

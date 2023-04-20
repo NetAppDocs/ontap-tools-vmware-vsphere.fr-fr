@@ -1,0 +1,29 @@
+---
+permalink: configure/reference_delete_vvols.html 
+sidebar: sidebar 
+keywords: vVols datastore,delete vVol 
+summary: Les outils ONTAP prennent en charge une commande de suppression des volumes FlexVol dans votre data Center. 
+---
+= Supprimer les datastores vVols
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La tâche Supprimer le datastore vvol des outils ONTAP dans vCenter effectue les opérations suivantes :
+
+* Démonte le conteneur vVol.
+* Nettoie iGroup. Si igroup n'est pas utilisé, supprime iqn du igroup.
+* Supprime le conteneur Vvol.
+* Laisse les volumes Flex sur la baie de stockage.
+
+
+Pour supprimer le datastore vvol des outils ONTAP depuis vCenter, procédez comme suit :
+
+Étapes :
+
+. Dans la vue * d'inventaire, sélectionnez le datastore.
+. Cliquez avec le bouton droit de la souris sur le datastore vVol et sélectionnez *NetApp ONTAP Tools* > *Delete vVols datastore*.
+. Nettoyez les volumes Flex de la matrice de stockage et du groupe initiateur.
+

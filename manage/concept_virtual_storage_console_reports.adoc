@@ -23,6 +23,7 @@ Virtual Storage Console (VSC) propose les rapports prédéfinis suivants :
 * Rapport de machine virtuelle
 * Rapport de datastore vVvols
 * Rapport machine virtuelle vVvols
+* Rapport d'intégrité du journal
 
 
 
@@ -47,7 +48,7 @@ Le datastore fournit les rapports prédéfinis suivants :
 Le menu Rapport datastore fournit des informations sur les paramètres suivants pour les datastores :
 
 * Nom du datastore
-* Type de datastore : NFS ou VMFS
+* Type de datastore : NFS et VMFS
 * Style de volume
 +
 Le style de volume peut être un volume FlexVol ou FlexGroup.
@@ -118,7 +119,7 @@ Pour les machines virtuelles qui sont sauvegardées par des volumes FlexGroup, l
 
 Les rapports vvols affichent des informations détaillées sur les datastores VMware Virtual volumes (vvols) et les machines virtuelles qui sont créées sur ces datastores. Le tableau de bord vVvols vous permet d'examiner et d'identifier les problèmes potentiels avec les datastores vvols et les machines virtuelles de votre serveur vCenter.
 
-Vous pouvez afficher, organiser et exporter des rapports. Les données pour les datastores vvols et les machines virtuelles sont fournies par ONTAP avec OnCommand API Services.
+Vous pouvez afficher, organiser et exporter des rapports. Les données du rapport des datastores vVols et des machines virtuelles sont fournies par ONTAP.
 
 VVvols fournit les rapports prédéfinis suivants :
 
@@ -162,3 +163,40 @@ Le rapport affiche la latence des machines virtuelles sur tous les datastores vv
 
 
 Chaque nom de machine virtuelle dans le rapport est un lien vers l'onglet Monitor de la machine virtuelle sélectionnée. Vous pouvez organiser le rapport de la machine virtuelle en fonction de vos besoins, exportez-le dans `.CSV` formatez, puis enregistrez le rapport sur votre système local. L'horodatage du rapport est ajouté au rapport enregistré.
+
+*Rapport sur l'intégrité du journal*
+
+Le rapport d'intégrité du journal indique l'état d'intégrité du fichier. L'intégrité du journal est vérifiée à intervalles réguliers et le rapport s'affiche dans l'onglet Rapport d'intégrité du journal. Il fournit également l'état des différents fichiers d'audit qui sont en cours de reprise.
+
+L'état du fichier journal disponible est :
+
+* ACTIF : indique le fichier actif dans lequel les journaux sont écrits.
+* NORMAL : indique que le fichier d'archive n'a pas été altéré ou supprimé.
+* FALSIFIÉ : indique que le fichier a été modifié après l'archivage
+* ROLLOVER_DELETE : indique que le fichier a été supprimé dans le cadre de la stratégie de rétention log4j.
+* UNEXPECTED_DELETE : indique que le fichier a été supprimé manuellement.
+
+
+Les outils ONTAP pour VMware vSphere génèrent une journalisation d'audit pour les éléments suivants :
+
+* Service VSC
++
+Emplacement du journal d'audit pour vscservice : _/opt/netapp/vscservice/vsc-audit.log_. Vous pouvez modifier les paramètres suivants du rapport d'intégrité des journaux dans le fichier _/opt/netapp/vscserver/etc/log4j2.properties_ :
+
++
+** Taille max. De log pour le retournement.
+** Politique de rétention des médias, la valeur par défaut de ce paramètre est 10 fichiers.
+** Taille du fichier, la valeur par défaut de ce paramètre est de 10 Mo avant l'archivage des fichiers. Vous devez redémarrer les services pour que les nouvelles valeurs entrent en vigueur.
+
+
+* Vice-président du service
++
+Emplacement du journal d'audit pour le service VP : _/opt/netapp/vpservice/vp-audit.log_ les journaux d'audit VP peuvent être modifiés dans le fichier _/opt/netapp/vpserver/conf/log4j2.properties_. Vous devez redémarrer les services pour que les nouvelles valeurs entrent en vigueur.
+
+* Commandes maint
++
+Emplacement du journal d'audit pour les services de maintenance : _/opt/netapp/vscservice/maint-audit.log_ les fichiers journaux maint peuvent être modifiés dans le fichier _/opt/netapp/vscserver/etc/maint_logger.properties_. Lorsque vous modifiez les valeurs par défaut, redémarrez le serveur pour que les nouvelles valeurs entrent en vigueur.
+
+
+
+Le planificateur peut être configuré pour vérifier les journaux d'audit sur des bases régulières. La valeur par défaut du planificateur est un jour. Vous pouvez modifier la valeur dans le fichier _/opt/netapp/vscserver/etc/maint_logger.properties_.

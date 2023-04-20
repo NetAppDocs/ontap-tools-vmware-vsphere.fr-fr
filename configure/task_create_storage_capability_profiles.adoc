@@ -21,7 +21,7 @@ Après avoir configuré un profil, vous pouvez le modifier si nécessaire.
 
 *Étapes*
 
-. Sur la page d'accueil des outils ONTAP, cliquez sur *profils de capacité de stockage*.
+. Sur la page d'accueil des outils ONTAP, cliquez sur *stratégies et profils*.
 . Créez un profil ou modifiez un profil existant, selon les besoins :
 +
 |===
@@ -33,7 +33,7 @@ Après avoir configuré un profil, vous pouvez le modifier si nécessaire.
  a| 
 Créer un profil
  a| 
-Cliquez sur *image:../media/create_icon.gif[""]*.
+Cliquez sur *CRÉER*.
 
 
 
@@ -43,11 +43,18 @@ Modifier un profil existant
 Cliquez sur le profil que vous souhaitez modifier dans les profils répertoriés sur la page *profils de capacité de stockage*.
 
 |===
-
-
++
 
 NOTE: Pour afficher les valeurs associées à un profil existant, vous pouvez cliquer sur le nom du profil dans la page profil de capacités de stockage. Vasa Provider affiche alors la page Résumé de ce profil.
 
+. Dans *Nouveau datastore* > *systèmes de stockage*, cliquez sur *Créer un profil de capacité de stockage*.
++
+Vous obtenez le message suivant pour confirmer la navigation loin de la fenêtre datastore.
+
++
+_Ceci supprimera les données saisies en fermant le flux de travail actuel et ouvre le flux de travail Créer un profil de capacité de stockage. Voulez-vous continuer?_
+
+. Cliquez sur *YES* pour ouvrir la fenêtre Créer un profil de capacité de stockage.
 . Complétez les pages de l'assistant Créer un profil de capacité de stockage pour configurer un profil ou modifier des valeurs pour modifier un profil existant.
 +
 La plupart des champs de cet assistant sont explicites. Le tableau suivant décrit certains des champs pour lesquels vous pouvez avoir besoin de conseils.

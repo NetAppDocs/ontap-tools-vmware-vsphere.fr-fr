@@ -13,10 +13,10 @@ summary: 'La console de maintenance des outils ONTAP vous permet de gérer vos c
 [role="lead"]
 La console de maintenance des outils ONTAP vous permet de gérer vos configurations d'applications, système et réseau. Vous pouvez modifier votre mot de passe administrateur et votre mot de passe de maintenance. Vous pouvez également générer des offres de support, définir différents niveaux de journal, afficher et gérer les configurations TLS et démarrer les diagnostics à distance.
 
-Vous devez avoir installé les outils VMware après avoir déployé les outils ONTAP pour accéder à la console de maintenance. Vous devez utiliser "maaint" comme nom d'utilisateur et mot de passe que vous avez configuré pendant le déploiement pour vous connecter à la console de maintenance des outils ONTAP.
+Vous devez avoir installé les outils VMware après avoir déployé les outils ONTAP pour accéder à la console de maintenance. Vous devez utiliser `maint` En tant que nom d'utilisateur et mot de passe que vous avez configurés pendant le déploiement pour vous connecter à la console de maintenance des outils ONTAP. Vous devez utiliser *nano* pour modifier les fichiers dans maint ou root login console.
 
 
-NOTE: Vous devez définir un mot de passe pour l'utilisateur "diag" tout en activant les diagnostics à distance.
+NOTE: Vous devez définir un mot de passe pour le `diag` utilisateur lors de l'activation des diagnostics à distance.
 
 Vous devez utiliser l'onglet *Résumé* de vos outils ONTAP déployés pour accéder à la console de maintenance. Lorsque vous cliquez sur image:../media/launch_maintenance_console.gif[""], la console de maintenance démarre.
 
@@ -36,11 +36,16 @@ Configuration de l'application
 . Arrêt du service VASA Provider et SRA
 . Modifier le mot de passe utilisateur « administrateur »
 . Re-générez des certificats
-. Réinitialisation matérielle du magasin de clés et des certificats
 . Réinitialisation matérielle de la base de données
 . Modifiez le niveau DE JOURNALISATION du service Virtual Storage Console
 . Modifier le niveau DE JOURNALISATION pour les services VASA Provider et SRA
 . Afficher la configuration TLS
+. Générer un jeton d'authentification Web-CLI
+. Démarrer le service de plug-in des outils ONTAP
+. Arrêtez le service du plug-in des outils ONTAP
+. Démarrez les services d'intégrité du journal
+. Arrêtez les services d'intégrité du journal
+. Modifier le mot de passe de la base de
 
 
 

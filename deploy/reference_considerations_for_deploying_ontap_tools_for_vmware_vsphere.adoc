@@ -26,8 +26,6 @@ Premier déploiement des outils ONTAP
  a| 
 Le déploiement des outils ONTAP installe automatiquement les fonctionnalités de VSC.
 
-link:../deploy/concept_deploy_or_upgrade_ontap_tools.html["Déploiement et mise à niveau des outils ONTAP"]
-
 link:../deploy/concept_installation_workflow_for_new_users.html["Flux de travail de déploiement pour les nouveaux utilisateurs des outils ONTAP pour VMware vSphere"]
 
 
@@ -107,7 +105,7 @@ Si un utilisateur tente d'effectuer une tâche sans les privilèges et autorisat
  a| 
 Version ONTAP
  a| 
-Vos systèmes de stockage doivent exécuter ONTAP 9.3, 9.5, 9.6, 9.7, 9.8P1 ou une version ultérieure.
+Vos systèmes de stockage doivent exécuter ONTAP 9.7, 9.8P1 ou une version ultérieure.
 
 
 
@@ -125,9 +123,9 @@ Vous devez tenir compte de quelques exigences tout en personnalisant les outils 
 
 
 
-=== Mot de passe utilisateur administrateur de l'appliance
+=== Mot de passe utilisateur de l'application
 
-Vous ne devez pas utiliser d'espace dans le mot de passe administrateur.
+Il s'agit du mot de passe attribué au compte administrateur. Pour des raisons de sécurité, il est recommandé que la longueur du mot de passe soit comprise entre huit et trente caractères et qu'elle contienne au moins un caractère supérieur, un chiffre inférieur, un chiffre et un caractère spécial. Le mot de passe expire après 90 jours.
 
 
 
@@ -142,6 +140,12 @@ Vous devez accéder à la console de maintenance en utilisant le nom d'utilisate
 Vous pouvez définir les informations d'identification d'administrateur pour vCenter Server lors du déploiement des outils ONTAP.
 
 Si le mot de passe du serveur vCenter change, vous pouvez mettre à jour le mot de passe de l'administrateur à l'aide de l'URL suivante : ``\https://<IP>:8143/Register.html` Où se trouve l'adresse IP des outils ONTAP que vous fournissez pendant le déploiement.
+
+
+
+=== Mot de passe de base de données Derby
+
+Pour des raisons de sécurité, il est recommandé que la longueur du mot de passe soit comprise entre huit et trente caractères et qu'elle contienne au moins un caractère supérieur, un chiffre inférieur, un chiffre et un caractère spécial. Le mot de passe expire après 90 jours.
 
 
 

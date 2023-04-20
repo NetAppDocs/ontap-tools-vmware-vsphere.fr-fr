@@ -26,7 +26,7 @@ Si la fonctionnalité VASA Provider est désactivée avant la mise à niveau ver
 *Étapes*
 
 . Connectez-vous à l'interface utilisateur Web de VMware vSphere.
-. Dans vSphere client, cliquez sur *Menu* > *ONTAP Tools Console*.
+. Depuis le client vSphere, cliquez sur *Menu* > *Console des outils NetApp ONTAP*.
 . Cliquez sur *Paramètres*.
 . Cliquez sur *gérer les fonctionnalités* dans l'onglet Paramètres d'administration.
 . Dans la boîte de dialogue gérer les fonctionnalités, sélectionnez l'extension VASA Provider à activer.
@@ -34,8 +34,10 @@ Si la fonctionnalité VASA Provider est désactivée avant la mise à niveau ver
 . Entrez l'adresse IP des outils ONTAP et le mot de passe administrateur, puis cliquez sur *appliquer*.
 +
 
-NOTE: Si l'état de VASA Provider s'affiche comme « hors ligne » même après l'activation de VASA Provider extesnsion, vérifiez alors le fichier /var/log/vmware/vmware-sps/sps.log à la recherche d'éventuelles erreurs de connexion avec VASA Provider ou redémarrez le service « vmware-sps ».
+NOTE: Si le statut VASA Provider s'affiche comme « Offline » même après avoir activé l'extension VASA Provider, vérifiez le fichier /var/log/vmware/vmware-sps/sps.log pour toute erreur de connexion avec VASA Provider ou redémarrez le service « vmware-sps ».
 
 
 
-Si vous utilisez ONTAP 9.6 ou des clusters antérieurs, vous devez enregistrer OnCommand API Services avec VASA Provider pour obtenir les détails des datastores vvols et des machines virtuelles utilisées dans les rapports de datastore SAN vVols VM et SAN vvols. Mais si vous utilisez ONTAP 9.7 ou version ultérieure, vous n'avez pas besoin d'enregistrer les services d'API OnCommand auprès de VASA Provider.
+*Informations connexes*
+
+https://mysupport.netapp.com/site/global/dashboard["Support NetApp"]

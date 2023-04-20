@@ -43,8 +43,12 @@ entries:
     url: "/configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html"
   - title: Définissez les identifiants par défaut des systèmes de stockage
     url: "/configure/task_set_default_credentials_for_storage_systems.html"
-  - title: Ajout de systèmes de stockage à VSC
+  - title: Ajout de systèmes de stockage
     url: "/configure/task_add_storage_systems.html"
+  - title: Modifier les systèmes de stockage
+    url: "/configure/task_modify_storage_system.html"
+  - title: Mettre à jour le certificat
+    url: "/configure/task_update_certificate.html"
   - title: Découverte des systèmes et des hôtes de stockage
     url: "/configure/task_discover_storage_systems_and_hosts.html"
   - title: Actualiser l'affichage du système de stockage
@@ -76,3 +80,5 @@ entries:
     url: "/configure/task_provision_vvols_datastores.html"
   - title: Rééquilibrent les datastores vVvols
     url: "/configure/reference_rebalance_vvols_datastore.html"
+  - title: Supprimer les datastores vVols
+    url: "/configure/reference_delete_vvols.html"

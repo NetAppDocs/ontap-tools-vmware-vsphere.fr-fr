@@ -25,7 +25,7 @@ Une fois que vous avez créé un profil de capacité de stockage, vous pouvez le
 
 *Étapes*
 
-. Dans la page d'accueil des outils ONTAP, cliquez sur *mappage du stockage*.
+. Sur la page d'accueil des outils NetApp ONTAP, cliquez sur *mappage du stockage*.
 . Sélectionnez le datastore dans la liste disponible.
 . Dans le menu actions, sélectionnez *Auto-generate*.
 . Une fois le processus de génération automatique terminé, actualisez l'écran pour afficher les informations relatives au nouveau profil.
