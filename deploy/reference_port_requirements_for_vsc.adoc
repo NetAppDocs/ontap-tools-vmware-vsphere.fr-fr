@@ -28,28 +28,21 @@ VSC utilise les ports TCP bidirectionnels suivants :
  a| 
 9083
  a| 
-Lorsqu'il est activé, le fournisseur VASA et l'adaptateur SRA (Storage Replication adapter) utilisent ce port pour communiquer avec vCenter Server. Ce port est également requis pour obtenir les paramètres TCP/IP.
+Lorsqu'il est activé, le fournisseur VASA et l'adaptateur SRA (Storage Replication adapter) utilisent ce port pour communiquer avec vCenter Server. Ce port est également requis pour obtenir les paramètres TCP/IP. Ce port est utilisé pour télécharger le pack de prise en charge VP, accéder à l'interface utilisateur Web-CLI et contrôler la communication du chemin de VMware vers VP.
 
 
 
  a| 
 443
  a| 
-En fonction de la façon dont vous avez configuré vos informations d'identification, VMware vCenter Server et les systèmes de stockage sont à l'écoute des communications sécurisées sur ce port.
+En fonction de la façon dont vous avez configuré vos informations d'identification, VMware vCenter Server et les systèmes de stockage sont à l'écoute des communications sécurisées sur ce port. Le port est utilisé dans l'architecture de communication client-serveur. Le port 443 est activé par défaut pour les connexions sécurisées. Le client, qui peut être n'importe quel client d'automatisation utilisant l'API REST, initie la connexion au serveur et les points d'extrémité échangent des données.
 
 
 
  a| 
 8143
  a| 
-VSC écoute les communications sécurisées sur ce port.
-
-
-
- a| 
-7
- a| 
-VSC envoie une demande d'écho à ONTAP pour vérifier l'accessibilité. Elle n'est requise que lors de l'ajout d'un système de stockage et peut être désactivée par la suite.
+VSC écoute les communications sécurisées sur ce port. Le port est utilisé dans l'architecture de communication client-serveur. Le client, qui peut être n'importe quel client d'automatisation utilisant l'API REST, initie la connexion au serveur et les points d'extrémité échangent des données. Ce port est activé pour les services VSC et pour l'exportation des journaux du serveur VSC. La page register.html est hébergée sur ce port. Le RESTE de l'andaineur est exposé sur ce port.
 
 |===
 

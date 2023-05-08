@@ -73,4 +73,4 @@ https://kb.netapp.com/mgmt/OTV/SRA/NetApp_Storage_Replication_Adapter_4.0%2F%2F7
 
 La documentation VMware sur la modification des paramètres du fournisseur de SAN contient davantage d'informations.
 
-https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentation de VMware site Recovery Manager : modifiez les paramètres de stockage"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html?hWord=N4IghgNiBcIGoFkDuYBOBTABAZQJYBcsAldAYwHsA3dVAT0wTADswBzGzAEXNIFcBbdE3xh8uckxABfIA["Documentation de VMware site Recovery Manager : modifiez les paramètres de stockage"]

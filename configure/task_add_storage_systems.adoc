@@ -20,6 +20,9 @@ NOTE: Si le cluster ONTAP est compatible SAML, la communication avec ONTAP s'eff
 
 Chaque fois que vous démarrez Virtual Storage Console (VSC) ou que vous sélectionnez l'option *REDÉCOUVREZ tout*, VSC détecte automatiquement les systèmes de stockage disponibles.
 
+
+NOTE: Les datastores vVol ne sont pas pris en charge sur les SVM directes.
+
 *Étapes*
 
 . Pour ajouter un système de stockage à VSC, utilisez l'une des options de la page d'accueil des outils ONTAP :

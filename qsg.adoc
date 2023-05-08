@@ -31,7 +31,7 @@ Vous déployez le plug-in en tant qu'appliance virtuelle, ce qui vous permet de 
 
 === De déploiement
 
-Les outils ONTAP peuvent être utilisés avec Windows vCenter Server ou avec une appliance virtuelle VMware vCenter Server (vCSA). Vous devez déployer les outils ONTAP sur un système vSphere pris en charge incluant le système ESXi.
+Les outils ONTAP peuvent être utilisés avec une appliance virtuelle VMware vCenter Server (vCSA). Vous devez déployer les outils ONTAP sur un système vSphere pris en charge incluant le système ESXi.
 
 Les exigences minimales en matière d'espace et de dimensionnement de l'hôte sont les suivantes :
 
@@ -63,16 +63,10 @@ Les outils ONTAP utilisent les ports TCP bidirectionnels suivants :
 | * Exigences supplémentaires* | *Colonne Description* 
 
 
-| 9083 | Lorsque cette option est activée, VASA Provider et SRA utilisent ce port pour communiquer avec vCenter Server. Ce port est également requis pour obtenir les paramètres TCP/IP. 
-
-
-| 443 | En fonction de la façon dont vous avez configuré vos informations d'identification, VMware vCenter Server et les systèmes de stockage sont à l'écoute des communications sécurisées sur ce port. 
+| 9083 | Lorsqu'il est activé, le fournisseur VASA et l'adaptateur SRA (Storage Replication adapter) utilisent ce port pour communiquer avec vCenter Server. Ce port est également requis pour obtenir les paramètres TCP/IP. Ce port prend en charge le téléchargement de bundle, l'interface utilisateur Web-CLI et la communication du chemin de contrôle entre VMware et VP. SRA communique sur ce numéro DE PORT avec le service SRA back-end. 
 
 
 | 8143 | VSC écoute les communications sécurisées sur ce port. 
-
-
-| 7 | VSC envoie une demande d'écho à ONTAP pour vérifier l'accessibilité. Elle n'est requise que lors de l'ajout d'un système de stockage et peut être désactivée par la suite. 
 |===
 Exigences minimales en matière de stockage et d'applications :
 

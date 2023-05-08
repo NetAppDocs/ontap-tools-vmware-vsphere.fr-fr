@@ -46,7 +46,7 @@ Si vous disposez de la version 7.2 ou 7.2.1 de l'appliance virtuelle pour VSC, V
 
 Pour effectuer une mise à niveau vers les outils ONTAP 9.10 et versions ultérieures, vous devez exécuter l'appliance virtuelle 9.7P1 ou une version ultérieure. La mise à niveau depuis une version antérieure à 9.7P1 de l'appliance virtuelle n'est pas prise en charge.
 
-Si vous allez déployer la dernière version des outils ONTAP, vous devez voir la rubrique link:..deploy/concept_requirements_for_deploying_ontap_tools_for_vmware_vsphere.html["Conditions requises pour le déploiement des outils ONTAP"]. Le sujet link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Passez à la dernière version des outils ONTAP"] possède des informations sur la réalisation d'une mise à niveau sur place.
+Si vous allez déployer la dernière version des outils ONTAP, vous devez voir la rubrique link:../deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html["Exigences en matière d'espace et de dimensionnement pour les outils ONTAP"]. Le sujet link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Passez à la dernière version des outils ONTAP"] possède des informations sur la réalisation d'une mise à niveau sur place.
 
 *Informations connexes*
 
