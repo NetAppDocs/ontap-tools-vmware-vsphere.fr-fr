@@ -18,7 +18,7 @@ Vous devez avoir installé les outils VMware après avoir déployé les outils O
 
 NOTE: Vous devez définir un mot de passe pour le `diag` utilisateur lors de l'activation des diagnostics à distance.
 
-Vous devez utiliser l'onglet *Résumé* de vos outils ONTAP déployés pour accéder à la console de maintenance. Lorsque vous cliquez sur image:../media/launch_maintenance_console.gif[""], la console de maintenance démarre.
+Vous devez utiliser l'onglet *Résumé* de vos outils ONTAP déployés pour accéder à la console de maintenance. Lorsque vous cliquez sur  image:../media/launch_maintenance_console.gif["Bouton de lecture"], la console de maintenance démarre.
 
 |===
 

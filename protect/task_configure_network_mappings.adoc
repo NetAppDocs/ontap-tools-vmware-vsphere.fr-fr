@@ -30,7 +30,7 @@ Vous devez avoir connecté les sites protégés et de restauration.
 . Connectez-vous à votre serveur vCenter et cliquez sur *site Recovery* > *sites*.
 . Sélectionnez votre site protégé, puis cliquez sur *gérer*.
 . Dans l'onglet gérer, sélectionnez *mappages réseau*.
-. Cliquez sur le bouton image:../media/new_network_mappings.gif[""] pour créer un nouveau mappage réseau.
+. Cliquez sur le bouton image:../media/new_network_mappings.gif["icône globe"] pour créer un nouveau mappage réseau.
 +
 L'assistant de création de mappage réseau s'affiche.
 

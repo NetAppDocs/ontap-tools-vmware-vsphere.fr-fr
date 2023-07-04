@@ -26,7 +26,7 @@ Ce processus peut prendre un certain temps, selon votre configuration et la char
 Les valeurs standard recommandées sont définies par défaut.
 
 +
-image::../media/vsc_recommended_hosts_settings.gif[paramètres des hôtes recommandés par vsc]
+image::../media/vsc_recommended_hosts_settings.gif[Écran définir les valeurs recommandées]
 
 . Cliquez sur *OK*.
 

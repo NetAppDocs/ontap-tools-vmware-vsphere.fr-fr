@@ -2,7 +2,7 @@
 permalink: concepts/concept_how_to_configure_data_ontap_role_based_access_control_for_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous devez configurer le contrôle d"accès ONTAP basé sur des rôles \(RBAC\) sur le système de stockage si vous souhaitez utiliser le contrôle d"accès basé sur des rôles avec les outils ONTAP® pour VMware vSphere. Vous pouvez créer un ou plusieurs comptes utilisateur personnalisés avec des privilèges d"accès limités grâce à la fonction RBAC ONTAP.' 
+summary: 'Vous devez configurer le contrôle d"accès basé sur des rôles ONTAP \(RBAC\) sur le système de stockage si vous souhaitez utiliser le contrôle d"accès basé sur des rôles avec les outils ONTAP pour VMware vSphere. Vous pouvez créer un ou plusieurs comptes utilisateur personnalisés avec des privilèges d"accès limités grâce à la fonction RBAC ONTAP.' 
 ---
 = Configuration du contrôle d'accès basé sur des rôles ONTAP pour les outils ONTAP pour VMware vSphere
 :allow-uri-read: 
@@ -13,25 +13,25 @@ summary: 'Vous devez configurer le contrôle d"accès ONTAP basé sur des rôles
 [role="lead"]
 Vous devez configurer le contrôle d'accès basé sur des rôles (RBAC) ONTAP sur le système de stockage si vous souhaitez utiliser le contrôle d'accès basé sur des rôles avec les outils ONTAP pour VMware vSphere. Vous pouvez créer un ou plusieurs comptes utilisateur personnalisés avec des privilèges d'accès limités grâce à la fonction RBAC ONTAP.
 
-VSC et SRA peuvent accéder aux systèmes de stockage au niveau du cluster ou de la machine virtuelle de stockage (SVM)SVM. Si vous ajoutez des systèmes de stockage au niveau du cluster, vous devez fournir les identifiants de l'utilisateur admin pour fournir toutes les fonctionnalités requises. Si vous ajoutez des systèmes de stockage en ajoutant directement des détails SVM, vous devez savoir que l'utilisateur « vsadmin » n'a pas tous les rôles et les fonctionnalités nécessaires pour effectuer certaines tâches.
+Les outils ONTAP et SRA peuvent accéder aux systèmes de stockage au niveau du cluster ou des SVM (Storage Virtual machine). Si vous ajoutez des systèmes de stockage au niveau du cluster, vous devez fournir les identifiants de l'utilisateur admin pour fournir toutes les fonctionnalités requises. Si vous ajoutez des systèmes de stockage en ajoutant directement des détails SVM, vous devez savoir que l'utilisateur « vsadmin » n'a pas tous les rôles et les fonctionnalités nécessaires pour effectuer certaines tâches.
 
-Vasa Provider ne peut accéder aux systèmes de stockage qu'au niveau du cluster. Si VASA Provider est requis pour un contrôleur de stockage spécifique, le système de stockage doit être ajouté à VSC au niveau du cluster, même si vous utilisez VSC ou SRA.
+Vasa Provider ne peut accéder aux systèmes de stockage qu'au niveau du cluster. Si VASA Provider est requis pour un contrôleur de stockage spécifique, le système de stockage doit être ajouté aux outils ONTAP au niveau du cluster même si vous utilisez des outils ONTAP ou SRA.
 
 Pour créer un nouvel utilisateur et connecter un cluster ou un SVM aux outils ONTAP, il faut effectuer les opérations suivantes :
 
 * Créer un rôle d'administrateur de cluster ou SVM à l'aide de ONTAP System Manager 9.8P1 ou version ultérieure. Voir link:../configure/task_configure_user_role_and_privileges.html["Configurez les rôles et privilèges utilisateur"] pour en savoir plus.
 * Créez des utilisateurs avec le rôle attribué et le jeu d'applications approprié à l'aide de ONTAP
 +
-Ces identifiants sont nécessaires pour configurer les systèmes de stockage pour VSC. Vous pouvez configurer les systèmes de stockage pour VSC en saisissant les identifiants dans VSC. Chaque fois que vous vous connectez à un système de stockage avec ces identifiants, vous disposez d'autorisations pour accéder aux fonctions VSC que vous avez configurées dans ONTAP lors de la création des identifiants.
+Vous avez besoin de ces informations d'identification pour configurer les systèmes de stockage pour les outils ONTAP. Vous pouvez configurer les systèmes de stockage pour les outils ONTAP en saisissant les informations d'identification dans les outils ONTAP. Chaque fois que vous vous connectez à un système de stockage avec ces informations d'identification, vous disposez des autorisations nécessaires pour accéder aux fonctions des outils ONTAP que vous avez configurées dans ONTAP lors de la création des informations d'identification.
 
-* Ajoutez le système de stockage à VSC et fournissez les identifiants de l'utilisateur que vous venez de créer
-
-
+* Ajoutez le système de stockage aux outils ONTAP et fournissez les informations d'identification de l'utilisateur que vous venez de créer
 
 
-== Rôles VSC
 
-VSC classifie les privilèges ONTAP en fonction de l'ensemble des rôles VSC suivants :
+
+== Rôles des outils ONTAP
+
+Les outils ONTAP classifient les privilèges ONTAP en l'ensemble suivant de rôles d'outils ONTAP :
 
 * Détection
 +
@@ -63,4 +63,4 @@ Vous pouvez créer uniquement une gestion basée sur des règles au niveau du cl
 
 SRA classifie les privilèges d'ONTAP en rôle SAN ou NAS au niveau du cluster ou des SVM. Les utilisateurs peuvent ainsi exécuter des opérations SRM.
 
-Lors de l'ajout du cluster à VSC, VSC procède à une validation initiale des rôles RBAC ONTAP. Si vous avez ajouté une adresse IP de stockage SVM directe, VSC n'effectue pas la validation initiale. VSC vérifie et applique les privilèges plus tard dans le flux de travail des tâches.
+Les outils ONTAP valident les privilèges initiaux des rôles ONTAP RBAC lorsque vous ajoutez le cluster aux outils ONTAP. Si vous avez ajouté une IP de stockage SVM directe, les outils ONTAP n'effectuent pas la validation initiale. Les outils ONTAP vérifient et appliquent les privilèges ultérieurement dans le flux de travail des tâches.

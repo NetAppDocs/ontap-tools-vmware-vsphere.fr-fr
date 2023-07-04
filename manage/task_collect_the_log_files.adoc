@@ -19,11 +19,11 @@ Si vous avez besoin de fichiers journaux de VASA Provider, vous pouvez générer
 
 `\https://vm_ip:9083`
 
-Vous pouvez collecter les fichiers journaux VSC à l'aide de la fonctionnalité « Export VSC Logs » dans l'interface graphique de VSC. Lorsque vous collectez un bundle VSC Log avec VASA Provider activé, le bundle VSC Log propose également les journaux VP. La procédure suivante décrit comment collecter les fichiers journaux VSC :
+Vous pouvez collecter les outils ONTAP pour les fichiers journaux VMware vSphere à l'aide de la fonctionnalité « Exporter les outils ONTAP pour les journaux VMware vSphere » de l'interface utilisateur graphique de VSC. Lorsque vous collectez un bundle ONTAP Tools pour VMware vSphere Log avec VASA Provider activé, le bundle ONTAP Tools pour VMware vSphere Log contient également les journaux VP. Les étapes suivantes expliquent comment collecter les outils ONTAP pour les fichiers journaux VMware vSphere :
 
 *Étapes*
 
-. Sur la page d'accueil des outils ONTAP, cliquez sur *Configuration* > *Exporter les journaux VSC*.
+. Sur la page d'accueil des outils ONTAP, cliquez sur *Configuration* > *Exporter les outils ONTAP pour les journaux VMware vSphere*.
 +
 Cette opération peut prendre plusieurs minutes.
 

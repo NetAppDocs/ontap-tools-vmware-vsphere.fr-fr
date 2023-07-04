@@ -19,7 +19,7 @@ Lorsque vous travaillez avec des autorisations vCenter Server, vous devez garder
 
 Vous n'avez besoin de configurer les autorisations vCenter Server que si vous souhaitez limiter l'accès aux objets et aux tâches vSphere. Sinon, vous pouvez vous connecter en tant qu'administrateur. Cette connexion vous permet automatiquement d'accéder à tous les objets vSphere.
 
-L'endroit où vous attribuez une autorisation détermine les tâches VSC que l'utilisateur peut effectuer.
+L'emplacement où vous attribuez une autorisation détermine les tâches des outils ONTAP qu'un utilisateur peut effectuer.
 
 Parfois, pour assurer la réalisation d'une tâche, vous devez attribuer l'autorisation à un niveau supérieur, tel que l'objet racine. C'est le cas lorsqu'une tâche nécessite un privilège qui ne s'applique pas à un objet vSphere spécifique (par exemple, le suivi de la tâche) ou lorsqu'un privilège requis s'applique à un objet non vSphere (par exemple, un système de stockage).
 
@@ -32,9 +32,9 @@ TIP: À moins que les règles de sécurité de votre entreprise ne nécessitent 
 
 == Autorisations et objets non vSphere
 
-L'autorisation que vous créez est appliquée à un objet non vSphere. Par exemple, un système de stockage n'est pas un objet vSphere. Si un privilège s'applique à un système de stockage, vous devez attribuer l'autorisation contenant ce privilège à l'objet racine VSC car aucun objet vSphere ne peut être affecté.
+L'autorisation que vous créez est appliquée à un objet non vSphere. Par exemple, un système de stockage n'est pas un objet vSphere. Si un privilège s'applique à un système de stockage, vous devez attribuer l'autorisation contenant ce privilège à l'objet racine des outils ONTAP car il n'existe aucun objet vSphere auquel vous pouvez l'attribuer.
 
-Par exemple, toute autorisation incluant un privilège tel que le privilège VSC « Add/Modify/Skip Storage Systems » doit être attribuée au niveau de l'objet racine.
+Par exemple, toute autorisation qui inclut un privilège tel que le privilège Outils ONTAP « Ajouter/Modifier/Ignorer les systèmes de stockage » doit être attribuée au niveau de l'objet racine.
 
 
 

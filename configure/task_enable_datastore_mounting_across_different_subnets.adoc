@@ -15,7 +15,7 @@ Si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos h�
 
 *À propos de cette tâche*
 
-Lorsque le provisionnement du datastore échoue, VSC consigne les messages d'erreur suivants :
+En cas d'échec du provisionnement du datastore, les outils ONTAP pour VMware vSphere consigne les messages d'erreur suivants :
 
 'Impossible de continuer. Aucune adresse ip n'a été trouvée lors du référencement croisé des adresses ip du noyau et des adresses IP sur le contrôleur. Impossible de trouver un réseau correspondant au volume de montage NFS pour ces hôtes.'
 

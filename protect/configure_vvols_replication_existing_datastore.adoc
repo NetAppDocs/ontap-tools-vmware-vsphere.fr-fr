@@ -45,7 +45,7 @@ NOTE: Si vous utilisez System Manager pour protéger les volumes FlexVol et le p
 . Ajoutez le groupe de réplication à la machine virtuelle non protégée.
 
 
-image::../media/vvols_replication_existing_datastore.png[vvol réplique le datastore existant]
+image::../media/vvols_replication_existing_datastore.png[Flux de travail des nouveaux utilisateurs et des utilisateurs existants]
 
 *REMARQUE :*
 

@@ -23,6 +23,6 @@ Des groupes de réplication sont créés lors de la création du workflow de dat
 
 NOTE: Si vous utilisez une reprise après incident pour le datastore vvols, il n'est pas nécessaire de configurer Storage Replication adapter (SRA) séparément puisque la fonctionnalité VASA Provider est améliorée pour disposer d'une réplication vvols.
 
-image::../media/vvols_replication.png[réplication vvol]
+image::../media/vvols_replication.png[Configurez le flux de production des systèmes ONTAP]
 
 link:../protect/configure_vvols_replication_existing_datastore.html["Configurez la réplication vvols pour les datastores existants"]

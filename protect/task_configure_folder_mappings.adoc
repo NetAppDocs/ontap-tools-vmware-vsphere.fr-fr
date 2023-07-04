@@ -22,7 +22,7 @@ Vous devez avoir connecté les sites protégés et de restauration.
 . Connectez-vous à votre serveur vCenter et cliquez sur *site Recovery* > *sites*.
 . Sélectionnez votre site protégé, puis cliquez sur *gérer*.
 . Dans l'onglet gérer, sélectionnez *mappages de dossiers*.
-. Cliquez sur le bouton image:../media/new_folder_mappings.gif[""] pour créer un nouveau mappage de dossier.
+. Sélectionnez l'icône *Folder* pour créer un mappage de dossiers.
 +
 L'assistant de création de mappage de dossier s'affiche.
 

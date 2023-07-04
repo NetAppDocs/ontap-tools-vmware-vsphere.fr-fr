@@ -42,17 +42,20 @@ NOTE: Dans le cadre de la mise à niveau des outils ONTAP 9.12, tous les process
 
 L'ajout d'un système de stockage sans authentification par certificat est restreint.
 
-Si le système de stockage est ajouté avec un utilisateur personnalisé créé dans le périmètre du cluster à l'aide du fichier json et que vous souhaitez effectuer une mise à niveau vers la version 9.12, exécutez les commandes ci-dessous sur l'interface de ligne de commande ONTAP avant la mise à niveau pour activer la communication basée sur le certificat entre les outils ONTAP pour VMware vSphere et ONTAP :
+Si le système de stockage est ajouté avec un utilisateur personnalisé créé dans le périmètre du cluster à l'aide du fichier json et que vous souhaitez effectuer une mise à niveau vers la version 9.12, alors
+Exécutez les commandes ci-dessous sur l'interface de ligne de commande ONTAP avant de procéder à la mise à niveau pour activer la communication basée sur des certificats entre les outils ONTAP pour VMware vSphere et ONTAP.
 
-. _security login role create -role <role-name> -cmddirname "security login show" -access all_
-. _security login role create -role <role-name> -cmddirname "security certificate show" -access all_
-. _security login role create -role <role-name> -cmddirname "security certificate install" -access all_
+. _security login role create -role <existing-role-name> -cmddirname "security login show" -access all_
+. _security login role create -role <existing-role-name> -cmddirname "security certificate show" -access all_
+. _security login role create -role <existing-role-name> -cmddirname "security certificate install" -access all_
 
 
 Si le système de stockage est ajouté avec un utilisateur scoped SVM créé personnalisé en utilisant le fichier json et que vous souhaitez effectuer une mise à niveau vers 9.12, Exécutez ensuite les commandes ci-dessous sur l'interface de ligne de commande ONTAP avec un accès administrateur du cluster avant la mise à niveau pour activer la communication basée sur le certificat entre les outils ONTAP pour VMware vSphere et ONTAP :
 
-. _security login role create -role <role-name> -cmddirname "security certificate install" -access all -vserver <vserver-name>_
-. _security login role create -role <role-name> -cmddirname "security certificate show" -access all -vserver <vserver-name>_
+. _security login role create -role <existing-role-name> -cmddirname "security certificate install" -access all -vserver <vserver-name>_
+. _security login role create -role <existing-role-name> -cmddirname "security certificate show" -access all -vserver <vserver-name>_
+. _security login create -user-or-group-name <user> -application http -authentication-method cert -role <existing-role-name> -vserver <vserver-name>_
+. _security login create -user-or-group-name <user> -application ontapi -authentication-method cert -role <existing-role-name> -vserver <vserver-name>_
 
 
 *Étapes*
@@ -65,7 +68,7 @@ Si le système de stockage est ajouté avec un utilisateur scoped SVM créé per
 
 
 . Accédez à l'onglet Récapitulatif des outils ONTAP déployés.
-. Cliquez sur *image:../media/launch_maintenance_console.gif[""]* pour démarrer la console de maintenance.
+. Démarrez la console de maintenance.
 . À l'invite "Menu principal", entrez option `2` Pour *Configuration du système*, puis entrez option `8` Pour *Upgrade*.
 +
 Une fois la mise à niveau terminée, les outils ONTAP redémarre. Les outils ONTAP sont enregistrés sur le serveur vCenter avec la même adresse IP qu'avant la mise à niveau.
