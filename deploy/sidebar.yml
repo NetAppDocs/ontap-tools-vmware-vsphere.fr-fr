@@ -13,7 +13,7 @@ entries:
   url: "/qsg.html"
 - title: Conditions requises pour le déploiement des outils ONTAP
   entries:
-  - title: Configuration requise pour les ports VSC
+  - title: Port requis pour les outils ONTAP
     url: "/deploy/reference_port_requirements_for_vsc.html"
   - title: Exigences en matière d'espace et de dimensionnement pour les outils ONTAP
     url: "/deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html"

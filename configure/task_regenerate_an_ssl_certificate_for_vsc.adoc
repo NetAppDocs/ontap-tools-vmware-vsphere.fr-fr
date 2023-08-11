@@ -2,7 +2,7 @@
 permalink: configure/task_regenerate_an_ssl_certificate_for_vsc.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Le certificat SSL est généré lorsque vous installez Virtual Storage Console \(VSC\). Le nom unique \(DN\) généré pour le certificat SSL ne correspond peut-être pas à un nom commun \(CN\) reconnu par les ordinateurs clients. En modifiant les mots de passe du magasin de clés et de la clé privée, vous pouvez régénérer le certificat et créer un certificat spécifique au site.' 
+summary: 'Le certificat SSL est généré lorsque vous installez les outils ONTAP. Le nom unique \(DN\) généré pour le certificat SSL ne correspond peut-être pas à un nom commun \(CN\) reconnu par les ordinateurs clients. En modifiant les mots de passe du magasin de clés et de la clé privée, vous pouvez régénérer le certificat et créer un certificat spécifique au site.' 
 ---
 = Régénérer un certificat SSL pour Virtual Storage Console
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Le certificat SSL est généré lorsque vous installez Virtual Storage
 
 
 [role="lead"]
-Le certificat SSL est généré lors de l'installation de Virtual Storage Console (VSC). Le nom distinctif (DN) généré pour le certificat SSL peut ne pas être un nom commun (CN) reconnu par les ordinateurs clients. En modifiant les mots de passe du magasin de clés et de la clé privée, vous pouvez régénérer le certificat et créer un certificat spécifique au site.
+Le certificat SSL est généré lorsque vous installez les outils ONTAP. Le nom distinctif (DN) généré pour le certificat SSL peut ne pas être un nom commun (CN) reconnu par les ordinateurs clients. En modifiant les mots de passe du magasin de clés et de la clé privée, vous pouvez régénérer le certificat et créer un certificat spécifique au site.
 
 *À propos de cette tâche*
 

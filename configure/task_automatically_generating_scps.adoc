@@ -15,8 +15,8 @@ Vasa Provider pour ONTAP vous permet de générer automatiquement des profils de
 
 *Ce dont vous aurez besoin*
 
-* Vous devez avoir enregistré votre instance VASA Provider sur Virtual Storage Console (VSC).
-* VSC doit avoir découvert votre système de stockage.
+* Vous devez avoir enregistré votre instance VASA Provider avec les outils ONTAP.
+* Les outils ONTAP doivent avoir détecté votre stockage.
 
 
 *À propos de cette tâche*

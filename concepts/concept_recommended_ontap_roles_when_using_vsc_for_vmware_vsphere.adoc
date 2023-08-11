@@ -2,7 +2,7 @@
 permalink: concepts/concept_recommended_ontap_roles_when_using_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez configurer plusieurs rôles ONTAP recommandés pour utiliser les outils ONTAP® pour VMware vSphere et le contrôle d"accès basé sur des rôles \(RBAC\). Ces rôles contiennent les privilèges ONTAP requis pour effectuer les opérations de stockage requises exécutées par les tâches Virtual Storage Console \(VSC\).' 
+summary: 'Vous pouvez configurer plusieurs rôles ONTAP recommandés pour utiliser les outils ONTAP® pour VMware vSphere et le contrôle d"accès basé sur des rôles \(RBAC\). Ces rôles contiennent les privilèges ONTAP requis pour effectuer les opérations de stockage requises qui sont exécutées par les tâches des outils ONTAP.' 
 ---
 = Rôles ONTAP recommandés pour l'utilisation des outils ONTAP pour VMware vSphere
 :allow-uri-read: 
@@ -11,15 +11,15 @@ summary: 'Vous pouvez configurer plusieurs rôles ONTAP recommandés pour utilis
 
 
 [role="lead"]
-Vous pouvez définir plusieurs rôles ONTAP recommandés pour l'utilisation des outils ONTAP pour VMware vSphere et le contrôle d'accès basé sur des rôles (RBAC). Ces rôles disposent des privilèges ONTAP requis pour effectuer les opérations de stockage requises exécutées par les tâches Virtual Storage Console (VSC).
+Vous pouvez définir plusieurs rôles ONTAP recommandés pour l'utilisation des outils ONTAP pour VMware vSphere et le contrôle d'accès basé sur des rôles (RBAC). Ces rôles contiennent les privilèges ONTAP requis pour effectuer les opérations de stockage requises qui sont exécutées par les tâches des outils ONTAP.
 
 Pour créer de nouveaux rôles utilisateur, vous devez vous connecter en tant qu'administrateur sur les systèmes de stockage exécutant ONTAP. Vous pouvez créer des rôles ONTAP à l'aide de ONTAP System Manager 9.8P1 ou version ultérieure. Voirlink:../configure/task_configure_user_role_and_privileges.html["Configurez les rôles et privilèges utilisateur"] pour en savoir plus.
 
 Chaque rôle ONTAP est associé à un nom d'utilisateur et une paire de mots de passe qui constituent les identifiants du rôle. Si vous ne vous connectez pas à l'aide de ces informations d'identification, vous ne pouvez pas accéder aux opérations de stockage associées au rôle.
 
-Par mesure de sécurité, les rôles ONTAP spécifiques à VSC sont classés par ordre hiérarchique. Le premier rôle est donc le rôle le plus restrictif et ne dispose que de privilèges associés à un ensemble d'opérations de stockage VSC de base. Le rôle suivant inclut à la fois ses propres privilèges et tous les privilèges associés au rôle précédent. Chaque rôle supplémentaire est moins restrictif en termes de termes de limites au niveau des opérations de stockage prises en charge.
+À titre de mesure de sécurité, les rôles ONTAP spécifiques aux outils ONTAP sont classés de manière hiérarchique. Cela signifie que le premier rôle est le rôle le plus restrictif et ne dispose que des privilèges associés à l'ensemble le plus basique d'opérations de stockage des outils ONTAP. Le rôle suivant inclut à la fois ses propres privilèges et tous les privilèges associés au rôle précédent. Chaque rôle supplémentaire est moins restrictif en termes de termes de limites au niveau des opérations de stockage prises en charge.
 
-Voici certains des rôles RBAC ONTAP recommandés lors de l'utilisation de VSC. Une fois ces rôles créés, vous pouvez attribuer les rôles aux utilisateurs qui doivent effectuer des tâches associées au stockage, par exemple le provisionnement de machines virtuelles.
+Voici quelques-uns des rôles ONTAP RBAC recommandés lors de l'utilisation d'outils ONTAP. Une fois ces rôles créés, vous pouvez attribuer les rôles aux utilisateurs qui doivent effectuer des tâches associées au stockage, par exemple le provisionnement de machines virtuelles.
 
 . Détection
 +

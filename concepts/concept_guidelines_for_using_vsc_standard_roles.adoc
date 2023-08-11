@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Lorsque vous utilisez des outils ONTAP® standard pour les rôles VMware vSphere, vous devez suivre certaines directives. 
 ---
-= Instructions d'utilisation des rôles standard VSC
+= Instructions d'utilisation des rôles standard des outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,28 +13,28 @@ summary: Lorsque vous utilisez des outils ONTAP® standard pour les rôles VMwar
 [role="lead"]
 Lorsque vous utilisez des outils ONTAP® standard pour les rôles VMware vSphere, vous devez suivre certaines directives.
 
-Vous ne devez pas modifier directement les rôles standard. Si vous le faites, VSC remplacera vos modifications à chaque fois que vous mettez à niveau VSC. À chaque mise à niveau de VSC, le programme d'installation met à jour les définitions de rôles standard. Vous êtes ainsi assuré que les rôles sont à jour pour votre version de VSC et pour toutes les versions prises en charge de vCenter Server.
+Vous ne devez pas modifier directement les rôles standard. Si c'est le cas, les outils ONTAP écraseront vos modifications chaque fois que vous mettez à niveau les outils ONTAP. Le programme d'installation met à jour les définitions de rôles standard chaque fois que vous mettez à niveau les outils ONTAP. Cela permet de s'assurer que les rôles sont à jour pour votre version des outils ONTAP ainsi que pour toutes les versions prises en charge du serveur vCenter.
 
-Vous pouvez toutefois utiliser les rôles standard pour créer des rôles adaptés à votre environnement. Pour ce faire, vous devez copier le rôle standard VSC, puis modifier le rôle copié. En créant un nouveau rôle, vous pouvez le conserver même lorsque vous redémarrez ou mettez à niveau le service Windows VSC.
+Vous pouvez toutefois utiliser les rôles standard pour créer des rôles adaptés à votre environnement. Pour ce faire, vous devez copier le rôle standard des outils ONTAP, puis modifier le rôle copié. En créant un nouveau rôle, vous pouvez conserver ce rôle même lorsque vous redémarrez ou mettez à niveau le service Windows des outils ONTAP.
 
-Les rôles standard de VSC comme vous le souhaitez peuvent être utilisés comme suit :
+Vous pouvez utiliser les rôles standard des outils ONTAP de différentes façons :
 
-* Utilisation des rôles standard VSC pour toutes les tâches VSC.
+* Utilisez les rôles d'outils ONTAP standard pour toutes les tâches d'outils ONTAP.
 +
-Dans ce scénario, les rôles standard fournissent tous les privilèges dont l'utilisateur a besoin pour effectuer les tâches VSC.
+Dans ce scénario, les rôles standard fournissent tous les privilèges dont un utilisateur a besoin pour effectuer les tâches des outils ONTAP.
 
 * Associer des rôles pour développer les tâches qu'un utilisateur peut effectuer.
 +
-Si les rôles standard VSC fournissent une granularité trop importante pour votre environnement, vous pouvez développer les rôles en créant des groupes de niveau supérieur contenant plusieurs rôles.
+Si les rôles standard des outils ONTAP apportent une granularité excessive à votre environnement, vous pouvez développer les rôles en créant des groupes de niveau supérieur contenant plusieurs rôles.
 
 +
-Si un utilisateur doit effectuer d'autres tâches non VSC qui nécessitent des privilèges vCenter Server natifs supplémentaires, vous pouvez créer un rôle qui fournit ces privilèges et l'ajouter au groupe également.
+Si un utilisateur doit effectuer d'autres tâches d'outils non ONTAP qui nécessitent des privilèges vCenter Server natifs supplémentaires, vous pouvez créer un rôle qui fournit ces privilèges et l'ajouter au groupe.
 
 * Créer des rôles plus précis.
 +
-Si votre entreprise exige que vous implémentiez des rôles plus restrictifs que les rôles VSC standard, vous pouvez utiliser les rôles VSC pour créer de nouveaux rôles.
+Si votre entreprise exige que vous mettiez en œuvre des rôles plus restrictifs que les rôles standard pour les outils ONTAP, vous pouvez utiliser les rôles des outils ONTAP pour créer de nouveaux rôles.
 
 +
-Dans ce cas, vous clonez les rôles VSC nécessaires, puis modifiez le rôle cloné de sorte que celui-ci dispose uniquement des privilèges dont l'utilisateur a besoin.
+Dans ce cas, vous allez cloner les rôles d'outils ONTAP nécessaires, puis modifier le rôle cloné de sorte qu'il ne dispose que des privilèges dont votre utilisateur a besoin.
 
 

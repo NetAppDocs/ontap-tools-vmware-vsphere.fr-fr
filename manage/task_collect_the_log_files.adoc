@@ -2,7 +2,7 @@
 permalink: manage/task_collect_the_log_files.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez collecter les fichiers journaux des outils ONTAP® pour VMware vSphere à partir de l"option disponible dans l"interface graphique \(GUI\) de VSC. Le support technique peut vous demander de collecter les fichiers journaux afin de résoudre un problème.' 
+summary: 'Vous pouvez collecter les fichiers journaux des outils ONTAP® pour VMware vSphere à partir de l"option disponible dans l"interface utilisateur graphique des outils ONTAP \(GUI\). Le support technique peut vous demander de collecter les fichiers journaux afin de résoudre un problème.' 
 ---
 = Collectez les fichiers journaux
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Vous pouvez collecter les fichiers journaux des outils ONTAP® pour VM
 
 
 [role="lead"]
-Vous pouvez collecter les fichiers journaux des outils ONTAP pour VMware vSphere à partir de l'option disponible dans l'interface graphique de VSC. Le support technique peut vous demander de collecter les fichiers journaux afin de résoudre un problème.
+Vous pouvez collecter les fichiers journaux des outils ONTAP pour VMware vSphere à partir de l'option disponible dans l'interface graphique des outils ONTAP. Le support technique peut vous demander de collecter les fichiers journaux afin de résoudre un problème.
 
 *À propos de cette tâche*
 
@@ -19,7 +19,7 @@ Si vous avez besoin de fichiers journaux de VASA Provider, vous pouvez générer
 
 `\https://vm_ip:9083`
 
-Vous pouvez collecter les outils ONTAP pour les fichiers journaux VMware vSphere à l'aide de la fonctionnalité « Exporter les outils ONTAP pour les journaux VMware vSphere » de l'interface utilisateur graphique de VSC. Lorsque vous collectez un bundle ONTAP Tools pour VMware vSphere Log avec VASA Provider activé, le bundle ONTAP Tools pour VMware vSphere Log contient également les journaux VP. Les étapes suivantes expliquent comment collecter les outils ONTAP pour les fichiers journaux VMware vSphere :
+Vous pouvez collecter les outils ONTAP pour les fichiers journaux VMware vSphere à l'aide de la fonctionnalité « Exporter les outils ONTAP pour les journaux VMware vSphere » de l'interface utilisateur graphique des outils ONTAP. Lorsque vous collectez un bundle ONTAP Tools pour VMware vSphere Log avec VASA Provider activé, le bundle ONTAP Tools pour VMware vSphere Log contient également les journaux VP. Les étapes suivantes expliquent comment collecter les outils ONTAP pour les fichiers journaux VMware vSphere :
 
 *Étapes*
 

@@ -82,6 +82,14 @@ Lorsque vous attendez la fin du déploiement, vous pouvez afficher la progressio
 . Mettez la machine virtuelle sous tension des outils ONTAP, puis ouvrez une console de la machine virtuelle exécutant les outils ONTAP.
 . Vérifiez que les outils ONTAP sont en cours d'exécution une fois le déploiement terminé.
 . Si les outils ONTAP ne sont enregistrés avec aucun serveur vCenter, utilisez `\https://appliance_ip:8143/Register.html` Pour enregistrer l'instance VSC. Le Register.html vous redirige vers la page swagger. À partir de ONTAP Tools 9.12, l'enregistrement des outils ONTAP avec vCenter se fait à partir de la page swagger.
++
+Utilisez l'API POST pour enregistrer les outils ONTAP dans vCenter à partir de la version 9.12.
+
++
+[listing]
+----
+/2.0/plugin/vcenter
+----
 . Déconnectez-vous puis reconnectez-vous au client vSphere pour afficher les outils ONTAP déployés.
 +
 La mise à jour du plug-in peut prendre quelques minutes dans le client vSphere.

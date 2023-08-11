@@ -2,35 +2,35 @@
 permalink: configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Si vous utilisez des outils ONTAP® pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de vCenter Server, vous devez enregistrer une instance de VSC avec chaque serveur vCenter pour qu"il existe un couplage 1:1 entre VSC et vCenter Server. Cela vous permet de gérer tous les serveurs exécutant vCenter 6.0 ou version ultérieure en mode lié et en mode non lié à partir d"un seul client HTML5 vSphere.' 
+summary: 'Si vous utilisez les outils ONTAP® pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de serveur vCenter, vous devez enregistrer une instance d"outils ONTAP avec chaque serveur vCenter afin d"établir un couplage 1:1 entre les outils ONTAP et le serveur vCenter. Cela vous permet de gérer tous les serveurs exécutant vCenter 6.0 ou version ultérieure en mode lié et en mode non lié à partir d"un seul client HTML5 vSphere.' 
 ---
-= Conditions requises pour l'enregistrement de VSC dans un environnement de plusieurs serveurs vCenter
+= Conditions requises pour l'enregistrement des outils ONTAP dans un environnement de plusieurs serveurs vCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Si vous utilisez les outils ONTAP pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de vCenter Server, vous devez enregistrer une instance de VSC avec chaque serveur vCenter Server de sorte qu'il existe un couplage 1:1 entre VSC et vCenter Server. Cela vous permet de gérer tous les serveurs exécutant vCenter 7.0 ou version ultérieure en mode lié et en mode non lié à partir d'un seul client vSphere HTML5.
+Si vous utilisez les outils ONTAP pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de vCenter Server, vous devez enregistrer une instance d'outils ONTAP avec chaque serveur vCenter afin d'établir un couplage 1:1 entre les outils ONTAP et le serveur vCenter. Cela vous permet de gérer tous les serveurs exécutant vCenter 7.0 ou version ultérieure en mode lié et en mode non lié à partir d'un seul client vSphere HTML5.
 
 
-NOTE: Si vous souhaitez utiliser VSC avec un serveur vCenter, vous devez avoir configuré ou enregistré une instance VSC pour chaque instance de vCenter Server à gérer. Chaque instance VSC enregistrée doit avoir la même version.
+NOTE: Si vous souhaitez utiliser les outils ONTAP avec un serveur vCenter, vous devez avoir configuré ou enregistré une instance d'outils ONTAP pour chaque instance de serveur vCenter que vous souhaitez gérer. Chaque instance d'outils ONTAP enregistrée doit être de la même version.
 
 Le mode lié est installé automatiquement pendant le déploiement de vCenter Server. Le mode lié utilise LE mode d'application Microsoft Active Directory (ADAM) pour stocker et synchroniser des données sur plusieurs systèmes vCenter Server.
 
-L'utilisation du client HTML5 vSphere pour effectuer des tâches VSC sur plusieurs serveurs vCenter nécessite l'exécution des tâches suivantes :
+L'utilisation du client vSphere HTML5 pour effectuer des tâches d'outils ONTAP sur plusieurs serveurs vCenter nécessite les éléments suivants :
 
-* Chaque serveur vCenter dans l'inventaire VMware que vous souhaitez gérer doit disposer d'un seul serveur VSC enregistré avec lui sous une configuration unique 1:1.
+* Chaque serveur vCenter de l'inventaire VMware que vous souhaitez gérer doit disposer d'un seul serveur d'outils ONTAP enregistré avec celui-ci lors d'un couplage 1:1 unique.
 +
-Par exemple, vous pouvez faire enregistrer le serveur VSC A sur vCenter Server A, le serveur VSC B enregistré sur vCenter Server B, le serveur VSC C enregistré sur vCenter Server C, etc.
-
-+
-Le serveur VSC A ne peut pas être enregistré sur vCenter Server A et vCenter Server B.
+Par exemple, vous pouvez enregistrer le serveur d'outils ONTAP A sur le serveur vCenter A, le serveur d'outils ONTAP B sur le serveur vCenter B, le serveur d'outils ONTAP C sur le serveur vCenter C, etc.
 
 +
-Si un inventaire VMware inclut un serveur vCenter ne possédant pas de serveur VSC enregistré, mais un ou plusieurs serveurs vCenter sont enregistrés auprès de VSC, Vous pouvez alors afficher les instances de VSC et effectuer des opérations VSC pour les serveurs vCenter sur lesquels VSC est enregistré.
+Vous *ne pouvez pas disposer du serveur d'outils ONTAP A enregistré à la fois sur le serveur vCenter A et sur le serveur vCenter B.
 
-* Vous devez disposer du privilège View spécifique à VSC pour chaque serveur vCenter enregistré sur la connexion unique (SSO).
++
+Si un inventaire VMware inclut un serveur vCenter qui ne dispose pas d'un serveur d'outils ONTAP enregistré, mais qu'un ou plusieurs serveurs vCenter sont enregistrés avec les outils ONTAP, vous pouvez ensuite afficher les instances des outils ONTAP et effectuer les opérations des outils ONTAP pour les serveurs vCenter sur lesquels les outils ONTAP sont enregistrés.
+
+* Vous devez disposer du privilège ONTAP Tools-Specific View pour chaque serveur vCenter enregistré sur l'authentification unique (SSO).
 +
 Vous devez également disposer des autorisations RBAC appropriées.
 
@@ -40,6 +40,6 @@ Lorsque vous effectuez une tâche nécessitant la spécification d'un serveur vC
 
 Si l'emplacement du stockage est connu (par exemple, lorsque vous utilisez l'assistant de provisionnement et que le datastore se trouve sur un hôte géré par un serveur vCenter spécifique), la liste vCenter Server s'affiche sous la forme d'une option en lecture seule. Cela se produit uniquement lorsque vous utilisez l'option clic droit pour sélectionner un élément dans vSphere Web client.
 
-VSC vous avertit lorsque vous essayez de sélectionner un objet qu'il ne gère pas.
+Les outils ONTAP vous avertissent lorsque vous tentez de sélectionner un objet qu'il ne gère pas.
 
-Vous pouvez filtrer les systèmes de stockage basés sur un serveur vCenter spécifique depuis la page de résumé de VSC. Une page récapitule les instances VSC enregistrées avec un serveur vCenter. Vous pouvez gérer les systèmes de stockage associés à une instance VSC et à vCenter Server spécifique, mais vous devez séparer les informations d'enregistrement de chaque système de stockage si vous exécutez plusieurs instances de VSC.
+Vous pouvez filtrer les systèmes de stockage en fonction d'un serveur vCenter spécifique à partir de la page de résumé des outils ONTAP. Une page de résumé s'affiche pour chaque instance d'outils ONTAP enregistrée auprès d'un serveur vCenter. Vous pouvez gérer les systèmes de stockage associés à une instance d'outils ONTAP et à un serveur vCenter spécifiques, mais vous devez conserver les informations d'enregistrement de chaque système de stockage séparément si vous exécutez plusieurs instances d'outils ONTAP.

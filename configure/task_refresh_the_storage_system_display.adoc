@@ -2,7 +2,7 @@
 permalink: configure/task_refresh_the_storage_system_display.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez utiliser la fonction de mise à jour fournie par les outils ONTAP® pour VMware vSphere pour actualiser les informations sur les systèmes de stockage et forcer Virtual Storage Console \(VSC\) à détecter les systèmes de stockage.' 
+summary: Vous pouvez utiliser la fonction de mise à jour fournie par les outils ONTAP® pour VMware vSphere pour actualiser les informations sur les systèmes de stockage et forcer les outils ONTAP à détecter les systèmes de stockage. 
 ---
 = Actualiser l'affichage du système de stockage
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: 'Vous pouvez utiliser la fonction de mise à jour fournie par les outil
 
 
 [role="lead"]
-Vous pouvez utiliser la fonction de mise à jour fournie par les outils ONTAP® pour VMware vSphere pour actualiser les informations sur les systèmes de stockage et forcer Virtual Storage Console (VSC) à détecter les systèmes de stockage.
+Vous pouvez utiliser la fonction de mise à jour fournie par les outils ONTAP® pour VMware vSphere pour actualiser les informations sur les systèmes de stockage et forcer les outils ONTAP à détecter les systèmes de stockage.
 
 *À propos de cette tâche*
 
-Le `refresh` cette option est utile si vous avez modifié les informations d'identification par défaut des systèmes de stockage après avoir reçu une erreur d'authentification. Vous devez toujours effectuer une opération de mise à jour si vous avez modifié les informations d'identification du système de stockage après que le système de stockage a signalé un `Authentication Failure Status`. Lors de l'opération de mise à jour, VSC tente de se connecter au système de stockage à l'aide des nouvelles informations d'identification.
+Le `refresh` cette option est utile si vous avez modifié les informations d'identification par défaut des systèmes de stockage après avoir reçu une erreur d'authentification. Vous devez toujours effectuer une opération de mise à jour si vous avez modifié les informations d'identification du système de stockage après que le système de stockage a signalé un `Authentication Failure Status`. Lors de la mise à jour, les outils ONTAP tentent de se connecter au système de stockage en utilisant les nouvelles informations d'identification.
 
 Selon la configuration de votre système, cette tâche peut prendre un certain temps.
 

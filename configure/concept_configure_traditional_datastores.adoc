@@ -2,7 +2,7 @@
 permalink: configure/concept_configure_traditional_datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez utiliser Virtual Storage Console \(VSC\) pour configurer des datastores et des machines virtuelles dans votre serveur vCenter. Les datastores et les machines virtuelles provisionnés par VSC sont affichés sur le tableau de bord de VSC. Vous pouvez ainsi facilement surveiller et gérer ces datastores et ces machines virtuelles.' 
+summary: Vous pouvez utiliser les outils ONTAP pour configurer les datastores et les machines virtuelles de votre serveur vCenter. Les datastores et les machines virtuelles provisionnées par les outils ONTAP sont affichés dans le tableau de bord des outils ONTAP. Vous pouvez ainsi facilement surveiller et gérer ces datastores et ces machines virtuelles. 
 ---
 = Configuration de datastores classiques et de machines virtuelles
 :allow-uri-read: 
@@ -11,4 +11,4 @@ summary: 'Vous pouvez utiliser Virtual Storage Console \(VSC\) pour configurer d
 
 
 [role="lead"]
-Vous pouvez utiliser Virtual Storage Console (VSC) pour configurer des datastores et des machines virtuelles dans votre serveur vCenter. Les datastores et les machines virtuelles provisionnés par VSC sont affichés sur le tableau de bord de VSC. Vous pouvez ainsi facilement surveiller et gérer ces datastores et ces machines virtuelles.
+Vous pouvez utiliser les outils ONTAP pour configurer les datastores et les machines virtuelles de votre serveur vCenter. Les datastores et les machines virtuelles provisionnées par les outils ONTAP sont affichés dans le tableau de bord des outils ONTAP. Vous pouvez ainsi facilement surveiller et gérer ces datastores et ces machines virtuelles.

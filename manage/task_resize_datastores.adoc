@@ -15,7 +15,7 @@ Le redimensionnement d'un datastore vous permet d'augmenter ou de réduire le st
 
 *À propos de cette tâche*
 
-Si vous souhaitez que VSC redimensionne le volume contenant lors de la redimensionnement du datastore VMFS, vous ne devez pas utiliser l'option *Use existing volume* sous Storage attributes (attributs de stockage) lors du premier provisionnement du datastore VMFS, mais plutôt créer automatiquement un volume pour chaque datastore.
+Si vous souhaitez que les outils ONTAP redimensionnent le volume contenant lorsqu'il redimensionne le datastore VMFS, vous ne devez pas utiliser l'option *Use existing volume* (utiliser le volume existant) sous la section Storage Attributes (attributs de stockage) lors du provisionnement initial du datastore VMFS, mais vous devez plutôt le laisser créer automatiquement un nouveau volume pour chaque datastore.
 
 Vous pouvez augmenter ou réduire la taille d'un datastore NFS, mais pour un datastore VMFS, vous ne pouvez augmenter la taille que. Le redimensionnement des datastores FlexGroup est également pris en charge avec l'option d'augmentation et de réduction automatiques. Un FlexGroup faisant partie d'un datastore traditionnel et d'un volume FlexVol qui fait partie d'un datastore vVols ne peuvent pas diminuer la taille existante, mais il peut atteindre une croissance de 120 % au maximum. Les snapshots par défaut sont activés sur ces volumes FlexGroup et FlexVol.
 

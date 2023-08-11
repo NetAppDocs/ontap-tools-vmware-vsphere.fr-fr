@@ -1,0 +1,15 @@
+---
+permalink: manage/vasa_provider_disaster_recovery.html 
+sidebar: sidebar 
+keywords: scope of guide 
+summary: 'Si l"appliance virtuelle VASA Provider (VP) a été perdue, devient inaccessible ou n"est plus fonctionnelle, il peut être nécessaire d"effectuer une reprise après incident VP. ' 
+---
+= Reprise d'activité VASA Provider
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si l'appliance virtuelle VASA Provider (VP) a été perdue, devient inaccessible ou n'est plus fonctionnelle, il peut être nécessaire d'effectuer une reprise après incident VP.
+Pour plus d'informations, voir https://kb.netapp.com/mgmt/OTV/Virtual_Storage_Console/How_to_perform_a_VASA_Provider_Disaster_Recovery_-_Resolution_Guide["Guide de résolution des incidents VASA Provider"]

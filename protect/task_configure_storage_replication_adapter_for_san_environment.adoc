@@ -13,6 +13,10 @@ summary: 'Vous devez configurer les systèmes de stockage avant d"exécuter Stor
 [role="lead"]
 Vous devez configurer les systèmes de stockage avant d'exécuter Storage Replication adapter (SRA) pour site Recovery Manager (SRM).
 
+Les outils ONTAP pour VMware vSphere prennent en charge la configuration du site de restauration partagée SRM de VMware. Pour plus d'informations, voir : https://docs.vmware.com/en/Site-Recovery-Manager/8.6/com.vmware.srm.install_config.doc/GUID-EBF84252-DF37-43CD-ADC8-E90F5254F315.html["Site Recovery Manager dans une configuration de site de reprise partagé"].
+
+Le https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Comment configurer SRA sur un site de reprise partagé SRM"] L'article de la base de connaissances détaille la procédure de configuration de SRA pour prendre en charge la configuration du site de récupération partagée SRM.
+
 *Ce dont vous aurez besoin*
 
 Vous devez avoir installé les programmes suivants sur le site protégé et le site de reprise :

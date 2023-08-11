@@ -2,7 +2,7 @@
 permalink: configure/concept_configure_vsc_for_vmware_vsphere_environment.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Virtual Storage Console \(VSC\) prend en charge de nombreux environnements. Certaines fonctionnalités de ces environnements peuvent nécessiter une configuration supplémentaire.' 
+summary: Les outils ONTAP prennent en charge de nombreux environnements. Certaines fonctionnalités de ces environnements peuvent nécessiter une configuration supplémentaire. 
 ---
 = Configuration des outils ONTAP pour VMware vSphere
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: 'Virtual Storage Console \(VSC\) prend en charge de nombreux environnem
 
 
 [role="lead"]
-Virtual Storage Console (VSC) prend en charge de nombreux environnements. Certaines fonctionnalités de ces environnements peuvent nécessiter une configuration supplémentaire.
+Les outils ONTAP prennent en charge de nombreux environnements. Certaines fonctionnalités de ces environnements peuvent nécessiter une configuration supplémentaire.
 
-Vous devrez peut-être effectuer les tâches suivantes pour configurer vos hôtes ESXi, les systèmes d'exploitation invités et VSC :
+Vous devrez peut-être effectuer certaines des tâches suivantes pour configurer vos hôtes ESXi, vos systèmes d'exploitation invités et les outils ONTAP :
 
 * Vérification des paramètres de l'hôte ESXi, y compris les paramètres UNMAP
 * Ajout de valeurs de délai d'attente pour les systèmes d'exploitation invités
-* Régénération du certificat SSL VSC
+* Régénération du certificat SSL des outils ONTAP
 * Création de profils de capacité de stockage et d'alarmes de seuil
 * Modification du fichier de préférences pour permettre le montage de datastores sur différents sous-réseaux
 

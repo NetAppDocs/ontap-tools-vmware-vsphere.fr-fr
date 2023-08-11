@@ -2,7 +2,7 @@
 permalink: configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez définir des délais d"expiration et d"autres valeurs sur les hôtes ESXi à l"aide des outils ONTAP pour VMware vSphere afin de garantir des performances optimales et un basculement réussi. Les valeurs des jeux de VSC \(VSC\) Virtual Storage Console sont basées sur des tests internes de NetApp.' 
+summary: 'Vous pouvez définir des délais d"expiration et d"autres valeurs sur les hôtes ESXi à l"aide des outils ONTAP pour VMware vSphere afin de garantir des performances optimales et un basculement réussi. Les valeurs des jeux d"outils ONTAP sont basées sur les tests internes de NetApp.' 
 ---
 = Valeurs de l'hôte ESXi définies à l'aide des outils ONTAP
 :allow-uri-read: 

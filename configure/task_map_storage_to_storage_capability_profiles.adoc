@@ -16,7 +16,7 @@ Vous pouvez mapper les datastores associés à VASA Provider pour ONTAP vers les
 *Ce dont vous aurez besoin*
 
 * Vous devez avoir enregistré votre instance de VASA Provider à l'aide des outils ONTAP® pour VMware vSphere.
-* Virtual Storage Console (VSC) doit déjà avoir découvert votre système de stockage.
+* Les outils ONTAP doivent avoir déjà détecté votre stockage.
 
 
 Vous pouvez associer un data store traditionnel à un profil de fonctionnalité de stockage ou modifier le profil de fonctionnalité de stockage associé à un datastore. Vasa Provider _not_ affiche les datastores de volume virtuel (VVol) sur la page mappages du stockage. Tous les datastores cités dans cette tâche sont des datastores classiques.
@@ -42,7 +42,7 @@ Un datastore peut correspondre à plusieurs profils, mais un datastore ne peut �
 
 . Pour mapper un profil de capacité de stockage à un datastore ou pour modifier le profil existant d'un datastore, sélectionnez le datastore.
 +
-Pour localiser des datastores spécifiques ou d'autres informations sur la page mappage de stockage, vous pouvez entrer un nom ou une chaîne partielle dans la zone de recherche. VSC affiche les résultats de la recherche dans une boîte de dialogue. Pour revenir à l'affichage complet, vous devez supprimer le texte de la zone de recherche, puis cliquer sur *entrée*.
+Pour localiser des datastores spécifiques ou d'autres informations sur la page mappage de stockage, vous pouvez entrer un nom ou une chaîne partielle dans la zone de recherche. Les outils ONTAP affichent les résultats de la recherche dans une boîte de dialogue. Pour revenir à l'affichage complet, vous devez supprimer le texte de la zone de recherche, puis cliquer sur *entrée*.
 
 . Dans le menu actions, sélectionnez *attribuer un profil correspondant*.
 . Sélectionnez le profil que vous souhaitez mapper au datastore dans la liste des profils correspondants fournis dans la boîte de dialogue *affecter le profil au datastore*, puis cliquez sur *OK* pour mapper le profil sélectionné au datastore.
