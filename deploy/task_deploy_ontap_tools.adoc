@@ -30,7 +30,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 * Vous devez avoir déconnecté et fermé toutes les sessions de navigateur du client vSphere et supprimé le cache du navigateur pour éviter tout problème de cache du navigateur lors du déploiement des outils ONTAP.
 * Vous devez avoir activé le protocole ICMP (Internet Control message Protocol).
 +
-Si ICMP est désactivé, la configuration initiale des outils ONTAP échoue et VSC ne peut pas démarrer les services VSC et VASA Provider après le déploiement. Vous devez activer manuellement les services VSC et VASA Provider après le déploiement.
+Si ICMP est désactivé, la configuration initiale des outils ONTAP échoue et les outils ONTAP ne peuvent pas démarrer les outils ONTAP et les services VASA Provider après le déploiement. Après le déploiement, vous devez activer manuellement les outils ONTAP et les services VASA Provider.
 
 
 
@@ -81,7 +81,7 @@ Lorsque vous attendez la fin du déploiement, vous pouvez afficher la progressio
 
 . Mettez la machine virtuelle sous tension des outils ONTAP, puis ouvrez une console de la machine virtuelle exécutant les outils ONTAP.
 . Vérifiez que les outils ONTAP sont en cours d'exécution une fois le déploiement terminé.
-. Si les outils ONTAP ne sont enregistrés avec aucun serveur vCenter, utilisez `\https://appliance_ip:8143/Register.html` Pour enregistrer l'instance VSC. Le Register.html vous redirige vers la page swagger. À partir de ONTAP Tools 9.12, l'enregistrement des outils ONTAP avec vCenter se fait à partir de la page swagger.
+. Si les outils ONTAP ne sont enregistrés avec aucun serveur vCenter, utilisez `\https://appliance_ip:8143/Register.html` Pour enregistrer l'instance d'outils ONTAP. Le Register.html vous redirige vers la page swagger. À partir de ONTAP Tools 9.12, l'enregistrement des outils ONTAP avec vCenter se fait à partir de la page swagger.
 +
 Utilisez l'API POST pour enregistrer les outils ONTAP dans vCenter à partir de la version 9.12.
 

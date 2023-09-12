@@ -15,14 +15,15 @@ Utilisez syslog pour envoyer les journaux système au serveur de journalisation 
 
 *À propos de cette tâche*
 
-Les outils ONTAP pour VMware vSphere 9.12 suppriment les 2.0 API syslog précédentes et contiennent les nouvelles API syslog 3.0 qui prennent en charge l'authentification mutuelle. Suivez les étapes ci-dessous pour configurer syslog.
+À partir des outils ONTAP pour VMware vSphere 9.12, les outils ONTAP suppriment les 2.0 API syslog précédentes. Ils contiennent de nouvelles API syslog 3.0 qui prennent en charge l'authentification mutuelle.
+Suivez les étapes ci-dessous pour configurer syslog.
 
 *Étapes*
 
 . Exécutez _POST /2.0/Security/user/login pour obtenir_ un ID de session.
 . Exécutez _POST /3.0/appliance-management/logging-client-certificate_ en transmettant le sessionid reçu dans la réponse ci-dessus.
 +
-Cela génère des certificats pour le serveur VP ainsi que pour le serveur VSC.
+Cela génère des certificats pour le serveur VP ainsi que pour le serveur ONTAP Tools.
 
 . Copiez les deux certificats sur votre serveur syslog et faites-les confiance sur le serveur syslog.
 +

@@ -2,7 +2,7 @@
 permalink: configure/task_enable_datastore_mounting_across_different_subnets.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les outils ONTAP pour les fichiers de préférences VMware vSphere. Si vous ne modifiez pas le fichier de préférences, le provisionnement des datastores échoue car Virtual Storage Console \(VSC\) ne peut pas monter le datastore.' 
+summary: Si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les outils ONTAP pour les fichiers de préférences VMware vSphere. Si vous ne modifiez pas le fichier de préférences, le provisionnement du datastore échoue car les outils ONTAP ne peuvent pas monter le datastore. 
 ---
 = Activez le montage du datastore sur différents sous-réseaux
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Si vous utilisez iSCSI ou NFS et que le sous-réseau est différent en
 
 
 [role="lead"]
-Si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les outils ONTAP pour les fichiers de préférences VMware vSphere. Si vous ne modifiez pas le fichier de préférences, le provisionnement des datastores échoue car Virtual Storage Console (VSC) ne peut pas monter le datastore.
+Si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les outils ONTAP pour les fichiers de préférences VMware vSphere. Si vous ne modifiez pas le fichier de préférences, le provisionnement du datastore échoue car les outils ONTAP ne peuvent pas monter le datastore.
 
 *À propos de cette tâche*
 

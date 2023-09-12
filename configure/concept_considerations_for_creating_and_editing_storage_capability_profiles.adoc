@@ -18,9 +18,9 @@ Vous trouverez ci-dessous les considérations relatives à la création et à la
 +
 Cette fonctionnalité offre une plus grande flexibilité lors de l'affectation de metrics QoS variés pour les différents VMDK de la même machine virtuelle provisionnée dans un datastore virtuel.
 
-* Vous pouvez configurer des profils de capacité de stockage pour les datastores FAS et AFF.
+* Vous pouvez configurer les profils de capacité de stockage pour les datastores Flash hybrides, ASA et AFF.
 +
-Pour les systèmes FAS avec AFF, il est possible de configurer la réserve d'espace pour qu'elle soit fine ou non.
+Pour les baies hybrides Flash, les systèmes ASA et AFF, vous pouvez configurer la réserve d'espace pour qu'elle soit épaisse ou fine.
 
 * Vous pouvez utiliser des profils de capacité de stockage pour assurer le cryptage de vos datastores.
 * Vous ne pouvez pas modifier des profils de capacité de stockage existants (créés avant la version 7.2) après la mise à niveau d'une version antérieure des outils ONTAP pour VMware vSphere vers la dernière version des outils ONTAP.

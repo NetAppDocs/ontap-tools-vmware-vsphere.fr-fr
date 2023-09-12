@@ -2,7 +2,7 @@
 permalink: configure/task_create_storage_capability_profiles.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez utiliser VSC pour créer manuellement des profils de capacité de stockage, générer automatiquement un profil en fonction des fonctionnalités d"un datastore ou modifier un profil en fonction de vos besoins.' 
+summary: 'Vous pouvez utiliser les outils ONTAP pour créer manuellement des profils de capacité de stockage, générer automatiquement un profil basé sur les fonctionnalités d"un datastore ou modifier un profil pour répondre à vos besoins.' 
 ---
 = Créer des profils de capacité de stockage
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Vous pouvez utiliser VSC pour créer manuellement des profils de capac
 
 
 [role="lead"]
-Vous pouvez utiliser VSC pour créer manuellement des profils de capacité de stockage, générer automatiquement un profil en fonction des fonctionnalités d'un datastore ou modifier un profil en fonction de vos besoins.
+Vous pouvez utiliser les outils ONTAP pour créer manuellement des profils de capacité de stockage, générer automatiquement un profil basé sur les fonctionnalités d'un datastore ou modifier un profil pour répondre à vos besoins.
 
 *Ce dont vous aurez besoin*
 
@@ -69,9 +69,10 @@ La plupart des champs de cet assistant sont explicites. Le tableau suivant décr
  a| 
 Identification de plusieurs profils
  a| 
-Vous pouvez utiliser le champ *Description* de l'onglet Nom et Description pour décrire l'objectif du profil de capacité de stockage. Fournir une bonne description est utile car il est conseillé de configurer différents profils en fonction des applications utilisées.
+Vous pouvez utiliser le champ *Description* de l'onglet Nom et Description pour décrire l'objectif du profil de capacité de stockage (SCP). Fournir une bonne description est utile car il est conseillé de configurer différents profils en fonction des applications utilisées.
 
-Par exemple, une application stratégique nécessite un profil doté de fonctionnalités capables de prendre en charge des performances plus élevées, telles qu'une plateforme AFF. Un datastore utilisé à des fins de test ou de formation peut utiliser un profil avec une plateforme FAS aux performances moindres, et permettre à toutes les fonctionnalités d'efficacité du stockage et la hiérarchisation pour contrôler les coûts.
+Par exemple, une application stratégique nécessite un profil offrant des fonctionnalités capables de prendre en charge des performances plus élevées, comme la plateforme AFF et ASA. Un datastore utilisé à des fins de test ou de formation peut utiliser un profil doté d'une plateforme hybride pour baie Flash aux performances moins élevées, et permettre à toutes les fonctionnalités d'efficacité du stockage et à la hiérarchisation de contrôler les coûts.
+La combinaison du type de plate-forme et de l'indicateur asymétrique détermine le type de SCP. Par exemple : Platinum_ASA_A, Platinum_AFF_A, Platinum_AFF_C.
 
 Si vous avez activé le mode « lié » pour vos serveurs vCenter, vous devez sélectionner le serveur vCenter pour lequel vous créez le profil de capacité de stockage.
 
@@ -80,7 +81,7 @@ Si vous avez activé le mode « lié » pour vos serveurs vCenter, vous devez s�
  a| 
 Plateforme
  a| 
-Vous pouvez sélectionner votre système de stockage pour obtenir la plate-forme AFF ou FAS. Les options des écrans suivants sont mises à jour en fonction de votre sélection de type de système de stockage.
+Vous pouvez créer un profil de capacité de stockage avec les types de plateforme : performance, capacité, baie Flash hybride et une nouvelle fonctionnalité de stockage avec indicateur asymétrique. Les options des écrans suivants sont mises à jour en fonction de votre sélection de type de système de stockage.
 
 
 
@@ -118,13 +119,17 @@ Attributs de stockage
  a| 
 Les attributs de stockage que vous pouvez activer dans cet onglet dépendent du type de stockage que vous sélectionnez dans l'onglet personnalité.
 
-** Si vous sélectionnez le stockage FAS, vous pouvez configurer la réserve d'espace (fine ou non) et activer la déduplication, la compression et le cryptage.
+** Si vous sélectionnez un système de stockage hybride avec baie Flash, vous pouvez configurer la réserve d'espace (Thick ou Thin), activer la déduplication, la compression et le chiffrement.
 +
-L'attribut de hiérarchisation est désactivé car cet attribut n'est pas applicable au stockage FAS.
+L'attribut de hiérarchisation est désactivé car cet attribut ne s'applique pas au stockage hybride de la baie Flash.
 
 ** Si vous sélectionnez le stockage AFF, vous pouvez activer le cryptage et le Tiering.
 +
 La déduplication et la compression sont activées par défaut pour le stockage AFF et ne peuvent pas être désactivées.
+
+** Si vous sélectionnez le stockage ASA, vous pouvez activer le chiffrement et la hiérarchisation.
++
+La déduplication et la compression sont activées par défaut pour le stockage ASA et ne peuvent pas être désactivées.
 
 +
 L'attribut de Tiering permet d'utiliser les volumes faisant partie d'un agrégat compatible FabricPool (pris en charge par VASA Provider pour les systèmes AFF avec ONTAP 9.4 et versions ultérieures). Vous pouvez configurer l'une des règles suivantes pour l'attribut de hiérarchisation :

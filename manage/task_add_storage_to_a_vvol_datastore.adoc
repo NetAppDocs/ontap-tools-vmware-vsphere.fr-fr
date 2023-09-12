@@ -21,7 +21,7 @@ Lorsque vous ajoutez un volume FlexVol, vous pouvez également modifier le profi
 ====
 * Lors de l'expansion d'un datastore vvols avec des fonctionnalités de réplication, vous ne pouvez pas créer de nouveaux volumes FlexVol, mais vous ne pouvez sélectionner que des volumes FlexVol préconfigurés dans la liste existante.
 * Lors du clonage d'un ordinateur virtuel protégé déployé sur un datastore avec une réplication vvols échoue en raison de l'espace insuffisant, vous devez alors augmenter la taille du volume FlexVol.
-* Lorsqu'un datastore vVvols est créé sur un cluster AFF, vous ne pouvez pas développer le datastore avec un autre volume FlexVol ayant un profil de capacité de stockage généré automatiquement.
+* Lorsqu'un datastore vVols est créé sur un cluster AFF ou ASA, vous ne pouvez pas développer le datastore avec un autre volume FlexVol doté d'un profil de capacité de stockage généré automatiquement.
 +
 ** Vous pouvez développer le datastore vvols avec des volumes FlexVol dotés de profils de capacité de stockage prédéfinis.
 

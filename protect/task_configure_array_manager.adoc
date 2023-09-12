@@ -39,7 +39,7 @@ NOTE: VMware ne prend pas en charge le protocole NFS4.1 pour SRM.
 *** Si vous vous connectez directement à un SVM, vous devez saisir l'adresse IP de la LIF de management du SVM.
 +
 
-NOTE: Lors de la configuration du gestionnaire de baies, vous devez utiliser la même connexion et les mêmes informations d'identification pour le système de stockage utilisé pour ajouter le système de stockage dans le menu systèmes de stockage de Virtual Storage Console. Par exemple, si la configuration Array Manager est prévue au niveau du SVM, le stockage sous VSC doit être ajouté au niveau du SVM.
+NOTE: Lors de la configuration du gestionnaire de baies, vous devez utiliser la même connexion et les mêmes informations d'identification pour le système de stockage utilisé pour ajouter le système de stockage dans le menu systèmes de stockage de Virtual Storage Console. Par exemple, si la configuration Array Manager est définie sur périmètre SVM, le stockage sous outils ONTAP doit être ajouté au niveau du SVM.
 
 
 

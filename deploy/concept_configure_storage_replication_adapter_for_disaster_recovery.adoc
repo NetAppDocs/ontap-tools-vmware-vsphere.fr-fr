@@ -2,7 +2,7 @@
 permalink: deploy/concept_configure_storage_replication_adapter_for_disaster_recovery.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Si vous souhaitez configurer votre serveur vCenter pour la reprise sur incident, vous devez activer Storage Replication adapter \(SRA\) après le déploiement de . Par défaut, le déploiement des outils ONTAP installe VSC. Vous devez activer SRA pour votre vCenter Server après le déploiement des outils ONTAP.' 
+summary: 'Si vous souhaitez configurer vCenter Server pour la reprise après incident, vous devez activer Storage Replication adapter \(SRA\) après le déploiement. Vous devez activer SRA pour votre vCenter Server après le déploiement des outils ONTAP.' 
 ---
 = Configuration de Storage Replication adapter pour la reprise après incident
 :allow-uri-read: 
@@ -11,6 +11,6 @@ summary: 'Si vous souhaitez configurer votre serveur vCenter pour la reprise sur
 
 
 [role="lead"]
-Si vous souhaitez configurer vCenter Server pour la reprise après incident, vous devez activer Storage Replication adapter (SRA) après le déploiement de . Par défaut, le déploiement des outils ONTAP installe VSC. Vous devez activer SRA pour votre vCenter Server après le déploiement des outils ONTAP.
+Si vous souhaitez configurer votre vCenter Server pour la reprise après incident, vous devez activer Storage Replication adapter (SRA) après le déploiement. Vous devez activer SRA pour votre vCenter Server après le déploiement des outils ONTAP.
 
 link:../protect/task_enable_storage_replication_adapter.html["Activez Storage Replication adapter"]

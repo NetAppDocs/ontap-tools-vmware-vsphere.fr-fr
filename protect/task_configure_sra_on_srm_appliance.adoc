@@ -23,6 +23,7 @@ La configuration de SRA sur SRM Appliance stocke les informations d'identificati
 
 *Étapes*
 
+. Dans le menu du client vSphere, sélectionnez *NetApp ONTAP Tools* > *Settings* > *administrative Settings* > *Manage Capabilities* > *Enable Storage Replication adapter (SRA)*
 . Sur l'écran SRM Appliance, cliquez sur *Storage Replication adapter* > *New adapter*.
 . Téléchargez le fichier _.tar.gz_ vers SRM.
 . Relancez l'analyse des cartes pour vérifier que les détails sont mis à jour dans la page SRM Storage Replication Adapters.

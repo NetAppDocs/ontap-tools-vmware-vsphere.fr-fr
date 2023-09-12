@@ -82,7 +82,7 @@ NetApp Virtual Storage Console > gestion basée sur des règles > gestion ou pri
  a| 
 Administrateur VSC
  a| 
-Tâches VSC et VASA Provider associées aux profils de fonctionnalité de stockage et aux paramètres de seuil.
+Outils ONTAP et tâches VASA Provider liées aux profils de fonctionnalités de stockage et aux paramètres de seuil.
 
 |===
 

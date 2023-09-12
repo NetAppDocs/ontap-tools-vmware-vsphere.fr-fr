@@ -104,7 +104,7 @@ Cette section vous permet de choisir si vous souhaitez que la réplication soit 
 
 *Remarque :* lors de la création de volumes FlexVol dans ONTAP, veillez à les créer avec les attributs que vous souhaitez sélectionner dans le profil de capacité de stockage. Les volumes FlexVol de lecture/écriture et de protection des données doivent avoir des attributs similaires.
 
-Une fois les volumes FlexVol créés et SnapMirror initialisés dans ONTAP, il est conseillé d'exécuter une redétection de stockage dans VSC pour pouvoir afficher les nouveaux volumes.
+Une fois les volumes FlexVol créés et l'initialisation de SnapMirror dans ONTAP, vous devez exécuter une redécouverte de stockage dans les outils ONTAP pour pouvoir voir les nouveaux volumes.
 
 
 

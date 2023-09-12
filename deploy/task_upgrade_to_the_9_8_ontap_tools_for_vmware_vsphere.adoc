@@ -38,11 +38,11 @@ Après la mise à niveau, l'état de VASA Provider depuis le déploiement exista
 NOTE: Vous pouvez effectuer une mise à niveau sans déplacement des outils ONTAP vers la dernière version d'uniquement à partir de vos versions 9.10 ou ultérieures existantes.
 
 
-NOTE: Dans le cadre de la mise à niveau des outils ONTAP 9.12, tous les processus d'authentification et de communication des systèmes de stockage sont remplacés par une authentification de base et une authentification basée sur certificat en faisant confiance automatiquement aux certificats de stockage ONTAP. Aucune action n'est requise de la part de l'utilisateur.
+NOTE: Depuis la mise à niveau des outils ONTAP 9.12, tous les processus d'authentification et de communication des systèmes de stockage sont remplacés par une authentification de base et une authentification basée sur certificat en faisant confiance automatiquement aux certificats de stockage ONTAP. Aucune action n'est requise de la part de l'utilisateur.
 
 L'ajout d'un système de stockage sans authentification par certificat est restreint.
 
-Si le système de stockage est ajouté avec un utilisateur personnalisé créé dans le périmètre du cluster à l'aide du fichier json et que vous souhaitez effectuer une mise à niveau vers la version 9.12, alors
+Si le système de stockage est ajouté avec un utilisateur de périmètre de cluster personnalisé créé à l'aide du fichier json et que vous souhaitez effectuer une mise à niveau vers la version 9.12 et les versions ultérieures, alors
 Exécutez les commandes ci-dessous sur l'interface de ligne de commande ONTAP avant de procéder à la mise à niveau pour activer la communication basée sur des certificats entre les outils ONTAP pour VMware vSphere et ONTAP.
 
 . _security login role create -role <existing-role-name> -cmddirname "security login show" -access all_
@@ -50,7 +50,8 @@ Exécutez les commandes ci-dessous sur l'interface de ligne de commande ONTAP av
 . _security login role create -role <existing-role-name> -cmddirname "security certificate install" -access all_
 
 
-Si le système de stockage est ajouté avec un utilisateur scoped SVM créé personnalisé en utilisant le fichier json et que vous souhaitez effectuer une mise à niveau vers 9.12, Exécutez ensuite les commandes ci-dessous sur l'interface de ligne de commande ONTAP avec un accès administrateur du cluster avant la mise à niveau pour activer la communication basée sur le certificat entre les outils ONTAP pour VMware vSphere et ONTAP :
+Si le système de stockage est ajouté avec un utilisateur scoped SVM créé personnalisé en utilisant le fichier json et que vous voulez mettre à niveau vers 9.12 et versions ultérieures, alors
+Exécuter les commandes ci-dessous sur l'interface de ligne de commandes ONTAP avec un accès administrateur du cluster avant la mise à niveau pour activer la communication basée sur le certificat entre les outils ONTAP pour VMware vSphere et ONTAP :
 
 . _security login role create -role <existing-role-name> -cmddirname "security certificate install" -access all -vserver <vserver-name>_
 . _security login role create -role <existing-role-name> -cmddirname "security certificate show" -access all -vserver <vserver-name>_

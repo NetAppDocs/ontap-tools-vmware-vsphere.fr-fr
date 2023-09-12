@@ -2,7 +2,7 @@
 permalink: configure/task_configure_alarm_thresholds.html 
 sidebar: sidebar 
 keywords:  
-summary: VSC vous permet de définir des alarmes pour vous avertir lorsque les seuils de volume et les seuils globaux atteignent les limites définies. 
+summary: 'Vous pouvez utiliser les outils ONTAP pour définir des alarmes et vous avertir lorsque les seuils de volume et les seuils d"agrégat atteignent les limites définies.' 
 ---
 = Configurer les seuils d'alarme
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: VSC vous permet de définir des alarmes pour vous avertir lorsque les s
 
 
 [role="lead"]
-VSC vous permet de définir des alarmes pour vous avertir lorsque les seuils de volume et les seuils globaux atteignent les limites définies.
+Vous pouvez utiliser les outils ONTAP pour définir des alarmes et vous avertir lorsque les seuils de volume et les seuils d'agrégat atteignent les limites définies.
 
 *Étapes*
 

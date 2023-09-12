@@ -11,7 +11,7 @@ summary: Lorsque vous utilisez des outils ONTAP® standard pour les rôles VMwar
 
 
 [role="lead"]
-Lorsque vous utilisez des outils ONTAP® standard pour les rôles VMware vSphere, vous devez suivre certaines directives.
+Lorsque vous utilisez les outils ONTAP standard pour les rôles VMware vSphere, vous devez suivre certaines directives.
 
 Vous ne devez pas modifier directement les rôles standard. Si c'est le cas, les outils ONTAP écraseront vos modifications chaque fois que vous mettez à niveau les outils ONTAP. Le programme d'installation met à jour les définitions de rôles standard chaque fois que vous mettez à niveau les outils ONTAP. Cela permet de s'assurer que les rôles sont à jour pour votre version des outils ONTAP ainsi que pour toutes les versions prises en charge du serveur vCenter.
 

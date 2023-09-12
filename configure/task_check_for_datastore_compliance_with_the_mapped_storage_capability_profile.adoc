@@ -15,8 +15,8 @@ Vous pouvez rapidement vérifier si vos datastores sont conformes avec les profi
 
 *Ce dont vous aurez besoin*
 
-* Vous devez avoir enregistré votre instance VASA Provider à l'aide des outils ONTAP® pour VMware vSphere (VSC).
-* VSC doit avoir découvert votre système de stockage.
+* Vous devez avoir enregistré votre instance VASA Provider avec les outils ONTAP pour VMware vSphere.
+* Les outils ONTAP doivent avoir détecté votre stockage.
 
 
 *Étapes*
@@ -25,7 +25,7 @@ Vous pouvez rapidement vérifier si vos datastores sont conformes avec les profi
 . Consultez les informations de la colonne Statut de conformité pour identifier les datastores non conformes et examinez les alertes pour des raisons de non-conformité.
 +
 
-NOTE: Lorsque vous cliquez sur le bouton *COMPLIANCE CHECK*, VSC effectue une nouvelle détection pour l'ensemble du stockage, ce qui peut prendre quelques minutes.
+NOTE: Lorsque vous cliquez sur le bouton *COMPLIANCE CHECK*, les outils ONTAP effectuent une redécouverte de l'ensemble du stockage, ce qui peut prendre quelques minutes.
 
 +
 Si un datastore n'est plus conforme à son profil, la colonne État de conformité affiche une alerte indiquant la raison de la non-conformité. Par exemple, un profil peut nécessiter une compression. Si ce paramètre a été modifié sur le stockage, la compression n'est plus utilisée et le datastore n'est pas compatible.

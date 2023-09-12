@@ -2,7 +2,7 @@
 permalink: configure/reference_set_ipv4_or_ipv6.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Une nouvelle option est ajoutée au fichier de préférences kaminopReFS.xmlque vous pouvez définir pour activer la prise en charge d"IPv4 ou d"IPv6 pour tous les systèmes de stockage ajoutés à VSC.' 
+summary: 'Une nouvelle option a été ajoutée au fichier de préférences kaminoprefs.xmlque vous pouvez définir pour activer la prise en charge d"IPv4 ou d"IPv6 pour tous les systèmes de stockage ajoutés aux outils ONTAP.' 
 ---
 = Définissez IPv4 ou IPv6 à l'aide du fichier de préférences
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: 'Une nouvelle option est ajoutée au fichier de préférences kaminopRe
 
 
 [role="lead"]
-Les fichiers de préférences contiennent des paramètres qui contrôlent les outils ONTAP pour les opérations VMware vSphere. Dans la plupart des cas, il n'est pas nécessaire de modifier les paramètres de ces fichiers. Il est utile de savoir quels fichiers de préférences Virtual Storage Console (VSC) utilise.
+Les fichiers de préférences contiennent des paramètres qui contrôlent les outils ONTAP pour les opérations VMware vSphere. Dans la plupart des cas, il n'est pas nécessaire de modifier les paramètres de ces fichiers. Il est utile de savoir quels fichiers de préférences les outils ONTAP utilisent.
 
-VSC possède plusieurs fichiers de préférences. Ces fichiers incluent des clés d'entrée de gamme et des valeurs qui déterminent la façon dont VSC effectue diverses opérations. Voici quelques fichiers de préférences utilisés par VSC :
+Les outils ONTAP contiennent plusieurs fichiers de préférences. Ces fichiers incluent des clés d'entrée et des valeurs qui déterminent comment les outils ONTAP effectuent diverses opérations. Voici quelques-uns des fichiers de préférences utilisés par les outils ONTAP :
 
 `/opt/netapp/vscserver/etc/kamino/kaminoprefs.xml`
 
 `/opt/netapp/vscserver/etc/vsc/vscPreferences.xml`
 
-Vous devrez peut-être modifier les fichiers de préférences dans certaines situations. Par exemple, si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les fichiers de préférences. Si vous ne modifiez pas les paramètres du fichier de préférences, le provisionnement des datastores échoue car VSC ne peut pas monter le datastore.
+Vous devrez peut-être modifier les fichiers de préférences dans certaines situations. Par exemple, si vous utilisez iSCSI ou NFS et que le sous-réseau est différent entre vos hôtes ESXi et votre système de stockage, vous devez modifier les fichiers de préférences. Si vous ne modifiez pas les paramètres du fichier de préférences, le provisionnement du datastore échoue car les outils ONTAP ne peuvent pas monter le datastore.
 
-Une nouvelle option est ajoutée au fichier de préférences `kaminoprefs.xml` Que vous pouvez définir pour activer la prise en charge d'IPv4 ou d'IPv6 pour tous les systèmes de stockage ajoutés à VSC.
+Une nouvelle option est ajoutée au fichier de préférences `kaminoprefs.xml` Que vous pouvez configurer pour activer la prise en charge d'IPv4 ou d'IPv6 pour tous les systèmes de stockage ajoutés aux outils ONTAP.
 
 * Le `default.override.option.provision.mount.datastore.address.family` le paramètre a été ajouté au `kaminoprefs.xml` Fichier de préférences pour définir un protocole LIF de données préféré pour le provisionnement de datastores.
 +
-Cette préférence s'applique à tous les systèmes de stockage ajoutés à VSC.
+Cette préférence s'applique à tous les systèmes de stockage ajoutés aux outils ONTAP.
 
 * Les valeurs de la nouvelle option sont `IPv4`, `IPv6`, et `NONE`.
 * Par défaut, la valeur est définie sur `NONE`.

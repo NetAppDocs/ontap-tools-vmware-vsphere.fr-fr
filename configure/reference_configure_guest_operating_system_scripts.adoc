@@ -2,7 +2,7 @@
 permalink: configure/reference_configure_guest_operating_system_scripts.html 
 sidebar: sidebar 
 keywords: Guest operating system 
-summary: 'Les images ISO des scripts \(OS\) du système d"exploitation invité sont montées sur les outils ONTAP® pour le serveur VMware vSphere. Pour utiliser les scripts du système d"exploitation invité afin de définir les délais de stockage des machines virtuelles, vous devez monter les scripts à partir du client vSphere.' 
+summary: 'Les images ISO des scripts du système d"exploitation invité \(OS\) sont montées sur les outils ONTAP pour le serveur VMware vSphere. Pour utiliser les scripts du système d"exploitation invité afin de définir les délais de stockage des machines virtuelles, vous devez monter les scripts à partir du client vSphere.' 
 ---
 = Configurer les scripts des systèmes d'exploitation invités
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Les images ISO des scripts \(OS\) du système d"exploitation invité s
 
 
 [role="lead"]
-Les images ISO des scripts du système d'exploitation invité sont montées sur les outils ONTAP® pour le serveur VMware vSphere. Pour utiliser les scripts du système d'exploitation invité afin de définir les délais de stockage des machines virtuelles, vous devez monter les scripts à partir du client vSphere.
+Les images ISO des scripts du système d'exploitation invité (OS) sont montées sur les outils du serveur VMware vSphere. Pour utiliser les scripts du système d'exploitation invité afin de définir les délais de stockage des machines virtuelles, vous devez monter les scripts à partir du client vSphere.
 
 |===
 
@@ -45,6 +45,6 @@ Solaris
 \https://<appliance_ip>:8143/vsc/public/writable/solaris_gos_timeout_190-install.iso
 
 |===
-Vous devez installer le script à partir de la copie de l'instance VSC enregistrée sur le serveur vCenter (ELM) qui gère la machine virtuelle. Si votre environnement comprend plusieurs serveurs vCenter, vous devez sélectionner l'instance contenant la machine virtuelle pour laquelle vous souhaitez définir les valeurs de délai de stockage.
+Vous devez installer le script à partir de la copie de l'instance ONTAP Tools enregistrée sur le serveur vCenter (ELM) qui gère la machine virtuelle. Si votre environnement comprend plusieurs serveurs vCenter, vous devez sélectionner l'instance contenant la machine virtuelle pour laquelle vous souhaitez définir les valeurs de délai de stockage.
 
 Vous devez vous connecter à la machine virtuelle, puis exécuter le script pour définir les valeurs de délai de stockage.

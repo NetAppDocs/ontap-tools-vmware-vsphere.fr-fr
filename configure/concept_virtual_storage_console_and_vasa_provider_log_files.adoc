@@ -15,7 +15,8 @@ Vous pouvez consulter les fichiers journaux dans le répertoire '/opt/netapp/vsc
 
 Les trois fichiers journaux suivants peuvent être utiles pour identifier les problèmes :
 
-* 'cxf.log', contenant des informations sur le trafic API depuis et vers VASA Provider *'kaminoPrefs.xml, contenant des informations sur les paramètres VSC
+* 'cxf.log', contenant des informations sur le trafic API vers et depuis VASA Provider
+*'kaminoPrefs.xml', contenant des informations sur les paramètres des outils ONTAP
 * 'Vvolvp.log', contenant toutes les informations de journal sur VASA Provider
 
 
@@ -29,7 +30,7 @@ Le menu de maintenance des outils ONTAP pour VMware vSphere vous permet de défi
 
 Lorsque vous définissez les niveaux de journalisation, les fichiers suivants sont mis à jour :
 
-* Serveur VSC : 'kamino.log' et 'vvolvp.log'
+* Serveur d'outils ONTAP: 'kamino.log' et 'vvolvp.log'
 * Serveur VASA Provider : 'vvolvp.log', 'error.log' et 'netapp.log'
 
 

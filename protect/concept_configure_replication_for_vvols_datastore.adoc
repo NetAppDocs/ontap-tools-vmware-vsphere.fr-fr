@@ -13,6 +13,9 @@ summary: 'Vous pouvez configurer la réplication de votre datastore vvols à l"a
 [role="lead"]
 Vous pouvez configurer la réplication de votre datastore vvols à l'aide des outils ONTAP. L'objectif principal de la réplication de vvols est de protéger les ordinateurs virtuels stratégiques lors d'une reprise après incident à l'aide de VMware site Recovery Manager (SRM).
 
+
+NOTE: Les flux de travail SRM (site Recovery Manager) échouent dans vCenter 8.0 avec un message d'erreur. La réplication Vvol fonctionne comme prévu dans vCenter 7.0u3.
+
 Cependant, pour configurer la réplication de vvols pour les outils ONTAP, la fonctionnalité de VASA Provider et la réplication de vvols doivent être activées. Vasa Provider est activé par défaut dans les outils ONTAP. La réplication basée sur les baies est effectuée au niveau FlexVol. Chaque datastore vvols est mappé à un conteneur de stockage composé d'un ou plusieurs volumes FlexVol. Les volumes FlexVol doivent être préconfigurés avec SnapMirror à partir de ONTAP.
 
 

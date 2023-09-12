@@ -15,7 +15,10 @@ Les outils ONTAP pour VMware vSphere peuvent être déployés dans un environnem
 
 Le mode VCF vous permet de créer des conteneurs pour votre stockage sans avoir besoin de vCenter Server. Vasa Provider est activé par défaut après le déploiement des outils ONTAP en mode VCF. Une fois le déploiement terminé, vous pouvez ajouter des systèmes de stockage et créer des conteneurs à l'aide d'API REST. L'article suivant présente la procédure d'ajout de stockage aux outils ONTAP lorsque VCF est activé, https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Ajoutez du stockage aux outils ONTAP à partir de l'interface swagger"].
 
-Une nouvelle API est introduite pour générer le _appliance-api-token_ qui authentifie les appels API. Certaines API existantes sont modifiées pour inclure l'en-tête _appliance-api-token_. Avec les outils ONTAP version 9.12, swagger ne prend pas en charge les API 1.0. Les pointeurs qui se trouvaient auparavant sur 1.0 sont déplacés vers les API 2.0 ou 3.0.
+Une nouvelle API est introduite pour générer le _appliance-api-token_ qui authentifie les appels API. Certaines API existantes sont modifiées pour inclure l'en-tête _appliance-api-token_. À partir de la version 9.12 des outils ONTAP, swagger ne prend pas en charge les API 1.0. Les pointeurs qui se trouvaient auparavant sur 1.0 sont déplacés vers les API 2.0 ou 3.0.
+
+
+NOTE: À partir des outils ONTAP pour VMware vSphere version 9.13, 2.0 les API de profil de capacité de stockage ne sont plus disponibles.
 
 Les API disponibles pour le mode de déploiement VCF sont :
 
@@ -143,13 +146,11 @@ stockage/volumes
 Lors de l'exécution du conteneur create API, vous pouvez ajouter des volumes existants au conteneur. Mais vous devez vous assurer que les valeurs de compression et de déduplication des volumes existants correspondent à la capacité de stockage du conteneur. La création de la machine virtuelle échoue lorsque les valeurs ne correspondent pas. Le tableau suivant fournit des détails sur les valeurs que les volumes existants doivent avoir pour les profils de capacité de stockage correspondants.
 
 |===
-
-
 | *Profil de capacité de stockage de conteneurs* | *Déduplication* | *Compression* 
 
 
  a| 
-Platinum
+Platinum_AFF_A
  a| 
 Les deux
  a| 
@@ -158,7 +159,7 @@ Les deux
 
 
  a| 
-Aff_Thick
+Platinum_AFF_C.
  a| 
 Les deux
  a| 
@@ -167,7 +168,7 @@ Les deux
 
 
  a| 
-Aff_Default
+Platinum_ASA_A.
  a| 
 Les deux
  a| 
@@ -176,7 +177,7 @@ Les deux
 
 
  a| 
-Tiering_AFF
+AFF_NVME_AFF_A
  a| 
 Les deux
  a| 
@@ -185,7 +186,7 @@ Les deux
 
 
  a| 
-Aff_chiffré
+AFF_NVME_AFF_C.
  a| 
 Les deux
  a| 
@@ -194,7 +195,7 @@ Les deux
 
 
  a| 
-Tiering_chiffré_AFF
+AFF_NVME_ASA_A
  a| 
 Les deux
  a| 
@@ -203,7 +204,7 @@ Les deux
 
 
  a| 
-Aff_chiffré_Min50
+AFF_THICK_AFF_A
  a| 
 Les deux
  a| 
@@ -212,7 +213,25 @@ Les deux
 
 
  a| 
-FAS_Default
+AFF_THICK_AFF_C.
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+AFF_THICK_ASA_A
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+AFF_DEFAULT_AFF_A
  a| 
 Contexte
  a| 
@@ -221,11 +240,128 @@ Aucune
 
 
  a| 
-FAS_Max20
+AFF_DEFAULT_AFF_C.
  a| 
 Contexte
  a| 
 Aucune
+
+
+
+ a| 
+AFF_DEFAULT_ASA_A
+ a| 
+Contexte
+ a| 
+Aucune
+
+
+
+ a| 
+NETAPP AFF_TIERING_AFF_A
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+HIÉRARCHISATION_AFF_C.
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+TIERING_AFF_ASA_A
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+AFF_CRYPTÉ_AFF_A
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+AFF_CRYPTÉ_AFF_C
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+AFF_ENCRYPTED_ASA_A
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+NetApp AFF_Tiering_chiffré_AFF_A
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Hiérarchisation_chiffrée_AFF_C
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Stockage_AFF_NetApp_ASA_A_Tiering_crypté
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Aff_cryptage_Min50_AFF_A
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Aff_cryptés_Min50_AFF_C
+ a| 
+Les deux
+ a| 
+Les deux
+
+
+
+ a| 
+Aff_Min50_ASA_A_crypté
+ a| 
+Les deux
+ a| 
+Les deux
 
 
 

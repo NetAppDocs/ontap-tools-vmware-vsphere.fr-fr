@@ -2,7 +2,7 @@
 permalink: configure/task_add_storage_systems.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez ajouter manuellement un système de stockage à Virtual Storage Console \(VSC\).' 
+summary: Vous pouvez ajouter manuellement un système de stockage aux outils ONTAP. 
 ---
 = Ajout de systèmes de stockage
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: 'Vous pouvez ajouter manuellement un système de stockage à Virtual St
 
 
 [role="lead"]
-Vous pouvez ajouter manuellement un système de stockage à Virtual Storage Console (VSC).
+Vous pouvez ajouter manuellement un système de stockage aux outils ONTAP.
 
 
 NOTE: Si le cluster ONTAP est compatible SAML, la communication avec ONTAP s'effectue avec l'authentification de base.
 
 *À propos de cette tâche*
 
-Chaque fois que vous démarrez Virtual Storage Console (VSC) ou que vous sélectionnez l'option *REDÉCOUVREZ tout*, VSC détecte automatiquement les systèmes de stockage disponibles.
+Chaque fois que vous démarrez les outils ONTAP ou que vous sélectionnez l'option *REDÉCOUVRIR tout*, les outils ONTAP découvrent automatiquement les systèmes de stockage disponibles.
 
 
 NOTE: Les datastores vVol ne sont pas pris en charge sur les SVM directes.
 
 *Étapes*
 
-. Pour ajouter un système de stockage à VSC, utilisez l'une des options de la page d'accueil des outils ONTAP :
+. Pour ajouter un système de stockage aux outils ONTAP, utilisez l'une des options de la page d'accueil des outils ONTAP :
 +
 ** Cliquez sur *Storage Systems* > *Add*. ou
 ** Cliquez sur *Présentation* > *pour commencer*, puis sur le bouton *AJOUTER* sous Ajouter un système de stockage.
@@ -39,7 +39,7 @@ Lorsque vous ajoutez un système de stockage, toute communication entre le plug-
 Vous pouvez également ajouter des systèmes de stockage en utilisant l'adresse IPv6 du cluster ou de la SVM.
 
 +
-Lorsque vous ajoutez du stockage à partir de la page VSC Storage System, spécifiez l'instance vCenter Server où se trouve le stockage. La boîte de dialogue Ajouter un système de stockage fournit une liste déroulante des instances de vCenter Server disponibles. VSC n'affiche pas cette option si vous ajoutez du stockage à un data Center déjà associé à une instance de vCenter Server.
+Lorsque vous ajoutez du stockage à partir de la page ONTAP Tools Storage System, spécifiez l'instance vCenter Server où se trouve le stockage. La boîte de dialogue Ajouter un système de stockage fournit une liste déroulante des instances de vCenter Server disponibles. Les outils ONTAP n'affichent pas cette option si vous ajoutez du stockage à un datacenter déjà associé à une instance de serveur vCenter.
 
 +
 REMARQUE :

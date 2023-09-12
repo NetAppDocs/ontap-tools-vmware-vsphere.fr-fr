@@ -35,7 +35,7 @@ Le tableau de bord traditionnel des outils ONTAP vous permet de voir les datasto
 Le portlet datastores fournit les informations suivantes :
 
 +
-** Le nombre de datastores classiques et les mesures de performances sont gérées par VSC dans votre instance vCenter Server
+** Le nombre de datastores traditionnels et leurs metrics de performances gérés par les outils ONTAP de votre instance de serveur vCenter
 ** Les cinq principaux datastores d'après l'utilisation des ressources et les paramètres de performance qui peuvent être modifiés, vous pouvez modifier dans l'ordre la liste des datastores en fonction de l'espace utilisé, des IOPS, de la latence ou de l'espace requis.
 
 

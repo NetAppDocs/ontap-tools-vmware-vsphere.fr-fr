@@ -15,7 +15,7 @@ Vasa Provider pour ONTAP vous permet de créer des profils de capacité de stock
 
 Une fonctionnalité de stockage est un ensemble d'attributs du système de stockage qui identifie un niveau spécifique de performances de stockage, d'efficacité du stockage et d'autres fonctionnalités telles que le chiffrement de l'objet de stockage associé à la fonctionnalité de stockage.
 
-Pour les datastores traditionnels, vous pouvez utiliser un profil de capacité de stockage pour créer des datastores de manière cohérente avec des attributs communs et leur affecter des règles de QoS. Lors du provisionnement, VSC affiche les clusters, les SVM et les agrégats qui correspondent au profil de fonctionnalité de stockage. Vous pouvez générer un profil de capacité de stockage à partir de datastores traditionnels existants à l'aide de l'option *GLOBAL AUTO-GENERATE PROFILES* du menu mappage du stockage. Une fois le profil créé, vous pouvez utiliser VSC pour contrôler la conformité des datastores avec le profil.
+Pour les datastores traditionnels, vous pouvez utiliser un profil de capacité de stockage pour créer des datastores de manière cohérente avec des attributs communs et leur affecter des règles de QoS. Lors du provisionnement, les outils ONTAP affichent les clusters, les SVM et les agrégats qui correspondent au profil de capacité de stockage. Vous pouvez générer un profil de capacité de stockage à partir de datastores traditionnels existants à l'aide de l'option *GLOBAL AUTO-GENERATE PROFILES* du menu mappage du stockage. Une fois le profil créé, vous pouvez utiliser les outils ONTAP pour contrôler la conformité des datastores avec le profil.
 
 
 NOTE: Les datastores vVol ne sont pas pris en charge sur les SVM directes.
@@ -24,15 +24,30 @@ Lorsqu'il est utilisé avec des datastores vvols, l'assistant de provisionnement
 
 Lorsqu'il est utilisé avec vvols, le profil de capacité de stockage est également utilisé pour définir la performance de stockage de l'ordinateur virtuel individuel et le placer sur le volume FlexVol dans le datastore vvols qui répond le mieux aux besoins en termes de performances. Vous pouvez spécifier une règle de QoS avec des IOPS minimales et/ou maximales pour plus de performances. Vous pouvez utiliser les règles par défaut lorsque vous provisionnez une machine virtuelle au départ ou modifier plus tard la règle de stockage de cette machine en cas d'évolution des exigences de l'entreprise. Profils de capacité de stockage par défaut pour cette version des outils ONTAP :
 
-* Aff_Thick
-* FAS_MAX20
-* FAS_Default
-* Aff_Default
-* Tiering_AFF
-* Aff_chiffré
-* Tiering_chiffré_AFF
-* Aff_chiffré_Min50
-* Platinum
+* Platinum_AFF_A
+* Platinum_AFF_C.
+* Platinum_ASA_A.
+* AFF_NVME_AFF_A
+* AFF_NVME_AFF_C.
+* AFF_NVME_ASA_A
+* AFF_THICK_AFF_A
+* AFF_THICK_AFF_C.
+* AFF_THICK_ASA_A
+* AFF_DEFAULT_AFF_A
+* AFF_DEFAULT_AFF_C.
+* AFF_DEFAULT_ASA_A
+* NETAPP AFF_TIERING_AFF_A
+* HIÉRARCHISATION_AFF_C.
+* TIERING_AFF_ASA_A
+* AFF_CRYPTÉ_AFF_A
+* AFF_CRYPTÉ_AFF_C
+* AFF_ENCRYPTED_ASA_A
+* NetApp AFF_Tiering_chiffré_AFF_A
+* Hiérarchisation_chiffrée_AFF_C
+* Stockage_AFF_NetApp_ASA_A_Tiering_crypté
+* Aff_cryptage_Min50_AFF_A
+* Aff_cryptés_Min50_AFF_C
+* Aff_Min50_ASA_A_crypté
 * Bronze
 
 
@@ -51,9 +66,9 @@ Vous devez tenir compte des considérations relatives à la création et à la m
 +
 Cette fonctionnalité offre une plus grande flexibilité lors de l'affectation de metrics QoS variés pour les différents VMDK de la même machine virtuelle provisionnée dans un datastore virtuel.
 
-* Vous pouvez configurer des profils de capacité de stockage pour les datastores FAS et AFF.
+* Vous pouvez configurer les profils de capacité de stockage pour les datastores Flash hybrides, ASA et AFF.
 +
-Pour les systèmes FAS et AFF, il est possible de configurer la réserve d'espace de manière à ce qu'elle soit fine ou non.
+Pour les baies Flash hybrides, ASA et AFF, vous pouvez configurer la réserve d'espace pour qu'elle soit fine ou non.
 
 * Vous pouvez utiliser des profils de capacité de stockage pour assurer le cryptage de vos datastores.
 * Vous ne pouvez pas modifier des profils de capacité de stockage existants (créés avant la version 7.2) après la mise à niveau d'une version antérieure des outils ONTAP pour VMware vSphere vers la dernière version des outils ONTAP.
