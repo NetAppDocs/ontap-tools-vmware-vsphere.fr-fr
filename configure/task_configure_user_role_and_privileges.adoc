@@ -15,9 +15,16 @@ Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion des systè
 
 *Ce dont vous aurez besoin*
 
-* Vous devriez avoir téléchargé le fichier privilèges ONTAP à partir des outils ONTAP à l'aide de \https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip.
+* Vous devez avoir téléchargé le fichier privilèges ONTAP à partir des outils ONTAP en procédant comme suit :
++
+** Accédez à https://{virtual_appliance_IP}:9083/vsc/config/[]
+** Télécharger le fichier VSC_ONTAP_User_Privileges.zip
+** Extrayez le fichier VSC_ONTAP_User_Privileges.zip téléchargé
+** Accédez à System Manager
 +
 Voir l'article de la base de connaissances - https://kb.netapp.com/mgmt/OTV/Virtual_Storage_Console/Virtual_Storage_Console%3A_How_to_retrieve_the_JSON_file_to_configure_user_roles_and_privileges["Virtual Storage Console : comment récupérer le fichier JSON pour configurer les rôles et privilèges des utilisateurs"] Pour obtenir des instructions sur le téléchargement du fichier privilèges ONTAP à partir de l'interface de ligne de commande Web.
+
+
 
 * Vous devez avoir configuré le stockage ONTAP 9.8P1 ou une version ultérieure.
 * Vous devez avoir ouvert une session avec les privilèges d'administrateur pour le système de stockage.

@@ -81,7 +81,20 @@ Si vous avez activé le mode « lié » pour vos serveurs vCenter, vous devez s�
  a| 
 Plateforme
  a| 
-Vous pouvez créer un profil de capacité de stockage avec les types de plateforme : performance, capacité, baie Flash hybride et une nouvelle fonctionnalité de stockage avec indicateur asymétrique. Les options des écrans suivants sont mises à jour en fonction de votre sélection de type de système de stockage.
+À partir des outils ONTAP pour VMware vSphere 9.13, vous pouvez créer des profils de capacité de stockage en combinant les éléments suivants :
+
+.. Type de plateforme : performances, capacité et baie Flash hybride
+.. Drapeau asymétrique : indique l'état optimisé pour le SAN du système de stockage (baie SAN complète).
++
+*** Lorsque le type de plate-forme est *Performance* et que l'indicateur asymétrique est *TRUE*, il considère le système de stockage de type AFF-A.
+*** Lorsque le type de plate-forme est *Performance* et que l'indicateur asymétrique est *Faux*, il considère le système de stockage de type ASA-A.
+*** Lorsque le type de plate-forme est *Capacity* et que l'indicateur asymétrique est *True*, il considère le système de stockage de type AFF-C.
+*** Lorsque le type de plate-forme est *Flash hybride Array* et que l'indicateur asymétrique est NA, il considère le système de stockage de type FAS
+
+
+
+
+Les options des écrans suivants sont mises à jour en fonction de votre sélection de type de système de stockage.
 
 
 

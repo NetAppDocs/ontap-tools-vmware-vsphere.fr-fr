@@ -10,6 +10,8 @@ entries:
     url: "/protect/task_configure_storage_replication_adapter_for_san_environment.html"
   - title: Configuration du stockage pour les environnements à grande échelle
     url: "/protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html"
+  - title: Configurez SRA avec SRM dans une configuration de site de reprise partagé
+    url: "/protect/configure_sra_with_srm_shared_site.html"
 - title: Configurez SRA sur l'appliance SRM
   url: "/protect/task_configure_sra_on_srm_appliance.html"
 - title: Mettez à jour les informations d'identification SRA

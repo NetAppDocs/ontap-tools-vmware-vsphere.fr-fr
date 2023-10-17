@@ -98,12 +98,13 @@ La mise à jour du plug-in peut prendre quelques minutes dans le client vSphere.
 
 [NOTE]
 ====
+* À partir des outils ONTAP pour VMware vSphere 9.12, l'authentification avec ONTAP s'effectue par certificat. Vous pouvez ajouter un certificat signé par l'autorité de certification ou un certificat auto-signé. Voir, link:../configure/task_modify_storage_system.html["Modifier les systèmes de stockage"] pour obtenir des instructions.
 * Si vous procédez à la mise à niveau de la version 7.0 des outils ONTAP vers la dernière version des outils ONTAP, vous devez d'abord créer des profils de capacité de stockage avant de tenter de modifier une stratégie de stockage de machine virtuelle existante, ou si vous obtenez une erreur indiquant que les valeurs sont incorrectes ou manquantes.
 * Si vous effectuez une mise à niveau d'une version antérieure vers la dernière version des outils ONTAP, vous trouverez que le `vvol.rebalance.threshold` la propriété est manquante dans le fichier `vvol.properties.
 +
-La valeur par défaut de la propriété est définie sur 85 %.
+La valeur par défaut de la propriété est définie sur 85 %.* après la mise à niveau vers la dernière version des outils ONTAP pour laquelle FIPS est activé, mais une version antérieure de vCenter pour laquelle FIPS n'est pas pris en charge, le déploiement fonctionnera toujours.
+Cependant, si vous mettez à niveau vCenter vers la dernière version prise en charge par FIPS et que vous disposez d'une version antérieure des outils ONTAP, le déploiement ne fonctionnera que si FIPS est désactivé sur vCenter.
 
-* Le déploiement fonctionnera toujours après la mise à niveau vers la dernière version des outils ONTAP pour laquelle FIPS est activé, mais avec une ancienne version de vCenter pour laquelle FIPS n'est pas pris en charge. Cependant, si vous mettez à niveau vCenter vers la dernière version prise en charge par FIPS et que vous disposez d'une version antérieure des outils ONTAP, le déploiement ne fonctionnera que si FIPS est désactivé sur vCenter.
 
 
 ====

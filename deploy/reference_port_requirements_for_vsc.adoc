@@ -44,6 +44,21 @@ En fonction de la façon dont vous avez configuré vos informations d'identifica
  a| 
 Les outils ONTAP sont à l'écoute des communications sécurisées sur ce port. Le port est utilisé dans l'architecture de communication client-serveur. Le client, qui peut être n'importe quel client d'automatisation utilisant l'API REST, initie la connexion au serveur et les points d'extrémité échangent des données. Ce port est activé pour les services d'outils ONTAP et pour l'exportation des journaux du serveur d'outils ONTAP. La page register.html est hébergée sur ce port. Le RESTE de l'andaineur est exposé sur ce port.
 
+
+
+ a| 
+8443
+ a| 
+Ce port est utilisé pour le service de plug-in distant.
+
+
+
+ a| 
+7
+ a| 
+Les outils ONTAP envoient une demande d'écho à ONTAP pour vérifier l'accessibilité et n'est nécessaire que lors de l'ajout de stockage
+système et peut être désactivé ultérieurement.
+
 |===
 
 NOTE: Vous devez avoir activé le protocole ICMP (Internet Control message Protocol) avant de déployer les outils ONTAP.
