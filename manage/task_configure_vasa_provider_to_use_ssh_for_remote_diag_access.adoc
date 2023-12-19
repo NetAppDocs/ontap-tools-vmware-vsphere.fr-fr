@@ -35,7 +35,7 @@ La session de connexion reste valide jusqu'à minuit le lendemain.
 
 *Étapes*
 
-. Depuis vCenter Server, ouvrez une console vers VASA Provider.
+. À partir du serveur vCenter, ouvrez une console pour accéder à la machine virtuelle de l'appliance ONTAP Tools.
 . Connectez-vous en tant qu'utilisateur de maintenance.
 . Entrez `4` Pour sélectionner support et Diagnostics.
 . Entrez `3` Pour sélectionner Activer l'accès aux diagnostics à distance.

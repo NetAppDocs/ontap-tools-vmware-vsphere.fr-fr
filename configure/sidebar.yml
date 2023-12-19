@@ -41,8 +41,6 @@ entries:
   entries:
   - title: Présentation du système de stockage pour les outils ONTAP
     url: "/configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html"
-  - title: Définissez les identifiants par défaut des systèmes de stockage
-    url: "/configure/task_set_default_credentials_for_storage_systems.html"
   - title: Ajout de systèmes de stockage
     url: "/configure/task_add_storage_systems.html"
   - title: Modifier les systèmes de stockage

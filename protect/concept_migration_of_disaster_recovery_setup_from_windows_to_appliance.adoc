@@ -15,7 +15,7 @@ Si vous utilisez Windows site Recovery Manager (SRM) pour la reprise après inci
 
 Les étapes de la migration de la reprise sur incident sont les suivantes :
 
-. Mettez à niveau votre dispositif d'outils ONTAP existant vers la dernière version.
+. Mettez à niveau votre appliance d'outils ONTAP existante vers la dernière version.
 +
 link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Passez à la dernière version des outils ONTAP"]
 
