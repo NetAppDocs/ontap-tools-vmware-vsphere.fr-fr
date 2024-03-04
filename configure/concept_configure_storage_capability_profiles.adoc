@@ -27,27 +27,35 @@ Lorsqu'il est utilisé avec vvols, le profil de capacité de stockage est égale
 * Platinum_AFF_A
 * Platinum_AFF_C.
 * Platinum_ASA_A.
+* Platinum_ASA_C.
 * AFF_NVME_AFF_A
 * AFF_NVME_AFF_C.
 * AFF_NVME_ASA_A
+* AFF_NVME_ASA_C
 * AFF_THICK_AFF_A
 * AFF_THICK_AFF_C.
 * AFF_THICK_ASA_A
+* AFF_THICK_ASA_C.
 * AFF_DEFAULT_AFF_A
 * AFF_DEFAULT_AFF_C.
 * AFF_DEFAULT_ASA_A
+* AFF_DEFAULT_ASA_C.
 * NETAPP AFF_TIERING_AFF_A
 * HIÉRARCHISATION_AFF_C.
 * TIERING_AFF_ASA_A
+* TIERING_AFF_ASA_C
 * AFF_CRYPTÉ_AFF_A
 * AFF_CRYPTÉ_AFF_C
 * AFF_ENCRYPTED_ASA_A
+* AFF_ENCRYPTED_ASA_C
 * NetApp AFF_Tiering_chiffré_AFF_A
 * Hiérarchisation_chiffrée_AFF_C
 * Stockage_AFF_NetApp_ASA_A_Tiering_crypté
+* Tiering_chiffré_AFF_ASA_C.
 * Aff_cryptage_Min50_AFF_A
 * Aff_cryptés_Min50_AFF_C
 * Aff_Min50_ASA_A_crypté
+* Aff_Min50_ASA_C_crypté
 * Bronze
 
 
@@ -76,5 +84,4 @@ Pour les baies Flash hybrides, ASA et AFF, vous pouvez configurer la réserve d'
 Les profils de capacité de stockage hérités sont conservés pour une rétrocompatibilité. Si les modèles par défaut ne sont pas utilisés, ils sont remplacés lors de la mise à niveau vers la dernière version des outils ONTAP par les modèles existants qui reflètent les nouvelles mesures de QoS et règles de hiérarchisation liées aux performances des profils de capacités de stockage.
 
 * Vous ne pouvez ni modifier, ni utiliser les profils de capacité de stockage hérités pour provisionner de nouveaux datastores virtuels ni appliquer les règles de stockage de machines virtuelles.
-* Vous devez utiliser de nouveaux profils de capacité de stockage pour tous les nouveaux datastores.
 

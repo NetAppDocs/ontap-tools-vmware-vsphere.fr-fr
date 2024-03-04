@@ -263,17 +263,6 @@
   <block id="4a046628c353b3aadc7da0fe8feb02e5" category="list-text">Entrez<block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block> Pour sélectionner Activer l'accès aux diagnostics à distance.</block>
   <block id="950be4668cb2fcdd834d276e66e90c4d" category="list-text">Entrez<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> Dans la boîte de dialogue Confirmation pour activer l'accès au diagnostic à distance.</block>
   <block id="d48f057485c79fea29ae606305f9eb86" category="list-text">Saisissez un mot de passe pour l'accès au diagnostic à distance.</block>
-  <block id="593947f8d5e4e5056e4cbc0df44b31ba" category="summary">Ce guide vous aidera à trouver rapidement des informations sur les tâches de provisionnement et d'optimisation du stockage et de surveillance des datastores et des machines virtuelles.</block>
-  <block id="6cbc3d316243b777216f4f72ff0a0869" category="doc">Choisissez d'utiliser ou non ce guide</block>
-  <block id="06ccfbdd4bca45f6352514dad9991bf7" category="paragraph">* Conditions d'utilisation de ce guide*</block>
-  <block id="62418c82e837c2de8717d422c47f1704" category="paragraph">Ce guide est basé sur les hypothèses suivantes :</block>
-  <block id="2a4ebfe287de523c0821df3c92fcb0c2" category="list-text">Les fonctions dont vous avez besoin pour les tâches que vous effectuez ont été installées.</block>
-  <block id="4128e8f68603e53206775205d1f0397e" category="paragraph">Peut-être le plug-in NFS pour VMware VAAI, VASA Provider pour ONTAP et Storage Replication adapter.</block>
-  <block id="385efce5a9724c9f179860be1b8c1a16" category="list-text">Un contrôle d'accès basé sur des rôles (RBAC) a été configuré pour vCenter Server et ONTAP.</block>
-  <block id="777e62cd03e65fc88d5dd8bf6e074b5f" category="paragraph">Si vous ne disposez pas de tous les privilèges et autorisations nécessaires, la tâche que vous exécutez peut sembler fonctionner au fur et à mesure que vous passez par l'assistant, mais que vous n'avez toujours pas réussi à terminer.</block>
-  <block id="fd80a621abb064d6b42d01e151f1b653" category="paragraph">La plupart des tâches présentées dans ce guide nécessitent également qu'une seule opération à la fois soit effectuée sur le datastore cible ou la machine virtuelle.</block>
-  <block id="6e1cc1c43c963fb2f7be56194436c0bc" category="inline-link">Communauté NetApp : Virtual Storage Console pour VMware vSphere</block>
-  <block id="b117a32af6ce3993d0558888d48066aa" category="paragraph"><block ref="b117a32af6ce3993d0558888d48066aa" category="inline-link-rx"></block></block>
   <block id="81e4ca59135c3f45f286823f56664170" category="summary">Les rapports datastore fournissent des informations détaillées sur les datastores traditionnels et les machines virtuelles créées sur ces datastores.</block>
   <block id="6b02839975c8740a45d6599f918343aa" category="doc">Rapports sur les datastores</block>
   <block id="27c82488e4515938ae4b9054ae24fb14" category="paragraph">Le tableau de bord traditionnel vous permet d'examiner et d'identifier les problèmes potentiels avec les datastores et les machines virtuelles de votre serveur vCenter. Vous pouvez afficher, trier et exporter des rapports. Le rapport sur les données des datastores traditionnels et des machines virtuelles est fourni par vCenter Server. Toutefois, ONTAP a fourni des mesures telles que la latence, le débit et les IOPS, grâce à l'introduction de la prise en charge des datastores pris en charge par les data stores pris en charge par FlexGroup.</block>
@@ -1258,7 +1247,6 @@
   <block id="8cc26aabe4ce86b5e0e7cfb0b18110c4" category="list-text">Vous ne pouvez pas modifier des profils de capacité de stockage existants (créés avant la version 7.2) après la mise à niveau d'une version antérieure des outils ONTAP pour VMware vSphere vers la dernière version des outils ONTAP.</block>
   <block id="4313b18a787f869e62a3625361a97eec" category="paragraph">Les profils de capacité de stockage hérités sont conservés pour une rétrocompatibilité. Si les modèles par défaut ne sont pas utilisés, ils sont remplacés lors de la mise à niveau vers la dernière version des outils ONTAP par les modèles existants qui reflètent les nouvelles mesures de QoS et règles de hiérarchisation liées aux performances des profils de capacités de stockage.</block>
   <block id="a73487c98f2dda3222e7778da1b41360" category="list-text">Vous ne pouvez ni modifier, ni utiliser les profils de capacité de stockage hérités pour provisionner de nouveaux datastores virtuels ni appliquer les règles de stockage de machines virtuelles.</block>
-  <block id="b73838ffcbb69f170964cafa4454f6e6" category="list-text">Vous devez utiliser de nouveaux profils de capacité de stockage pour tous les nouveaux datastores.</block>
   <block id="10fe24e67af2df3bfb206c5863b86c02" category="list-text">Dans la boîte de dialogue *Ajouter un système de stockage*, entrez l'adresse IP de gestion et les informations d'identification pour ce système de stockage.</block>
   <block id="5e76a0ccaa822c77f5e23f13a579496f" category="summary">Vous pouvez mapper les datastores associés à VASA Provider pour ONTAP vers les profils de fonctionnalité de stockage. Vous pouvez affecter un profil à un datastore qui n'est pas associé à un profil de capacité de stockage.</block>
   <block id="ff83d16bc5d8d21cbb8ed4893d197bbc" category="doc">Mappage des datastores sur les profils de capacité de stockage</block>
@@ -1450,7 +1438,6 @@
   <block id="5dfffeb251713b6b10e51ca1a58a16d1" category="list-text">Sur la page d'accueil des outils ONTAP, cliquez sur *Menu* &gt; *hôte et clusters*.</block>
   <block id="944df66e06b22f6332bfa0c03f99d5cf" category="list-text">Cliquez avec le bouton droit de la souris sur le datastore ou la machine virtuelle requis et cliquez sur *Outils NetApp ONTAP* &gt; *affecter QoS*.</block>
   <block id="438a5a3c55ac2da39715ccc2098b77d7" category="list-text">Dans la boîte de dialogue attribuer QoS, entrez les valeurs d'IOPS requises, puis cliquez sur *appliquer*.</block>
-  <block id="8c9aff8d70d2347574f52228c778a94e" category="doc">Configuration de datastores classiques et de machines virtuelles</block>
   <block id="aa9742a8c89b1a51af38fb3122936dfa" category="doc">Actualiser l'affichage du système de stockage</block>
   <block id="4bb5cb1ed310f90a7d75fa02aaf4c306" category="paragraph">Selon la configuration de votre système, cette tâche peut prendre un certain temps.</block>
   <block id="f6f602e0b8bacecaeac351913bc637cb" category="list-text">Lancer la mise à jour :</block>
@@ -1525,25 +1512,9 @@
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevets</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Vous trouverez une liste actuelle des brevets appartenant à NetApp à l'adresse suivante :</block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Politique de confidentialité</block>
-  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Commencez</block>
-  <block id="da951ef1610be90b45b31baf7b25b179" category="sidebar">Découvrez les outils ONTAP pour VMware vSphere</block>
   <block id="e695b432b77d6bddfcb785c76f5e5442" category="sidebar">Outils ONTAP démarrage rapide</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">Déployez les outils ONTAP</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">Mettez à niveau les outils ONTAP</block>
-  <block id="21e2a89d708329706ec6ed3fc989a1f6" category="sidebar">Utilisez les outils ONTAP</block>
-  <block id="317bbf73ff27c5f981628c8fb83ebf22" category="sidebar">Configurez le contrôle d'accès basé sur des rôles</block>
-  <block id="48bc2d028cb2a507ef974230ca3ba793" category="sidebar">Configurer les diagnostics à distance</block>
-  <block id="641e9457539249e880725760f91d5ee2" category="sidebar">Configurez la haute disponibilité</block>
-  <block id="04edeb5424c826c14a69edb777edf395" category="sidebar">Protéger et gérer les datastores</block>
-  <block id="eaf78ca462bf848b7c59c410077002b6" category="sidebar">Protection des datastores</block>
-  <block id="c724784c65896d8b16350f4b0580dfd4" category="sidebar">Protection des machines virtuelles</block>
-  <block id="5267febc97a2cc385cc5c73995dc64df" category="sidebar">Surveiller les datastores classiques et les machines virtuelles</block>
-  <block id="3123ece3c3b36f605758cb0c9a28f904" category="sidebar">Surveillez les datastores vvols et les machines virtuelles</block>
-  <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">Ressources supplémentaires</block>
-  <block id="51cf1968b9a38ab03f7396d237ad0be6" category="sidebar">Documentation relative aux versions antérieures des outils ONTAP pour VMware</block>
-  <block id="4c3c39a603eb21106d2df2836d4b456c" category="sidebar">Base de connaissances NetApp - outils ONTAP</block>
-  <block id="bbf1057ad175e1e1664e224351019ac9" category="sidebar">Utilitaire d'importation NetApp - vidéo</block>
-  <block id="72393f9ef0b6b69526a30ac7ce5276bc" category="sidebar">Communauté NetApp - Outils ONTAP</block>
   <block id="4226794a7bb33ab0a2309e30c07c9031" category="sidebar">Gérer les outils ONTAP</block>
   <block id="1b8a04f09ff55290753a17988fd53c2a" category="sidebar">Gérer les datastores</block>
   <block id="427d9ce60f4b39aa82a25138b4aa489f" category="sidebar">Gérer des machines virtuelles</block>
@@ -1951,7 +1922,6 @@ Pour plus d'informations, voir<block ref="4f93ad428ff5409cfa4e0415508a7d46" cate
   <block id="1582cc9629306ba6f3639270bdf4eb44" category="paragraph">Le type d'outils ONTAP et de certificats VASA générés dépend de l'adresse IP (IPv4 ou IPv6) que vous avez fournie pendant le déploiement. Lors du déploiement des outils ONTAP, si vous n'avez pas saisi de détails IP statiques et si votre DHCP alors le réseau fournit à la fois des adresses IPv4 et IPv6.</block>
   <block id="86bb68a12bd0cf7f26f81f22d3f0750c" category="paragraph">Les outils ONTAP et les certificats VASA sont générés à l'aide du même type d'adresse IP que celui utilisé lors de l'enregistrement du serveur vCenter.</block>
   <block id="82f408b562b890390f80688a77d415b7" category="inline-link">Ajoutez du stockage aux outils ONTAP à partir de l'interface swagger</block>
-  <block id="388c8beb5db60ef8f333013e0bff7505" category="paragraph">Le mode VCF vous permet de créer des conteneurs pour votre stockage sans avoir besoin de vCenter Server. Vasa Provider est activé par défaut après le déploiement des outils ONTAP en mode VCF. Une fois le déploiement terminé, vous pouvez ajouter des systèmes de stockage et créer des conteneurs à l'aide d'API REST. L'article suivant présente la procédure d'ajout de stockage aux outils ONTAP lorsque VCF est activé,<block ref="3ac4be985d9966f37c32d23f811ada05" category="inline-link-rx"></block>.</block>
   <block id="3b7d87c8639d968f41f7f7a7da57f7bb" category="summary">Les outils ONTAP pour VMware vSphere offrent un mécanisme unique pour détecter les systèmes de stockage et définir les identifiants de stockage. Les informations d'identification fournissent les autorisations ONTAP requises pour permettre aux utilisateurs des outils ONTAP d'effectuer des tâches à l'aide des systèmes de stockage.</block>
   <block id="81077972c7560c903eb8f825a5ccfb3f" category="paragraph">Les outils ONTAP® pour VMware vSphere fournissent un mécanisme unique de détection des systèmes de stockage et de définition des informations d'identification du stockage. Les informations d'identification fournissent les autorisations ONTAP requises pour permettre aux utilisateurs des outils ONTAP d'effectuer des tâches à l'aide des systèmes de stockage.</block>
   <block id="206a8ab8f173d67e0c18c8ffd9a8c590" category="paragraph">Avant de ONTAP pouvoir afficher et gérer les ressources de stockage, les outils ONTAP doivent détecter les systèmes de stockage. Dans le cadre du processus de détection, vous devez fournir les identifiants ONTAP de vos systèmes de stockage. Il s'agit des privilèges (ou rôles) associés à la paire nom d'utilisateur et mot de passe attribuée à chaque système de stockage. Ces paires de noms d'utilisateur et de mots de passe utilisent le contrôle d'accès basé sur des rôles (RBAC) ONTAP et doivent être configurées depuis ONTAP. Vous ne pouvez pas modifier ces informations d'identification à partir des outils ONTAP. Vous pouvez définir des rôles RBAC ONTAP à l'aide de ONTAP System Manager.</block>
@@ -1997,7 +1967,6 @@ Pour plus d'informations, voir<block ref="4f93ad428ff5409cfa4e0415508a7d46" cate
   <block id="fa0abf64888de4c94dacb5a7652d58d0" category="summary">Les outils ONTAP prennent en charge de nombreux environnements. Certaines fonctionnalités de ces environnements peuvent nécessiter une configuration supplémentaire.</block>
   <block id="41f0d5d36394297256afcd5376ca3397" category="paragraph">Vous devrez peut-être effectuer certaines des tâches suivantes pour configurer vos hôtes ESXi, vos systèmes d'exploitation invités et les outils ONTAP :</block>
   <block id="00d05dc82a56c2b5c54c0026652008fc" category="list-text">Régénération du certificat SSL des outils ONTAP</block>
-  <block id="535f47691e05fee56d1f18e523c6a360" category="summary">Vous pouvez utiliser les outils ONTAP pour configurer les datastores et les machines virtuelles de votre serveur vCenter. Les datastores et les machines virtuelles provisionnées par les outils ONTAP sont affichés dans le tableau de bord des outils ONTAP. Vous pouvez ainsi facilement surveiller et gérer ces datastores et ces machines virtuelles.</block>
   <block id="7d74f1d21f6854c7993e1b0275d74e28" category="admonition">Lors de la configuration du gestionnaire de baies, vous devez utiliser la même connexion et les mêmes informations d'identification pour le système de stockage utilisé pour ajouter le système de stockage dans le menu systèmes de stockage de Virtual Storage Console. Par exemple, si la configuration Array Manager est définie sur périmètre SVM, le stockage sous outils ONTAP doit être ajouté au niveau du SVM.</block>
   <block id="a1c0444b1a542c852fc2d20519caf067" category="admonition">Les flux de travail SRM (site Recovery Manager) échouent dans vCenter 8.0 avec un message d'erreur. La réplication Vvol fonctionne comme prévu dans vCenter 7.0u3.</block>
   <block id="40bca699ad9d82790f8acf46746bf6bf" category="list-text">Dans le menu du client vSphere, sélectionnez *NetApp ONTAP Tools* &gt; *Settings* &gt; *administrative Settings* &gt; *Manage Capabilities* &gt; *Enable Storage Replication adapter (SRA)*</block>
@@ -2009,10 +1978,6 @@ Pour plus d'informations, voir<block ref="4f93ad428ff5409cfa4e0415508a7d46" cate
   <block id="89320c6c07930c9881a6ac929a15a616" category="list-text"><block ref="43ee33685f5d1476018f13eeaa89da14" prefix="" category="inline-code"></block>, Contenant des informations sur le trafic API vers et hors de VASA Provider
 <block ref="e2d364adecadb42493d95a6c48245376" prefix="*" category="inline-code"></block>, Contenant des informations sur les paramètres des outils ONTAP</block>
   <block id="faf06ec17c1b33b9c2b3d7682971f5f7" category="list-text">Serveur d'outils ONTAP :<block ref="d73aa7cfc3f8e89c37a2673bb667f1d8" prefix=" " category="inline-code"></block> et<block ref="6fbea5707094c19c0cf0e7517f528702" prefix=" " category="inline-code"></block></block>
-  <block id="1f4ec73bb8d94c3cbed17be018e69c97" category="paragraph">Les informations contenues dans ce guide s'adresse à l'utilisateur des outils ONTAP et non à l'administrateur système. Ce guide fournit des informations sur toutes les tâches de post-déploiement des outils ONTAP® pour VMware vSphere.</block>
-  <block id="4747dace70ccea8e51c1ab662498a395" category="list-text">Vous avez installé et configuré des outils ONTAP.</block>
-  <block id="4cc75885a6d06db585c32cea6a7d8485" category="list-text">Les outils ONTAP ont détecté tous les systèmes de stockage que vous utilisez.</block>
-  <block id="c2d7bb1d880bb0fddb8c0da4f36fbedf" category="paragraph">Si vous avez des questions sur les outils ONTAP ou si vous souhaitez partager des informations avec d'autres utilisateurs des outils ONTAP, rendez-vous sur le forum des communautés NetApp.</block>
   <block id="88f7a3f25d4be5ba3ffcdaa56a5a8f85" category="list-text">Le nombre de datastores traditionnels et leurs metrics de performances gérés par les outils ONTAP de votre instance de serveur vCenter</block>
   <block id="e69424f143b8af4676d84ab6088e12fb" category="paragraph">À partir des outils ONTAP pour VMware vSphere 9.12, les outils ONTAP suppriment les 2.0 API syslog précédentes. Ils contiennent de nouvelles API syslog 3.0 qui prennent en charge l'authentification mutuelle.
 Suivez les étapes ci-dessous pour configurer syslog.</block>
@@ -2023,8 +1988,6 @@ Suivez les étapes ci-dessous pour configurer syslog.</block>
   <block id="b75a1f15b9d5c67a12df98a9f92a5966" category="paragraph">Pour les baies hybrides Flash, les systèmes ASA et AFF, vous pouvez configurer la réserve d'espace pour qu'elle soit épaisse ou fine.</block>
   <block id="9ce0d0c7f1eb71c44d9deec84bc83698" category="summary">Vous pouvez utiliser les outils ONTAP pour créer manuellement des profils de capacité de stockage, générer automatiquement un profil basé sur les fonctionnalités d'un datastore ou modifier un profil pour répondre à vos besoins.</block>
   <block id="08356be0c93d53bb862523b5f265dc58" category="paragraph">Vous pouvez utiliser le champ *Description* de l'onglet Nom et Description pour décrire l'objectif du profil de capacité de stockage (SCP). Fournir une bonne description est utile car il est conseillé de configurer différents profils en fonction des applications utilisées.</block>
-  <block id="0db06e45c833cc0383b061f129de7e01" category="paragraph">Par exemple, une application stratégique nécessite un profil offrant des fonctionnalités capables de prendre en charge des performances plus élevées, comme la plateforme AFF et ASA. Un datastore utilisé à des fins de test ou de formation peut utiliser un profil doté d'une plateforme hybride pour baie Flash aux performances moins élevées, et permettre à toutes les fonctionnalités d'efficacité du stockage et à la hiérarchisation de contrôler les coûts.
-La combinaison du type de plate-forme et de l'indicateur asymétrique détermine le type de SCP. Par exemple : Platinum_ASA_A, Platinum_AFF_A, Platinum_AFF_C.</block>
   <block id="357990fd8e31e2fb0a3bad1794beb33c" category="list-text">Si vous sélectionnez un système de stockage hybride avec baie Flash, vous pouvez configurer la réserve d'espace (Thick ou Thin), activer la déduplication, la compression et le chiffrement.</block>
   <block id="13144f962def59576c0e52e4bc8fd480" category="paragraph">L'attribut de hiérarchisation est désactivé car cet attribut ne s'applique pas au stockage hybride de la baie Flash.</block>
   <block id="89bf031d8a89602b6558e06d692d13a1" category="list-text">Si vous sélectionnez le stockage ASA, vous pouvez activer le chiffrement et la hiérarchisation.</block>
@@ -2142,4 +2105,17 @@ Cependant, si vous mettez à niveau vCenter vers la dernière version prise en c
   <block id="142666c1fbe08e639361aca9fb6d3d5a" category="list-text">Mettez à niveau votre appliance d'outils ONTAP existante vers la dernière version.</block>
   <block id="7ffdc51b9c93dfaa755052457f971d9e" category="list-text">À partir du serveur vCenter, ouvrez une console pour accéder à la machine virtuelle de l'appliance ONTAP Tools.</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Présentation du contrôle d'accès basé sur les rôles pour les outils ONTAP</block>
+  <block id="b98d139729a71b493dcd4c3f860f1947" category="paragraph">Le mode VCF vous permet de créer des conteneurs pour votre stockage sans avoir besoin de vCenter Server. Vasa Provider est activé par défaut après le déploiement des outils ONTAP en mode VCF. Une fois le déploiement terminé, vous pouvez ajouter, supprimer ou modifier des systèmes de stockage, et créer des conteneurs à l'aide d'API REST. L'article suivant présente la procédure d'ajout de stockage aux outils ONTAP lorsque VCF est activé,<block ref="3ac4be985d9966f37c32d23f811ada05" category="inline-link-rx"></block>.</block>
+  <block id="32f68a60cef40faedbc6af20298c1a1e" category="paragraph">SUPPRIMER</block>
+  <block id="3e75383a5992a6d15fb81e872e46e256" category="paragraph">EN</block>
+  <block id="3609cc991ef06b80256315c4e79537aa" category="paragraph">Platinum_ASA_C.</block>
+  <block id="d84c449b5ba5c99192b66c773c0134a7" category="paragraph">AFF_NVME_ASA_C</block>
+  <block id="f456be3bdce5629c658724dad4f3a865" category="paragraph">AFF_THICK_ASA_C.</block>
+  <block id="eae2a40fbc4ae52edc2b32231150c9e6" category="paragraph">AFF_DEFAULT_ASA_C.</block>
+  <block id="3fbc1f1a3ba06f7917f54e41b9123e21" category="paragraph">TIERING_AFF_ASA_C</block>
+  <block id="2c539e94dde16d8a3ef8f6da22c85df3" category="paragraph">AFF_ENCRYPTED_ASA_C</block>
+  <block id="65e13e4d0253abff89ed1874b8274341" category="paragraph">Tiering_chiffré_AFF_ASA_C.</block>
+  <block id="eb8ad81730e4bb2e83e5a8fd73176d69" category="paragraph">Aff_Min50_ASA_C_crypté</block>
+  <block id="f5117d7744e4edc2e74fa77f9eff59ed" category="paragraph">Par exemple, une application stratégique nécessite un profil offrant des fonctionnalités capables de prendre en charge des performances plus élevées, comme la plateforme AFF et ASA. Un datastore utilisé à des fins de test ou de formation peut utiliser un profil doté d'une plateforme hybride pour baie Flash aux performances moins élevées, et permettre à toutes les fonctionnalités d'efficacité du stockage et à la hiérarchisation de contrôler les coûts.
+La combinaison du type de plate-forme et de l'indicateur asymétrique détermine le type de SCP. Par exemple : Platinum_ASA_A, Platinum_ASA_C, Platinum_AFF_A, Platinum_AFF_C.</block>
 </blocks>

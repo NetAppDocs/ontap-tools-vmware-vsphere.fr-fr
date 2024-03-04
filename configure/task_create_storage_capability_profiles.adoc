@@ -72,7 +72,7 @@ Identification de plusieurs profils
 Vous pouvez utiliser le champ *Description* de l'onglet Nom et Description pour décrire l'objectif du profil de capacité de stockage (SCP). Fournir une bonne description est utile car il est conseillé de configurer différents profils en fonction des applications utilisées.
 
 Par exemple, une application stratégique nécessite un profil offrant des fonctionnalités capables de prendre en charge des performances plus élevées, comme la plateforme AFF et ASA. Un datastore utilisé à des fins de test ou de formation peut utiliser un profil doté d'une plateforme hybride pour baie Flash aux performances moins élevées, et permettre à toutes les fonctionnalités d'efficacité du stockage et à la hiérarchisation de contrôler les coûts.
-La combinaison du type de plate-forme et de l'indicateur asymétrique détermine le type de SCP. Par exemple : Platinum_ASA_A, Platinum_AFF_A, Platinum_AFF_C.
+La combinaison du type de plate-forme et de l'indicateur asymétrique détermine le type de SCP. Par exemple : Platinum_ASA_A, Platinum_ASA_C, Platinum_AFF_A, Platinum_AFF_C.
 
 Si vous avez activé le mode « lié » pour vos serveurs vCenter, vous devez sélectionner le serveur vCenter pour lequel vous créez le profil de capacité de stockage.
 

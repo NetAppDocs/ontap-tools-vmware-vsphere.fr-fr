@@ -28,5 +28,4 @@ Pour les baies hybrides Flash, les systèmes ASA et AFF, vous pouvez configurer 
 Les profils de capacité de stockage hérités sont conservés pour une rétrocompatibilité. Si les modèles par défaut ne sont pas utilisés, cela signifie qu'au cours de la mise à niveau vers la dernière version des outils ONTAP, les modèles existants sont remplacés pour refléter les nouvelles mesures de QoS associées aux performances des profils de capacités de stockage.
 
 * Vous ne pouvez ni modifier, ni utiliser les profils de capacité de stockage hérités pour provisionner de nouveaux datastores virtuels ni appliquer les règles de stockage de machines virtuelles.
-* Vous devez utiliser de nouveaux profils de capacité de stockage pour tous les nouveaux datastores.
 
