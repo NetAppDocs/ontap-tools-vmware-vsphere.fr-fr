@@ -88,7 +88,7 @@ Le tableau ci-dessous présente le besoin pour configurer les outils ONTAP.
  a| 
 Exigences du contrôle d'accès basé sur des rôles (RBAC)
  a| 
-Les outils ONTAP prennent en charge le RBAC vCenter Server et ONTAP RBAC. Compte utilisé pour enregistrer les outils ONTAP sur le serveur vCenter (`https://<appliance_ip>:8143/Register.html`) Doit être un administrateur vCenter Server (affecté à l'administrateur vCenter Server ou au rôle d'administrateur). Si vous prévoyez d'exécuter les outils ONTAP en tant qu'administrateur, vous devez disposer de toutes les autorisations et privilèges requis pour toutes les tâches.
+Les outils ONTAP prennent en charge le RBAC vCenter Server et ONTAP RBAC. Compte utilisé pour enregistrer les outils ONTAP sur le serveur vCenter (`\https://<appliance_ip>:8143/Register.html`) Doit être un administrateur vCenter Server (affecté à l'administrateur vCenter Server ou au rôle d'administrateur). Si vous prévoyez d'exécuter les outils ONTAP en tant qu'administrateur, vous devez disposer de toutes les autorisations et privilèges requis pour toutes les tâches.
 
 Si votre entreprise exige que vous restreignez l'accès aux objets vSphere, vous pouvez créer et attribuer des rôles d'outils ONTAP standard aux utilisateurs pour répondre aux exigences du serveur vCenter.
 
@@ -139,7 +139,7 @@ Vous devez accéder à la console de maintenance en utilisant le nom d'utilisate
 
 Vous pouvez définir les informations d'identification d'administrateur pour vCenter Server lors du déploiement des outils ONTAP.
 
-Si le mot de passe du serveur vCenter change, vous pouvez mettre à jour le mot de passe de l'administrateur à l'aide de l'URL suivante : ``\https://<IP>:8143/Register.html` Où se trouve l'adresse IP des outils ONTAP que vous fournissez pendant le déploiement.
+Si le mot de passe du serveur vCenter change, vous pouvez mettre à jour le mot de passe de l'administrateur à l'aide de l'URL suivante : `\https://<IP>:8143/Register.html` Où se trouve l'adresse IP des outils ONTAP que vous fournissez pendant le déploiement.
 
 
 

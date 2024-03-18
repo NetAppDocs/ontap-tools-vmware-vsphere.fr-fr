@@ -17,7 +17,7 @@ Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion des systè
 
 * Vous devez avoir téléchargé le fichier privilèges ONTAP à partir des outils ONTAP en procédant comme suit :
 +
-** Accédez à https://{virtual_appliance_IP}:9083/vsc/config/[]
+** Accédez à `\https://{virtual_appliance_IP}:9083/vsc/config/`
 ** Télécharger le fichier VSC_ONTAP_User_Privileges.zip
 ** Extrayez le fichier VSC_ONTAP_User_Privileges.zip téléchargé
 ** Accédez à System Manager

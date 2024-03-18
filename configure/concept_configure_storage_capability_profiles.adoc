@@ -22,7 +22,12 @@ NOTE: Les datastores vVol ne sont pas pris en charge sur les SVM directes.
 
 Lorsqu'il est utilisé avec des datastores vvols, l'assistant de provisionnement peut utiliser plusieurs profils de capacité de stockage pour créer différents volumes FlexVol dans le datastore. Il est possible d'utiliser la stratégie de stockage de VM pour créer automatiquement vvols pour une machine virtuelle dans des volumes FlexVol appropriés tels que définis. Par exemple, vous pouvez créer des profils pour les classes de stockage courantes (par exemple, pour les limites de performance et d'autres fonctionnalités telles que le cryptage ou FabricPool). Vous pouvez par la suite créer des règles de stockage des machines virtuelles dans vCenter Server, qui représentent les classes commerciales des machines virtuelles, et les lier au profil de fonctionnalités de stockage approprié par nom (production, test, RH, par exemple).
 
-Lorsqu'il est utilisé avec vvols, le profil de capacité de stockage est également utilisé pour définir la performance de stockage de l'ordinateur virtuel individuel et le placer sur le volume FlexVol dans le datastore vvols qui répond le mieux aux besoins en termes de performances. Vous pouvez spécifier une règle de QoS avec des IOPS minimales et/ou maximales pour plus de performances. Vous pouvez utiliser les règles par défaut lorsque vous provisionnez une machine virtuelle au départ ou modifier plus tard la règle de stockage de cette machine en cas d'évolution des exigences de l'entreprise. Profils de capacité de stockage par défaut pour cette version des outils ONTAP :
+Lorsqu'il est utilisé avec vvols, le profil de capacité de stockage est également utilisé pour définir la performance de stockage de l'ordinateur virtuel individuel et le placer sur le volume FlexVol dans le datastore vvols qui répond le mieux aux besoins en termes de performances. Vous pouvez spécifier une règle de QoS avec des IOPS minimales et/ou maximales pour plus de performances. Vous pouvez utiliser les règles par défaut lorsque vous provisionnez une machine virtuelle au départ ou modifier plus tard la règle de stockage de cette machine en cas d'évolution des exigences de l'entreprise.
+
+
+NOTE: Le profil de capacité de stockage ASA-C est pris en charge à partir des outils ONTAP pour VMware vSphere 9.13P1.
+
+Profils de capacité de stockage par défaut pour cette version des outils ONTAP :
 
 * Platinum_AFF_A
 * Platinum_AFF_C.

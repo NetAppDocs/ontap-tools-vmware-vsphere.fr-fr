@@ -34,4 +34,4 @@ Lorsque vous définissez les niveaux de journalisation, les fichiers suivants so
 * Serveur VASA Provider : 'vvolvp.log', 'error.log' et 'netapp.log'
 
 
-En outre, la page Web de l'interface de ligne de commandes (CLI) de VASA Provider contient les appels d'API effectués, les erreurs renvoyées et plusieurs compteurs de performances. La page Web CLI se trouve à l'adresse 'https://<IP_address_or_hostname>:9083/stats'[].
+En outre, la page Web de l'interface de ligne de commandes (CLI) de VASA Provider contient les appels d'API effectués, les erreurs renvoyées et plusieurs compteurs de performances. La page Web CLI se trouve à l'adresse `\https://<IP_address_or_hostname>:9083/stats`.

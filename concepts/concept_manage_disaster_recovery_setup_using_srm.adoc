@@ -32,7 +32,7 @@ Vous pouvez activer l'indicateur Quick_resync pour effectuer l'opération de rep
 Pour activer l'indicateur Quick_resync, procédez comme suit :
 
 .Étapes
-. Connectez-vous au panneau de configuration à l'adresse _https://<IP address>:9083_ et cliquez sur interface CLI Web.
+. Connectez-vous au panneau de commande à `/https://<IP address>:9083` Et cliquez sur interface de ligne de commande Web.
 . Lancer la commande `vp updateconfig -key=snapmirror.quick.resync.enabled -value=true`.
 . Lancer la commande `vp reloadconfig`.
 
