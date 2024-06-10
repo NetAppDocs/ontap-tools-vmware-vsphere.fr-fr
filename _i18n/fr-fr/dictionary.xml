@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="8f7be3c874feb6ef0fd5f20afd8d5fbb" category="summary">Les outils ONTAP pour VMware vSphere vous permettent de configurer, gérer et protéger vos datastores virtuels dans votre environnement vCenter Server.</block>
-  <block id="46c4d9bfa1c229940459326940489ab0" category="doc">Documentation sur les outils ONTAP pour VMware vSphere</block>
   <block id="37cb7cba8a11cb5f31e25fa717c59190" category="summary">Vous pouvez modifier un datastore VMware Virtual volumes \(vVvols\) existant pour modifier le profil de capacité de stockage par défaut. Le profil de capacité de stockage par défaut est principalement utilisé pour Swap vvols.</block>
   <block id="1beae669357c3fbe10db97be0339d159" category="doc">Modifiez un datastore vVols</block>
   <block id="5025113f793ed6f71d046e496cae4a91" category="paragraph">Vous pouvez modifier un datastore VMware Virtual volumes (vvols) existant pour modifier le profil de capacité de stockage par défaut. Le profil de capacité de stockage par défaut est principalement utilisé pour Swap vvols.</block>
@@ -529,7 +528,6 @@
   <block id="dfb1f7e164fa9a18cdccdd70cc836871" category="doc">Mettez à jour les informations d'identification SRA</block>
   <block id="06e0b13e99109afd1553218d06e4287d" category="inline-link-macro">Configuration de SRA sur l'appliance SRM</block>
   <block id="a7b1731ee7a384d42899d1089c98fcd0" category="paragraph"><block ref="a7b1731ee7a384d42899d1089c98fcd0" category="inline-link-macro-rx"></block></block>
-  <block id="91041cdb80acf69ffc64bea820b683a1" category="list-text">Supprimer le contenu du<block ref="deb83d2dfd0ec1ec35caefe22e2fc515" prefix=" " category="inline-code"></block> utilisation :</block>
   <block id="c8c76585229a8fa67ac61e761baed2fc" category="list-text"><block ref="3f4f7415d3b5542ac20a11b143c4cee8" prefix="" category="inline-code"></block></block>
   <block id="bc5ad92fecd3f6eeb4473c9df6479d46" category="list-text"><block ref="4609acba202877f99742342f4195d95e" prefix="" category="inline-code"></block></block>
   <block id="42f35b3ef9c82737da1f02ca0b45f308" category="list-text">Exécutez la commande perl pour configurer SRA avec les nouvelles informations d'identification :</block>
@@ -1091,7 +1089,6 @@
   <block id="3d3f0daa239b0b019c9d5ecc236fccea" category="paragraph">Indiquez l'URL du fichier _.ova_ pour les outils ONTAP.</block>
   <block id="b0f2b97dc5d2b76b26e040408bb1d8af" category="paragraph">Dossier</block>
   <block id="b74ac16094255bdf0eabd36ff36949d7" category="list-text">Entrez les détails nécessaires à la personnalisation de l'assistant de déploiement.</block>
-  <block id="ff22f9429bb46603451057ba28a08029" category="paragraph">(Facultatif) dans la section configurer vCenter ou Activer VCF, cochez la case *Activer VMware Cloud Foundation (VCF)* et indiquez un mot de passe pour les informations d'identification des outils ONTAP. Vous n'avez pas besoin de fournir l'adresse IP mais vous devez fournir un mot de passe. Pour plus d'informations, reportez-vous aux sections suivantes.</block>
   <block id="db87f0e7d398509389710de2acd5bc37" category="list-text"><block ref="db87f0e7d398509389710de2acd5bc37" category="inline-link-macro-rx"></block></block>
   <block id="86c1acfce4de432d234f580b141148df" category="list-text"><block ref="86c1acfce4de432d234f580b141148df" category="inline-link-macro-rx"></block></block>
   <block id="4539adaf7ad2170543ffc624dcdbf903" category="list-text">Vérifiez les données de configuration, puis cliquez sur *Suivant* pour terminer le déploiement.</block>
@@ -1537,8 +1534,6 @@
   <block id="4e26ae2ca2d1ce1c5840ef1ab63ecb04" category="sidebar">Présentation du système de stockage pour les outils ONTAP</block>
   <block id="544c4e9e8bb8792201c78fc0c53ee086" category="sidebar">Configurer les profils de capacité de stockage</block>
   <block id="f98484fc38c578aca640fd781e7196ae" category="sidebar">Configurez les datastores</block>
-  <block id="a88efd6c9b7763df783d278ede79c4a6" category="list-text">Configurer SRM à l'aide de l'adresse IP et du mot de passe des outils ONTAP :<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block>Un message de confirmation de la mémorisation des identifiants de stockage s'affiche.</block>
-  <block id="092016eb57c00c965fc19b3bff7ff343" category="list-text"><block ref="4222690b3b5a5c9afb047223bc02154e" prefix="" category="inline-code"></block></block>
   <block id="0e28dc8bb869d015f17f333c6255226d" category="list-text">Vous devriez avoir téléchargé le pack d'installation du plug-in NFS pour VAAI <block ref="d7d0fd6d41e4cc9c277d6e7d82ae6981" prefix="(" category="inline-code"></block>) Sur le site de support NetApp.<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block></block>
   <block id="389fed57e0f06c0d1d884e132105585a" category="list-text">Vous devez disposer des versions de vSphere 7.x car vSphere 6.5 est obsolète et vSphere 8.x n'est pas pris en charge.</block>
   <block id="5ccc8ee8b61049069fbdba29f36f4627" category="paragraph">Vous pouvez télécharger le<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> Fichier contenant des binaires (_.ova_) et des certificats signés pour les outils ONTAP pour VMware vSphere à partir du<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>.</block>
@@ -1623,7 +1618,6 @@
   <block id="7aab78a1b39daabb0255f06097941141" category="paragraph">_Ceci supprimera les données saisies en fermant le flux de travail actuel et ouvre le flux de travail Créer un profil de capacité de stockage. Voulez-vous continuer?_</block>
   <block id="f604eb859718e32220986583f0dd60f8" category="list-text">Cliquez sur *YES* pour ouvrir la fenêtre Créer un profil de capacité de stockage.</block>
   <block id="f5881ae95eaddf3eaa37ea9dfa5a4025" category="paragraph">Lorsque vous effectuez une tâche nécessitant la spécification d'un serveur vCenter, le sélecteur *INSTANCE* situé dans le coin supérieur gauche de l'écran affiche les serveurs vCenter disponibles dans l'ordre alphanumérique. Le serveur vCenter par défaut est toujours le premier serveur de la liste déroulante.</block>
-  <block id="3ba26e2ef418a8000e72bed69c2b1204" category="list-text">À partir de la version vSphere 8.0, le protocole NVMe/FC est pris en charge.</block>
   <block id="cfbd5fccaf4fd8045e424e51da259e46" category="paragraph">Vous pouvez sélectionner le type *NFS*, *VMFS* ou *vVols* pour configurer un datastore. Lorsque vous sélectionnez le type vVols, le protocole NVMe/FC est disponible.</block>
   <block id="18da7537a6d6a586cd1724bd68e0f65b" category="admonition">Le protocole NVMe/FC est pris en charge pour ONTAP 9.91P3 et versions ultérieures.</block>
   <block id="ee3acded2da3caf4c3251cbe51ed714f" category="list-text">NFS : vous pouvez provisionner un datastore NFS à l'aide des protocoles NFS3 ou NFS4.1.</block>
@@ -2045,8 +2039,6 @@ Suivez les étapes ci-dessous pour configurer syslog.</block>
   <block id="47036403afaaf8ca717ff4a9ab5e937f" category="admonition">Depuis la mise à niveau des outils ONTAP 9.12, tous les processus d'authentification et de communication des systèmes de stockage sont remplacés par une authentification de base et une authentification basée sur certificat en faisant confiance automatiquement aux certificats de stockage ONTAP. Aucune action n'est requise de la part de l'utilisateur.</block>
   <block id="58219ebdf648f85e26c26438bb61d686" category="paragraph">Si le système de stockage est ajouté avec un utilisateur de périmètre de cluster personnalisé créé à l'aide du fichier json et que vous souhaitez effectuer une mise à niveau vers la version 9.12 et les versions ultérieures, alors
 Exécutez les commandes ci-dessous sur l'interface de ligne de commande ONTAP avant de procéder à la mise à niveau pour activer la communication basée sur des certificats entre les outils ONTAP pour VMware vSphere et ONTAP.</block>
-  <block id="c8651a1e5e8dc4eb77c21ebfee7aa345" category="paragraph">Si le système de stockage est ajouté avec un utilisateur scoped SVM créé personnalisé en utilisant le fichier json et que vous voulez mettre à niveau vers 9.12 et versions ultérieures, alors
-Exécuter les commandes ci-dessous sur l'interface de ligne de commandes ONTAP avec un accès administrateur du cluster avant la mise à niveau pour activer la communication basée sur le certificat entre les outils ONTAP pour VMware vSphere et ONTAP :</block>
   <block id="89ee3f6f60ef2fe23bff96f279b6d85a" category="summary">Vous devez télécharger et déployer les outils ONTAP dans votre environnement VMware vSphere, puis configurer les applications requises en fonction des tâches que vous souhaitez effectuer à l'aide des outils ONTAP, du fournisseur VASA et de SRA.</block>
   <block id="7c3f9f49cd79868d0fe504cc021d45ff" category="doc">Déploiement ou mise à niveau des outils ONTAP pour VMware vSphere</block>
   <block id="5ee2d67e9c2037d55fb50ede660fd324" category="list-text">Renommez le<block ref="74f7b54ea713d9f5b69839982911bbf7" prefix=" " category="inline-code"></block> Fichier téléchargé depuis le site de support NetApp vers NetAppNasPlugin.vib en fonction du nom prédéfini utilisé par les outils ONTAP.</block>
@@ -2120,5 +2112,40 @@ La combinaison du type de plate-forme et de l'indicateur asymétrique détermine
   <block id="8b0a036d076285ea830ca8290e260a77" category="list-text">Annulez l'enregistrement du plug-in en accédant à<block ref="3668afd07686ea27a6f1590042360bee" prefix=" " category="inline-code"></block></block>
   <block id="4b8bd3e99bfcc26c0f74b6bf405ef012" category="list-text">Entrez un mot de passe de huit caractères minimum et de 30 caractères maximum. Le mot de passe doit contenir au moins un caractère supérieur, un chiffre inférieur, un chiffre et un caractère spécial. L'avertissement d'expiration du mot de passe s'affiche après 75 jours de réinitialisation du mot de passe. Le nouveau mot de passe ne peut pas être identique au dernier mot de passe utilisé. Vous devez modifier le mot de passe tous les 90 jours.</block>
   <block id="062f397773db685232413bdf1cdc77d6" category="list-text">Accédez à l'interface de gestion de l'appliance VMware SRM à l'aide de l'URL : \https://:&lt;srm_ip&gt;:5480, puis accédez à adaptateurs de réplication du stockage dans l'interface de gestion de l'appliance VMware SRM.</block>
-  <block id="02d748a182bd49eb68c66826e023ae52" category="list-text">Configurer SRM avec l'adresse IP et le mot de passe des outils ONTAP à l'aide de la commande :<block ref="80e6857610e0d41189fe70adcfa7e87b" prefix=" " category="inline-code"></block></block>
+  <block id="fad46460446354fa80d2500a2f1c2238" category="list-text">Configurer SRM à l'aide de l'adresse IP et du mot de passe des outils ONTAP :<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block>. Vous devez avoir un devis unique autour de la valeur du mot de passe.
+Un message de confirmation de la mémorisation des identifiants de stockage s'affiche. SRA peut communiquer avec le serveur SRA à l'aide de l'adresse IP, du port et des informations d'identification fournis.</block>
+  <block id="86e0bf9c3c7b551354475df97b7d9009" category="list-text"><block ref="4222690b3b5a5c9afb047223bc02154e" prefix="" category="inline-code"></block>. Vous devez avoir un devis unique autour de la valeur du mot de passe.</block>
+  <block id="48ac6224163e1e40df5fddadacfd3cab" category="list-text">Configurer SRM avec l'adresse IP et le mot de passe des outils ONTAP à l'aide de la commande :<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block>. Vous devez avoir un devis unique autour de la valeur du mot de passe.</block>
+  <block id="68e962ea1c22b4a4ce454c6d0243fb84" category="paragraph">Vous devez supprimer le dossier de la machine SRM mis en cache ONTAP Tools nom d'utilisateur mot de passe et réinstaller SRA.</block>
+  <block id="3642e7476d2c39d4c6204e36acaa5431" category="list-text">Exécutez les commandes suivantes pour supprimer le dossier de machine SRM mis en cache Outils ONTAP nom d'utilisateur mot de passe :</block>
+  <block id="98ea8bb5748846a8eb48ec17775dd65c" category="list-text"><block ref="73be5ab307e7055f684cc317b6aff741" prefix="" category="inline-code"></block></block>
+  <block id="9aac114d9a8bbe576d39d35cf5fad65b" category="list-text"><block ref="5ec1d0f6687a4c1e0107632871d4a131" prefix="" category="inline-code"></block></block>
+  <block id="be886d30990ecb1cd7da9458a1301ba3" category="list-text"><block ref="ed73a6dfaf2769c449bcf6ac1257b40e" prefix="" category="inline-code"></block></block>
+  <block id="2a7f66eb3c213058f0136bcf65d63f11" category="list-text"><block ref="1c2934a64ebf7e159bf45c1e6c30b478" prefix="" category="inline-code"></block></block>
+  <block id="c6503e5473d2858467146e434dedb32e" category="list-text">Lancer la commande perl pour configurer SRA avec les nouvelles informations d'identification :</block>
+  <block id="d2ef96c1cd4e9e918af9cc6fe693d19c" category="list-text"><block ref="3e82875f30595fcc3e2ea7112a52aec3" prefix="" category="inline-code"></block></block>
+  <block id="9f39a8ba317fa65df6bf0329cacd5667" category="paragraph">Si le système de stockage est ajouté avec un utilisateur scoped SVM créé personnalisé en utilisant le fichier json et que vous souhaitez mettre à niveau vers 9.12 et versions ultérieures, exécutez ensuite les commandes ci-dessous sur l'interface de ligne de commande ONTAP avec un accès administrateur du cluster avant la mise à niveau pour activer la communication basée sur le certificat entre les outils ONTAP pour VMware vSphere et ONTAP :</block>
+  <block id="6b93e6fdc6e3dbf8009c665ddf94abcf" category="paragraph">(Facultatif) dans la section configurer vCenter ou Activer VCF, cochez la case *Activer VMware Cloud Foundation (VCF)* et indiquez un mot de passe pour les informations d'identification des outils ONTAP. Les outils ONTAP stockent les détails de l'utilisateur dans un format codé. Pour toute communication entre les outils ONTAP et vCenter, ces informations sur l'utilisateur vCenter sont utilisées.
+Vous n'avez pas besoin de fournir l'adresse IP mais vous devez fournir un mot de passe.
+Pour plus d'informations, reportez-vous aux sections suivantes.</block>
+  <block id="8cc72bf41639ac37b90eb2211ba395af" category="admonition">Ne stockez pas la machine virtuelle des outils ONTAP sur un datastore vVol géré.</block>
+  <block id="fb65092a2b1818d2f28038d58c52a701" category="paragraph">Lorsqu'il est activé, le fournisseur VASA et l'adaptateur SRA (Storage Replication adapter) utilisent ce port pour communiquer avec vCenter Server. Ce port est également requis pour obtenir les paramètres TCP/IP. Ce port doit être activé sur le pare-feu des hôtes VMware ESXi vers l'appliance ONTAP Tools. Ce port est utilisé pour télécharger le pack de prise en charge VP, accéder à l'interface utilisateur Web-CLI et contrôler la communication du chemin de VMware vers VP.</block>
+  <block id="552de149f7e69b0800ade32a13e7e6f1" category="list-text">À partir de vSphere 8.0, le protocole NVMe/FC est pris en charge pour les datastores vvol.</block>
+  <block id="26ffc687a7267f96a389530199971cd1" category="sidebar">Documentation sur les outils ONTAP pour VMware vSphere</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Commencez</block>
+  <block id="da951ef1610be90b45b31baf7b25b179" category="sidebar">Découvrez les outils ONTAP pour VMware vSphere</block>
+  <block id="21e2a89d708329706ec6ed3fc989a1f6" category="sidebar">Utilisez les outils ONTAP</block>
+  <block id="317bbf73ff27c5f981628c8fb83ebf22" category="sidebar">Configurez le contrôle d'accès basé sur des rôles</block>
+  <block id="48bc2d028cb2a507ef974230ca3ba793" category="sidebar">Configurer les diagnostics à distance</block>
+  <block id="641e9457539249e880725760f91d5ee2" category="sidebar">Configurez la haute disponibilité</block>
+  <block id="04edeb5424c826c14a69edb777edf395" category="sidebar">Protéger et gérer les datastores</block>
+  <block id="eaf78ca462bf848b7c59c410077002b6" category="sidebar">Protection des datastores</block>
+  <block id="c724784c65896d8b16350f4b0580dfd4" category="sidebar">Protection des machines virtuelles</block>
+  <block id="5267febc97a2cc385cc5c73995dc64df" category="sidebar">Surveiller les datastores classiques et les machines virtuelles</block>
+  <block id="3123ece3c3b36f605758cb0c9a28f904" category="sidebar">Surveillez les datastores vvols et les machines virtuelles</block>
+  <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">Ressources supplémentaires</block>
+  <block id="51cf1968b9a38ab03f7396d237ad0be6" category="sidebar">Documentation relative aux versions antérieures des outils ONTAP pour VMware</block>
+  <block id="4c3c39a603eb21106d2df2836d4b456c" category="sidebar">Base de connaissances NetApp - outils ONTAP</block>
+  <block id="bbf1057ad175e1e1664e224351019ac9" category="sidebar">Utilitaire d'importation NetApp - vidéo</block>
+  <block id="72393f9ef0b6b69526a30ac7ce5276bc" category="sidebar">Communauté NetApp - Outils ONTAP</block>
 </blocks>

@@ -35,7 +35,7 @@ L'option *Provision datastore* vous permet de spécifier un profil de capacité 
 
 * NFS v3 et NFS v4.1
 * VMFS5 et VMFS6
-* À partir de la version vSphere 8.0, le protocole NVMe/FC est pris en charge.
+* À partir de vSphere 8.0, le protocole NVMe/FC est pris en charge pour les datastores vvol.
 
 
 Les outils ONTAP peuvent créer un datastore sur un volume NFS ou une LUN :

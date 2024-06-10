@@ -68,7 +68,9 @@ Extrayez le fichier .zip, qui contient le fichier .ova sur votre système local.
 |===
 . Entrez les détails nécessaires à la personnalisation de l'assistant de déploiement.
 +
-(Facultatif) dans la section configurer vCenter ou Activer VCF, cochez la case *Activer VMware Cloud Foundation (VCF)* et indiquez un mot de passe pour les informations d'identification des outils ONTAP. Vous n'avez pas besoin de fournir l'adresse IP mais vous devez fournir un mot de passe. Pour plus d'informations, reportez-vous aux sections suivantes.
+(Facultatif) dans la section configurer vCenter ou Activer VCF, cochez la case *Activer VMware Cloud Foundation (VCF)* et indiquez un mot de passe pour les informations d'identification des outils ONTAP. Les outils ONTAP stockent les détails de l'utilisateur dans un format codé. Pour toute communication entre les outils ONTAP et vCenter, ces informations sur l'utilisateur vCenter sont utilisées.
+Vous n'avez pas besoin de fournir l'adresse IP mais vous devez fournir un mot de passe.
+Pour plus d'informations, reportez-vous aux sections suivantes.
 
 +
 ** link:../deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html["Personnalisation du déploiement"]
@@ -80,6 +82,10 @@ Extrayez le fichier .zip, qui contient le fichier .ova sur votre système local.
 Lorsque vous attendez la fin du déploiement, vous pouvez afficher la progression du déploiement dans l'onglet tâches.
 
 . Mettez la machine virtuelle sous tension des outils ONTAP, puis ouvrez une console de la machine virtuelle exécutant les outils ONTAP.
++
+
+NOTE: Ne stockez pas la machine virtuelle des outils ONTAP sur un datastore vVol géré.
+
 . Vérifiez que les outils ONTAP sont en cours d'exécution une fois le déploiement terminé.
 . Si les outils ONTAP ne sont enregistrés avec aucun serveur vCenter, utilisez `\https://appliance_ip:8143/Register.html` Pour enregistrer l'instance d'outils ONTAP. Le Register.html vous redirige vers la page swagger. À partir de ONTAP Tools 9.12, l'enregistrement des outils ONTAP avec vCenter se fait à partir de la page swagger.
 +
