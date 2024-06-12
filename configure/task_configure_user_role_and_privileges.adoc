@@ -2,7 +2,7 @@
 permalink: configure/task_configure_user_role_and_privileges.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: 'Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion des systèmes de stockage à l"aide du fichier JSON fourni avec les outils ONTAP et ONTAP System Manager.' 
+summary: 'Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion des systèmes de stockage à l"aide du fichier JSON fourni par les outils ONTAP pour VMware vSphere et ONTAP System Manager.' 
 ---
 = Configurez les rôles et privilèges utilisateur
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion 
 
 
 [role="lead"]
-Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion des systèmes de stockage à l'aide du fichier JSON fourni avec les outils ONTAP et ONTAP System Manager.
+Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion des systèmes de stockage à l'aide du fichier JSON fourni par les outils ONTAP pour VMware vSphere et ONTAP System Manager.
 
 *Ce dont vous aurez besoin*
 

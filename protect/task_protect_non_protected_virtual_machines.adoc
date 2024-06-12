@@ -28,7 +28,7 @@ Si SVM possède à la fois des LIF IPv4 et IPv6, vous devez désactiver les LIF 
 [NOTE]
 ====
 ** Cette version des outils ONTAP ne prend pas en charge le clonage à chaud des machines virtuelles protégées. Vous devez mettre la machine virtuelle hors tension, puis effectuer l'opération de clonage.
-** Si un datastore n'apparaît pas dans les outils ONTAP après une opération de reprotection, vous devez effectuer une détection du système de stockage ou attendre la prochaine opération de détection planifiée.
+** Si un datastore n'apparaît pas dans les outils ONTAP pour VMware vSphere après une opération de reprotection, vous devez alors lancer une détection du système de stockage ou attendre la prochaine opération de découverte planifiée.
 
 
 ====

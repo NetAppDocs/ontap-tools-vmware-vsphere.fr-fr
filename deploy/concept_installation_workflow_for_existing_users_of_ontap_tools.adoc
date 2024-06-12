@@ -24,7 +24,7 @@ Les données de configuration incluent des informations d'identification du syst
 
 link:../configure/reference_set_ipv4_or_ipv6.html["Définissez IPv4 ou IPv6 à l'aide du fichier de préférences"]
 
-Dans de nombreux cas, vous n'avez peut-être pas besoin de migrer les données de configuration. Toutefois, si vous avez précédemment personnalisé les fichiers de préférences, il est préférable de les vérifier et d'apporter des modifications similaires aux outils ONTAP récemment déployés. Vous pouvez ajouter les systèmes de stockage aux nouveaux outils ONTAP déployés et spécifier les identifiants au fur et à mesure de leur ajout.
+Dans de nombreux cas, vous n'avez peut-être pas besoin de migrer les données de configuration. Toutefois, si vous avez précédemment personnalisé les fichiers de préférences, il est préférable de les vérifier et d'apporter des modifications similaires aux outils ONTAP récemment déployés. Vous pouvez ajouter les systèmes de stockage aux nouveaux outils ONTAP pour VMware vSphere déployés et spécifier les informations d'identification au fur et à mesure de leur ajout.
 
 Si vous effectuez une mise à niveau à partir de VASA Provider 6.X, vous devez annuler l'enregistrement de VASA Provider avant la mise à niveau. Pour plus de détails, consultez la documentation de la version actuelle.
 

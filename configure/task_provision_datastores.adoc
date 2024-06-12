@@ -35,7 +35,7 @@ L'option *Provision datastore* vous permet de spécifier un profil de capacité 
 
 * NFS v3 et NFS v4.1
 * VMFS5 et VMFS6
-* À partir de vSphere 8.0, le protocole NVMe/FC est pris en charge pour les datastores vvol.
+* À partir de la version vSphere 8.0, le protocole NVMe/FC est pris en charge pour les datastores vVol.
 
 
 Les outils ONTAP peuvent créer un datastore sur un volume NFS ou une LUN :
@@ -65,7 +65,7 @@ La taille de LUN maximale prise en charge sur les autres plateformes est de 16 T
 
 
 
-Si aucun profil de capacité de stockage n'est spécifié lors du provisionnement, vous pouvez utiliser la page mappage du stockage pour mapper un datastore vers un profil de capacité de stockage. Vous pouvez appliquer des paramètres de QoS du stockage, un plafond de débit (IOPS max.) et un débit minimal (IOPS min.) sur les fichiers VMDK des machines virtuelles provisionnées sur le datastore pris en charge par FlexGroup. Les paramètres de qualité de service peuvent être appliqués au niveau du datastore ou de la machine virtuelle individuelle en cliquant avec le bouton droit de la souris sur le datastore. L'option de clic droit n'est disponible que sur les datastores ou les machines virtuelles qui sont sauvegardés par le datastore FlexGroup. Après l'application de la QoS à un datastore, tous les paramètres prédéfinis ou QoS de la machine virtuelle sont remplacés. Les paramètres de qualité de service ne peuvent pas être appliqués au niveau du datastore ou d'une machine virtuelle pour les datastores provisionnés sur une SVM directe, car ONTAP ne prend pas en charge la QoS au niveau de la gestion de la SVM.
+Si aucun profil de capacité de stockage n'est spécifié lors du provisionnement, vous pouvez utiliser la page mappage du stockage pour mapper un datastore vers un profil de capacité de stockage. Vous pouvez appliquer des paramètres de QoS du stockage, un plafond de débit (IOPS max.) et un débit minimal (IOPS min.) sur les fichiers VMDK des machines virtuelles provisionnées sur le datastore pris en charge par FlexGroup. Les paramètres de qualité de service peuvent être appliqués au niveau du datastore ou de la machine virtuelle individuelle en cliquant avec le bouton droit de la souris sur le datastore. L'option de clic droit n'est disponible que sur les datastores ou les machines virtuelles qui sont sauvegardés par le datastore FlexGroup. Après l'application de la QoS à un datastore, tous les paramètres prédéfinis ou QoS de la machine virtuelle sont remplacés. Les paramètres de QoS ne peuvent pas être appliqués au niveau du datastore ou d'une machine virtuelle pour les datastores provisionnés par les utilisateurs d'un SVM, car ONTAP ne prend pas en charge la QoS au niveau de la gestion du SVM.
 
 *Étapes*
 

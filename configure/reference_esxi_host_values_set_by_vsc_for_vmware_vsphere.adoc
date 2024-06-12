@@ -17,7 +17,7 @@ Vous pouvez définir les valeurs suivantes sur un hôte ESXi :
 
 
 
-== Configuration avancée ESXi
+== Configuration avancée de l'hôte ESXi
 
 * *VMFS3.HardwareAccélérationde Locaking*
 +

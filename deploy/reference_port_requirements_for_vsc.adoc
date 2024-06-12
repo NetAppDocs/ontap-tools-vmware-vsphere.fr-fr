@@ -28,7 +28,7 @@ Les outils ONTAP utilisent les ports TCP bidirectionnels suivants :
  a| 
 9083
  a| 
-Lorsqu'il est activé, le fournisseur VASA et l'adaptateur SRA (Storage Replication adapter) utilisent ce port pour communiquer avec vCenter Server. Ce port est également requis pour obtenir les paramètres TCP/IP. Ce port doit être activé sur le pare-feu des hôtes VMware ESXi vers l'appliance ONTAP Tools. Ce port est utilisé pour télécharger le pack de prise en charge VP, accéder à l'interface utilisateur Web-CLI et contrôler la communication du chemin de VMware vers VP.
+Lorsqu'il est activé, le fournisseur VASA et l'adaptateur SRA (Storage Replication adapter) utilisent ce port pour communiquer avec vCenter Server. Ce port est également requis pour obtenir les paramètres TCP/IP. Ce port doit être activé sur le pare-feu des hôtes VMware ESXi vers les outils ONTAP pour l'appliance VMware vSphere. Ce port est utilisé pour télécharger le pack de prise en charge VP, accéder à l'interface utilisateur Web-CLI et contrôler la communication du chemin de VMware vers VP.
 
 
 
@@ -49,7 +49,7 @@ Les outils ONTAP sont à l'écoute des communications sécurisées sur ce port. 
  a| 
 8443
  a| 
-Ce port est utilisé pour le service de plug-in distant.
+Ce port est utilisé pour les outils ONTAP pour le service de plug-in VMware vSphere.
 
 
 
@@ -63,4 +63,4 @@ système et peut être désactivé ultérieurement.
 
 NOTE: Vous devez avoir activé le protocole ICMP (Internet Control message Protocol) avant de déployer les outils ONTAP.
 
-Si ICMP est désactivé, la configuration initiale des outils ONTAP échoue et les outils ONTAP ne peuvent pas démarrer les outils ONTAP et les services VASA Provider après le déploiement. Après le déploiement, vous devez activer manuellement les outils ONTAP et les services VASA Provider.
+Si ICMP est désactivé, la configuration initiale des outils ONTAP échoue et les outils ONTAP ne peuvent pas démarrer les outils ONTAP pour les services VMware vSphere et VASA Provider après le déploiement. Après le déploiement, vous devez activer manuellement les outils ONTAP pour les services VMware vSphere et VASA Provider.

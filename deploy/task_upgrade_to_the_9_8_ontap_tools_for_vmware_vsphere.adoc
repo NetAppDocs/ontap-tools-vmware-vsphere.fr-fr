@@ -77,7 +77,7 @@ Une fois la mise à niveau terminée, les outils ONTAP redémarre. Les outils ON
 +
 .. Annuler l'inscription des outils ONTAP.
 .. Enregistrez l'adresse IPv6 des outils ONTAP dans vCenter Server à l'aide de la page *Inscription*.
-.. Régénérez les outils ONTAP et les certificats VASA Provider après l'enregistrement.
+.. Régénérez les outils ONTAP pour les certificats VMware vSphere et VASA Provider après l'enregistrement.
 
 
 +

@@ -35,7 +35,7 @@ La session de connexion reste valide jusqu'à minuit le lendemain.
 
 *Étapes*
 
-. À partir du serveur vCenter, ouvrez une console pour accéder à la machine virtuelle de l'appliance ONTAP Tools.
+. Depuis le serveur vCenter, ouvrez une console pour accéder aux outils ONTAP de la machine virtuelle de l'appliance VMware vSphere.
 . Connectez-vous en tant qu'utilisateur de maintenance.
 . Entrez `4` Pour sélectionner support et Diagnostics.
 . Entrez `3` Pour sélectionner Activer l'accès aux diagnostics à distance.

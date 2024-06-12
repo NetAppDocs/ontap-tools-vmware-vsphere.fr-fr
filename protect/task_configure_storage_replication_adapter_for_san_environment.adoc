@@ -36,7 +36,8 @@ L'adaptateur est installé sur SRM.
 . Vérifiez que LES LUN sont dans des igroups qui ont `ostype` Option définie sur _VMware_ sur le système de stockage principal.
 . Vérifier que les hôtes ESXi du site de reprise disposent d'une connectivité FC ou iSCSI appropriée vers la machine virtuelle de stockage (SVM). Les hôtes ESXi du site secondaire doivent avoir accès au système de stockage du site secondaire, de même que les hôtes ESXi du site principal doivent avoir accès au stockage du site principal.
 +
-Pour ce faire, vous pouvez vérifier que les hôtes ESXi disposent de LUN locales connectées sur la SVM ou à l'aide de `fcp show initiators` commande ou le `iscsi show initiators` Commande sur les SVM. Vérifiez l'accès LUN pour les LUN mappées dans ESXi afin de vérifier la connectivité FC et iSCSI.
+Pour ce faire, vous pouvez vérifier que les hôtes ESXi disposent de LUN locales connectées sur la SVM ou à l'aide de `fcp show initiators` commande ou le `iscsi show initiators` Commande sur les SVM.
+Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectivité FC et iSCSI.
 
 
 

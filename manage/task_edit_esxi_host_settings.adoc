@@ -52,7 +52,7 @@ Page d'accueil de vSphere client
 
 
  a| 
-Portlet systèmes hôtes VMware ESXi
+Portlet ESXi Host Systems
  a| 
 .. Cliquez sur l'onglet *Traditional Dashboard* dans la section Présentation des outils ONTAP.
 .. Cliquez sur *Modifier les paramètres de l'hôte VMware ESXi*.

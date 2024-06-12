@@ -39,11 +39,11 @@ Si le mot de passe du serveur vCenter change, vous pouvez mettre à jour le mot 
 
 * Vous devez indiquer l'adresse IP (IPv4 ou IPv6) de l'instance de vCenter Server à laquelle vous souhaitez enregistrer les outils ONTAP.
 +
-Le type d'outils ONTAP et de certificats VASA générés dépend de l'adresse IP (IPv4 ou IPv6) que vous avez fournie pendant le déploiement. Lors du déploiement des outils ONTAP, si vous n'avez pas saisi de détails IP statiques et si votre DHCP alors le réseau fournit à la fois des adresses IPv4 et IPv6.
+Le type d'outils ONTAP pour les certificats VMware vSphere et VASA générés dépend de l'adresse IP (IPv4 ou IPv6) que vous avez fournie lors du déploiement. Lors du déploiement des outils ONTAP, si vous n'avez pas saisi de détails IP statiques et si votre DHCP alors le réseau fournit à la fois des adresses IPv4 et IPv6.
 
 * L'adresse IP des outils ONTAP utilisée pour s'enregistrer auprès de vCenter Server dépend du type d'adresse IP du serveur vCenter (IPv4 ou IPv6) saisi dans l'assistant de déploiement.
 +
-Les outils ONTAP et les certificats VASA sont générés à l'aide du même type d'adresse IP que celui utilisé lors de l'enregistrement du serveur vCenter.
+Les certificats ONTAP pour VMware vSphere et VASA sont générés à l'aide du même type d'adresse IP que celui utilisé lors de l'enregistrement du serveur vCenter.
 
 +
 
@@ -55,4 +55,4 @@ NOTE: : IPv6 est pris en charge uniquement avec vCenter Server 6.7 et versions u
 
 == Propriétés du réseau de l'appliance
 
-Si vous n'utilisez pas DHCP, spécifiez un nom d'hôte DNS valide (non qualifié) ainsi que l'adresse IP statique pour les outils ONTAP et les autres paramètres réseau. Tous ces paramètres sont nécessaires pour une installation et un fonctionnement corrects.
+Si vous n'utilisez pas DHCP, spécifiez un nom d'hôte DNS valide (non qualifié) ainsi que l'adresse IP statique des outils ONTAP pour VMware vSphere et les autres paramètres réseau. Tous ces paramètres sont nécessaires pour une installation et un fonctionnement corrects.

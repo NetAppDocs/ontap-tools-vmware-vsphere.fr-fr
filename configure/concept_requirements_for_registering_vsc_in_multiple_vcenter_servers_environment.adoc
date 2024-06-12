@@ -2,7 +2,7 @@
 permalink: configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Si vous utilisez les outils ONTAP® pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de serveur vCenter, vous devez enregistrer une instance d"outils ONTAP avec chaque serveur vCenter afin d"établir un couplage 1:1 entre les outils ONTAP et le serveur vCenter. Cela vous permet de gérer tous les serveurs exécutant vCenter 6.0 ou version ultérieure en mode lié et en mode non lié à partir d"un seul client HTML5 vSphere.' 
+summary: 'Si vous utilisez les outils ONTAP® pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de serveur vCenter, vous devez enregistrer une instance d"outils ONTAP avec chaque serveur vCenter afin d"établir un couplage 1:1 entre les outils ONTAP pour VMware vSphere et le serveur vCenter. Cela vous permet de gérer tous les serveurs exécutant vCenter 6.0 ou version ultérieure en mode lié et en mode non lié à partir d"un seul client HTML5 vSphere.' 
 ---
 = Conditions requises pour l'enregistrement des outils ONTAP dans un environnement de plusieurs serveurs vCenter
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Si vous utilisez les outils ONTAP® pour VMware vSphere dans un enviro
 
 
 [role="lead"]
-Si vous utilisez les outils ONTAP pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de vCenter Server, vous devez enregistrer une instance d'outils ONTAP avec chaque serveur vCenter afin d'établir un couplage 1:1 entre les outils ONTAP et le serveur vCenter. Cela vous permet de gérer tous les serveurs exécutant vCenter 7.0 ou version ultérieure en mode lié et en mode non lié à partir d'un seul client vSphere HTML5.
+Si vous utilisez les outils ONTAP pour VMware vSphere dans un environnement où un seul client VMware vSphere HTML5 gère plusieurs instances de vCenter Server, vous devez enregistrer une instance d'outils ONTAP avec chaque serveur vCenter afin d'établir un couplage 1:1 entre les outils ONTAP pour VMware vSphere et le serveur vCenter. Cela vous permet de gérer tous les serveurs exécutant vCenter 7.0 ou version ultérieure en mode lié et en mode non lié à partir d'un seul client vSphere HTML5.
 
 
 NOTE: Si vous souhaitez utiliser les outils ONTAP avec un serveur vCenter, vous devez avoir configuré ou enregistré une instance d'outils ONTAP pour chaque instance de serveur vCenter que vous souhaitez gérer. Chaque instance d'outils ONTAP enregistrée doit être de la même version.
@@ -28,7 +28,7 @@ Par exemple, vous pouvez enregistrer le serveur d'outils ONTAP A sur le serveur 
 Vous *ne pouvez pas disposer du serveur d'outils ONTAP A enregistré à la fois sur le serveur vCenter A et sur le serveur vCenter B.
 
 +
-Si un inventaire VMware inclut un serveur vCenter qui ne dispose pas d'un serveur d'outils ONTAP enregistré, mais qu'un ou plusieurs serveurs vCenter sont enregistrés avec les outils ONTAP, vous pouvez ensuite afficher les instances des outils ONTAP et effectuer les opérations des outils ONTAP pour les serveurs vCenter sur lesquels les outils ONTAP sont enregistrés.
+Si un inventaire VMware inclut un serveur vCenter qui ne dispose pas d'un serveur d'outils ONTAP enregistré, mais qu'un ou plusieurs serveurs vCenter sont enregistrés avec les outils ONTAP, vous pouvez ensuite afficher les instances des outils ONTAP pour VMware vSphere et effectuer les opérations des outils ONTAP pour les serveurs vCenter sur lesquels les outils ONTAP sont enregistrés.
 
 * Vous devez disposer du privilège ONTAP Tools-Specific View pour chaque serveur vCenter enregistré sur l'authentification unique (SSO).
 +

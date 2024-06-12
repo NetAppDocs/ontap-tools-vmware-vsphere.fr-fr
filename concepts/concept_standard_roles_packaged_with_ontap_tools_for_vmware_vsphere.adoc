@@ -40,7 +40,7 @@ Fournit tous les privilèges natifs du serveur vCenter et les privilèges spéci
  a| 
 VSC en lecture seule
  a| 
-Accès en lecture seule aux outils ONTAP. Ces utilisateurs ne peuvent pas effectuer d'actions d'outils ONTAP contrôlées par l'accès.
+Accès en lecture seule aux outils ONTAP. Ces utilisateurs ne peuvent pas exécuter d'actions ONTAP Tools for VMware vSphere contrôlées par accès.
 
 
 
@@ -61,7 +61,7 @@ Fournit tous les privilèges de serveur vCenter natif et les privilèges spécif
 
 Lorsque vous utilisez les outils ONTAP standard pour les rôles VMware vSphere, vous devez suivre certaines directives.
 
-Vous ne devez pas modifier directement les rôles standard. Si c'est le cas, les outils ONTAP écraseront vos modifications chaque fois que vous effectuez une mise à niveau. Le programme d'installation met à jour les définitions de rôles standard chaque fois que vous mettez à niveau les outils ONTAP. Cela permet de s'assurer que les rôles sont à jour pour votre version des outils ONTAP ainsi que pour toutes les versions prises en charge du serveur vCenter.
+Vous ne devez pas modifier directement les rôles standard. Si c'est le cas, les outils ONTAP écraseront vos modifications chaque fois que vous effectuez une mise à niveau. Le programme d'installation met à jour les définitions de rôles standard chaque fois que vous mettez à niveau les outils ONTAP. Cela permet de s'assurer que les rôles sont à jour pour votre version des outils ONTAP pour VMware vSphere ainsi que pour toutes les versions prises en charge du serveur vCenter.
 
 Vous pouvez toutefois utiliser les rôles standard pour créer des rôles adaptés à votre environnement. Pour ce faire, vous devez copier le rôle standard des outils ONTAP, puis modifier le rôle copié. En créant un nouveau rôle, vous pouvez conserver ce rôle même lorsque vous redémarrez ou mettez à niveau le service Windows des outils ONTAP.
 

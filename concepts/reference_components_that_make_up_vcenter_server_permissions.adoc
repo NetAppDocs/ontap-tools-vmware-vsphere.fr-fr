@@ -73,7 +73,7 @@ Console des outils NetApp ONTAP > Afficher
 * VSC en lecture seule
 
  a| 
-Tous les outils ONTAP et les tâches spécifiques au fournisseur VASA nécessitent le privilège d'affichage.
+Tous les outils ONTAP pour les tâches spécifiques à VMware vSphere et VASA Provider nécessitent le privilège View.
 
 
 
@@ -82,7 +82,7 @@ NetApp Virtual Storage Console > gestion basée sur des règles > gestion ou pri
  a| 
 Administrateur VSC
  a| 
-Outils ONTAP et tâches VASA Provider liées aux profils de fonctionnalités de stockage et aux paramètres de seuil.
+Outils ONTAP pour VMware vSphere et tâches VASA Provider liées aux profils de fonctionnalités de stockage et aux paramètres de seuil.
 
 |===
 
@@ -98,6 +98,6 @@ Les autorisations sont associées aux objets vSphere, tels que vCenter Server, l
 Vous pouvez utiliser Active Directory (ou la machine vCenter Server locale) pour configurer des utilisateurs et des groupes d'utilisateurs. Vous pouvez ensuite utiliser les autorisations du serveur vCenter pour accorder l'accès à ces utilisateurs ou groupes afin de leur permettre d'effectuer des tâches spécifiques aux outils ONTAP.
 
 
-NOTE: Ces autorisations vCenter Server s'appliquent aux utilisateurs vCenter des outils ONTAP, et non aux administrateurs des outils ONTAP. Par défaut, les administrateurs des outils ONTAP disposent d'un accès complet au produit et n'ont pas besoin d'autorisations qui leur sont attribuées.
+NOTE: Ces autorisations vCenter Server s'appliquent aux utilisateurs vCenter des outils ONTAP, et non aux outils ONTAP pour les administrateurs VMware vSphere. Par défaut, les outils ONTAP pour les administrateurs VMware vSphere bénéficient d'un accès complet au produit et ne nécessitent pas d'autorisations qui leur sont attribuées.
 
 Les utilisateurs et les groupes n'ont pas de rôles qui leur sont attribués. Ils ont accès à un rôle en faisant partie de l'autorisation vCenter Server.

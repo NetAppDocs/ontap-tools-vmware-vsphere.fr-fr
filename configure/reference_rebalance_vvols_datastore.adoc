@@ -36,7 +36,27 @@ La commande rééquilibrages supprime les volumes FlexVol vides pour fournir un 
 
 
 * Si un volume FlexVol a des snapshots, alors lors de l'opération de rééquilibrage de vvols, les vVvols ne sont pas rééquilibrés correctement en raison de détails insuffisants sur l'utilisation de l'espace.
-* Vous pouvez définir la propriété VASA Provider _enable.update.vvol.through.Discovery_ sur true afin d'obtenir des données cohérentes entre les outils ONTAP et ONTAP, lorsque le délai d'expiration se produit lors du rééquilibrage du conteneur.
+* Vous pouvez définir la propriété VASA Provider _enable.update.vvol.through.Discovery_ sur TRUE pour obtenir des données cohérentes entre les outils ONTAP pour VMware vSphere et ONTAP, lorsque le délai d'attente se produit pendant l'opération de rééquilibrage du conteneur.
+* Aucune API REST n'EST exposée pour rééquilibrer le datastore vVol.
 
 
 ====
+.*Avant de commencer*
+* Générez le jeton Web-CLI à partir de la console de maintenance :
++
+.. Connectez-vous à la console maint.
+.. Sélectionnez l'option *1* Configuration de l'appareil.
+.. Sélectionnez l'option *12* générer un jeton d'authentification Web-CLI.
+
+
+* Obtenez le nom du conteneur et le nom des volumes FlexVol dans vCenter ou via l'interface de ligne de commande Web.
+Pour obtenir la liste des volumes FlexVol attachés au conteneur, exécutez la commande _container list_ depuis l'interface de ligne de commande Web. Vous trouverez les détails de la commande de rééquilibrage de conteneur sur la page Web-CLI.
+
+
+
+NOTE: Vous devez fournir le nom du conteneur pour procéder à un rééquilibrage sur tous les volumes FlexVol rattachés à ce conteneur. Toutefois, si le paramètre de volume FlexVol est fourni, le rééquilibrage n'est effectué que sur le volume FlexVol fourni.
+
+.*Étapes*
+. Connectez-vous à partir de la CLI Web à l'aide de l'URL `\https://<OTV-IP>:9083/`
+. Exécutez la commande : _container reagent -container_name=<container-name>_
+

@@ -476,7 +476,7 @@ Vous pouvez utiliser l'API DE CORRECTIF ONTAP pour définir les valeurs appropri
 
 `\https://<machine_IP>/api/storage/volumes/{uuid}`
 
-Le déploiement VCF des outils ONTAP n'autorise que les flux de travail de création de conteneurs. Si vous souhaitez utiliser d'autres flux de travail, tels que le provisionnement de datastores, la création de profils de capacité de stockage ou la reprise après incident, vous devez enregistrer les outils ONTAP auprès de vCenter Server à l'aide de la page swagger. À partir de ONTAP Tools 9.12, l'enregistrement des outils ONTAP avec vCenter se fait à partir de la page swagger. La limitation des outils ONTAP en mode VCF est que vous ne pouvez pas configurer SRA pour la reprise après incident tant que vous n'avez pas enregistré le plugin. Lorsque vous déployez des outils ONTAP sans mode VCF, l'enregistrement s'effectue automatiquement.
+Le déploiement VCF des outils ONTAP pour VMware vSphere ne permet que des workflows de création de conteneurs. Si vous souhaitez utiliser d'autres flux de travail, tels que le provisionnement de datastores, la création de profils de capacité de stockage ou la reprise après incident, vous devez enregistrer les outils ONTAP auprès de vCenter Server à l'aide de la page swagger. À partir de ONTAP Tools 9.12, l'enregistrement des outils ONTAP avec vCenter se fait à partir de la page swagger. La limitation des outils ONTAP en mode VCF est que vous ne pouvez pas configurer SRA pour la reprise après incident tant que vous n'avez pas enregistré le plugin. Lorsque vous déployez des outils ONTAP sans mode VCF, l'enregistrement s'effectue automatiquement.
 
 
 NOTE: La version Register.html sera supprimée dans les prochaines versions des outils ONTAP.

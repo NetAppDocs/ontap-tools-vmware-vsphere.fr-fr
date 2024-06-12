@@ -31,7 +31,7 @@ Si la fonctionnalité VASA Provider est désactivée avant la mise à niveau ver
 . Cliquez sur *gérer les fonctionnalités* dans l'onglet Paramètres d'administration.
 . Dans la boîte de dialogue gérer les fonctionnalités, sélectionnez l'extension VASA Provider à activer.
 . Si vous souhaitez utiliser la capacité de réplication pour les datastores vVvols, utilisez le bouton bascule *Activer la réplication vVvols*.
-. Entrez l'adresse IP des outils ONTAP et le mot de passe administrateur, puis cliquez sur *appliquer*.
+. Entrez l'adresse IP des outils ONTAP pour VMware vSphere et le mot de passe administrateur, puis cliquez sur *appliquer*.
 +
 
 NOTE: Si l'état de VASA Provider s'affiche en tant que « hors ligne » même après l'activation de l'extension VASA Provider, vérifiez alors le ``/var/log/vmware/vmware-sps/sps.log` File pour toute erreur de connexion avec VASA Provider ou redémarrez le service « vmware-sps ».

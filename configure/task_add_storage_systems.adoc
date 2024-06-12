@@ -18,10 +18,10 @@ NOTE: Si le cluster ONTAP est compatible SAML, la communication avec ONTAP s'eff
 
 *À propos de cette tâche*
 
-Chaque fois que vous démarrez les outils ONTAP ou que vous sélectionnez l'option *REDÉCOUVRIR tout*, les outils ONTAP découvrent automatiquement les systèmes de stockage disponibles.
+Chaque fois que vous démarrez les outils ONTAP ou que vous sélectionnez l'option *REDÉCOUVRIR tout*, les outils ONTAP pour VMware vSphere découvrent automatiquement les systèmes de stockage disponibles.
 
 
-NOTE: Les datastores vVol ne sont pas pris en charge sur les SVM directes.
+NOTE: Les datastores vVol ne sont pas pris en charge par les utilisateurs de SVM.
 
 *Étapes*
 

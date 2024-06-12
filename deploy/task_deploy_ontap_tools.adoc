@@ -2,7 +2,7 @@
 permalink: deploy/task_deploy_ontap_tools.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous devez déployer les outils ONTAP dans votre environnement et spécifier les paramètres requis pour pouvoir utiliser l"appliance.' 
+summary: 'Pour utiliser les outils ONTAP pour l"appliance VMware vSphere, déployez les outils ONTAP pour VMware vSphere dans votre environnement et spécifiez les paramètres requis.' 
 ---
 = Comment déployer les outils ONTAP
 :allow-uri-read: 
@@ -11,14 +11,14 @@ summary: 'Vous devez déployer les outils ONTAP dans votre environnement et spé
 
 
 [role="lead"]
-Vous devez déployer les outils ONTAP dans votre environnement et spécifier les paramètres requis pour pouvoir utiliser l'appliance.
+Pour utiliser les outils ONTAP pour l'appliance VMware vSphere, déployez les outils ONTAP pour VMware vSphere dans votre environnement et spécifiez les paramètres requis.
 
 *Ce dont vous aurez besoin*
 
-* Vous devez exécuter une version prise en charge de vCenter Server.
+* Vous devez disposer de la version prise en charge de vCenter Server.
 +
 
-NOTE: Les outils ONTAP peuvent être enregistrés avec un déploiement Windows de vCenter Server ou un déploiement VMware vCenter Server Virtual Appliance (vCSA).
+NOTE: Vous pouvez enregistrer les outils ONTAP pour VMware vSphere dans un déploiement Windows de vCenter Server ou dans un déploiement VMware vCenter Server Virtual Appliance (vCSA).
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Matrice d'interopérabilité"^]
@@ -30,21 +30,25 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 * Vous devez avoir déconnecté et fermé toutes les sessions de navigateur du client vSphere et supprimé le cache du navigateur pour éviter tout problème de cache du navigateur lors du déploiement des outils ONTAP.
 * Vous devez avoir activé le protocole ICMP (Internet Control message Protocol).
 +
-Si ICMP est désactivé, la configuration initiale des outils ONTAP échoue et les outils ONTAP ne peuvent pas démarrer les outils ONTAP et les services VASA Provider après le déploiement. Après le déploiement, vous devez activer manuellement les outils ONTAP et les services VASA Provider.
+Si ICMP est désactivé, la configuration initiale des outils ONTAP pour VMware vSphere échoue. Après le déploiement, vous devez activer manuellement les outils ONTAP pour les services VMware vSphere et VASA Provider.
 
 
 
 *À propos de cette tâche*
 
-Si vous déployez une nouvelle installation des outils ONTAP, VASA Provider est activé par défaut. Cependant, en cas de mise à niveau depuis une version antérieure des outils ONTAP, l'état de VASA Provider est conservé et vous devrez peut-être activer VASA Provider manuellement.
+Le fournisseur VASA est activé par défaut pour une nouvelle installation des outils ONTAP pour VMware vSphere. Toutefois, en cas de mise à niveau depuis une version antérieure, l'état de VASA Provider est conservé et vous devrez peut-être activer manuellement VASA Provider.
 
 link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["Activez VASA Provider pour la configuration des datastores virtuels"]
 
 *Étapes*
 
 . Connectez-vous au client vSphere.
-. Sélectionnez *Accueil* > *hôte et clusters*.
+. Sélectionnez *Accueil* > *hôtes et clusters*.
 . Cliquez avec le bouton droit de la souris sur le centre de données requis, puis cliquez sur *déployer le modèle OVF...*.
++
+
+NOTE: Ne déployez pas la machine virtuelle VMware vSphere des outils ONTAP sur un datastore vVols qu'il gère.
+
 . Sélectionnez la méthode applicable pour fournir le fichier de déploiement pour les outils ONTAP, puis cliquez sur *Suivant*.
 +
 |===
@@ -82,10 +86,6 @@ Pour plus d'informations, reportez-vous aux sections suivantes.
 Lorsque vous attendez la fin du déploiement, vous pouvez afficher la progression du déploiement dans l'onglet tâches.
 
 . Mettez la machine virtuelle sous tension des outils ONTAP, puis ouvrez une console de la machine virtuelle exécutant les outils ONTAP.
-+
-
-NOTE: Ne stockez pas la machine virtuelle des outils ONTAP sur un datastore vVol géré.
-
 . Vérifiez que les outils ONTAP sont en cours d'exécution une fois le déploiement terminé.
 . Si les outils ONTAP ne sont enregistrés avec aucun serveur vCenter, utilisez `\https://appliance_ip:8143/Register.html` Pour enregistrer l'instance d'outils ONTAP. Le Register.html vous redirige vers la page swagger. À partir de ONTAP Tools 9.12, l'enregistrement des outils ONTAP avec vCenter se fait à partir de la page swagger.
 +

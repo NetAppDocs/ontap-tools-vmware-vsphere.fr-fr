@@ -2,7 +2,7 @@
 permalink: concepts/reference_metrocluster_configurations_supported_by_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: Les outils ONTAP pour VMware vSphere prennent en charge les environnements qui utilisent les configurations MetroCluster IP et FC pour ONTAP. La majeure partie de ce support est automatique. Cependant, vous remarquerez peut-être certaines différences lorsque vous utilisez un environnement MetroCluster avec les outils ONTAP et le fournisseur VASA. 
+summary: Les outils ONTAP pour VMware vSphere prennent en charge les environnements qui utilisent les configurations MetroCluster IP et FC pour ONTAP. La majeure partie de ce support est automatique. Cependant, vous remarquerez peut-être des différences lorsque vous utilisez un environnement MetroCluster avec les outils ONTAP pour VMware vSphere et VASA Provider. 
 ---
 = Configurations MetroCluster prises en charge par les outils ONTAP
 :allow-uri-read: 
@@ -11,18 +11,18 @@ summary: Les outils ONTAP pour VMware vSphere prennent en charge les environneme
 
 
 [role="lead"]
-Les outils ONTAP pour VMware vSphere prennent en charge les environnements qui utilisent les configurations MetroCluster IP et FC pour ONTAP. La majeure partie de ce support est automatique. Cependant, vous remarquerez peut-être certaines différences lorsque vous utilisez un environnement MetroCluster avec les outils ONTAP et le fournisseur VASA.
+Les outils ONTAP pour VMware vSphere prennent en charge les environnements qui utilisent les configurations MetroCluster IP et FC pour ONTAP. La majeure partie de ce support est automatique. Cependant, vous remarquerez peut-être des différences lorsque vous utilisez un environnement MetroCluster avec les outils ONTAP pour VMware vSphere et VASA Provider.
 
 
 
 == Configurations MetroCluster et outils ONTAP
 
-Vous devez vous assurer que les outils ONTAP découvrent les contrôleurs du système de stockage sur le site principal et le site secondaire. Généralement, les outils ONTAP découvre automatiquement les contrôleurs de stockage. Si vous utilisez une LIF de gestion de cluster, il est recommandé de vérifier que les outils ONTAP ont détecté les clusters sur les deux sites. Sinon, vous pouvez ajouter manuellement les contrôleurs de stockage aux outils ONTAP. Vous pouvez également modifier les paires de noms d'utilisateur et de mots de passe que les outils ONTAP utilisent pour se connecter aux contrôleurs de stockage.
+Vous devez vous assurer que les outils ONTAP découvrent les contrôleurs du système de stockage sur le site principal et le site secondaire. Généralement, les outils ONTAP pour VMware vSphere découvrent automatiquement les contrôleurs de stockage. Si vous utilisez une LIF de gestion de cluster, il est recommandé de vérifier que les outils ONTAP ont détecté les clusters sur les deux sites. Sinon, vous pouvez ajouter manuellement les contrôleurs de stockage aux outils ONTAP. Vous pouvez également modifier les paires de noms d'utilisateur et de mots de passe que les outils ONTAP utilisent pour se connecter aux contrôleurs de stockage.
 
 Lorsqu'un basculement se produit, les SVM sur le site secondaire prennent le contrôle. Ces SVM ont le suffixe «`-mc» ajouté à leurs noms. En cas de basculement lorsque vous effectuez des opérations telles que le provisionnement d'un datastore, le nom de la SVM où réside le datastore est modifié afin d'inclure le suffixe «`-mc ». Ce suffixe est supprimé lorsque le rétablissement se produit, et que les SVM du contrôle de reprise sur le site principal.
 
 
-NOTE: Si vous avez ajouté des SVM directs avec configuration MetroCluster aux outils ONTAP, après le switchover, la modification du nom du SVM (l'ajout du suffixe «`-mc ») n'est pas reflétée. Toutes les autres opérations de basculement continuent à s'exécuter normalement.
+NOTE: Si vous avez ajouté des utilisateurs de SVM avec configuration MetroCluster aux outils ONTAP, alors après switchover, la modification du nom du SVM (l'ajout du suffixe «`-mc ») n'est pas reflétée. Toutes les autres opérations de basculement continuent à s'exécuter normalement.
 
 Lors d'un basculement ou d'un rétablissement, la détection et la détection automatiques des clusters peuvent prendre quelques minutes avec les outils ONTAP. Si cela se produit pendant l'exécution d'une opération d'outils ONTAP telle que le provisionnement d'un datastore, vous risquez de rencontrer un retard.
 
@@ -30,7 +30,7 @@ Lors d'un basculement ou d'un rétablissement, la détection et la détection au
 
 == Configurations MetroCluster et VASA Provider
 
-Vasa Provider prend automatiquement en charge les environnements qui utilisent les configurations MetroCluster. Le basculement est transparent dans les environnements VASA Provider. Vous ne pouvez pas ajouter de SVM directs à VASA Provider.
+Vasa Provider prend automatiquement en charge les environnements qui utilisent les configurations MetroCluster. Le basculement est transparent dans les environnements VASA Provider. Vous ne pouvez pas ajouter d'utilisateurs SVM à VASA Provider.
 
 
 NOTE: Vasa Provider n'ajoute pas le suffixe «`-mc » aux noms des SVM sur le site secondaire après un basculement.

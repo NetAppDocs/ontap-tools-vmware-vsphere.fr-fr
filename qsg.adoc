@@ -86,7 +86,7 @@ Les outils ONTAP sont à l'écoute des communications sécurisées sur ce port. 
  a| 
 8443
  a| 
-Ce port est utilisé pour le service de plug-in distant.
+Ce port est utilisé pour les outils ONTAP pour le service de plug-in VMware vSphere.
 
 |===
 Exigences minimales en matière de stockage et d'applications :
@@ -223,5 +223,5 @@ Un message de confirmation de la mémorisation des identifiants de stockage s'af
 
 NOTE: Vasa Provider est activé par défaut. Si vous souhaitez utiliser la capacité de réplication pour les datastores vVvols, utilisez ensuite le bouton bascule Activer la réplication vvols.
 
-. Entrez l'adresse IP des outils ONTAP et le mot de passe administrateur, puis cliquez sur *appliquer*.
+. Entrez l'adresse IP des outils ONTAP pour VMware vSphere et le mot de passe administrateur, puis cliquez sur *appliquer*.
 

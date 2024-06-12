@@ -80,4 +80,4 @@ Après avoir créé un volume FlexVol, vous pouvez le modifier en cliquant sur l
 L'assistant ajoute le stockage que vous avez spécifié dans le datastore vvols. Un message de réussite s'affiche à la fin de l'opération.
 
 
-NOTE: L'assistant de datastore Expand Storage of vvols gère automatiquement les réacquisitions de stockage VMware ESXi ou toute autre opération importante requise. Comme un datastore vvols est une entité logique contrôlée par VASA Provider, l'ajout de volume FlexVol est la seule chose à faire pour augmenter la capacité de votre conteneur de stockage.
+NOTE: L'assistant étendre le stockage des datastores vVols gère automatiquement les renumérisations de stockage des hôtes ESXi ou toute autre opération importante requise. Comme un datastore vvols est une entité logique contrôlée par VASA Provider, l'ajout de volume FlexVol est la seule chose à faire pour augmenter la capacité de votre conteneur de stockage.
