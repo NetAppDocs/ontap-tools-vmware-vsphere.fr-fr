@@ -15,6 +15,8 @@ Vous pouvez effectuer une mise à niveau sur place vers la dernière version des
 
 *Ce dont vous aurez besoin*
 
+La matrice d'interopérabilité (IMT) contient les dernières informations sur les versions prises en charge de ONTAP, vCenter Server, les hôtes ESXi, les applications de plug-in et site Recovery Manager (SRM). Reportez-vous https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Matrice d'interopérabilité"^] à pour obtenir toutes les informations sur le chemin de mise à niveau pris en charge.
+
 * Vous devez avoir téléchargé le fichier _.iso_ pour la dernière version des outils ONTAP.
 * Vous devez avoir réservé au moins 12 Go de RAM pour que les outils ONTAP fonctionnent de façon optimale après la mise à niveau.
 * Vous devez nettoyer le cache du navigateur vSphere client.
