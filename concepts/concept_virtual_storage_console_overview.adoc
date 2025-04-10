@@ -2,7 +2,7 @@
 permalink: concepts/concept_virtual_storage_console_overview.html 
 sidebar: sidebar 
 keywords:  
-summary: Les outils ONTAP pour VMware vSphere offrent une gestion du cycle de vie de bout en bout des ordinateurs virtuels dans des environnements VMware qui utilisent des systèmes de stockage NetApp. Il permet aux administrateurs de gérer directement le stockage dans vCenter Server et simplifie ainsi la gestion du stockage et des données dans les environnements VMware. 
+summary: Les outils ONTAP pour VMware vSphere offrent une gestion de bout en bout du cycle de vie des machines virtuelles dans des environnements VMware qui utilisent des systèmes de stockage NetApp. Il permet aux administrateurs de gérer directement le stockage dans vCenter Server et simplifie ainsi la gestion du stockage et des données dans les environnements VMware. 
 ---
 = Présentation des outils ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Les outils ONTAP pour VMware vSphere offrent une gestion du cycle de vi
 
 
 [role="lead"]
-Les outils ONTAP pour VMware vSphere offrent une gestion du cycle de vie de bout en bout des ordinateurs virtuels dans des environnements VMware qui utilisent des systèmes de stockage NetApp. Il permet aux administrateurs de gérer directement le stockage dans vCenter Server et simplifie ainsi la gestion du stockage et des données dans les environnements VMware.
+Les outils ONTAP pour VMware vSphere offrent une gestion de bout en bout du cycle de vie des machines virtuelles dans des environnements VMware qui utilisent des systèmes de stockage NetApp. Il permet aux administrateurs de gérer directement le stockage dans vCenter Server et simplifie ainsi la gestion du stockage et des données dans les environnements VMware.
 
 Les outils ONTAP s'intègrent au client vSphere et vous permettent d'utiliser des services SSO. Dans un environnement comportant plusieurs instances de serveur vCenter, chaque instance de serveur vCenter que vous souhaitez gérer doit posséder sa propre instance enregistrée d'outils ONTAP.
 
