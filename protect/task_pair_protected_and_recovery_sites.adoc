@@ -21,12 +21,7 @@ Vous devez coupler les sites protégés et de reprise créés à l'aide de votre
 
 *À propos de cette tâche*
 
-Les configurations « fan-out » SnapMirror sont celles où un volume source est répliqué vers deux destinations différentes. Ces opérations créent un problème lors de la restauration lorsque SRM a besoin de restaurer la machine virtuelle à partir de la destination.
-
-
-NOTE: Storage Replication adapter (SRA) ne prend pas en charge les configurations SnapMirror « Fan-Out ».
-
-*Étapes*
+Les configurations « fan-out » SnapMirror sont celles où un volume source est répliqué vers deux destinations différentes. Ces opérations créent un problème lors de la restauration lorsque SRM a besoin de restaurer la machine virtuelle à partir de la destination. *Étapes*
 
 . Double-cliquez sur *site Recovery* sur la page d'accueil de vSphere client, puis cliquez sur *sites*.
 . Cliquez sur *objets* > *actions* > *paire de sites*.

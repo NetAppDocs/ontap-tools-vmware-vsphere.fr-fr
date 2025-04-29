@@ -23,4 +23,4 @@ Votre système doit répondre aux exigences du processeur, aux exigences de limi
 
 La procédure de configuration de HA dépend de la version de votre serveur vCenter. Par exemple, vous pouvez utiliser le lien de référence suivant et sélectionner la version de vCenter Server requise pour afficher les étapes de configuration de HA.
 
-https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-57929CF0-DA9B-407A-BF2E-E7B72708D825.html["Documentation VMware vSphere : exigences en matière de tolérance aux pannes, limites et licences"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-availability.html["Conditions de tolérance aux pannes, limites et licences"]

@@ -34,5 +34,5 @@ Vous devez activer la licence FlexClone pour réaliser les opérations de bascul
 Pour afficher les IOPS d'un datastore, vous devez activer le contrôle des E/S du stockage ou décocher la case Désactiver la collecte des statistiques d'E/S du stockage dans la configuration du contrôle des E/S du stockage. Vous pouvez activer le contrôle des E/S de stockage uniquement si vous disposez de la licence Enterprise plus de VMware.
 
 * https://kb.vmware.com/s/article/1022091["Dépannage du contrôle d'E/S du stockage"]
-* https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-37CC0E44-7BC7-479C-81DC-FFFC21C1C4E3.html["Exigences de contrôle des E/S du stockage"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-resource-management-6-5.html["Gestion des ressources vSphere"]
 
