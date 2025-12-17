@@ -523,7 +523,6 @@
   <block id="56d43ad1a280ada5e16fd2960ae44b32" category="list-text">SRM</block>
   <block id="03b870ced8b149ca765fa1ffe2f8b770" category="paragraph">La documentation relative à l'installation de SRM est disponible sur le site VMware.</block>
   <block id="4617dd5a7193927c5552182931541c9c" category="inline-link">Documentation VMware site Recovery Manager</block>
-  <block id="2b27cdd9529ad91885c6c019ee8329ee" category="paragraph"><block ref="2b27cdd9529ad91885c6c019ee8329ee" category="inline-link-rx"></block></block>
   <block id="406292f3c5b20715e348f48fa5e6d6e3" category="list-text">SRA</block>
   <block id="5964a20b29586f71f419711aae6ae487" category="paragraph">L'adaptateur est installé sur SRM.</block>
   <block id="39d642e40fbcd108eb0ab15715ee349d" category="list-text">Vérifiez que les hôtes ESXi principaux sont connectés aux LUN du système de stockage principal du site protégé.</block>
@@ -579,7 +578,6 @@
   <block id="39b58596949c4b9771bc20ef05dffce8" category="list-text">Vous devez avoir apparié les sites protégés et les sites de reprise dans SRM.</block>
   <block id="0fef91ca040522ee258c514383b22085" category="list-text">Vous devez avoir configuré votre stockage avant de configurer le gestionnaire de baies.</block>
   <block id="c57d1578817fecd8541ae081dd3b752e" category="list-text">Vous devez avoir configuré et répliqué les relations SnapMirror entre les sites protégés et les sites de reprise.</block>
-  <block id="43195d9f7cab578cb244f5f740f6e085" category="list-text">Vous devez avoir activé les LIF de gestion du SVM pour permettre la colocation.</block>
   <block id="7945c1d153109a7470a701147eb9bf91" category="paragraph">SRA prend en charge la gestion au niveau du cluster et de la SVM. Si vous ajoutez du stockage au niveau du cluster, vous pouvez détecter et exécuter des opérations sur tous les SVM du cluster. Si vous ajoutez du stockage au niveau d'un SVM, vous ne pouvez gérer que ce SVM spécifique.</block>
   <block id="e074ce1ed2ac873058a796fcf283eedd" category="admonition">VMware ne prend pas en charge le protocole NFS4.1 pour SRM.</block>
   <block id="7fdab6ccf999bb53d546254efa8e925a" category="list-text">Dans SRM, cliquez sur *Array Managers*, puis sur *Add Array Manager*.</block>
@@ -1947,7 +1945,6 @@ Suivez les étapes ci-dessous pour configurer syslog.</block>
   <block id="9854c166539f1bb4ba9e61f895f32a6f" category="paragraph">Une nouvelle API est introduite pour générer le _appliance-api-token_ qui authentifie les appels API. Certaines API existantes sont modifiées pour inclure l'en-tête _appliance-api-token_. À partir de la version 9.12 des outils ONTAP, swagger ne prend pas en charge les API 1.0. Les pointeurs qui se trouvaient auparavant sur 1.0 sont déplacés vers les API 2.0 ou 3.0.</block>
   <block id="ca98aaad89f286b4cde26867bc59bed4" category="admonition">À partir des outils ONTAP pour VMware vSphere version 9.13, 2.0 les API de profil de capacité de stockage ne sont plus disponibles.</block>
   <block id="92ac68c3c800987e3d8470f227aef494" category="paragraph">Le fichier _.ova_ comprend les outils ONTAP. Une fois le déploiement terminé, les outils ONTAP, VASA et SRA sont installés dans votre environnement. Par défaut, les outils ONTAP commencent à fonctionner dès que vous décidez du modèle de déploiement suivant. Vous pouvez également activer le fournisseur VASA et SRA en fonction de vos besoins.</block>
-  <block id="47036403afaaf8ca717ff4a9ab5e937f" category="admonition">Depuis la mise à niveau des outils ONTAP 9.12, tous les processus d'authentification et de communication des systèmes de stockage sont remplacés par une authentification de base et une authentification basée sur certificat en faisant confiance automatiquement aux certificats de stockage ONTAP. Aucune action n'est requise de la part de l'utilisateur.</block>
   <block id="58219ebdf648f85e26c26438bb61d686" category="paragraph">Si le système de stockage est ajouté avec un utilisateur de périmètre de cluster personnalisé créé à l'aide du fichier json et que vous souhaitez effectuer une mise à niveau vers la version 9.12 et les versions ultérieures, alors
 Exécutez les commandes ci-dessous sur l'interface de ligne de commande ONTAP avant de procéder à la mise à niveau pour activer la communication basée sur des certificats entre les outils ONTAP pour VMware vSphere et ONTAP.</block>
   <block id="89ee3f6f60ef2fe23bff96f279b6d85a" category="summary">Vous devez télécharger et déployer les outils ONTAP dans votre environnement VMware vSphere, puis configurer les applications requises en fonction des tâches que vous souhaitez effectuer à l'aide des outils ONTAP, du fournisseur VASA et de SRA.</block>
@@ -2153,4 +2150,7 @@ Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectiv
   <block id="d2a8cc12733d837b21d04e966da18849" category="inline-link">Installation et configuration de site Recovery Manager site Recovery Manager</block>
   <block id="aa7e72b3419247f39d0e6b1a10ecde90" category="paragraph"><block ref="e8cde9e1b38fd82f2c0a7be37ca3e90f" category="inline-link-rx"></block> a plus d'informations.</block>
   <block id="1131b5ba310f0132fa89f2e2bc52cb0c" category="paragraph">Les configurations « fan-out » SnapMirror sont celles où un volume source est répliqué vers deux destinations différentes. Ces opérations créent un problème lors de la restauration lorsque SRM a besoin de restaurer la machine virtuelle à partir de la destination. *Étapes*</block>
+  <block id="e9137eaa9a63d9c4bceed13dfb01d6db" category="admonition">À partir de la mise à niveau des outils ONTAP 9.12, le processus d'authentification et de communication de tous les systèmes de stockage passe de l'authentification de base à l'authentification par certificat en faisant automatiquement confiance aux certificats de stockage ONTAP .</block>
+  <block id="04afb3bdbc4139cf45256b44141b1a77" category="list-text">Vous devez avoir activé les LIF de gestion SVM pour prendre en charge la multilocation.</block>
+  <block id="0d6d5f3b6b0d7149732baa366c9a237a" category="paragraph"><block ref="0d6d5f3b6b0d7149732baa366c9a237a" category="inline-link-rx"></block></block>
 </blocks>

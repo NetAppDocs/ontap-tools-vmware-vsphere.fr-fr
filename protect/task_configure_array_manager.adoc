@@ -18,7 +18,7 @@ La configuration de Storage Replication adapter (SRA) peut être configurée à 
 * Vous devez avoir apparié les sites protégés et les sites de reprise dans SRM.
 * Vous devez avoir configuré votre stockage avant de configurer le gestionnaire de baies.
 * Vous devez avoir configuré et répliqué les relations SnapMirror entre les sites protégés et les sites de reprise.
-* Vous devez avoir activé les LIF de gestion du SVM pour permettre la colocation.
+* Vous devez avoir activé les LIF de gestion SVM pour prendre en charge la multilocation.
 
 
 SRA prend en charge la gestion au niveau du cluster et de la SVM. Si vous ajoutez du stockage au niveau du cluster, vous pouvez détecter et exécuter des opérations sur tous les SVM du cluster. Si vous ajoutez du stockage au niveau d'un SVM, vous ne pouvez gérer que ce SVM spécifique.
