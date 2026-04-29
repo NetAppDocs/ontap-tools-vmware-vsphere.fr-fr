@@ -213,14 +213,14 @@ NOTE: Une FlexGroup faisant partie d'un data store traditionnel ne peut pas réd
 
 *Informations connexes*
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/Datastore_inaccessible_when_volume_status_is_changed_to_offline["Le datastore est inaccessible lorsque le statut du volume passe en mode hors ligne"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/Datastore_inaccessible_when_volume_status_is_changed_to_offline["Le datastore est inaccessible lorsque le statut du volume passe en mode hors ligne"^]
 
-https://docs.netapp.com/us-en/ontap/nfs-admin/ontap-support-kerberos-concept.html["Prise en charge de ONTAP pour Kerberos"]
+https://docs.netapp.com/us-en/ontap/nfs-admin/ontap-support-kerberos-concept.html["Prise en charge de ONTAP pour Kerberos"^]
 
 https://docs.netapp.com/us-en/ontap/nfs-admin/requirements-configuring-kerberos-concept.html["Conditions requises pour la configuration de Kerberos avec NFS"]
 
-https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/concept_kerberos_realm_services.html["Gérez les services de domaine Kerberos avec System Manager - ONTAP 9.7 et versions antérieures"]
+https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/concept_kerberos_realm_services.html["Gérez les services de domaine Kerberos avec System Manager - ONTAP 9.7 et versions antérieures"^]
 
-https://docs.netapp.com/us-en/ontap/nfs-config/create-kerberos-config-task.html["Activez Kerberos sur une LIF donnée"]
+https://docs.netapp.com/us-en/ontap/nfs-config/create-kerberos-config-task.html["Activez Kerberos sur une LIF donnée"^]
 
-https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0.html["Stockage vSphere"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0.html["Stockage vSphere"^]

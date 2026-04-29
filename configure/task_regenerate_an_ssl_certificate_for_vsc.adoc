@@ -17,7 +17,7 @@ Le certificat SSL est généré lorsque vous installez les outils ONTAP. Le nom 
 
 Vous pouvez activer le diagnostic à distance à l'aide de la console de maintenance et générer un certificat spécifique au site.
 
-https://kb.netapp.com/advice_and_troubleshooting/data_storage_software/vsc_and_vasa_provider/virtual_storage_console%3a_implementing_ca_signed_certificates["Virtual Storage Console : implémentation de certificats signés par une autorité de certification"]
+https://kb.netapp.com/advice_and_troubleshooting/data_storage_software/vsc_and_vasa_provider/virtual_storage_console%3a_implementing_ca_signed_certificates["Virtual Storage Console : implémentation de certificats signés par une autorité de certification"^]
 
 *Étapes*
 

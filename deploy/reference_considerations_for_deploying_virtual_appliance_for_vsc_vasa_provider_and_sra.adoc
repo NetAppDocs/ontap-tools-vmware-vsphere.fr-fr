@@ -35,7 +35,7 @@ Mise à niveau à partir d'un déploiement existant des outils ONTAP
  a| 
 La procédure de mise à niveau à partir d'un déploiement existant des outils ONTAP vers les outils ONTAP dépend de la version des outils ONTAP et du déploiement des outils ONTAP. La section flux de travail de déploiement et mise à niveau contient plus d'informations.
 
-link:concept_installation_workflow_for_existing_users_of_vsc.html["Workflow de déploiement pour les utilisateurs existants des outils ONTAP"]
+link:concept_installation_workflow_for_existing_users_of_ontap_tools.html["Workflow de déploiement pour les utilisateurs existants des outils ONTAP"]
 
 Meilleures pratiques avant la mise à niveau :
 
@@ -96,7 +96,7 @@ Vous pouvez créer les rôles ONTAP recommandés en utilisant ONTAP System Manag
 
 Si un utilisateur tente d'effectuer une tâche sans les privilèges et autorisations appropriés, les options de tâche sont grisées.
 
-* link:../concepts/concept_standard_roles_packaged_with_virtual_appliance_for_vsc_vp_and_sra.html["Rôles standard fournis avec les outils ONTAP"]
+* link:../concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html["Rôles standard fournis avec les outils ONTAP"]
 * link:../concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html["Autorisations pour les systèmes de stockage ONTAP et les objets vSphere"]
 
 

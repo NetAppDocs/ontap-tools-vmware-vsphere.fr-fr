@@ -17,4 +17,4 @@ La fonction VMware HA surveille les machines virtuelles afin de détecter les d�
 
 La procédure de configuration de VMware HA dépend de la version de votre serveur vCenter. Par exemple, vous pouvez utiliser le lien de référence suivant et sélectionner la version de vCenter Server requise pour afficher les étapes de configuration de VMware HA.
 
-https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-availability.html["Création et utilisation de clusters HA vSphere"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-availability/creating-and-using-vsphere-ha-clusters.html["Création et utilisation de clusters HA vSphere"^]

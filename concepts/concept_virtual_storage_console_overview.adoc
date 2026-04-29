@@ -68,4 +68,4 @@ Lorsque SRA est activé et utilisé conjointement avec VMware site Recovery Mana
 
 *Informations connexes*
 
-https://mysupport.netapp.com/site/global/dashboard["Support NetApp"]
+https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^]

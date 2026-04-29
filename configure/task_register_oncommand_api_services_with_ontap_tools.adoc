@@ -45,4 +45,4 @@ Le tableau de bord vVvols affiche les metrics pour les datastores ONTAP 9.6 ou a
 
 *Informations connexes*
 
-https://mysupport.netapp.com/site/global/dashboard["Support NetApp"]
+https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^]
