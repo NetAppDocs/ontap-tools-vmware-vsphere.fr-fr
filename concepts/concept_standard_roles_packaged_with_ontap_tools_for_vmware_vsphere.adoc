@@ -57,6 +57,7 @@ Fournit tous les privilèges de serveur vCenter natif et les privilèges spécif
 |===
 
 
+[[guidelines-for-using-ontap-tools-standard-roles]]
 == Instructions d'utilisation des rôles standard des outils ONTAP
 
 Lorsque vous utilisez les outils ONTAP standard pour les rôles VMware vSphere, vous devez suivre certaines directives.

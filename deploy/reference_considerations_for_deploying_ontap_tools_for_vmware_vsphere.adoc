@@ -117,24 +117,28 @@ Pour utiliser des profils de capacité de stockage ou configurer des alarmes, vo
 |===
 
 
+[[additional-deployment-considerations]]
 == Autres considérations relatives au déploiement
 
 Vous devez tenir compte de quelques exigences tout en personnalisant les outils ONTAP de déploiement.
 
 
 
+[[application-user-password]]
 === Mot de passe utilisateur de l'application
 
 Il s'agit du mot de passe attribué au compte administrateur. Pour des raisons de sécurité, il est recommandé que la longueur du mot de passe soit comprise entre huit et trente caractères et qu'elle contienne au moins un caractère supérieur, un chiffre inférieur, un chiffre et un caractère spécial. Le mot de passe expire après 90 jours.
 
 
 
+[[appliance-maintenance-console-credentials]]
 === Identifiants de la console de maintenance de l'appliance
 
 Vous devez accéder à la console de maintenance en utilisant le nom d'utilisateur "maaint". Vous pouvez définir le mot de passe pour l'utilisateur "saint" pendant le déploiement. Vous pouvez utiliser le menu Configuration de l'application de la console de maintenance de vos outils ONTAP pour modifier le mot de passe.
 
 
 
+[[vcenter-server-administrator-credentials]]
 === Informations d'identification de l'administrateur vCenter Server
 
 Vous pouvez définir les informations d'identification d'administrateur pour vCenter Server lors du déploiement des outils ONTAP.
@@ -143,12 +147,14 @@ Si le mot de passe du serveur vCenter change, vous pouvez mettre à jour le mot 
 
 
 
+[[derby-database-password]]
 === Mot de passe de base de données Derby
 
 Pour des raisons de sécurité, il est recommandé que la longueur du mot de passe soit comprise entre huit et trente caractères et qu'elle contienne au moins un caractère supérieur, un chiffre inférieur, un chiffre et un caractère spécial. Le mot de passe expire après 90 jours.
 
 
 
+[[vcenter-server-ip-address]]
 === Adresse IP du serveur vCenter
 
 * Vous devez indiquer l'adresse IP (IPv4 ou IPv6) de l'instance de vCenter Server à laquelle vous souhaitez enregistrer les outils ONTAP.
@@ -167,6 +173,7 @@ NOTE: IPv6 est pris en charge uniquement avec vCenter Server 6.7 et versions ult
 
 
 
+[[appliance-network-properties]]
 === Propriétés du réseau de l'appliance
 
 Si vous n'utilisez pas DHCP, spécifiez un nom d'hôte DNS valide (non qualifié) ainsi que l'adresse IP statique des outils ONTAP pour VMware vSphere et les autres paramètres réseau. Tous ces paramètres sont nécessaires pour une installation et un fonctionnement corrects.

@@ -15,6 +15,7 @@ Les outils ONTAP pour VMware vSphere prennent en charge les environnements qui u
 
 
 
+[[metrocluster-configurations-and-ontap-tools]]
 == Configurations MetroCluster et outils ONTAP
 
 Vous devez vous assurer que les outils ONTAP découvrent les contrôleurs du système de stockage sur le site principal et le site secondaire. Généralement, les outils ONTAP pour VMware vSphere découvrent automatiquement les contrôleurs de stockage. Si vous utilisez une LIF de gestion de cluster, il est recommandé de vérifier que les outils ONTAP ont détecté les clusters sur les deux sites. Sinon, vous pouvez ajouter manuellement les contrôleurs de stockage aux outils ONTAP. Vous pouvez également modifier les paires de noms d'utilisateur et de mots de passe que les outils ONTAP utilisent pour se connecter aux contrôleurs de stockage.
@@ -28,6 +29,7 @@ Lors d'un basculement ou d'un rétablissement, la détection et la détection au
 
 
 
+[[metrocluster-configurations-and-vasa-provider]]
 == Configurations MetroCluster et VASA Provider
 
 Vasa Provider prend automatiquement en charge les environnements qui utilisent les configurations MetroCluster. Le basculement est transparent dans les environnements VASA Provider. Vous ne pouvez pas ajouter d'utilisateurs SVM à VASA Provider.
@@ -37,6 +39,7 @@ NOTE: Vasa Provider n'ajoute pas le suffixe «`-mc » aux noms des SVM sur le si
 
 
 
+[[metrocluster-configurations-and-sra]]
 == Configurations MetroCluster et SRA
 
 Storage Replication adapter (SRA) prend en charge les environnements qui utilisent des configurations MetroCluster (MCC) avec le protocole NFS, iSCSI et FCP.

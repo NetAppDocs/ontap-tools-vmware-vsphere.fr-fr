@@ -15,18 +15,21 @@ Vous devez tenir compte de quelques restrictions, tout en personnalisant les out
 
 
 
+[[appliance-administrator-user-password]]
 == Mot de passe utilisateur administrateur de l'appliance
 
 Vous ne devez pas utiliser d'espace dans le mot de passe administrateur.
 
 
 
+[[appliance-maintenance-console-credentials]]
 == Identifiants de la console de maintenance de l'appliance
 
 Vous devez accéder à la console de maintenance en utilisant le nom d'utilisateur "maaint". Vous pouvez définir le mot de passe pour l'utilisateur "saint" pendant le déploiement. Vous pouvez utiliser le menu Configuration de l'application de la console de maintenance de vos outils ONTAP pour modifier le mot de passe.
 
 
 
+[[vcenter-server-administrator-credentials]]
 == Informations d'identification de l'administrateur vCenter Server
 
 Vous pouvez définir les informations d'identification d'administrateur pour vCenter Server lors du déploiement des outils ONTAP.
@@ -35,6 +38,7 @@ Si le mot de passe du serveur vCenter change, vous pouvez mettre à jour le mot 
 
 
 
+[[vcenter-server-ip-address]]
 == Adresse IP du serveur vCenter
 
 * Vous devez indiquer l'adresse IP (IPv4 ou IPv6) de l'instance de vCenter Server à laquelle vous souhaitez enregistrer les outils ONTAP.
@@ -53,6 +57,7 @@ NOTE: : IPv6 est pris en charge uniquement avec vCenter Server 6.7 et versions u
 
 
 
+[[appliance-network-properties]]
 == Propriétés du réseau de l'appliance
 
 Si vous n'utilisez pas DHCP, spécifiez un nom d'hôte DNS valide (non qualifié) ainsi que l'adresse IP statique des outils ONTAP pour VMware vSphere et les autres paramètres réseau. Tous ces paramètres sont nécessaires pour une installation et un fonctionnement corrects.

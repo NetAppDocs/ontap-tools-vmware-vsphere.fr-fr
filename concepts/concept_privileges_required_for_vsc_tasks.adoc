@@ -19,6 +19,7 @@ https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/VSC_VASA_and_SRA_ONTAP_RBAC_Configur
 
 
 
+[[product-level-privilege-required-by-ontap-tools-for-vmware-vsphere]]
 == Privilège au niveau du produit requis par les outils ONTAP pour VMware vSphere
 
 Pour accéder à l'interface graphique ONTAP Tools for VMware vSphere, vous devez disposer du privilège de vue spécifique aux outils ONTAP au niveau du produit, attribué au niveau d'objet vSphere approprié. Si vous vous connectez sans ce privilège, ONTAP Tools affiche un message d'erreur lorsque vous cliquez sur l'icône NetApp et vous empêche d'accéder aux outils ONTAP.

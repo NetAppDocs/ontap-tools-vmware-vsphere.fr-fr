@@ -47,6 +47,7 @@ Vous pouvez conserver toutes les informations d'identification du contrôleur en
 
 
 
+[[recommended-ontap-roles-when-using-ontap-tools-for-vmware-vsphere]]
 == Rôles ONTAP recommandés pour l'utilisation des outils ONTAP pour VMware vSphere
 
 Vous pouvez configurer plusieurs rôles ONTAP recommandés pour utiliser les outils ONTAP® pour VMware vSphere et le contrôle d'accès basé sur les rôles (RBAC). Ces rôles contiennent les privilèges ONTAP requis pour effectuer les opérations de stockage requises qui sont exécutées par les tâches des outils ONTAP.

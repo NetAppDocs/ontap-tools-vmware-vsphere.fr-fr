@@ -2111,7 +2111,6 @@ Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectiv
   <block id="47635be81cb27fe24be3c1541e49e8c2" category="doc">Présentation des outils ONTAP</block>
   <block id="693059892f5ca1ab1683c98e037ee404" category="summary">Si vous découvrez VMware et n'avez jamais utilisé de produit NetApp ONTAP Tools, vous devez configurer votre serveur vCenter et configurer un hôte ESXi avant de déployer et de configurer les outils ONTAP.</block>
   <block id="65448065a2f2f124958039e28edbabea" category="inline-link">Disponibilité vSphere</block>
-  <block id="b43fbfd98dfaf4b96f25257f3e9b2fb2" category="inline-link">Conditions de tolérance aux pannes, limites et licences</block>
   <block id="9eb2bd2480a35c698be7fc3c56207ade" category="inline-link">Création et utilisation de clusters HA vSphere</block>
   <block id="d5a602ee44affae0e4490dbbdbaa5f11" category="inline-link">Stockage vSphere</block>
   <block id="98ce2155c1121498c5a221338cbeabba" category="inline-link">Gestion des ressources vSphere</block>
@@ -2126,7 +2125,6 @@ Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectiv
   <block id="e9137eaa9a63d9c4bceed13dfb01d6db" category="admonition">À partir de la mise à niveau des outils ONTAP 9.12, le processus d'authentification et de communication de tous les systèmes de stockage passe de l'authentification de base à l'authentification par certificat en faisant automatiquement confiance aux certificats de stockage ONTAP .</block>
   <block id="04afb3bdbc4139cf45256b44141b1a77" category="list-text">Vous devez avoir activé les LIF de gestion SVM pour prendre en charge la multilocation.</block>
   <block id="91b8be87790f1992cddb99c3df97687e" category="paragraph"><block ref="91b8be87790f1992cddb99c3df97687e" category="inline-link-rx"></block></block>
-  <block id="be6b1b2df308def05b1fc2cc80c66b9f" category="paragraph"><block ref="be6b1b2df308def05b1fc2cc80c66b9f" category="inline-link-rx"></block></block>
   <block id="d73eca98393b4e64f0e6ff440a390d4a" category="paragraph"><block ref="d73eca98393b4e64f0e6ff440a390d4a" category="inline-link-rx"></block></block>
   <block id="f4d1718476f238773172cc8143587c05" category="paragraph"><block ref="f4d1718476f238773172cc8143587c05" category="inline-link-rx"></block></block>
   <block id="4ea857035eb7bf4e5b487fd0017b6c49" category="paragraph"><block ref="4ea857035eb7bf4e5b487fd0017b6c49" category="inline-link-rx"></block></block>
@@ -2151,4 +2149,6 @@ Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectiv
   <block id="da5ccd5e0d25abdde390a07b70563258" category="paragraph"><block ref="da5ccd5e0d25abdde390a07b70563258" category="inline-link-rx"></block></block>
   <block id="a4070a999b4b824e32915e4ad5eb924b" category="paragraph"><block ref="a4070a999b4b824e32915e4ad5eb924b" category="inline-link-rx"></block></block>
   <block id="3904b96e16e0546b33dbcc3f9cc072d0" category="paragraph"><block ref="3904b96e16e0546b33dbcc3f9cc072d0" category="inline-link-rx"></block></block>
+  <block id="ae0aa1a81eb18e69d5fc662eaee0efd5" category="inline-link">Broadcom Documentation technique</block>
+  <block id="d5ec05d5862a4efa0c0f47029bcf8f30" category="paragraph"><block ref="d5ec05d5862a4efa0c0f47029bcf8f30" category="inline-link-rx"></block></block>
 </blocks>

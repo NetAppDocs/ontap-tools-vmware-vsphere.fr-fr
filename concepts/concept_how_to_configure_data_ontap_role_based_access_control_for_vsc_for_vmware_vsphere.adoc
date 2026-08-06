@@ -29,6 +29,7 @@ Vous avez besoin de ces informations d'identification pour configurer les systè
 
 
 
+[[ontap-tools-roles]]
 == Rôles des outils ONTAP
 
 Les outils ONTAP classifient les privilèges ONTAP en l'ensemble suivant de rôles d'outils ONTAP :
@@ -53,12 +54,14 @@ Permet la destruction de volumes et de LUN
 
 
 
+[[vasa-provider-roles]]
 == Rôles de VASA Provider
 
 Vous pouvez créer uniquement une gestion basée sur des règles au niveau du cluster. Ce rôle permet la gestion du stockage basée sur des règles à l'aide de profils de fonctions de stockage.
 
 
 
+[[sra-roles]]
 == Rôles SRA
 
 SRA classifie les privilèges d'ONTAP en rôle SAN ou NAS au niveau du cluster ou des SVM. Les utilisateurs peuvent ainsi exécuter des opérations SRM.

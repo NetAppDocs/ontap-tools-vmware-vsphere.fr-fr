@@ -38,6 +38,7 @@ image::../media/permission_updated_graphic.gif[illustration des composants d'aut
 
 
 
+[[privileges]]
 == Privilèges
 
 Deux types de privilèges sont associés aux outils ONTAP pour VMware vSphere :
@@ -87,12 +88,14 @@ Outils ONTAP pour VMware vSphere et tâches VASA Provider liées aux profils de 
 |===
 
 
+[[vsphere-objects]]
 == Objets vSphere
 
 Les autorisations sont associées aux objets vSphere, tels que vCenter Server, les hôtes ESXi, les machines virtuelles, les datastores, les data centers, et les dossiers. Vous pouvez attribuer des autorisations à n'importe quel objet vSphere. En fonction de l'autorisation attribuée à un objet vSphere, vCenter Server détermine qui peut effectuer les tâches sur cet objet. Pour les tâches spécifiques aux outils ONTAP, les autorisations sont attribuées et validées uniquement au niveau du dossier racine (serveur vCenter) et non sur une autre entité. Sauf pour le fonctionnement du plug-in VAAI, où les autorisations sont validées par rapport à l'ESXi concerné .
 
 
 
+[[users-and-groups]]
 == Utilisateurs et groupes
 
 Vous pouvez utiliser Active Directory (ou la machine vCenter Server locale) pour configurer des utilisateurs et des groupes d'utilisateurs. Vous pouvez ensuite utiliser les autorisations du serveur vCenter pour accorder l'accès à ces utilisateurs ou groupes afin de leur permettre d'effectuer des tâches spécifiques aux outils ONTAP.

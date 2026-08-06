@@ -70,6 +70,7 @@ Avec les outils ONTAP, vous pouvez configurer chaque datastore de volume virtuel
 
 
 
+[[considerations-for-creating-and-editing-storage-capability-profiles]]
 == Considérations relatives à la création et à la modification de profils de capacité de stockage
 
 Vous devez tenir compte des considérations relatives à la création et à la modification de profils de capacité de stockage.

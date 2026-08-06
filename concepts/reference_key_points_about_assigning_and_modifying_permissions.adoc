@@ -15,6 +15,7 @@ Lorsque vous travaillez avec des autorisations vCenter Server, vous devez garder
 
 
 
+[[assigning-permissions]]
 == Attribution d'autorisations
 
 Vous n'avez besoin de configurer les autorisations vCenter Server que si vous souhaitez limiter l'accès aux objets et aux tâches vSphere. Sinon, vous pouvez vous connecter en tant qu'administrateur. Cette connexion vous permet automatiquement d'accéder à tous les objets vSphere.
@@ -30,6 +31,7 @@ TIP: À moins que les règles de sécurité de votre entreprise ne nécessitent 
 
 
 
+[[permissions-and-non-vsphere-objects]]
 == Autorisations et objets non vSphere
 
 L'autorisation que vous créez est appliquée à un objet non vSphere. Par exemple, un système de stockage n'est pas un objet vSphere. Si un privilège s'applique à un système de stockage, vous devez attribuer l'autorisation contenant ce privilège à l'objet racine des outils ONTAP car il n'existe aucun objet vSphere auquel vous pouvez l'attribuer.
@@ -38,6 +40,7 @@ Par exemple, toute autorisation qui inclut un privilège tel que le privilège O
 
 
 
+[[modifying-permissions]]
 == Modification des autorisations
 
 Vous pouvez modifier une autorisation à tout moment.

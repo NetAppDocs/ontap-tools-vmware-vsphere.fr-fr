@@ -17,6 +17,7 @@ Vous pouvez définir les valeurs suivantes sur un hôte ESXi :
 
 
 
+[[esxi-host-advanced-configuration]]
 == Configuration avancée de l'hôte ESXi
 
 * *VMFS3.HardwareAccélérationde Locaking*
@@ -31,6 +32,7 @@ Vous devez définir cette valeur sur 0.
 
 
 
+[[nfs-settings]]
 == Paramètres NFS
 
 * *Net.TcpipeHeapSize*
@@ -73,6 +75,7 @@ Si vous utilisez vSphere 7.0 ou une version ultérieure, vous devez définir cet
 
 
 
+[[fcfcoe-settings]]
 == Paramètres FC/FCoE
 
 * *Politique de sélection de chemin*
@@ -105,6 +108,7 @@ Utilisez la valeur par défaut.
 
 
 
+[[iscsi-settings]]
 == Paramètres iSCSI
 
 * *Politique de sélection de chemin*

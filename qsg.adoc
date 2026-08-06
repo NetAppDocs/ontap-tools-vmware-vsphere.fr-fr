@@ -20,12 +20,14 @@ Les outils ONTAP pour VMware vSphere sont un plug-in vCenter Server unique qui i
 
 
 
+[[preparing-for-installation]]
 == Préparation de l'installation
 
 Vous déployez le plug-in en tant qu'appliance virtuelle, ce qui vous permet de réduire les efforts d'installation et d'enregistrement de chaque produit séparément auprès de vCenter Server.
 
 
 
+[[deployment-requirements]]
 === De déploiement
 
 Les outils ONTAP peuvent être utilisés avec une appliance virtuelle VMware vCenter Server (vCSA). Vous devez déployer les outils ONTAP sur un système vSphere pris en charge incluant le système ESXi.
@@ -102,6 +104,7 @@ Exigences minimales en matière de stockage et d'applications :
 |===
 
 
+[[ontap-tools-requirements]]
 === Configuration minimale requise pour les outils ONTAP
 
 * Configurez et configurez votre environnement vCenter Server.
@@ -114,12 +117,14 @@ Exigences minimales en matière de stockage et d'applications :
 
 
 
+[[optional-requirements-for-sra]]
 === Exigences facultatives pour SRA
 
 Si vous déployez l'appliance virtuelle pour une utilisation avec VMware site Recovery Manager, vous devez avoir : * téléchargé le `.tar.gz` Fichier pour SRA si vous utilisez l'appliance SRM.
 
 
 
+[[deploying-ontap-tools]]
 == Déploiement des outils ONTAP
 
 .Étapes
@@ -168,6 +173,7 @@ Le fichier journal contient l'exécution de _sha256sum -c /opt/netapp/vscerver/e
 
 
 
+[[deploying-sra-on-srm]]
 === Déployer SRA sur SRM
 
 Vous pouvez déployer SRA sur le serveur Windows SRM ou sur l'appliance 8.2 SRM.

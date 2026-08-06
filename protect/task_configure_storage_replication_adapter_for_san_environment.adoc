@@ -43,6 +43,7 @@ Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectiv
 
 
 
+[[configure-storage-replication-adapter-for-nas-environment]]
 == Configuration de Storage Replication adapter pour un environnement NAS
 
 *Ce dont vous aurez besoin*

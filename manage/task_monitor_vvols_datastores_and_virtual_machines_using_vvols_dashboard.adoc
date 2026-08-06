@@ -52,6 +52,7 @@ Le portlet machines virtuelles fournit les informations suivantes :
 
 
 
+[[vvols-dashboard-data-requirements]]
 == Exigences de données de tableau de bord de vVvols
 
 Vous devez vérifier certaines exigences importantes du tableau de bord vVvols pour afficher les détails dynamiques des datastores VMware Virtual volumes (vvols) et des machines virtuelles.

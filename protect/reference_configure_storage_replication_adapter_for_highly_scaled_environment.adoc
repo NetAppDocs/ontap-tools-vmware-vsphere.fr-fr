@@ -15,6 +15,7 @@ Vous devez configurer les intervalles d'expiration du stockage en fonction des p
 
 
 
+[[storage-provider-settings]]
 == Paramètres du fournisseur de stockage
 
 Vous devez définir les valeurs de délai suivantes sur SRM pour l'environnement mis à l'échelle :
@@ -60,6 +61,7 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manag
 
 
 
+[[storage-settings]]
 == Paramètres de stockage
 
 Lorsque vous appuyez sur une temporisation, augmentez les valeurs de `storage.commandTimeout` et `storage.maxConcurrentCommandCnt` à une valeur supérieure.
